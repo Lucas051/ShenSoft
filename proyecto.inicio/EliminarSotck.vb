@@ -11,7 +11,7 @@ Public Class EliminarSotck
         sql = "SELECT * FROM stock"
         conexion.Open()
         comando = New MySqlCommand(sql, conexion)
-        DataGridView1 = comando.ToString
+
 
 
 

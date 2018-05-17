@@ -77,10 +77,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexioon.vb" />
+    <Compile Include="ConsultaFactura.Designer.vb">
+      <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EliminarSotck.Designer.vb">
       <DependentUpon>EliminarSotck.vb</DependentUpon>
     </Compile>
     <Compile Include="EliminarSotck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion.Designer.vb">
+      <DependentUpon>Facturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -105,6 +117,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RealizarFactura.Designer.vb">
+      <DependentUpon>RealizarFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RealizarFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Stock de Productos.Designer.vb">
       <DependentUpon>Stock de Productos.vb</DependentUpon>
     </Compile>
@@ -113,8 +131,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConsultaFactura.resx">
+      <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarSotck.resx">
       <DependentUpon>EliminarSotck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion.resx">
+      <DependentUpon>Facturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -124,6 +148,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizarFactura.resx">
+      <DependentUpon>RealizarFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock de Productos.resx">
       <DependentUpon>Stock de Productos.vb</DependentUpon>
