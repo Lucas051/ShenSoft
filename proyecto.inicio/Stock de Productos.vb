@@ -24,7 +24,7 @@ Public Class Stock_de_Productos
                 comando.ExecuteNonQuery()
 
                 MessageBox.Show("Datos Guardados Correctamente.")
-                MessageBox.Show("El id producto se agregara automaticamente.")
+                MessageBox.Show("El ID producto se agrega automaticamente jaja salu2.")
             Else
                 MessageBox.Show("Se deben rellenar todos los compos.")
             End If
