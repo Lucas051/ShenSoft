@@ -44,4 +44,9 @@ Public Class Stock_de_Productos
 
     End Sub
 
+    Private Sub Button5_Click(sender As System.Object, e As System.EventArgs) Handles Button5.Click
+        Me.Hide()
+        EliminarSotck.Show()
+
+    End Sub
 End Class
