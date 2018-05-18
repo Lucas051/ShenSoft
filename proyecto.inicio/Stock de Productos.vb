@@ -49,4 +49,21 @@ Public Class Stock_de_Productos
         EliminarSotck.Show()
 
     End Sub
+
+    Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Dim conexion As New MySqlConnection
+        Dim comando As MySqlCommand
+        Dim sql As String
+
+        conexion = conn
+        sql = "SELECT * FROM stock"
+        conexion.Open()
+
+        comando = New MySqlCommand(sql, conexion)
+        Dim dt As New DataTable
+        Dim da As New MySqlDataAdapter(comando)
+        da.Fill(dt)
+        DataGridView1.DataSource = dt
+        conexion.Clone()
+    End Sub
 End Class
