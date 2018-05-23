@@ -20,7 +20,7 @@ Public Class BuscarProducto
         Dim da As New MySqlDataAdapter(comando)
         da.Fill(dt)
         DataGridbuscar.DataSource = dt
-        conexion.Clone()
+        conexion.Close()
     End Sub
 
     Private Sub ingdatos_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ingdatos.TextChanged

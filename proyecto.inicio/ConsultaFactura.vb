@@ -7,7 +7,7 @@ Public Class ConsultaFactura
         Dim comando As MySqlCommand
         Try
             connect = conn
-            sql = "SELECT * FROM 'facturas'"
+            sql = "SELECT * FROM facturas"
             connect.Open()
             comando = New MySqlCommand(sql, connect)
             comando.ExecuteNonQuery()
