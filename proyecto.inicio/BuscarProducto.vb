@@ -12,7 +12,7 @@ Public Class BuscarProducto
         Dim sql As String
 
         conexion = conn
-        sql = "SELECT * FROM stock"
+        sql = "SELECT * FROM stock" 'mira esto nacho
         conexion.Open()
 
         comando = New MySqlCommand(sql, conexion)
