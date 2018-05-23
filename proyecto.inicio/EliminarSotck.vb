@@ -15,7 +15,13 @@ Public Class EliminarSotck
         Dim dt As New DataTable
         Dim da As New MySqlDataAdapter(comando)
         da.Fill(dt)
-        dgvStock.DataSource = dt
+        DataGridView1.DataSource = dt
         conexion.Clone()
+    End Sub
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Me.Hide()
+        Stock_de_Productos.Show()
+
     End Sub
 End Class

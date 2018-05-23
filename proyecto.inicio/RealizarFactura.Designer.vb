@@ -22,7 +22,13 @@ Partial Class RealizarFactura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridFacturas = New System.Windows.Forms.DataGridView()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.preciocosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pagocon = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,23 +45,53 @@ Partial Class RealizarFactura
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Vendedor = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciocosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.buscarb = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DataGridFacturas
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descripcion, Me.cantidad, Me.precioventa, Me.descuento, Me.preciocosto})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 63)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(643, 174)
-        Me.DataGridView1.TabIndex = 0
+        Me.DataGridFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridFacturas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descripcion, Me.cantidad, Me.precioventa, Me.descuento, Me.preciocosto})
+        Me.DataGridFacturas.Location = New System.Drawing.Point(12, 63)
+        Me.DataGridFacturas.Name = "DataGridFacturas"
+        Me.DataGridFacturas.Size = New System.Drawing.Size(643, 174)
+        Me.DataGridFacturas.TabIndex = 0
+        '
+        'codigo
+        '
+        Me.codigo.DataPropertyName = "cod_producto"
+        Me.codigo.HeaderText = "Código"
+        Me.codigo.Name = "codigo"
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        '
+        'precioventa
+        '
+        Me.precioventa.DataPropertyName = "precio_v_stock"
+        Me.precioventa.HeaderText = "Precio Venta"
+        Me.precioventa.Name = "precioventa"
+        '
+        'descuento
+        '
+        Me.descuento.HeaderText = "Descuento"
+        Me.descuento.Name = "descuento"
+        '
+        'preciocosto
+        '
+        Me.preciocosto.DataPropertyName = "precio_costo"
+        Me.preciocosto.HeaderText = "Precio Costo"
+        Me.preciocosto.Name = "preciocosto"
         '
         'Label1
         '
@@ -189,45 +225,31 @@ Partial Class RealizarFactura
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 16
         '
-        'codigo
+        'buscarb
         '
-        Me.codigo.DataPropertyName = "cod_producto"
-        Me.codigo.HeaderText = "Código"
-        Me.codigo.Name = "codigo"
+        Me.buscarb.Location = New System.Drawing.Point(580, 34)
+        Me.buscarb.Name = "buscarb"
+        Me.buscarb.Size = New System.Drawing.Size(75, 23)
+        Me.buscarb.TabIndex = 18
+        Me.buscarb.Text = "Buscar"
+        Me.buscarb.UseVisualStyleBackColor = True
         '
-        'descripcion
+        'Label4
         '
-        Me.descripcion.DataPropertyName = "descripcion"
-        Me.descripcion.HeaderText = "Descripción"
-        Me.descripcion.Name = "descripcion"
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        '
-        'precioventa
-        '
-        Me.precioventa.DataPropertyName = "precio_v_stock"
-        Me.precioventa.HeaderText = "Precio Venta"
-        Me.precioventa.Name = "precioventa"
-        '
-        'descuento
-        '
-        Me.descuento.HeaderText = "Descuento"
-        Me.descuento.Name = "descuento"
-        '
-        'preciocosto
-        '
-        Me.preciocosto.DataPropertyName = "precio_costo"
-        Me.preciocosto.HeaderText = "Precio Costo"
-        Me.preciocosto.Name = "preciocosto"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(488, 39)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 13)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Buscar Producto"
         '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(689, 393)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.buscarb)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Vendedor)
         Me.Controls.Add(Me.TextBox2)
@@ -244,15 +266,15 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.pagocon)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DataGridFacturas)
         Me.Name = "RealizarFactura"
         Me.Text = "RealizarFactura"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridFacturas As System.Windows.Forms.DataGridView
     Private WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents pagocon As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -275,4 +297,6 @@ Partial Class RealizarFactura
     Friend WithEvents precioventa As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents preciocosto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents buscarb As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
