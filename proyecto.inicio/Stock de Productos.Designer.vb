@@ -106,29 +106,29 @@ Partial Class Stock_de_Productos
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(112, 154)
+        Me.Button3.Location = New System.Drawing.Point(12, 154)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(92, 60)
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "Volver"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(1, 147)
+        Me.Button4.Location = New System.Drawing.Point(112, 154)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 50)
+        Me.Button4.Size = New System.Drawing.Size(75, 22)
         Me.Button4.TabIndex = 10
         Me.Button4.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(112, 187)
+        Me.Button5.Location = New System.Drawing.Point(112, 183)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(75, 45)
         Me.Button5.TabIndex = 11
-        Me.Button5.Text = "Borrar"
+        Me.Button5.Text = "Modificar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tabla"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'DataGridView1
@@ -136,14 +136,15 @@ Partial Class Stock_de_Productos
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(205, 9)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(591, 221)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(551, 219)
         Me.DataGridView1.TabIndex = 12
         '
         'Stock_de_Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(808, 242)
+        Me.ClientSize = New System.Drawing.Size(758, 230)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
