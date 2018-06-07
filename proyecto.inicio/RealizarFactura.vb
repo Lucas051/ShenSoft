@@ -40,6 +40,13 @@ Public Class RealizarFactura
         DataGridFacturas.Visible = False
         seleccionar.Visible = True
         cancelar.Visible = True
+        'Nombramos los encabezados del datagrid buscar
+        DataGridbuscar.Columns(0).HeaderText = "Código"
+        DataGridbuscar.Columns(1).HeaderText = "Descrip."
+        DataGridbuscar.Columns(2).HeaderText = "Cantidad"
+        DataGridbuscar.Columns(3).HeaderText = "Precio Costo"
+        DataGridbuscar.Columns(4).HeaderText = "Precio Venta"
+        DataGridbuscar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
     Private Sub cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelar.Click

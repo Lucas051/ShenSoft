@@ -337,7 +337,6 @@ Partial Class RealizarFactura
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(919, 413)
-        Me.Controls.Add(Me.cancelar)
         Me.Controls.Add(Me.DataGridbuscar)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.TextBox7)
@@ -370,6 +369,7 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.pagocon)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridFacturas)
+        Me.Controls.Add(Me.cancelar)
         Me.Name = "RealizarFactura"
         Me.Text = "RealizarFactura"
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).EndInit()
