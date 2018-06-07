@@ -39,8 +39,6 @@ Partial Class RealizarFactura
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Vendedor = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.buscarb = New System.Windows.Forms.Button()
-        Me.seleccionar = New System.Windows.Forms.Button()
         Me.agregar = New System.Windows.Forms.Button()
         Me.limpiarv = New System.Windows.Forms.Button()
         Me.cod = New System.Windows.Forms.Label()
@@ -48,12 +46,13 @@ Partial Class RealizarFactura
         Me.cantidad = New System.Windows.Forms.Label()
         Me.preciov = New System.Windows.Forms.Label()
         Me.descuento = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.cancelar = New System.Windows.Forms.Button()
+        Me.codigo = New System.Windows.Forms.TextBox()
+        Me.cant = New System.Windows.Forms.TextBox()
+        Me.descuent = New System.Windows.Forms.TextBox()
+        Me.precioov = New System.Windows.Forms.TextBox()
+        Me.desc = New System.Windows.Forms.TextBox()
+        Me.buscarb = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -197,24 +196,6 @@ Partial Class RealizarFactura
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 16
         '
-        'buscarb
-        '
-        Me.buscarb.Location = New System.Drawing.Point(824, 34)
-        Me.buscarb.Name = "buscarb"
-        Me.buscarb.Size = New System.Drawing.Size(75, 23)
-        Me.buscarb.TabIndex = 18
-        Me.buscarb.Text = "Buscar"
-        Me.buscarb.UseVisualStyleBackColor = True
-        '
-        'seleccionar
-        '
-        Me.seleccionar.Location = New System.Drawing.Point(737, 34)
-        Me.seleccionar.Name = "seleccionar"
-        Me.seleccionar.Size = New System.Drawing.Size(75, 23)
-        Me.seleccionar.TabIndex = 19
-        Me.seleccionar.Text = "Seleccionar"
-        Me.seleccionar.UseVisualStyleBackColor = True
-        '
         'agregar
         '
         Me.agregar.Location = New System.Drawing.Point(114, 273)
@@ -278,60 +259,70 @@ Partial Class RealizarFactura
         Me.descuento.TabIndex = 26
         Me.descuento.Text = "Descuento"
         '
-        'TextBox4
+        'codigo
         '
-        Me.TextBox4.Location = New System.Drawing.Point(89, 97)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 27
+        Me.codigo.Location = New System.Drawing.Point(89, 97)
+        Me.codigo.Name = "codigo"
+        Me.codigo.Size = New System.Drawing.Size(100, 20)
+        Me.codigo.TabIndex = 27
         '
-        'TextBox5
+        'cant
         '
-        Me.TextBox5.Location = New System.Drawing.Point(89, 160)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 28
+        Me.cant.Location = New System.Drawing.Point(89, 160)
+        Me.cant.Name = "cant"
+        Me.cant.Size = New System.Drawing.Size(100, 20)
+        Me.cant.TabIndex = 28
         '
-        'TextBox6
+        'descuent
         '
-        Me.TextBox6.Location = New System.Drawing.Point(89, 192)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 29
+        Me.descuent.Location = New System.Drawing.Point(89, 192)
+        Me.descuent.Name = "descuent"
+        Me.descuent.Size = New System.Drawing.Size(100, 20)
+        Me.descuent.TabIndex = 29
         '
-        'TextBox7
+        'precioov
         '
-        Me.TextBox7.Location = New System.Drawing.Point(89, 224)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 30
+        Me.precioov.Location = New System.Drawing.Point(89, 224)
+        Me.precioov.Name = "precioov"
+        Me.precioov.Size = New System.Drawing.Size(100, 20)
+        Me.precioov.TabIndex = 30
         '
-        'TextBox8
+        'desc
         '
-        Me.TextBox8.Location = New System.Drawing.Point(89, 128)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 31
+        Me.desc.Location = New System.Drawing.Point(89, 128)
+        Me.desc.Name = "desc"
+        Me.desc.Size = New System.Drawing.Size(100, 20)
+        Me.desc.TabIndex = 31
         '
-        'cancelar
+        'buscarb
         '
-        Me.cancelar.Location = New System.Drawing.Point(824, 34)
-        Me.cancelar.Name = "cancelar"
-        Me.cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.cancelar.TabIndex = 33
-        Me.cancelar.Text = "Cancelar"
-        Me.cancelar.UseVisualStyleBackColor = True
+        Me.buscarb.Location = New System.Drawing.Point(824, 34)
+        Me.buscarb.Name = "buscarb"
+        Me.buscarb.Size = New System.Drawing.Size(75, 23)
+        Me.buscarb.TabIndex = 18
+        Me.buscarb.Text = "Buscar"
+        Me.buscarb.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(727, 39)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(91, 13)
+        Me.Label4.TabIndex = 32
+        Me.Label4.Text = "Buscar Productos"
         '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(919, 413)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.desc)
+        Me.Controls.Add(Me.precioov)
+        Me.Controls.Add(Me.descuent)
+        Me.Controls.Add(Me.cant)
+        Me.Controls.Add(Me.codigo)
         Me.Controls.Add(Me.descuento)
         Me.Controls.Add(Me.preciov)
         Me.Controls.Add(Me.cantidad)
@@ -339,7 +330,6 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.limpiarv)
         Me.Controls.Add(Me.agregar)
-        Me.Controls.Add(Me.seleccionar)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Vendedor)
         Me.Controls.Add(Me.TextBox2)
@@ -358,7 +348,6 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridFacturas)
         Me.Controls.Add(Me.buscarb)
-        Me.Controls.Add(Me.cancelar)
         Me.Name = "RealizarFactura"
         Me.Text = "RealizarFactura"
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -378,13 +367,10 @@ Partial Class RealizarFactura
     Friend WithEvents imprimir As System.Windows.Forms.Button
     Friend WithEvents limpiar As System.Windows.Forms.Button
     Friend WithEvents Cliente As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents formadepago As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Vendedor As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents buscarb As System.Windows.Forms.Button
-    Friend WithEvents seleccionar As System.Windows.Forms.Button
     Friend WithEvents agregar As System.Windows.Forms.Button
     Friend WithEvents limpiarv As System.Windows.Forms.Button
     Friend WithEvents cod As System.Windows.Forms.Label
@@ -392,10 +378,12 @@ Partial Class RealizarFactura
     Friend WithEvents cantidad As System.Windows.Forms.Label
     Friend WithEvents preciov As System.Windows.Forms.Label
     Friend WithEvents descuento As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents cancelar As System.Windows.Forms.Button
+    Public WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Public WithEvents codigo As System.Windows.Forms.TextBox
+    Public WithEvents cant As System.Windows.Forms.TextBox
+    Public WithEvents descuent As System.Windows.Forms.TextBox
+    Public WithEvents precioov As System.Windows.Forms.TextBox
+    Public WithEvents desc As System.Windows.Forms.TextBox
+    Friend WithEvents buscarb As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

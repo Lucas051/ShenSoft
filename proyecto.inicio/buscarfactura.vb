@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Form3
+Public Class buscarfactura
 
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -31,5 +31,18 @@ Public Class Form3
     Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles atras.Click
         Me.Hide()
         RealizarFactura.Show()
+    End Sub
+
+    Private Sub DataGridbuscar_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridbuscar.CellClick
+        'Mediante el evento indicamos hacia donde van los valores seleccionados
+        RealizarFactura.codigo.Text = DataGridbuscar.CurrentRow.Cells(0).Value.ToString
+        RealizarFactura.desc.Text = DataGridbuscar.CurrentRow.Cells(1).Value.ToString
+        RealizarFactura.cant.Text = DataGridbuscar.CurrentRow.Cells(2).Value.ToString
+        RealizarFactura.descuent.Text = DataGridbuscar.CurrentRow.Cells(3).Value.ToString
+        RealizarFactura.precioov.Text = DataGridbuscar.CurrentRow.Cells(4).Value.ToString
+        'close para cerrar el form
+        Close()
+        RealizarFactura.Show()
+
     End Sub
 End Class

@@ -19,24 +19,15 @@ Public Class RealizarFactura
 
 
     Private Sub buscarb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buscarb.Click
-        '   buscarb.Visible = False
-        '  DataGridbuscar.Visible = True
-        ' DataGridFacturas.Visible = False
-        'seleccionar.Visible = True
-        'cancelar.Visible = True
         Me.Hide()
-        Form3.Show()
+        buscarfactura.Show()
     End Sub
 
-    Private Sub cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelar.Click
-        buscarb.Visible = True
-        ' DataGridbuscar.Visible = False
-        DataGridFacturas.Visible = True
-        seleccionar.Visible = False
-        cancelar.Visible = False
-    End Sub
-
-    Private Sub DataGridbuscar_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-
+    Private Sub limpiarv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles limpiarv.Click
+        codigo.Text = ""
+        desc.Text = ""
+        cant.Text = ""
+        descuent.Text = ""
+        precioov.Text = ""
     End Sub
 End Class
