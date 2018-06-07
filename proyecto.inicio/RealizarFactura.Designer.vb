@@ -53,10 +53,8 @@ Partial Class RealizarFactura
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.DataGridbuscar = New System.Windows.Forms.DataGridView()
         Me.cancelar = New System.Windows.Forms.Button()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridFacturas
@@ -315,14 +313,6 @@ Partial Class RealizarFactura
         Me.TextBox8.Size = New System.Drawing.Size(100, 20)
         Me.TextBox8.TabIndex = 31
         '
-        'DataGridbuscar
-        '
-        Me.DataGridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridbuscar.Location = New System.Drawing.Point(223, 63)
-        Me.DataGridbuscar.Name = "DataGridbuscar"
-        Me.DataGridbuscar.Size = New System.Drawing.Size(676, 181)
-        Me.DataGridbuscar.TabIndex = 32
-        '
         'cancelar
         '
         Me.cancelar.Location = New System.Drawing.Point(824, 34)
@@ -337,7 +327,6 @@ Partial Class RealizarFactura
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(919, 413)
-        Me.Controls.Add(Me.DataGridbuscar)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
@@ -351,7 +340,6 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.limpiarv)
         Me.Controls.Add(Me.agregar)
         Me.Controls.Add(Me.seleccionar)
-        Me.Controls.Add(Me.buscarb)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Vendedor)
         Me.Controls.Add(Me.TextBox2)
@@ -369,11 +357,11 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.pagocon)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridFacturas)
+        Me.Controls.Add(Me.buscarb)
         Me.Controls.Add(Me.cancelar)
         Me.Name = "RealizarFactura"
         Me.Text = "RealizarFactura"
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -409,6 +397,5 @@ Partial Class RealizarFactura
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridbuscar As System.Windows.Forms.DataGridView
     Friend WithEvents cancelar As System.Windows.Forms.Button
 End Class
