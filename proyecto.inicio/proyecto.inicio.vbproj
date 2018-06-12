@@ -76,6 +76,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes.Designer.vb">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="conexioon.vb" />
     <Compile Include="ConsultaFactura.Designer.vb">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
@@ -137,6 +143,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
     </EmbeddedResource>
