@@ -14,17 +14,19 @@ Public Class Stock_de_Productos
         Dim sql As String
         Dim connect As New MySqlConnection
         Dim comando As MySqlCommand
+
         Try
             connect = conn
             If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
 
                 sql = "INSERT INTO stock (descripcion,precio_costo,precio_v_stock) VALUES ('" + txtdescripcion.Text + "' , '" + txtprecio.Text + "','" + txtpreciostock.Text + "' )"
-                connect.Open()
+                
                 comando = New MySqlCommand(sql, connect)
                 comando.ExecuteNonQuery()
 
                 MessageBox.Show("Datos Guardados Correctamente.")
                 MessageBox.Show("El ID producto se agrega automaticamente jaja salu2.")
+
             Else
                 MessageBox.Show("Se deben rellenar todos los compos.")
             End If
@@ -51,6 +53,7 @@ Public Class Stock_de_Productos
     End Sub
 
     Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
         Dim conexion As New MySqlConnection
         Dim comando As MySqlCommand
         Dim sql As String
@@ -64,7 +67,17 @@ Public Class Stock_de_Productos
         Dim da As New MySqlDataAdapter(comando)
         da.Fill(dt)
         DataGridView1.DataSource = dt
+        'El Clone sirve para clonar la conexion y no tener que volver a escribir "conexion".open a cada rato
         conexion.Clone()
+
+
+        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+        DataGridView1.Columns(0).HeaderText = "Código"
+        DataGridView1.Columns(1).HeaderText = "Descripcion"
+        DataGridView1.Columns(2).HeaderText = "Precio Costo"
+        DataGridView1.Columns(3).HeaderText = "Precio Venta"
+        DataGridView1.Columns(4).HeaderText = "Proveedor"
+        'Proximamente Solo en Cines
     End Sub
 
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

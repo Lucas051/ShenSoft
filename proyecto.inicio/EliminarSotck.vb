@@ -9,7 +9,7 @@ Public Class EliminarSotck
 
         conexion = conn
         sql = "SELECT * FROM stock"
-        
+
         comando = New MySqlCommand(sql, conexion)
         Dim dt As New DataTable
         Dim da As New MySqlDataAdapter(comando)
@@ -24,16 +24,30 @@ Public Class EliminarSotck
 
     End Sub
 
-    Private Sub dgvEliminar_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEliminar.CellContentClick
 
 
 
 
-
+    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
 
     End Sub
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Dim elemento As String
+        Dim sql As String
+        Dim comando As MySqlCommand
+        Try
+            'Intento de eliminar stock v 0.0.1
+        
+        elemento = InputBox("Ingrese el Codigo del Producto", "Codigo del producto")
+            sql = "DELETE FROM stock (cod_producto) VALUES ('" + elemento + "')"
+        comando = New MySqlCommand(sql, conn)
+
+
+            MessageBox.Show("Dato Eliminado Correctamente.")
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
 
     End Sub
 End Class

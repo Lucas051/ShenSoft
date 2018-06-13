@@ -35,8 +35,10 @@ Partial Class EliminarSotck
         Me.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEliminar.Location = New System.Drawing.Point(1, -1)
         Me.dgvEliminar.Name = "dgvEliminar"
+        Me.dgvEliminar.ReadOnly = True
         Me.dgvEliminar.Size = New System.Drawing.Size(552, 287)
         Me.dgvEliminar.TabIndex = 0
+        Me.dgvEliminar.UseWaitCursor = True
         '
         'Label1
         '
