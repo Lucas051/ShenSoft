@@ -11,17 +11,18 @@ Public Class Stock_de_Productos
 
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Dim sql As String
+
+        'Dim sql As String
         Dim connect As New MySqlConnection
         Dim comando As MySqlCommand
 
         Try
-            connect = conn
+            'connect = conn
             If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
 
-                sql = "INSERT INTO stock (descripcion,precio_costo,precio_v_stock) VALUES ('" + txtdescripcion.Text + "' , '" + txtprecio.Text + "','" + txtpreciostock.Text + "' )"
+                Consulta = "INSERT INTO stock (descripcion,precio_costo,precio_v_stock) VALUES ('" + txtdescripcion.Text + "' , '" + txtprecio.Text + "','" + txtpreciostock.Text + "' )"
                 
-                comando = New MySqlCommand(sql, connect)
+                comando = New MySqlCommand(Consulta, connect)
                 comando.ExecuteNonQuery()
 
                 MessageBox.Show("Datos Guardados Correctamente.")
@@ -54,22 +55,9 @@ Public Class Stock_de_Productos
 
     Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
-        Dim conexion As New MySqlConnection
-        Dim comando As MySqlCommand
-        Dim sql As String
-
-        conexion = conn
-        sql = "SELECT * FROM stock"
-        conexion.Open()
-
-        comando = New MySqlCommand(sql, conexion)
-        Dim dt As New DataTable
-        Dim da As New MySqlDataAdapter(comando)
-        da.Fill(dt)
-        DataGridView1.DataSource = dt
-        'El Clone sirve para clonar la conexion y no tener que volver a escribir "conexion".open a cada rato
-        conexion.Clone()
-
+        Consulta = "select * from stock"
+        consultar()
+        DataGridView1.DataSource = resultado
 
         'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
         DataGridView1.Columns(0).HeaderText = "Código"
@@ -81,6 +69,10 @@ Public Class Stock_de_Productos
     End Sub
 
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub txtdescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtdescripcion.TextChanged
 
     End Sub
 End Class

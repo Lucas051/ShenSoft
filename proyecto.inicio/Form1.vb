@@ -17,4 +17,9 @@
         Me.Hide()
         Facturacion.Show()
     End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Me.Hide()
+        Consulta_proveedor.Show()
+    End Sub
 End Class

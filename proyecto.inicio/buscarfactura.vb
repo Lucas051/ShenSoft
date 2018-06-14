@@ -9,7 +9,7 @@ Public Class buscarfactura
         Dim comando As MySqlCommand
         Dim sql As String
 
-        conexion = conn
+        'conexion = conn
         sql = "SELECT * FROM stock"
         conexion.Open()
 
@@ -20,14 +20,12 @@ Public Class buscarfactura
         DataGridbuscar.DataSource = dt
         conexion.Close()
         'Nombramos los encabezados del datagrid buscar
-
+        'Te Arregle una fallita que tenias habias puesto hasta 5 columnas y eran 4 te borre cantidad que eso no tengo yo pasa el sql -Nacho
         DataGridbuscar.Columns(0).HeaderText = "Código"
         DataGridbuscar.Columns(1).HeaderText = "Descrip."
         DataGridbuscar.Columns(2).HeaderText = "Precio Costo"
         DataGridbuscar.Columns(3).HeaderText = "Precio Venta"
         DataGridbuscar.Columns(4).HeaderText = "Proveedor"
-        DataGridbuscar.Columns(4).HeaderText = "Cantidad"
-        DataGridbuscar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
     Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles atras.Click

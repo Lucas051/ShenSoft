@@ -7,9 +7,9 @@ Public Class EliminarSotck
         Dim comando As MySqlCommand
         Dim sql As String
 
-        conexion = conn
+        'conexion = conn
         sql = "SELECT * FROM stock"
-
+        conexion.Open()
         comando = New MySqlCommand(sql, conexion)
         Dim dt As New DataTable
         Dim da As New MySqlDataAdapter(comando)
@@ -35,13 +35,13 @@ Public Class EliminarSotck
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Dim elemento As String
         Dim sql As String
-        Dim comando As MySqlCommand
+        'Dim comando As MySqlCommand
         Try
             'Intento de eliminar stock v 0.0.1
         
         elemento = InputBox("Ingrese el Codigo del Producto", "Codigo del producto")
             sql = "DELETE FROM stock (cod_producto) VALUES ('" + elemento + "')"
-        comando = New MySqlCommand(sql, conn)
+            'comando = New MySqlCommand(sql, conn)
 
 
             MessageBox.Show("Dato Eliminado Correctamente.")

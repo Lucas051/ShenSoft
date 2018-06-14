@@ -11,7 +11,7 @@ Public Class ConsultaFactura
         Dim connect As New MySqlConnection
         Dim comando As MySqlCommand
 
-        connect = conn
+        'connect = conn
         sql = "SELECT * FROM facturas"
         connect.Open()
         comando = New MySqlCommand(sql, connect)

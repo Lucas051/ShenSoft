@@ -1,27 +1,20 @@
 ﻿Imports MySql.Data
 Imports MySql.Data.Types
 Imports MySql.Data.MySqlClient
+Imports System.Data.OleDb
+Imports System.Data
 Module conexioon
-    Public conn As New MySqlConnection("server=localhost; user=root; password=; database=proyecto; port=3306")
+    Dim ubicacion As String = "server=localhost ; user  id=root ; password=;database = proyecto"
+    Public conexion As MySqlDataAdapter
+    Public resultado As DataTable
+    Public Consulta As String
+    Public mysqlconexion As MySqlConnection = New MySqlConnection(ubicacion)
 
-    Public Sub conexion()
-        Try
-            conn.Open()
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
+    Public Sub consultar()
+        conexion = New MySqlDataAdapter(consulta, ubicacion)
+        resultado = New DataTable
+        conexion.Fill(resultado)
+
     End Sub
 
-    Public Function consultar(ByVal sql As String) As DataSet
-        Dim ds As New DataSet
-
-        Try
-            Dim reader As New MySqlDataAdapter(sql, conn)
-            reader.Fill(ds, "Historial")
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
-
-        Return ds
-    End Function
 End Module
