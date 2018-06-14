@@ -3,19 +3,12 @@
 Public Class EliminarSotck
 
    Private Sub EliminarStock_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Dim conexion As MySqlConnection
-        Dim comando As MySqlCommand
-        Dim sql As String
+  
 
-        'conexion = conn
-        sql = "SELECT * FROM stock"
-        conexion.Open()
-        comando = New MySqlCommand(sql, conexion)
-        Dim dt As New DataTable
-        Dim da As New MySqlDataAdapter(comando)
-        da.Fill(dt)
-        dgvEliminar.DataSource = dt
-        conexion.Close()
+        conexioon.Consulta = "SELECT * FROM stock"
+        consultar()
+        dgvEliminar.DataSource = resultado
+
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
