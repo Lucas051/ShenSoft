@@ -7,20 +7,9 @@ Public Class ConsultaFactura
     End Sub
 
     Private Sub ConsultaFactura_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Dim sql As String
-        Dim connect As New MySqlConnection
-        Dim comando As MySqlCommand
-
-        'connect = conn
-        sql = "SELECT * FROM facturas"
-        connect.Open()
-        comando = New MySqlCommand(sql, connect)
-        comando.ExecuteNonQuery()
-
-        Dim dt As New DataTable
-        Dim da As New MySqlDataAdapter(comando)
-        da.Fill(dt)
-        DataGridView1.DataSource = dt
-        connect.Close()
+       
+        conexioon.Consulta = "SELECT * FROM facturas"
+        consultar()
+        datagridconsulta.DataSource = resultado
     End Sub
 End Class

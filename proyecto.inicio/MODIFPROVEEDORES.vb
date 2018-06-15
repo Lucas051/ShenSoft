@@ -7,8 +7,9 @@ Public Class MODIFPROVEEDORES
             'connect = conn
             If (TextBox2.Text <> "" And TextBox3.Text <> "" And TextBox4.Text <> "") Then
 
-                Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p) VALUES ('" + TextBox2.Text + "' , '" + TextBox3.Text + "','" + TextBox4.Text + "' )"
+                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p) VALUES ('" + TextBox2.Text + "' , '" + TextBox3.Text + "','" + TextBox4.Text + "' )"
                 consultar()
+                datafrancoxd.DataSource = resultado
 
                 MessageBox.Show("Datos Guardados.")
 
@@ -45,6 +46,10 @@ Public Class MODIFPROVEEDORES
         datafrancoxd.Columns(1).HeaderText = "Proveedor"
         datafrancoxd.Columns(2).HeaderText = "Teléfono"
         datafrancoxd.Columns(3).HeaderText = "Dirección"
+
+    End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class

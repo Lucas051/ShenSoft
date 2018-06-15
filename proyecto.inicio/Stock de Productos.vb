@@ -12,18 +12,16 @@ Public Class Stock_de_Productos
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
 
-        'Dim sql As String
-        Dim connect As New MySqlConnection
-        Dim comando As MySqlCommand
-
+      
         Try
-            'connect = conn
+
             If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
 
-                Consulta = "INSERT INTO stock (descripcion,precio_costo,precio_v_stock) VALUES ('" + txtdescripcion.Text + "' , '" + txtprecio.Text + "','" + txtpreciostock.Text + "' )"
+                conexioon.Consulta = "INSERT INTO stock (descripcion,precio_costo,precio_v_stock) VALUES ('" + txtdescripcion.Text + "' , '" + txtprecio.Text + "','" + txtpreciostock.Text + "' )"
                 
-                comando = New MySqlCommand(Consulta, connect)
-                comando.ExecuteNonQuery()
+                consultar()
+                DataGridView1.DataSource = resultado
+
 
                 MessageBox.Show("Datos Guardados Correctamente.")
                 MessageBox.Show("El ID producto se agrega automaticamente jaja salu2.")
@@ -55,7 +53,7 @@ Public Class Stock_de_Productos
 
     Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
-        Consulta = "select * from stock"
+        conexioon.Consulta = "SELECT * FROM stock"
         consultar()
         DataGridView1.DataSource = resultado
 
