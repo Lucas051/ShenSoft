@@ -89,6 +89,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexioon.vb" />
+    <Compile Include="ConexiOOOOn.vb" />
     <Compile Include="Consulta proveedor.Designer.vb">
       <DependentUpon>Consulta proveedor.vb</DependentUpon>
     </Compile>

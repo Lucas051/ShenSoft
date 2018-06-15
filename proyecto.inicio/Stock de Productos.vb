@@ -55,16 +55,28 @@ Public Class Stock_de_Productos
 
     Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
-        Consulta = "select * from stock"
-        consultar()
-        DataGridView1.DataSource = resultado
+        Dim conexion As New MySqlConnection
+        Dim comando As MySqlCommand
+        Dim sql As String
+
+        conexion = conn
+        sql = "SELECT * FROM stock"
+        conexion.Open()
+
+        comando = New MySqlCommand(sql, conexion)
+        Dim dt As New DataTable
+        Dim da As New MySqlDataAdapter(comando)
+        da.Fill(dt)
+        DataGridView1.DataSource = dt
+        conexion.Clone()
 
         'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
         DataGridView1.Columns(0).HeaderText = "Código"
         DataGridView1.Columns(1).HeaderText = "Descripcion"
-        DataGridView1.Columns(2).HeaderText = "Precio Costo"
-        DataGridView1.Columns(3).HeaderText = "Precio Venta"
-        DataGridView1.Columns(4).HeaderText = "Proveedor"
+        DataGridView1.Columns(2).HeaderText = "Cantidad"
+        DataGridView1.Columns(3).HeaderText = "Precio Costo"
+        DataGridView1.Columns(4).HeaderText = "Precio Venta"
+        DataGridView1.Columns(5).HeaderText = "Proveedor"
         'Proximamente Solo en Cines
     End Sub
 
