@@ -24,10 +24,10 @@ Public Class Stock_de_Productos
 
 
                 MessageBox.Show("Datos Guardados Correctamente.")
-                MessageBox.Show("El ID producto se agrega automaticamente jaja salu2.")
+                MessageBox.Show("El ID producto se agregará automáticamente.")
 
             Else
-                MessageBox.Show("Se deben rellenar todos los compos.")
+                MessageBox.Show("Se deben rellenar todos los campos.")
             End If
 
         Catch ex As Exception
