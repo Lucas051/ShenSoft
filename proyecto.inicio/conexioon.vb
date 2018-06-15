@@ -13,7 +13,12 @@ Module conexioon
     Public Sub consultar()
         conexion = New MySqlDataAdapter(consulta, ubicacion)
         resultado = New DataTable
+
         conexion.Fill(resultado)
+
+
+
+
 
     End Sub
 

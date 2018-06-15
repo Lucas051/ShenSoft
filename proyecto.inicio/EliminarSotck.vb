@@ -9,6 +9,13 @@ Public Class EliminarSotck
         consultar()
         dgvEliminar.DataSource = resultado
 
+        dgvEliminar.Columns(0).HeaderText = "Código"
+        dgvEliminar.Columns(1).HeaderText = "Descripcion"
+        dgvEliminar.Columns(2).HeaderText = "Cantidad"
+        dgvEliminar.Columns(3).HeaderText = "Precio Costo"
+        dgvEliminar.Columns(4).HeaderText = "Precio Venta""
+        dgvEliminar.Columns(5).HeaderText = "Proveedor"
+
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
@@ -21,28 +28,30 @@ Public Class EliminarSotck
 
 
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs)
 
     End Sub
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
-        Dim elemento As String
+        'Intento de eliminar stock v 0.0.1
+        conexioon.Consulta = "DELETE FROM stock where cod_producto = (cod_producto) VALUES ('" + Val(txtcodigo.Text) + "')"
+        consultar()
+        dgvEliminar.DataSource = resultado
+        'comando = New MySqlCommand(sql, conn)
+
+
+        MessageBox.Show("Dato Eliminado Correctamente.")
      
-        Try
-            'Intento de eliminar stock v 0.0.1
-        
-        elemento = InputBox("Ingrese el Codigo del Producto", "Codigo del producto")
-            conexioon.Consulta = "DELETE FROM stock (cod_producto) VALUES ('" + elemento + "')"
-            consultar()
-            dgvEliminar.DataSource = resultado
-            'comando = New MySqlCommand(sql, conn)
+        conexioon.Consulta = "SELECT * FROM stock"
+        consultar()
+        dgvEliminar.DataSource = resultado
 
-
-            MessageBox.Show("Dato Eliminado Correctamente.")
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString)
-        End Try
-
+        dgvEliminar.Columns(0).HeaderText = "Código"
+        dgvEliminar.Columns(1).HeaderText = "Descripcion"
+        dgvEliminar.Columns(2).HeaderText = "Cantidad"
+        dgvEliminar.Columns(3).HeaderText = "Precio Costo"
+        dgvEliminar.Columns(4).HeaderText = "Precio Venta"""
+        dgvEliminar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
     Private Sub dgvEliminar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEliminar.CellContentClick

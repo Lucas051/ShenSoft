@@ -17,7 +17,7 @@ Public Class Stock_de_Productos
 
             If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
 
-                conexioon.Consulta = "INSERT INTO stock (descripcion,cantidad,precio_costo,precio_v_stock) VALUES ('" + txtdescripcion.Text + "' , '" + txtcantidad.Text + "','" + txtprecio.Text + "','" + txtpreciostock.Text + "' )"
+                conexioon.Consulta = "INSERT INTO stock (descripcion,cantidad,precio_costo,precio_v_stock,num_prov) VALUES ('" + txtdescripcion.Text + "' , '" + txtcantidad.Text + "','" + txtprecio.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "' )"
 
                 consultar()
                 DataGridView1.DataSource = resultado

@@ -26,7 +26,7 @@ Partial Class EliminarSotck
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
         CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,7 +51,7 @@ Partial Class EliminarSotck
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(607, 201)
+        Me.Button1.Location = New System.Drawing.Point(607, 230)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 56)
         Me.Button1.TabIndex = 2
@@ -60,28 +60,26 @@ Partial Class EliminarSotck
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(607, 135)
+        Me.Button2.Location = New System.Drawing.Point(607, 146)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 60)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Borrar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'txtcodigo
         '
-        Me.Button3.Location = New System.Drawing.Point(607, 69)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 60)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Actualizar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.txtcodigo.Location = New System.Drawing.Point(598, 76)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtcodigo.TabIndex = 5
         '
         'EliminarSotck
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(726, 286)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.txtcodigo)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
@@ -97,5 +95,5 @@ Partial Class EliminarSotck
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
 End Class

@@ -4,7 +4,7 @@ Public Class buscarfactura
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
 
-        
+
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()
         DataGridbuscar.DataSource = resultado
