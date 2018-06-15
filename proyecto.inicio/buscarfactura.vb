@@ -28,7 +28,6 @@ Public Class buscarfactura
         'Mediante el evento indicamos hacia donde van los valores seleccionados
         RealizarFactura.codigo.Text = DataGridbuscar.CurrentRow.Cells(0).Value.ToString
         RealizarFactura.desc.Text = DataGridbuscar.CurrentRow.Cells(1).Value.ToString
-        RealizarFactura.cant.Text = DataGridbuscar.CurrentRow.Cells(2).Value.ToString
         RealizarFactura.precioov.Text = DataGridbuscar.CurrentRow.Cells(4).Value.ToString
         'close para cerrar el form
         Close()
