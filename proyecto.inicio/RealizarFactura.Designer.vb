@@ -59,6 +59,7 @@ Partial Class RealizarFactura
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.borrar = New System.Windows.Forms.Button()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -349,11 +350,21 @@ Partial Class RealizarFactura
         Me.Column6.HeaderText = "Precio Total"
         Me.Column6.Name = "Column6"
         '
+        'borrar
+        '
+        Me.borrar.Location = New System.Drawing.Point(223, 34)
+        Me.borrar.Name = "borrar"
+        Me.borrar.Size = New System.Drawing.Size(75, 23)
+        Me.borrar.TabIndex = 33
+        Me.borrar.Text = "Borrar"
+        Me.borrar.UseVisualStyleBackColor = True
+        '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(919, 413)
+        Me.Controls.Add(Me.borrar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.desc)
         Me.Controls.Add(Me.precioov)
@@ -429,4 +440,5 @@ Partial Class RealizarFactura
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents borrar As System.Windows.Forms.Button
 End Class
