@@ -7,7 +7,7 @@ Public Class RealizarFactura
        
     End Sub
 
-    Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles atras.Click
+    Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         Facturacion.Show()
     End Sub
@@ -44,5 +44,11 @@ Public Class RealizarFactura
 
         'Agrega valores de textbox a datagrid
         DataGridFacturas.Rows.Add(codigo.Text, desc.Text, cantidadp, descuent.Text, precioov.Text, valorTotal)
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Hide()
+        Cobrar.Show()
+
     End Sub
 End Class

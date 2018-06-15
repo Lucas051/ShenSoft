@@ -34,11 +34,12 @@ Public Class EliminarSotck
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         'Intento de eliminar stock v 0.0.1
-        conexioon.Consulta = "DELETE FROM stock where cod_producto = (cod_producto) VALUES ('" + Val(txtcodigo.Text) + "')"
+
+        conexioon.Consulta = "DELETE FROM `stock` WHERE `stock`.`cod_producto` ='" + Str(txtcodigo.Text) + "'"
         consultar()
         dgvEliminar.DataSource = resultado
         'comando = New MySqlCommand(sql, conn)
-
+        '
 
         MessageBox.Show("Dato Eliminado Correctamente.")
      

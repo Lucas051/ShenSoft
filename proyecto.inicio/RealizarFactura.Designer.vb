@@ -23,22 +23,6 @@ Partial Class RealizarFactura
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridFacturas = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.pagocon = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.devolver = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.total = New System.Windows.Forms.TextBox()
-        Me.atras = New System.Windows.Forms.Button()
-        Me.cobrar = New System.Windows.Forms.Button()
-        Me.imprimir = New System.Windows.Forms.Button()
-        Me.limpiar = New System.Windows.Forms.Button()
-        Me.Cliente = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.formadepago = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Vendedor = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.agregar = New System.Windows.Forms.Button()
         Me.limpiarv = New System.Windows.Forms.Button()
         Me.cod = New System.Windows.Forms.Label()
@@ -53,13 +37,15 @@ Partial Class RealizarFactura
         Me.desc = New System.Windows.Forms.TextBox()
         Me.buscarb = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.borrar = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.borrar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.atras = New System.Windows.Forms.Button()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,152 +58,20 @@ Partial Class RealizarFactura
         Me.DataGridFacturas.Size = New System.Drawing.Size(676, 192)
         Me.DataGridFacturas.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(277, 282)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Pagó con"
-        '
-        'pagocon
-        '
-        Me.pagocon.Location = New System.Drawing.Point(346, 279)
-        Me.pagocon.Name = "pagocon"
-        Me.pagocon.Size = New System.Drawing.Size(100, 20)
-        Me.pagocon.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(277, 331)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Devolver"
-        '
-        'devolver
-        '
-        Me.devolver.Location = New System.Drawing.Point(346, 328)
-        Me.devolver.Name = "devolver"
-        Me.devolver.Size = New System.Drawing.Size(100, 20)
-        Me.devolver.TabIndex = 4
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(685, 306)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Total a pagar"
-        '
-        'total
-        '
-        Me.total.Location = New System.Drawing.Point(764, 303)
-        Me.total.Name = "total"
-        Me.total.Size = New System.Drawing.Size(100, 20)
-        Me.total.TabIndex = 6
-        '
-        'atras
-        '
-        Me.atras.Location = New System.Drawing.Point(824, 377)
-        Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(75, 23)
-        Me.atras.TabIndex = 7
-        Me.atras.Text = "Atras"
-        Me.atras.UseVisualStyleBackColor = True
-        '
-        'cobrar
-        '
-        Me.cobrar.Location = New System.Drawing.Point(280, 377)
-        Me.cobrar.Name = "cobrar"
-        Me.cobrar.Size = New System.Drawing.Size(96, 23)
-        Me.cobrar.TabIndex = 8
-        Me.cobrar.Text = "Cobrar Monto"
-        Me.cobrar.UseVisualStyleBackColor = True
-        '
-        'imprimir
-        '
-        Me.imprimir.Location = New System.Drawing.Point(392, 377)
-        Me.imprimir.Name = "imprimir"
-        Me.imprimir.Size = New System.Drawing.Size(75, 23)
-        Me.imprimir.TabIndex = 9
-        Me.imprimir.Text = "Imprimir"
-        Me.imprimir.UseVisualStyleBackColor = True
-        '
-        'limpiar
-        '
-        Me.limpiar.Location = New System.Drawing.Point(483, 377)
-        Me.limpiar.Name = "limpiar"
-        Me.limpiar.Size = New System.Drawing.Size(100, 23)
-        Me.limpiar.TabIndex = 10
-        Me.limpiar.Text = "Limpiar Campos"
-        Me.limpiar.UseVisualStyleBackColor = True
-        '
-        'Cliente
-        '
-        Me.Cliente.AutoSize = True
-        Me.Cliente.Location = New System.Drawing.Point(35, 66)
-        Me.Cliente.Name = "Cliente"
-        Me.Cliente.Size = New System.Drawing.Size(39, 13)
-        Me.Cliente.TabIndex = 11
-        Me.Cliente.Text = "Cliente"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(89, 63)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 12
-        '
-        'formadepago
-        '
-        Me.formadepago.AutoSize = True
-        Me.formadepago.Location = New System.Drawing.Point(465, 282)
-        Me.formadepago.Name = "formadepago"
-        Me.formadepago.Size = New System.Drawing.Size(78, 13)
-        Me.formadepago.TabIndex = 13
-        Me.formadepago.Text = "Forma de pago"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(549, 279)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 14
-        '
-        'Vendedor
-        '
-        Me.Vendedor.AutoSize = True
-        Me.Vendedor.Location = New System.Drawing.Point(465, 331)
-        Me.Vendedor.Name = "Vendedor"
-        Me.Vendedor.Size = New System.Drawing.Size(53, 13)
-        Me.Vendedor.TabIndex = 15
-        Me.Vendedor.Text = "Vendedor"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(549, 328)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 16
-        '
         'agregar
         '
-        Me.agregar.Location = New System.Drawing.Point(114, 273)
+        Me.agregar.Location = New System.Drawing.Point(114, 229)
         Me.agregar.Name = "agregar"
-        Me.agregar.Size = New System.Drawing.Size(75, 23)
+        Me.agregar.Size = New System.Drawing.Size(75, 26)
         Me.agregar.TabIndex = 20
         Me.agregar.Text = "Agregar"
         Me.agregar.UseVisualStyleBackColor = True
         '
         'limpiarv
         '
-        Me.limpiarv.Location = New System.Drawing.Point(28, 273)
+        Me.limpiarv.Location = New System.Drawing.Point(28, 229)
         Me.limpiarv.Name = "limpiarv"
-        Me.limpiarv.Size = New System.Drawing.Size(75, 23)
+        Me.limpiarv.Size = New System.Drawing.Size(75, 26)
         Me.limpiarv.TabIndex = 21
         Me.limpiarv.Text = "Limpiar"
         Me.limpiarv.UseVisualStyleBackColor = True
@@ -225,7 +79,7 @@ Partial Class RealizarFactura
         'cod
         '
         Me.cod.AutoSize = True
-        Me.cod.Location = New System.Drawing.Point(34, 100)
+        Me.cod.Location = New System.Drawing.Point(34, 66)
         Me.cod.Name = "cod"
         Me.cod.Size = New System.Drawing.Size(40, 13)
         Me.cod.TabIndex = 22
@@ -234,7 +88,7 @@ Partial Class RealizarFactura
         'descripcion
         '
         Me.descripcion.AutoSize = True
-        Me.descripcion.Location = New System.Drawing.Point(11, 131)
+        Me.descripcion.Location = New System.Drawing.Point(11, 97)
         Me.descripcion.Name = "descripcion"
         Me.descripcion.Size = New System.Drawing.Size(63, 13)
         Me.descripcion.TabIndex = 23
@@ -243,7 +97,7 @@ Partial Class RealizarFactura
         'cantidad
         '
         Me.cantidad.AutoSize = True
-        Me.cantidad.Location = New System.Drawing.Point(25, 163)
+        Me.cantidad.Location = New System.Drawing.Point(25, 129)
         Me.cantidad.Name = "cantidad"
         Me.cantidad.Size = New System.Drawing.Size(49, 13)
         Me.cantidad.TabIndex = 24
@@ -252,7 +106,7 @@ Partial Class RealizarFactura
         'preciov
         '
         Me.preciov.AutoSize = True
-        Me.preciov.Location = New System.Drawing.Point(6, 227)
+        Me.preciov.Location = New System.Drawing.Point(6, 193)
         Me.preciov.Name = "preciov"
         Me.preciov.Size = New System.Drawing.Size(68, 13)
         Me.preciov.TabIndex = 25
@@ -261,7 +115,7 @@ Partial Class RealizarFactura
         'descuento
         '
         Me.descuento.AutoSize = True
-        Me.descuento.Location = New System.Drawing.Point(15, 195)
+        Me.descuento.Location = New System.Drawing.Point(15, 161)
         Me.descuento.Name = "descuento"
         Me.descuento.Size = New System.Drawing.Size(59, 13)
         Me.descuento.TabIndex = 26
@@ -269,35 +123,35 @@ Partial Class RealizarFactura
         '
         'codigo
         '
-        Me.codigo.Location = New System.Drawing.Point(89, 97)
+        Me.codigo.Location = New System.Drawing.Point(89, 63)
         Me.codigo.Name = "codigo"
         Me.codigo.Size = New System.Drawing.Size(100, 20)
         Me.codigo.TabIndex = 27
         '
         'cant
         '
-        Me.cant.Location = New System.Drawing.Point(89, 160)
+        Me.cant.Location = New System.Drawing.Point(89, 126)
         Me.cant.Name = "cant"
         Me.cant.Size = New System.Drawing.Size(100, 20)
         Me.cant.TabIndex = 28
         '
         'descuent
         '
-        Me.descuent.Location = New System.Drawing.Point(89, 192)
+        Me.descuent.Location = New System.Drawing.Point(89, 158)
         Me.descuent.Name = "descuent"
         Me.descuent.Size = New System.Drawing.Size(100, 20)
         Me.descuent.TabIndex = 29
         '
         'precioov
         '
-        Me.precioov.Location = New System.Drawing.Point(89, 224)
+        Me.precioov.Location = New System.Drawing.Point(89, 190)
         Me.precioov.Name = "precioov"
         Me.precioov.Size = New System.Drawing.Size(100, 20)
         Me.precioov.TabIndex = 30
         '
         'desc
         '
-        Me.desc.Location = New System.Drawing.Point(89, 128)
+        Me.desc.Location = New System.Drawing.Point(89, 94)
         Me.desc.Name = "desc"
         Me.desc.Size = New System.Drawing.Size(100, 20)
         Me.desc.TabIndex = 31
@@ -320,6 +174,15 @@ Partial Class RealizarFactura
         Me.Label4.TabIndex = 32
         Me.Label4.Text = "Buscar Productos"
         '
+        'borrar
+        '
+        Me.borrar.Location = New System.Drawing.Point(361, 260)
+        Me.borrar.Name = "borrar"
+        Me.borrar.Size = New System.Drawing.Size(83, 36)
+        Me.borrar.TabIndex = 33
+        Me.borrar.Text = "Borrar Linea "
+        Me.borrar.UseVisualStyleBackColor = True
+        '
         'Column1
         '
         Me.Column1.HeaderText = "Código"
@@ -337,7 +200,7 @@ Partial Class RealizarFactura
         '
         'Column4
         '
-        Me.Column4.HeaderText = "Descuento"
+        Me.Column4.HeaderText = "Descuento (%)"
         Me.Column4.Name = "Column4"
         '
         'Column5
@@ -350,20 +213,31 @@ Partial Class RealizarFactura
         Me.Column6.HeaderText = "Precio Total"
         Me.Column6.Name = "Column6"
         '
-        'borrar
+        'Button1
         '
-        Me.borrar.Location = New System.Drawing.Point(223, 34)
-        Me.borrar.Name = "borrar"
-        Me.borrar.Size = New System.Drawing.Size(75, 23)
-        Me.borrar.TabIndex = 33
-        Me.borrar.Text = "Borrar"
-        Me.borrar.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(223, 260)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 36)
+        Me.Button1.TabIndex = 34
+        Me.Button1.Text = "Guardar e Imprimir"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'atras
+        '
+        Me.atras.Location = New System.Drawing.Point(824, 276)
+        Me.atras.Name = "atras"
+        Me.atras.Size = New System.Drawing.Size(75, 23)
+        Me.atras.TabIndex = 35
+        Me.atras.Text = "Atras"
+        Me.atras.UseVisualStyleBackColor = True
         '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(919, 413)
+        Me.ClientSize = New System.Drawing.Size(919, 318)
+        Me.Controls.Add(Me.atras)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.borrar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.desc)
@@ -378,22 +252,6 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.limpiarv)
         Me.Controls.Add(Me.agregar)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Vendedor)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.formadepago)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Cliente)
-        Me.Controls.Add(Me.limpiar)
-        Me.Controls.Add(Me.imprimir)
-        Me.Controls.Add(Me.cobrar)
-        Me.Controls.Add(Me.atras)
-        Me.Controls.Add(Me.total)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.devolver)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.pagocon)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridFacturas)
         Me.Controls.Add(Me.buscarb)
         Me.Name = "RealizarFactura"
@@ -404,21 +262,6 @@ Partial Class RealizarFactura
 
     End Sub
     Friend WithEvents DataGridFacturas As System.Windows.Forms.DataGridView
-    Private WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents pagocon As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents devolver As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents total As System.Windows.Forms.TextBox
-    Friend WithEvents atras As System.Windows.Forms.Button
-    Friend WithEvents cobrar As System.Windows.Forms.Button
-    Friend WithEvents imprimir As System.Windows.Forms.Button
-    Friend WithEvents limpiar As System.Windows.Forms.Button
-    Friend WithEvents Cliente As System.Windows.Forms.Label
-    Friend WithEvents formadepago As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Vendedor As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents agregar As System.Windows.Forms.Button
     Friend WithEvents limpiarv As System.Windows.Forms.Button
     Friend WithEvents cod As System.Windows.Forms.Label
@@ -426,7 +269,6 @@ Partial Class RealizarFactura
     Friend WithEvents cantidad As System.Windows.Forms.Label
     Friend WithEvents preciov As System.Windows.Forms.Label
     Friend WithEvents descuento As System.Windows.Forms.Label
-    Public WithEvents TextBox1 As System.Windows.Forms.TextBox
     Public WithEvents codigo As System.Windows.Forms.TextBox
     Public WithEvents cant As System.Windows.Forms.TextBox
     Public WithEvents descuent As System.Windows.Forms.TextBox
@@ -434,11 +276,13 @@ Partial Class RealizarFactura
     Public WithEvents desc As System.Windows.Forms.TextBox
     Friend WithEvents buscarb As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents borrar As System.Windows.Forms.Button
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents borrar As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents atras As System.Windows.Forms.Button
 End Class

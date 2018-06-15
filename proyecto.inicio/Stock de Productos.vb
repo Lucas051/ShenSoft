@@ -16,8 +16,9 @@ Public Class Stock_de_Productos
         Try
 
             If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
-
-                conexioon.Consulta = "INSERT INTO stock (descripcion,cantidad,precio_costo,precio_v_stock,num_prov) VALUES ('" + txtdescripcion.Text + "' , '" + txtcantidad.Text + "','" + txtprecio.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "' )"
+                'nacho puse nombre_prov en vez de num aca porque es mas facil reconocerlo por el nombre
+                'aca hay que hacer un join para conectar la foranea de nombre_prov de proveedores con stock en el mismo insert, hay sintaxis en internet
+                conexioon.Consulta = "INSERT INTO `stock` (`descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `num_prov`) VALUES ('" + txtdescripcion.Text + "','" + txtcantidad.Text + "','" + txtprecio.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "');"
 
                 consultar()
                 DataGridView1.DataSource = resultado
