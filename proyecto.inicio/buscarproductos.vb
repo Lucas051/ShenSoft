@@ -1,9 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class buscarfactura
+Public Class buscarproductos
 
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
 
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()

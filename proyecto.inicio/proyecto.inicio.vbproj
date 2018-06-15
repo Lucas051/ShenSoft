@@ -82,6 +82,12 @@
     <Compile Include="Buscar proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BuscarClientesFact.Designer.vb">
+      <DependentUpon>BuscarClientesFact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarClientesFact.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Clientes.Designer.vb">
       <DependentUpon>Clientes.vb</DependentUpon>
     </Compile>
@@ -126,10 +132,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="buscarfactura.Designer.vb">
-      <DependentUpon>buscarfactura.vb</DependentUpon>
+    <Compile Include="buscarproductos.Designer.vb">
+      <DependentUpon>buscarproductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="buscarfactura.vb">
+    <Compile Include="buscarproductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODIFPROVEEDORES.Designer.vb">
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="Buscar proveedores.resx">
       <DependentUpon>Buscar proveedores.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuscarClientesFact.resx">
+      <DependentUpon>BuscarClientesFact.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -191,8 +200,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="buscarfactura.resx">
-      <DependentUpon>buscarfactura.vb</DependentUpon>
+    <EmbeddedResource Include="buscarproductos.resx">
+      <DependentUpon>buscarproductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFPROVEEDORES.resx">
       <DependentUpon>MODIFPROVEEDORES.vb</DependentUpon>

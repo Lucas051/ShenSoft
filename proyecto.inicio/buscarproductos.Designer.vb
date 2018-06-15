@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class buscarfactura
+Partial Class buscarproductos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -44,15 +44,15 @@ Partial Class buscarfactura
         Me.atras.Text = "Volver"
         Me.atras.UseVisualStyleBackColor = True
         '
-        'buscarfactura
+        'buscarproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(666, 293)
         Me.Controls.Add(Me.atras)
         Me.Controls.Add(Me.DataGridbuscar)
-        Me.Name = "buscarfactura"
-        Me.Text = "Form3"
+        Me.Name = "buscarproductos"
+        Me.Text = "Buscar Productos"
         CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

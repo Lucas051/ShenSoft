@@ -22,7 +22,7 @@ Public Class RealizarFactura
 
     Private Sub buscarb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buscarb.Click
         Me.Hide()
-        buscarfactura.Show()
+        buscarproductos.Show()
     End Sub
 
     Private Sub limpiarv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles limpiarv.Click
