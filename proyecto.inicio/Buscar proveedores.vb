@@ -41,6 +41,7 @@ Public Class Buscar_proveedores
         ' consulta = "SELECT * FROM proveedores WHERE num_prov= '" & TextBox1.Text & "'"
         'conexion = New MySqlDataAdapter(consulta, ubicacion)
         'resultado = DataTable
+<<<<<<< HEAD
 
 
         'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
