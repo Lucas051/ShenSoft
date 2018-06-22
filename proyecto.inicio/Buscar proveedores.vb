@@ -41,20 +41,16 @@ Public Class Buscar_proveedores
         ' consulta = "SELECT * FROM proveedores WHERE num_prov= '" & TextBox1.Text & "'"
         'conexion = New MySqlDataAdapter(consulta, ubicacion)
         'resultado = DataTable
-<<<<<<< HEAD
 
 
         'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     End Sub
 
 
+    'intento visualizar datos en dgv. este anda cuando quiere xd
+
     Private Sub Buscar_proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-  
-
-    End Sub
-
-    Private Sub dgvfran_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvfran.CellContentClick
         conexioon.Consulta = "SELECT * FROM proveedores;"
         consultar()
         dgvfran.DataSource = resultado
@@ -64,5 +60,6 @@ Public Class Buscar_proveedores
         dgvfran.Columns(2).HeaderText = "Teléfono"
         dgvfran.Columns(3).HeaderText = "Dirección"
         dgvfran.Columns(4).HeaderText = "Saldo"
+
     End Sub
 End Class

@@ -138,6 +138,12 @@
     <Compile Include="buscarproductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InicioSesion.Designer.vb">
+      <DependentUpon>InicioSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MODIFPROVEEDORES.Designer.vb">
       <DependentUpon>MODIFPROVEEDORES.vb</DependentUpon>
     </Compile>
@@ -203,6 +209,9 @@
     <EmbeddedResource Include="buscarproductos.resx">
       <DependentUpon>buscarproductos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InicioSesion.resx">
+      <DependentUpon>InicioSesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MODIFPROVEEDORES.resx">
       <DependentUpon>MODIFPROVEEDORES.vb</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +247,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoencamino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackLogin.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
