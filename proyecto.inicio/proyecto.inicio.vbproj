@@ -125,11 +125,11 @@
     <Compile Include="Facturacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="buscarproductos.Designer.vb">
@@ -197,8 +197,8 @@
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buscarproductos.resx">
       <DependentUpon>buscarproductos.vb</DependentUpon>

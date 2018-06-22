@@ -12,6 +12,6 @@
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
         Me.Hide()
-        Form1.Show()
+        Inicio.Show()
     End Sub
 End Class

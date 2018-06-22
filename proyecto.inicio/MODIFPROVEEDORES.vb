@@ -4,10 +4,10 @@ Public Class MODIFPROVEEDORES
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles añadir.Click
 
         Try
-            'connect = conn
+
             If (TextBox2.Text <> "" And TextBox3.Text <> "" And TextBox4.Text <> "") Then
 
-                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p) VALUES ('" + TextBox2.Text + "' , '" + TextBox3.Text + "','" + TextBox4.Text + "' )"
+                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + TextBox2.Text + "' , '" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox1.Text + "' )"
                 consultar()
                 datafrancoxd.DataSource = resultado
 
@@ -38,7 +38,7 @@ Public Class MODIFPROVEEDORES
 
     Private Sub MODIFPROVEEDORES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        conexioon.Consulta = "SELECT * FROM proveedores;" 'saben porque me da error?
+        conexioon.Consulta = "SELECT * FROM proveedores;"
         consultar()
         datafrancoxd.DataSource = resultado
 

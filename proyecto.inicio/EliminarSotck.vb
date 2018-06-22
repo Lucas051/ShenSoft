@@ -38,8 +38,8 @@ Public Class EliminarSotck
         conexioon.Consulta = "DELETE FROM `stock` WHERE `stock`.`cod_producto` ='" + Str(txtcodigo.Text) + "'"
         consultar()
         dgvEliminar.DataSource = resultado
-        'comando = New MySqlCommand(sql, conn)
-        '
+
+
 
         MessageBox.Show("Dato Eliminado Correctamente.")
      
