@@ -22,4 +22,50 @@
         Me.Hide()
         Consulta_proveedor.Show()
     End Sub
+    'De aqui hacia abajo se usa mouse hover para agrandar el icono cuando se pasa el mouse por arriba y vuelve al estado anterior con leave
+    '_________________________________________________________________________________________________________________
+    Private Sub Panel2_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel2.MouseHover
+        Panel2.Size = New Size(98, 64)
+
+    End Sub
+
+    Private Sub Panel2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel2.MouseLeave
+        Panel2.Size = New Size(95, 61)
+    End Sub
+    '_________________________________________________________________________________________________________________
+    Private Sub Panel3_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel3.MouseHover
+        Panel3.Size = New Size(68, 65)
+    End Sub
+
+    Private Sub Panel3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel3.MouseLeave
+        Panel3.Size = New Size(65, 61)
+    End Sub
+    '_________________________________________________________________________________________________________________
+
+    Private Sub Panel4_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel4.MouseHover
+        Panel4.Size = New Size(76, 73)
+    End Sub
+
+    Private Sub Panel4_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel4.MouseLeave
+        Panel4.Size = New Size(73, 70)
+    End Sub
+    '_________________________________________________________________________________________________________________
+
+    Private Sub Panel5_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel5.MouseHover
+        Panel5.Size = New Size(76, 73)
+    End Sub
+
+    Private Sub Panel5_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel5.MouseLeave
+        Panel5.Size = New Size(73, 70)
+    End Sub
+    '_________________________________________________________________________________________________________________
+
+    Private Sub Panel6_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel6.MouseHover
+        Panel6.Size = New Size(65, 57)
+    End Sub
+
+    Private Sub Panel6_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel6.MouseLeave
+        Panel6.Size = New Size(62, 54)
+    End Sub
+    '_________________________________________________________________________________________________________________
 End Class
