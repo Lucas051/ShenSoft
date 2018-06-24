@@ -17,12 +17,25 @@
         End
     End Sub
 
+
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
+        TextBox2.UseSystemPasswordChar = True
+    End Sub
+
+    Private Sub InicioSesion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
         'muestra contraseña --nose porque no se esconde xd
-        If CheckBox1.Checked = True Then
+        If CheckBox1.Checked Then
+
             TextBox2.UseSystemPasswordChar = False
+
         Else
+
             TextBox2.UseSystemPasswordChar = True
+
         End If
     End Sub
 End Class

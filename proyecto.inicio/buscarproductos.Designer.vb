@@ -24,6 +24,7 @@ Partial Class buscarproductos
     Private Sub InitializeComponent()
         Me.DataGridbuscar = New System.Windows.Forms.DataGridView()
         Me.atras = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,19 +45,30 @@ Partial Class buscarproductos
         Me.atras.Text = "Volver"
         Me.atras.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(188, 288)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 35
+        Me.TextBox1.UseSystemPasswordChar = True
+        '
         'buscarproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(666, 293)
+        Me.ClientSize = New System.Drawing.Size(679, 335)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.atras)
         Me.Controls.Add(Me.DataGridbuscar)
         Me.Name = "buscarproductos"
         Me.Text = "Buscar Productos"
         CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridbuscar As System.Windows.Forms.DataGridView
     Friend WithEvents atras As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

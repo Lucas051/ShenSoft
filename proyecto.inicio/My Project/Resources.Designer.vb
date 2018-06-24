@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property BakLog() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BakLog", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property logoencamino() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("logoencamino", resourceCulture)
@@ -96,6 +106,26 @@ Namespace My.Resources
         Friend ReadOnly Property logoencamino1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("logoencamino1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property wall() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("wall", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Wallsesion() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Wallsesion", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

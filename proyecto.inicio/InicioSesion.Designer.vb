@@ -51,34 +51,32 @@ Partial Class InicioSesion
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.MenuText
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("XXII DONT-MESS-WITH-VIKINGS", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.Info
-        Me.TextBox1.Location = New System.Drawing.Point(218, 239)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(127, 240)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 28)
+        Me.TextBox1.Size = New System.Drawing.Size(266, 27)
         Me.TextBox1.TabIndex = 2
         '
         'TextBox2
         '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.MenuText
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("XXII DONT-MESS-WITH-VIKINGS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.SystemColors.Info
-        Me.TextBox2.Location = New System.Drawing.Point(135, 312)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(127, 312)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(259, 28)
+        Me.TextBox2.Size = New System.Drawing.Size(266, 25)
         Me.TextBox2.TabIndex = 3
+        Me.TextBox2.UseSystemPasswordChar = True
         '
         'CheckBox1
         '
+        Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox1.Location = New System.Drawing.Point(120, 358)
+        Me.CheckBox1.Location = New System.Drawing.Point(107, 368)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(19, 33)
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 4
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
@@ -86,7 +84,7 @@ Partial Class InicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.proyecto.inicio.My.Resources.Resources.BackLog_jpg
+        Me.BackgroundImage = Global.proyecto.inicio.My.Resources.Resources.BakLog
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(497, 549)
         Me.Controls.Add(Me.CheckBox1)
