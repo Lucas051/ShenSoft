@@ -118,26 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BackLog,jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackLog,jpg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logoencamino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoencamino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="facturacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\facturacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BakLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BakLog.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logoencamino1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoencamino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="proveedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\proveedores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logoencamino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoencamino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wallsesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wallsesion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,10 +148,13 @@
   <data name="BackLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="facturacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\facturacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logoencamino1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoencamino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

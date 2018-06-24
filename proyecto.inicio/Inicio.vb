@@ -1,6 +1,6 @@
 ﻿Public Class Inicio
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         Stock_de_Productos.Show()
 
@@ -8,17 +8,17 @@
 
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         End
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         Facturacion.Show()
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         Consulta_proveedor.Show()
     End Sub
@@ -68,4 +68,39 @@
         Panel6.Size = New Size(62, 54)
     End Sub
     '_________________________________________________________________________________________________________________
+
+    'dirigimos los botones
+    Private Sub Panel2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel2.Click
+        Me.Hide()
+        Facturacion.Show()
+    End Sub
+
+    Private Sub Panel3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel3.Click
+        Me.Hide()
+        Stock_de_Productos.Show()
+
+    End Sub
+
+    Private Sub Panel4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel4.Click
+        Me.Hide()
+        Consulta_proveedor.Show()
+    End Sub
+
+    Private Sub Panel5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel5.Click
+        Me.Hide()
+        Clientes.Show()
+
+    End Sub
+
+    Private Sub Panel6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel6.Click
+        End
+    End Sub
+    'Mostramos fecha y hora
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        hora.Text = TimeOfDay.TimeOfDay.ToString
+        fecha.Text = DateString
+    End Sub
+
+  
+ 
 End Class

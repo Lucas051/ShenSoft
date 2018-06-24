@@ -22,12 +22,8 @@ Partial Class Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -35,62 +31,24 @@ Partial Class Inicio
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.fecha = New System.Windows.Forms.Label()
+        Me.hora = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(213, 173)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(186, 28)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Facturación"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(213, 207)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(186, 27)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Clientes"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(213, 240)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(186, 27)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Proveedores"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(213, 273)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(186, 28)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Stock Productos"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(213, 322)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(186, 27)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Salir del Sistema"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
-        Me.PictureBox1.Location = New System.Drawing.Point(121, -59)
+        Me.PictureBox1.Location = New System.Drawing.Point(159, -51)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(401, 245)
+        Me.PictureBox1.Size = New System.Drawing.Size(466, 291)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -159,18 +117,61 @@ Partial Class Inicio
         Me.Panel2.Size = New System.Drawing.Size(95, 61)
         Me.Panel2.TabIndex = 0
         '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.Transparent
+        Me.Panel7.Controls.Add(Me.PictureBox2)
+        Me.Panel7.Controls.Add(Me.fecha)
+        Me.Panel7.Controls.Add(Me.hora)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel7.Location = New System.Drawing.Point(115, 360)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(446, 53)
+        Me.Panel7.TabIndex = 8
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.proyecto.inicio.My.Resources.Resources.calendario
+        Me.PictureBox2.Image = Global.proyecto.inicio.My.Resources.Resources.calendario
+        Me.PictureBox2.Location = New System.Drawing.Point(385, 5)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(49, 43)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
+        'fecha
+        '
+        Me.fecha.AutoSize = True
+        Me.fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fecha.Location = New System.Drawing.Point(237, 12)
+        Me.fecha.Name = "fecha"
+        Me.fecha.Size = New System.Drawing.Size(92, 29)
+        Me.fecha.TabIndex = 1
+        Me.fecha.Text = "Label2"
+        '
+        'hora
+        '
+        Me.hora.AutoSize = True
+        Me.hora.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hora.Location = New System.Drawing.Point(121, 12)
+        Me.hora.Name = "hora"
+        Me.hora.Size = New System.Drawing.Size(92, 29)
+        Me.hora.TabIndex = 0
+        Me.hora.Text = "Label1"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.proyecto.inicio.My.Resources.Resources.wall
         Me.ClientSize = New System.Drawing.Size(561, 413)
+        Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Inicio"
@@ -178,14 +179,12 @@ Partial Class Inicio
         Me.Text = "La Pollería "
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
@@ -193,5 +192,10 @@ Partial Class Inicio
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Panel7 As System.Windows.Forms.Panel
+    Friend WithEvents fecha As System.Windows.Forms.Label
+    Friend WithEvents hora As System.Windows.Forms.Label
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 
 End Class
