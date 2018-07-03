@@ -23,20 +23,20 @@ Partial Class Verificacion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.txtuser = New System.Windows.Forms.TextBox()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.txtpass = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btningresar = New System.Windows.Forms.Button()
         Me.minimizar = New System.Windows.Forms.PictureBox()
         Me.cerrar = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -49,6 +49,16 @@ Partial Class Verificacion
         Me.Panel1.Size = New System.Drawing.Size(250, 330)
         Me.Panel1.TabIndex = 0
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
+        Me.PictureBox3.Location = New System.Drawing.Point(-52, -37)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(359, 344)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
+        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
@@ -59,9 +69,20 @@ Partial Class Verificacion
         Me.ShapeContainer1.TabIndex = 1
         Me.ShapeContainer1.TabStop = False
         '
+        'LineShape2
+        '
+        Me.LineShape2.BorderColor = System.Drawing.Color.DimGray
+        Me.LineShape2.Enabled = False
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 329
+        Me.LineShape2.X2 = 725
+        Me.LineShape2.Y1 = 214
+        Me.LineShape2.Y2 = 214
+        '
         'LineShape1
         '
         Me.LineShape1.BorderColor = System.Drawing.Color.DimGray
+        Me.LineShape1.Enabled = False
         Me.LineShape1.Name = "LineShape1"
         Me.LineShape1.X1 = 330
         Me.LineShape1.X2 = 726
@@ -77,17 +98,8 @@ Partial Class Verificacion
         Me.txtuser.Location = New System.Drawing.Point(330, 102)
         Me.txtuser.Name = "txtuser"
         Me.txtuser.Size = New System.Drawing.Size(397, 20)
-        Me.txtuser.TabIndex = 2
+        Me.txtuser.TabIndex = 1
         Me.txtuser.Text = "USUARIO"
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderColor = System.Drawing.Color.DimGray
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 329
-        Me.LineShape2.X2 = 725
-        Me.LineShape2.Y1 = 214
-        Me.LineShape2.Y2 = 214
         '
         'txtpass
         '
@@ -98,7 +110,7 @@ Partial Class Verificacion
         Me.txtpass.Location = New System.Drawing.Point(329, 192)
         Me.txtpass.Name = "txtpass"
         Me.txtpass.Size = New System.Drawing.Size(397, 20)
-        Me.txtpass.TabIndex = 3
+        Me.txtpass.TabIndex = 2
         Me.txtpass.Text = "CONTRASEÑA"
         '
         'Label1
@@ -125,7 +137,7 @@ Partial Class Verificacion
         Me.btningresar.Location = New System.Drawing.Point(329, 247)
         Me.btningresar.Name = "btningresar"
         Me.btningresar.Size = New System.Drawing.Size(398, 40)
-        Me.btningresar.TabIndex = 5
+        Me.btningresar.TabIndex = 3
         Me.btningresar.Text = "INGRESAR"
         Me.btningresar.UseVisualStyleBackColor = False
         '
@@ -149,16 +161,6 @@ Partial Class Verificacion
         Me.cerrar.TabIndex = 6
         Me.cerrar.TabStop = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
-        Me.PictureBox3.Location = New System.Drawing.Point(-52, -37)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(359, 344)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
-        '
         'Verificacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -179,9 +181,9 @@ Partial Class Verificacion
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Verificacion"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.minimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
