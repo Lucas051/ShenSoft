@@ -23,10 +23,10 @@ Partial Class InicioP
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.barratitulo = New System.Windows.Forms.Panel()
-        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.Menuvertical = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -39,13 +39,13 @@ Partial Class InicioP
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelmedio = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.barratitulo.SuspendLayout()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Menuvertical.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelmedio.SuspendLayout()
@@ -64,18 +64,6 @@ Partial Class InicioP
         Me.barratitulo.Name = "barratitulo"
         Me.barratitulo.Size = New System.Drawing.Size(984, 35)
         Me.barratitulo.TabIndex = 0
-        '
-        'btnrestaurar
-        '
-        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnrestaurar.Location = New System.Drawing.Point(922, 5)
-        Me.btnrestaurar.Name = "btnrestaurar"
-        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
-        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnrestaurar.TabIndex = 3
-        Me.btnrestaurar.TabStop = False
-        Me.btnrestaurar.Visible = False
         '
         'btnmini
         '
@@ -109,6 +97,18 @@ Partial Class InicioP
         Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.cerrarbtn.TabIndex = 0
         Me.cerrarbtn.TabStop = False
+        '
+        'btnrestaurar
+        '
+        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
+        Me.btnrestaurar.Location = New System.Drawing.Point(922, 5)
+        Me.btnrestaurar.Name = "btnrestaurar"
+        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
+        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnrestaurar.TabIndex = 3
+        Me.btnrestaurar.TabStop = False
+        Me.btnrestaurar.Visible = False
         '
         'Menuvertical
         '
@@ -173,7 +173,7 @@ Partial Class InicioP
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(1, 299)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(202, 30)
+        Me.Button2.Size = New System.Drawing.Size(199, 30)
         Me.Button2.TabIndex = 8
         Me.Button2.Text = "          Proveedores"
         Me.Button2.UseVisualStyleBackColor = False
@@ -243,27 +243,20 @@ Partial Class InicioP
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.panelmedio.Controls.Add(Me.Panel5)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelmedio.Location = New System.Drawing.Point(200, 35)
+        Me.panelmedio.Location = New System.Drawing.Point(0, 0)
         Me.panelmedio.Name = "panelmedio"
-        Me.panelmedio.Size = New System.Drawing.Size(784, 426)
+        Me.panelmedio.Size = New System.Drawing.Size(984, 461)
         Me.panelmedio.TabIndex = 2
         '
         'Panel5
         '
-        Me.Panel5.Controls.Add(Me.Panel6)
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.Button5)
         Me.Panel5.Controls.Add(Me.Button4)
-        Me.Panel5.Location = New System.Drawing.Point(0, 150)
+        Me.Panel5.Location = New System.Drawing.Point(200, 185)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(200, 100)
         Me.Panel5.TabIndex = 0
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(0, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(5, 30)
-        Me.Panel6.TabIndex = 7
         '
         'Button4
         '
@@ -278,26 +271,43 @@ Partial Class InicioP
         Me.Button4.Location = New System.Drawing.Point(0, 0)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(200, 30)
-        Me.Button4.TabIndex = 6
+        Me.Button4.TabIndex = 2
         Me.Button4.Text = "          Facturación"
         Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button5.Image = Global.proyecto.inicio.My.Resources.Resources.venta
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(0, 36)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(197, 30)
+        Me.Button5.TabIndex = 3
+        Me.Button5.Text = "          Facturación"
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'InicioP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 461)
-        Me.Controls.Add(Me.panelmedio)
         Me.Controls.Add(Me.Menuvertical)
         Me.Controls.Add(Me.barratitulo)
+        Me.Controls.Add(Me.panelmedio)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "InicioP"
         Me.Text = "InicioP"
         Me.barratitulo.ResumeLayout(False)
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Menuvertical.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
@@ -322,6 +332,6 @@ Partial Class InicioP
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents Panel6 As System.Windows.Forms.Panel
+    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

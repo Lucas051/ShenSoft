@@ -38,4 +38,6 @@ Public Class InicioP
         ' ReleaseCapture();
         ' SendMessage(this.Handle, 0x112, 0xf012, 0);
     End Sub
+
+   
 End Class
