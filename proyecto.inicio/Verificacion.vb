@@ -21,21 +21,21 @@ Public Class Verificacion
 
     Private Sub txtpass_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtpass.Enter
         'Desaparece nombre de textbox
-        If txtuser.Text = "CONTRASEÑA" Then
-            txtuser.Text = ""
-            txtuser.ForeColor = Color.LightGray
-            'txtuser.UseSystemPasswordChar = True
+        If txtpass.Text = "CONTRASEÑA" Then
+            txtpass.Text = ""
+            txtpass.ForeColor = Color.LightGray
+            'oculta contraseña
+            txtpass.UseSystemPasswordChar = True
 
-            'CHE, NOSE PORQUE CUANDO USO EL PASSCHAR ME ANULA TODA LA ACCION Y NO ME OCULTA LA CONTRASEÑA, A USTEDES LE ANDA?
         End If
     End Sub
 
     Private Sub txtpass_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtpass.Leave
         'si no hay nada escrito vuelve a usuario con fuente original
-        If txtuser.Text = "" Then
-            txtuser.Text = "CONTRASEÑA"
-            txtuser.ForeColor = Color.DimGray
-            'txtuser.UseSystemPasswordChar = False
+        If txtpass.Text = "" Then
+            txtpass.Text = "CONTRASEÑA"
+            txtpass.ForeColor = Color.DimGray
+            txtpass.UseSystemPasswordChar = False
 
         End If
     End Sub
@@ -50,5 +50,11 @@ Public Class Verificacion
 
     Private Sub Verificacion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'agregar para que se pueda mover la ventana
+    End Sub
+
+    Private Sub btningresar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
+        Me.Hide()
+        Inicio.Show()
+        'por el momento dejamos la seguridad como segundo plano, para poder seguir con otras funciones mas importantes del programa
     End Sub
 End Class

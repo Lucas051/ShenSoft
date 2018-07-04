@@ -139,10 +139,10 @@
     <Compile Include="buscarproductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioSesion.Designer.vb">
-      <DependentUpon>InicioSesion.vb</DependentUpon>
+    <Compile Include="InicioP.Designer.vb">
+      <DependentUpon>InicioP.vb</DependentUpon>
     </Compile>
-    <Compile Include="InicioSesion.vb">
+    <Compile Include="InicioP.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODIFPROVEEDORES.Designer.vb">
@@ -216,8 +216,8 @@
     <EmbeddedResource Include="buscarproductos.resx">
       <DependentUpon>buscarproductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioSesion.resx">
-      <DependentUpon>InicioSesion.vb</DependentUpon>
+    <EmbeddedResource Include="InicioP.resx">
+      <DependentUpon>InicioP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFPROVEEDORES.resx">
       <DependentUpon>MODIFPROVEEDORES.vb</DependentUpon>
@@ -296,6 +296,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimazar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\res.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control+de+Stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
