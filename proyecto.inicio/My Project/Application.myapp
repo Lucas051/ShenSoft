@@ -1,10 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-16"?>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
 <MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <MySubMain>true</MySubMain>
-  <MainForm>Form1</MainForm>
+  <MainForm>Inicio</MainForm>
   <SingleInstance>false</SingleInstance>
   <ShutdownMode>0</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>
   <AuthenticationMode>0</AuthenticationMode>
   <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MySubMain>true</MySubMain>
+  <MainForm>Inicio</MainForm>
+  <SingleInstance>false</SingleInstance>
+  <ShutdownMode>0</ShutdownMode>
+  <EnableVisualStyles>true</EnableVisualStyles>
+  <AuthenticationMode>0</AuthenticationMode>
+  <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+>>>>>>> b9ac1fc0ad416c297c35c829e7c17ad9a49cbaf6
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MySubMain>true</MySubMain>
+  <MainForm>InicioP</MainForm>
+  <SingleInstance>false</SingleInstance>
+  <ShutdownMode>0</ShutdownMode>
+  <EnableVisualStyles>true</EnableVisualStyles>
+  <AuthenticationMode>0</AuthenticationMode>
+  <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MySubMain>true</MySubMain>
+  <MainForm>InicioP</MainForm>
+  <SingleInstance>false</SingleInstance>
+  <ShutdownMode>0</ShutdownMode>
+  <EnableVisualStyles>true</EnableVisualStyles>
+  <AuthenticationMode>0</AuthenticationMode>
+  <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
 </MyApplicationData>

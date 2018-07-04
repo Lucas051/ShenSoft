@@ -22,11 +22,14 @@ Partial Class EliminarSotck
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         Me.dgvEliminar = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
         CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,8 +38,10 @@ Partial Class EliminarSotck
         Me.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEliminar.Location = New System.Drawing.Point(1, -1)
         Me.dgvEliminar.Name = "dgvEliminar"
+        Me.dgvEliminar.ReadOnly = True
         Me.dgvEliminar.Size = New System.Drawing.Size(552, 287)
         Me.dgvEliminar.TabIndex = 0
+        Me.dgvEliminar.UseWaitCursor = True
         '
         'Label1
         '
@@ -49,7 +54,7 @@ Partial Class EliminarSotck
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(607, 201)
+        Me.Button1.Location = New System.Drawing.Point(607, 230)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 56)
         Me.Button1.TabIndex = 2
@@ -58,28 +63,26 @@ Partial Class EliminarSotck
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(607, 135)
+        Me.Button2.Location = New System.Drawing.Point(607, 146)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 60)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Borrar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'txtcodigo
         '
-        Me.Button3.Location = New System.Drawing.Point(607, 69)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 60)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Actualizar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.txtcodigo.Location = New System.Drawing.Point(598, 76)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtcodigo.TabIndex = 5
         '
         'EliminarSotck
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(726, 286)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.txtcodigo)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
@@ -90,10 +93,232 @@ Partial Class EliminarSotck
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
+=======
+        Me.dgvEliminar = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
+        CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'dgvEliminar
+        '
+        Me.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEliminar.Location = New System.Drawing.Point(1, -1)
+        Me.dgvEliminar.Name = "dgvEliminar"
+        Me.dgvEliminar.ReadOnly = True
+        Me.dgvEliminar.Size = New System.Drawing.Size(552, 287)
+        Me.dgvEliminar.TabIndex = 0
+        Me.dgvEliminar.UseWaitCursor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(604, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Eliminar Productos"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(607, 230)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 56)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Volver"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(607, 146)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 60)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Borrar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'txtcodigo
+        '
+        Me.txtcodigo.Location = New System.Drawing.Point(598, 76)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtcodigo.TabIndex = 5
+        '
+        'EliminarSotck
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(726, 286)
+        Me.Controls.Add(Me.txtcodigo)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.dgvEliminar)
+        Me.Name = "EliminarSotck"
+        Me.Text = "EliminarSotck"
+        CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+>>>>>>> b9ac1fc0ad416c297c35c829e7c17ad9a49cbaf6
+=======
+        Me.dgvEliminar = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
+        CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'dgvEliminar
+        '
+        Me.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEliminar.Location = New System.Drawing.Point(1, -1)
+        Me.dgvEliminar.Name = "dgvEliminar"
+        Me.dgvEliminar.ReadOnly = True
+        Me.dgvEliminar.Size = New System.Drawing.Size(552, 287)
+        Me.dgvEliminar.TabIndex = 0
+        Me.dgvEliminar.UseWaitCursor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(604, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Eliminar Productos"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(607, 230)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 56)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Volver"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(607, 146)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 60)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Borrar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'txtcodigo
+        '
+        Me.txtcodigo.Location = New System.Drawing.Point(598, 76)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtcodigo.TabIndex = 5
+        '
+        'EliminarSotck
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(726, 286)
+        Me.Controls.Add(Me.txtcodigo)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.dgvEliminar)
+        Me.Name = "EliminarSotck"
+        Me.Text = "EliminarSotck"
+        CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+        Me.dgvEliminar = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
+        CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'dgvEliminar
+        '
+        Me.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEliminar.Location = New System.Drawing.Point(1, -1)
+        Me.dgvEliminar.Name = "dgvEliminar"
+        Me.dgvEliminar.ReadOnly = True
+        Me.dgvEliminar.Size = New System.Drawing.Size(552, 287)
+        Me.dgvEliminar.TabIndex = 0
+        Me.dgvEliminar.UseWaitCursor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(604, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Eliminar Productos"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(607, 230)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 56)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Volver"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(607, 146)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 60)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Borrar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'txtcodigo
+        '
+        Me.txtcodigo.Location = New System.Drawing.Point(598, 76)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtcodigo.TabIndex = 5
+        '
+        'EliminarSotck
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(726, 286)
+        Me.Controls.Add(Me.txtcodigo)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.dgvEliminar)
+        Me.Name = "EliminarSotck"
+        Me.Text = "EliminarSotck"
+        CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
     End Sub
     Friend WithEvents dgvEliminar As System.Windows.Forms.DataGridView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+=======
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+>>>>>>> b9ac1fc0ad416c297c35c829e7c17ad9a49cbaf6
+=======
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+    Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
 End Class

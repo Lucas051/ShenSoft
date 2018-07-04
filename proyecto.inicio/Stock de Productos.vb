@@ -5,40 +5,57 @@ Public Class Stock_de_Productos
 
     Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
         Me.Hide()
-        Form1.Show()
+        Inicio.Show()
 
     End Sub
 
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Dim sql As String
-        Dim connect As New MySqlConnection
-        Dim comando As MySqlCommand
-        Try
-            connect = conn
-            If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
 
-                sql = "INSERT INTO stock (descripcion,precio_costo,precio_v_stock) VALUES ('" + txtdescripcion.Text + "' , '" + txtprecio.Text + "','" + txtpreciostock.Text + "' )"
-                connect.Open()
-                comando = New MySqlCommand(sql, connect)
-                comando.ExecuteNonQuery()
+
+        Try
+
+            If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
+                'nacho puse nombre_prov en vez de num aca porque es mas facil reconocerlo por el nombre
+                'aca hay que hacer un join para conectar la foranea de nombre_prov de proveedores con stock en el mismo insert, hay sintaxis en internet
+                conexioon.Consulta = "INSERT INTO `stock` (`descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `num_prov`) VALUES ('" + txtdescripcion.Text + "','" + txtcantidad.Text + "','" + txtprecio.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "');"
+
+                consultar()
+                DataGridView1.DataSource = resultado
+
 
                 MessageBox.Show("Datos Guardados Correctamente.")
-                MessageBox.Show("El ID producto se agrega automaticamente jaja salu2.")
+                MessageBox.Show("El ID producto se agregará automáticamente.")
+
             Else
-                MessageBox.Show("Se deben rellenar todos los compos.")
+                MessageBox.Show("Se deben rellenar todos los campos.")
             End If
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-        
+        'Acaaaaaaaaaaa Actualizooooooooooooooo El DGV de mierdaaaaaaaaaaaaaaaaaaaa repitiendo el comando creo que se puede mejorar...
+        conexioon.Consulta = "SELECT * FROM stock"
+        consultar()
+        DataGridView1.DataSource = resultado
+
+        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+        DataGridView1.Columns(0).HeaderText = "Código"
+        DataGridView1.Columns(1).HeaderText = "Descripcion"
+        DataGridView1.Columns(2).HeaderText = "Cantidad"
+        DataGridView1.Columns(3).HeaderText = "Precio Costo"
+        DataGridView1.Columns(4).HeaderText = "Precio Venta"
+        DataGridView1.Columns(5).HeaderText = "Proveedor"
+        'Proximamente Solo en Cines
+
     End Sub
 
     Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
 
         txtdescripcion.Text = ""
         txtprecio.Text = ""
+        txtcantidad.Text = ""
+        txtproveedor.Text = ""
         txtpreciostock.Text = ""
 
 
@@ -51,23 +68,26 @@ Public Class Stock_de_Productos
     End Sub
 
     Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Dim conexion As New MySqlConnection
-        Dim comando As MySqlCommand
-        Dim sql As String
+        'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
+        conexioon.Consulta = "SELECT * FROM stock"
+        consultar()
+        DataGridView1.DataSource = resultado
 
-        conexion = conn
-        sql = "SELECT * FROM stock"
-        conexion.Open()
-
-        comando = New MySqlCommand(sql, conexion)
-        Dim dt As New DataTable
-        Dim da As New MySqlDataAdapter(comando)
-        da.Fill(dt)
-        DataGridView1.DataSource = dt
-        conexion.Clone()
+        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+        DataGridView1.Columns(0).HeaderText = "Código"
+        DataGridView1.Columns(1).HeaderText = "Descripcion"
+        DataGridView1.Columns(2).HeaderText = "Cantidad"
+        DataGridView1.Columns(3).HeaderText = "Precio Costo"
+        DataGridView1.Columns(4).HeaderText = "Precio Venta"
+        DataGridView1.Columns(5).HeaderText = "Proveedor"
+        'Proximamente Solo en Cines
     End Sub
 
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub txtdescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtdescripcion.TextChanged
 
     End Sub
 End Class

@@ -22,18 +22,21 @@ Partial Class ConsultaFactura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Me.datagridconsulta = New System.Windows.Forms.DataGridView()
         Me.Atras = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'datagridconsulta
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 42)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(418, 171)
-        Me.DataGridView1.TabIndex = 0
+        Me.datagridconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridconsulta.Location = New System.Drawing.Point(12, 42)
+        Me.datagridconsulta.Name = "datagridconsulta"
+        Me.datagridconsulta.Size = New System.Drawing.Size(195, 203)
+        Me.datagridconsulta.TabIndex = 0
         '
         'Atras
         '
@@ -50,13 +53,121 @@ Partial Class ConsultaFactura
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(495, 278)
         Me.Controls.Add(Me.Atras)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.datagridconsulta)
         Me.Name = "ConsultaFactura"
         Me.Text = "ConsultaFactura"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
+=======
+        Me.datagridconsulta = New System.Windows.Forms.DataGridView()
+        Me.Atras = New System.Windows.Forms.Button()
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'datagridconsulta
+        '
+        Me.datagridconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridconsulta.Location = New System.Drawing.Point(12, 42)
+        Me.datagridconsulta.Name = "datagridconsulta"
+        Me.datagridconsulta.Size = New System.Drawing.Size(195, 203)
+        Me.datagridconsulta.TabIndex = 0
+        '
+        'Atras
+        '
+        Me.Atras.Location = New System.Drawing.Point(408, 243)
+        Me.Atras.Name = "Atras"
+        Me.Atras.Size = New System.Drawing.Size(75, 23)
+        Me.Atras.TabIndex = 1
+        Me.Atras.Text = "Atrás"
+        Me.Atras.UseVisualStyleBackColor = True
+        '
+        'ConsultaFactura
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(495, 278)
+        Me.Controls.Add(Me.Atras)
+        Me.Controls.Add(Me.datagridconsulta)
+        Me.Name = "ConsultaFactura"
+        Me.Text = "ConsultaFactura"
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+>>>>>>> b9ac1fc0ad416c297c35c829e7c17ad9a49cbaf6
+=======
+        Me.datagridconsulta = New System.Windows.Forms.DataGridView()
+        Me.Atras = New System.Windows.Forms.Button()
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'datagridconsulta
+        '
+        Me.datagridconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridconsulta.Location = New System.Drawing.Point(12, 42)
+        Me.datagridconsulta.Name = "datagridconsulta"
+        Me.datagridconsulta.Size = New System.Drawing.Size(195, 203)
+        Me.datagridconsulta.TabIndex = 0
+        '
+        'Atras
+        '
+        Me.Atras.Location = New System.Drawing.Point(408, 243)
+        Me.Atras.Name = "Atras"
+        Me.Atras.Size = New System.Drawing.Size(75, 23)
+        Me.Atras.TabIndex = 1
+        Me.Atras.Text = "Atrás"
+        Me.Atras.UseVisualStyleBackColor = True
+        '
+        'ConsultaFactura
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(495, 278)
+        Me.Controls.Add(Me.Atras)
+        Me.Controls.Add(Me.datagridconsulta)
+        Me.Name = "ConsultaFactura"
+        Me.Text = "ConsultaFactura"
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+        Me.datagridconsulta = New System.Windows.Forms.DataGridView()
+        Me.Atras = New System.Windows.Forms.Button()
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'datagridconsulta
+        '
+        Me.datagridconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridconsulta.Location = New System.Drawing.Point(12, 42)
+        Me.datagridconsulta.Name = "datagridconsulta"
+        Me.datagridconsulta.Size = New System.Drawing.Size(195, 203)
+        Me.datagridconsulta.TabIndex = 0
+        '
+        'Atras
+        '
+        Me.Atras.Location = New System.Drawing.Point(408, 243)
+        Me.Atras.Name = "Atras"
+        Me.Atras.Size = New System.Drawing.Size(75, 23)
+        Me.Atras.TabIndex = 1
+        Me.Atras.Text = "Atrás"
+        Me.Atras.UseVisualStyleBackColor = True
+        '
+        'ConsultaFactura
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(495, 278)
+        Me.Controls.Add(Me.Atras)
+        Me.Controls.Add(Me.datagridconsulta)
+        Me.Name = "ConsultaFactura"
+        Me.Text = "ConsultaFactura"
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents datagridconsulta As System.Windows.Forms.DataGridView
     Friend WithEvents Atras As System.Windows.Forms.Button
 End Class
