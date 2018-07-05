@@ -120,12 +120,6 @@
     <Compile Include="EliminarSotck.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Facturacion.Designer.vb">
-      <DependentUpon>Facturacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Facturacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="buscarproductos.Designer.vb">
       <DependentUpon>buscarproductos.vb</DependentUpon>
     </Compile>
@@ -199,9 +193,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarSotck.resx">
       <DependentUpon>EliminarSotck.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Facturacion.resx">
-      <DependentUpon>Facturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buscarproductos.resx">
       <DependentUpon>buscarproductos.vb</DependentUpon>

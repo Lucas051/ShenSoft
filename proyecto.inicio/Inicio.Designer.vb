@@ -74,8 +74,8 @@ Partial Class Inicio
         '
         Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.barratitulo.Controls.Add(Me.btnmini)
-        Me.barratitulo.Controls.Add(Me.btnmaxi)
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
+        Me.barratitulo.Controls.Add(Me.btnmaxi)
         Me.barratitulo.Controls.Add(Me.btnrestaurar)
         Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratitulo.Location = New System.Drawing.Point(0, 0)
