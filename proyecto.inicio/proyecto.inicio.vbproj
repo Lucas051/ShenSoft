@@ -126,23 +126,16 @@
     <Compile Include="Facturacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio.Designer.vb">
-      <DependentUpon>Inicio.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="buscarproductos.Designer.vb">
       <DependentUpon>buscarproductos.vb</DependentUpon>
     </Compile>
     <Compile Include="buscarproductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioP.Designer.vb">
-      <DependentUpon>InicioP.vb</DependentUpon>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
-    <Compile Include="InicioP.vb">
+    <Compile Include="Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODIFPROVEEDORES.Designer.vb">
@@ -210,14 +203,11 @@
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="buscarproductos.resx">
       <DependentUpon>buscarproductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioP.resx">
-      <DependentUpon>InicioP.vb</DependentUpon>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFPROVEEDORES.resx">
       <DependentUpon>MODIFPROVEEDORES.vb</DependentUpon>
@@ -317,6 +307,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
