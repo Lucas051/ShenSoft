@@ -42,6 +42,7 @@ Public Class InicioP
 
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
         'ocultamos pestaña en pantalla y aparece facturacion
+        Panelproveedores.Visible = False
         Panelclientes.Visible = False
         PanelFact.Visible = True
     End Sub
@@ -56,7 +57,7 @@ Public Class InicioP
     Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
         PanelFact.Visible = False
         Me.Hide()
-        RealizarFactura.Show()
+        ConsultaFactura.Show()
 
     End Sub
 
@@ -65,6 +66,7 @@ Public Class InicioP
    
     Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
         'ocultamos pestaña en pantalla y aparece clientes
+        Panelproveedores.Visible = False
         PanelFact.Visible = False
         Panelclientes.Visible = True
     End Sub
@@ -84,6 +86,24 @@ Public Class InicioP
         Stock_de_Productos.Show()
 
     End Sub
-
+    '___________________________________________________________________________________________________________________________________________
    
+    Private Sub btnprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnprov.Click
+        'ocultamos pestaña en pantalla y aparece proveedores
+        Panelclientes.Visible = False
+        PanelFact.Visible = False
+        Panelproveedores.Visible = True
+    End Sub
+
+    Private Sub btnmodprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodprov.Click
+        Me.Hide()
+        MODIFPROVEEDORES.Show()
+
+    End Sub
+
+    Private Sub btnbuscarprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarprov.Click
+        Me.Hide()
+        Buscar_proveedores.Show()
+
+    End Sub
 End Class
