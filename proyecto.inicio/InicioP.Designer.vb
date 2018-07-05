@@ -30,17 +30,25 @@ Partial Class InicioP
         Me.Menuvertical = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnclientes = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.facturacion = New System.Windows.Forms.Button()
+        Me.btnfacturacion = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelmedio = New System.Windows.Forms.Panel()
+        Me.Panelclientes = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.btndeudores = New System.Windows.Forms.Button()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.btnconsultclient = New System.Windows.Forms.Button()
+        Me.PanelFact = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.btnconslfact = New System.Windows.Forms.Button()
+        Me.btnrealizarfact = New System.Windows.Forms.Button()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,7 +57,8 @@ Partial Class InicioP
         Me.Menuvertical.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelmedio.SuspendLayout()
-        Me.Panel5.SuspendLayout()
+        Me.Panelclientes.SuspendLayout()
+        Me.PanelFact.SuspendLayout()
         Me.SuspendLayout()
         '
         'barratitulo
@@ -115,12 +124,12 @@ Partial Class InicioP
         Me.Menuvertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Menuvertical.Controls.Add(Me.Panel4)
         Me.Menuvertical.Controls.Add(Me.Panel3)
-        Me.Menuvertical.Controls.Add(Me.Button3)
+        Me.Menuvertical.Controls.Add(Me.btnclientes)
         Me.Menuvertical.Controls.Add(Me.Button2)
         Me.Menuvertical.Controls.Add(Me.Panel2)
         Me.Menuvertical.Controls.Add(Me.Button1)
         Me.Menuvertical.Controls.Add(Me.Panel1)
-        Me.Menuvertical.Controls.Add(Me.facturacion)
+        Me.Menuvertical.Controls.Add(Me.btnfacturacion)
         Me.Menuvertical.Controls.Add(Me.PictureBox1)
         Me.Menuvertical.Dock = System.Windows.Forms.DockStyle.Left
         Me.Menuvertical.Location = New System.Drawing.Point(0, 35)
@@ -144,22 +153,22 @@ Partial Class InicioP
         Me.Panel3.Size = New System.Drawing.Size(5, 30)
         Me.Panel3.TabIndex = 9
         '
-        'Button3
+        'btnclientes
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button3.Image = Global.proyecto.inicio.My.Resources.Resources.clientes1
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 249)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(200, 30)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "        Clientes"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnclientes.FlatAppearance.BorderSize = 0
+        Me.btnclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclientes.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnclientes.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnclientes.Image = Global.proyecto.inicio.My.Resources.Resources.clientes1
+        Me.btnclientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnclientes.Location = New System.Drawing.Point(0, 249)
+        Me.btnclientes.Name = "btnclientes"
+        Me.btnclientes.Size = New System.Drawing.Size(200, 30)
+        Me.btnclientes.TabIndex = 8
+        Me.btnclientes.Text = "        Clientes"
+        Me.btnclientes.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -211,22 +220,22 @@ Partial Class InicioP
         Me.Panel1.Size = New System.Drawing.Size(5, 30)
         Me.Panel1.TabIndex = 5
         '
-        'facturacion
+        'btnfacturacion
         '
-        Me.facturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.facturacion.FlatAppearance.BorderSize = 0
-        Me.facturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.facturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.facturacion.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.facturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.facturacion.Image = Global.proyecto.inicio.My.Resources.Resources.venta
-        Me.facturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.facturacion.Location = New System.Drawing.Point(0, 150)
-        Me.facturacion.Name = "facturacion"
-        Me.facturacion.Size = New System.Drawing.Size(200, 30)
-        Me.facturacion.TabIndex = 1
-        Me.facturacion.Text = "          Facturación"
-        Me.facturacion.UseVisualStyleBackColor = False
+        Me.btnfacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnfacturacion.FlatAppearance.BorderSize = 0
+        Me.btnfacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnfacturacion.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnfacturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnfacturacion.Image = Global.proyecto.inicio.My.Resources.Resources.venta
+        Me.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnfacturacion.Location = New System.Drawing.Point(0, 150)
+        Me.btnfacturacion.Name = "btnfacturacion"
+        Me.btnfacturacion.Size = New System.Drawing.Size(200, 30)
+        Me.btnfacturacion.TabIndex = 1
+        Me.btnfacturacion.Text = "          Facturación"
+        Me.btnfacturacion.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -241,56 +250,143 @@ Partial Class InicioP
         'panelmedio
         '
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.panelmedio.Controls.Add(Me.Panel5)
+        Me.panelmedio.Controls.Add(Me.Panelclientes)
+        Me.panelmedio.Controls.Add(Me.PanelFact)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelmedio.Location = New System.Drawing.Point(0, 0)
         Me.panelmedio.Name = "panelmedio"
         Me.panelmedio.Size = New System.Drawing.Size(984, 461)
         Me.panelmedio.TabIndex = 2
         '
+        'Panelclientes
+        '
+        Me.Panelclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panelclientes.Controls.Add(Me.Panel10)
+        Me.Panelclientes.Controls.Add(Me.btndeudores)
+        Me.Panelclientes.Controls.Add(Me.Panel8)
+        Me.Panelclientes.Controls.Add(Me.btnconsultclient)
+        Me.Panelclientes.Location = New System.Drawing.Point(200, 284)
+        Me.Panelclientes.Name = "Panelclientes"
+        Me.Panelclientes.Size = New System.Drawing.Size(197, 70)
+        Me.Panelclientes.TabIndex = 9
+        Me.Panelclientes.Visible = False
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel10.Location = New System.Drawing.Point(192, 36)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(5, 30)
+        Me.Panel10.TabIndex = 10
+        '
+        'btndeudores
+        '
+        Me.btndeudores.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btndeudores.FlatAppearance.BorderSize = 0
+        Me.btndeudores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btndeudores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btndeudores.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndeudores.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btndeudores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btndeudores.Location = New System.Drawing.Point(0, 36)
+        Me.btndeudores.Name = "btndeudores"
+        Me.btndeudores.Size = New System.Drawing.Size(197, 30)
+        Me.btndeudores.TabIndex = 9
+        Me.btndeudores.Text = "Deudores"
+        Me.btndeudores.UseVisualStyleBackColor = False
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel8.Location = New System.Drawing.Point(192, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(5, 30)
+        Me.Panel8.TabIndex = 8
+        '
+        'btnconsultclient
+        '
+        Me.btnconsultclient.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnconsultclient.FlatAppearance.BorderSize = 0
+        Me.btnconsultclient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnconsultclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnconsultclient.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnconsultclient.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnconsultclient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnconsultclient.Location = New System.Drawing.Point(0, 0)
+        Me.btnconsultclient.Name = "btnconsultclient"
+        Me.btnconsultclient.Size = New System.Drawing.Size(197, 30)
+        Me.btnconsultclient.TabIndex = 7
+        Me.btnconsultclient.Text = "Consulta de Client."
+        Me.btnconsultclient.UseVisualStyleBackColor = False
+        '
+        'PanelFact
+        '
+        Me.PanelFact.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelFact.Controls.Add(Me.Panel5)
+        Me.PanelFact.Controls.Add(Me.Panel6)
+        Me.PanelFact.Controls.Add(Me.Panel7)
+        Me.PanelFact.Controls.Add(Me.btnconslfact)
+        Me.PanelFact.Controls.Add(Me.btnrealizarfact)
+        Me.PanelFact.Location = New System.Drawing.Point(200, 185)
+        Me.PanelFact.Name = "PanelFact"
+        Me.PanelFact.Size = New System.Drawing.Size(197, 68)
+        Me.PanelFact.TabIndex = 0
+        Me.PanelFact.Visible = False
+        '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.Button5)
-        Me.Panel5.Controls.Add(Me.Button4)
-        Me.Panel5.Location = New System.Drawing.Point(200, 185)
+        Me.Panel5.Location = New System.Drawing.Point(0, 72)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(200, 100)
-        Me.Panel5.TabIndex = 0
+        Me.Panel5.Size = New System.Drawing.Size(197, 71)
+        Me.Panel5.TabIndex = 1
         '
-        'Button4
+        'Panel6
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button4.Image = Global.proyecto.inicio.My.Resources.Resources.venta
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(0, 0)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(200, 30)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "          Facturación"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel6.Location = New System.Drawing.Point(192, 0)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(5, 30)
+        Me.Panel6.TabIndex = 6
         '
-        'Button5
+        'Panel7
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button5.Image = Global.proyecto.inicio.My.Resources.Resources.venta
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(0, 36)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(197, 30)
-        Me.Button5.TabIndex = 3
-        Me.Button5.Text = "          Facturación"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel7.Location = New System.Drawing.Point(192, 36)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(5, 30)
+        Me.Panel7.TabIndex = 6
+        '
+        'btnconslfact
+        '
+        Me.btnconslfact.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnconslfact.FlatAppearance.BorderSize = 0
+        Me.btnconslfact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnconslfact.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnconslfact.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnconslfact.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnconslfact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnconslfact.Location = New System.Drawing.Point(0, 36)
+        Me.btnconslfact.Name = "btnconslfact"
+        Me.btnconslfact.Size = New System.Drawing.Size(197, 30)
+        Me.btnconslfact.TabIndex = 3
+        Me.btnconslfact.Text = "Consulta de Fact."
+        Me.btnconslfact.UseVisualStyleBackColor = False
+        '
+        'btnrealizarfact
+        '
+        Me.btnrealizarfact.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnrealizarfact.FlatAppearance.BorderSize = 0
+        Me.btnrealizarfact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnrealizarfact.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnrealizarfact.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnrealizarfact.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnrealizarfact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnrealizarfact.Location = New System.Drawing.Point(0, 0)
+        Me.btnrealizarfact.Name = "btnrealizarfact"
+        Me.btnrealizarfact.Size = New System.Drawing.Size(197, 30)
+        Me.btnrealizarfact.TabIndex = 2
+        Me.btnrealizarfact.Text = "Realizar Factura"
+        Me.btnrealizarfact.UseVisualStyleBackColor = False
         '
         'InicioP
         '
@@ -311,7 +407,8 @@ Partial Class InicioP
         Me.Menuvertical.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
+        Me.Panelclientes.ResumeLayout(False)
+        Me.PanelFact.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -323,15 +420,23 @@ Partial Class InicioP
     Friend WithEvents panelmedio As System.Windows.Forms.Panel
     Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents facturacion As System.Windows.Forms.Button
+    Friend WithEvents btnfacturacion As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnclientes As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents PanelFact As System.Windows.Forms.Panel
+    Friend WithEvents btnconslfact As System.Windows.Forms.Button
+    Friend WithEvents btnrealizarfact As System.Windows.Forms.Button
+    Friend WithEvents Panel6 As System.Windows.Forms.Panel
+    Friend WithEvents Panel7 As System.Windows.Forms.Panel
+    Friend WithEvents Panel8 As System.Windows.Forms.Panel
+    Friend WithEvents btnconsultclient As System.Windows.Forms.Button
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Panelclientes As System.Windows.Forms.Panel
+    Friend WithEvents Panel10 As System.Windows.Forms.Panel
+    Friend WithEvents btndeudores As System.Windows.Forms.Button
 End Class

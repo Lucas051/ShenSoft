@@ -39,5 +39,33 @@ Public Class InicioP
         ' SendMessage(this.Handle, 0x112, 0xf012, 0);
     End Sub
 
+
+    Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
+        PanelFact.Visible = True
+    End Sub
+
+    Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
+        PanelFact.Visible = False
+    End Sub
+
+    Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
+        PanelFact.Visible = False
+    End Sub
+
+    '___________________________________________________________________________________________________________________________________________
+
+   
+    Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
+        Panelclientes.Visible = True
+    End Sub
+
+    Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
+        Panelclientes.Visible = False
+    End Sub
+
+    Private Sub btndeudores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btndeudores.Click
+        Panelclientes.Visible = False
+    End Sub
+
    
 End Class
