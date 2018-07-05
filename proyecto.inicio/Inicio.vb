@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
+
 Public Class Inicio
 
     Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
@@ -45,6 +46,7 @@ Public Class Inicio
         Panelproveedores.Visible = False
         Panelclientes.Visible = False
         PanelFact.Visible = True
+        panetlstock.Visible = False
     End Sub
 
     Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
@@ -69,6 +71,7 @@ Public Class Inicio
         Panelproveedores.Visible = False
         PanelFact.Visible = False
         Panelclientes.Visible = True
+        panetlstock.Visible = True
     End Sub
 
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
@@ -81,9 +84,12 @@ Public Class Inicio
     '____________________________________________________________________________________________________________________________________________
 
     Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
-        '  abrimos stock
-        Me.Hide()
-        Stock_de_Productos.Show()
+        'Abro el panel pero hago que se oculten los demás si están abiertos ,para no entreverarse
+        panetlstock.Visible = True
+        Panelclientes.Visible = False
+        PanelFact.Visible = False
+        Panelproveedores.Visible = False
+
 
     End Sub
     '___________________________________________________________________________________________________________________________________________
@@ -93,6 +99,7 @@ Public Class Inicio
         Panelclientes.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = True
+        panetlstock.Visible = False
     End Sub
 
     Private Sub btnmodprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodprov.Click
@@ -114,5 +121,19 @@ Public Class Inicio
 
     Private Sub PictureBoxsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBoxsalir.Click
         End
+    End Sub
+
+    Private Sub btnaddstock_Click(sender As System.Object, e As System.EventArgs) Handles btnaddstock.Click
+        Me.Hide()
+        Stock_de_Productos.Show()
+
+    End Sub
+
+
+    
+    Private Sub btnmodistock_Click(sender As System.Object, e As System.EventArgs) Handles btnmodistock.Click
+        Me.Hide()
+        EliminarSotck.Show()
+
     End Sub
 End Class
