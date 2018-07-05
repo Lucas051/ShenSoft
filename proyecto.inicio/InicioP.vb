@@ -41,21 +41,31 @@ Public Class InicioP
 
 
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
+        'ocultamos pestaña en pantalla y aparece facturacion
+        Panelclientes.Visible = False
         PanelFact.Visible = True
     End Sub
 
     Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
         PanelFact.Visible = False
+        Me.Hide()
+        RealizarFactura.Show()
+
     End Sub
 
     Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
         PanelFact.Visible = False
+        Me.Hide()
+        RealizarFactura.Show()
+
     End Sub
 
     '___________________________________________________________________________________________________________________________________________
 
    
     Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
+        'ocultamos pestaña en pantalla y aparece clientes
+        PanelFact.Visible = False
         Panelclientes.Visible = True
     End Sub
 
@@ -65,6 +75,14 @@ Public Class InicioP
 
     Private Sub btndeudores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btndeudores.Click
         Panelclientes.Visible = False
+    End Sub
+    '____________________________________________________________________________________________________________________________________________
+
+    Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
+        '  abrimos stock
+        Me.Hide()
+        Stock_de_Productos.Show()
+
     End Sub
 
    
