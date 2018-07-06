@@ -43,10 +43,11 @@ Public Class Inicio
 
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
         'ocultamos pestaña en pantalla y aparece facturacion
+        panetlstock.Visible = False
         Panelproveedores.Visible = False
         Panelclientes.Visible = False
         PanelFact.Visible = True
-        panetlstock.Visible = False
+
     End Sub
 
     Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
@@ -68,10 +69,11 @@ Public Class Inicio
 
     Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
         'ocultamos pestaña en pantalla y aparece clientes
+        panetlstock.Visible = False
         Panelproveedores.Visible = False
         PanelFact.Visible = False
         Panelclientes.Visible = True
-        panetlstock.Visible = True
+
     End Sub
 
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
@@ -85,10 +87,11 @@ Public Class Inicio
 
     Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
         'Abro el panel pero hago que se oculten los demás si están abiertos ,para no entreverarse
-        panetlstock.Visible = True
+
         Panelclientes.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = False
+        panetlstock.Visible = True
 
 
     End Sub
@@ -96,10 +99,11 @@ Public Class Inicio
 
     Private Sub btnprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnprov.Click
         'ocultamos pestaña en pantalla y aparece proveedores
+        panetlstock.Visible = False
         Panelclientes.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = True
-        panetlstock.Visible = False
+
     End Sub
 
     Private Sub btnmodprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodprov.Click
@@ -135,5 +139,14 @@ Public Class Inicio
         Me.Hide()
         EliminarSotck.Show()
 
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        hora.Text = TimeOfDay.TimeOfDay.ToString
+        Fecha.Text = DateString
+    End Sub
+
+    Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
+        MonthCalendar1.Visible = True
     End Sub
 End Class
