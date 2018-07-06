@@ -39,4 +39,11 @@
     Private Sub btn0_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn0.Click
         TxtCaja.Text &= "0"
     End Sub
+
+    Private Sub btncoma_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncoma.Click
+        'InStr nos dejara poner punto si no encuentra uno, si ya existe no se repite, de esta manera no se acumulan los puntos en textbox
+        If InStr(TxtCaja.Text, ",", CompareMethod.Text) = 0 Then
+            TxtCaja.Text &= ","
+        End If
+    End Sub
 End Class

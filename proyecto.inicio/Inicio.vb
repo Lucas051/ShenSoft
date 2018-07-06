@@ -12,7 +12,7 @@ Public Class Inicio
         Me.WindowState = FormWindowState.Maximized
         'esconde boton, aparece restaurar
         btnmaxi.Visible = False
-        btnrestaurar.visible = True
+        btnrestaurar.Visible = True
     End Sub
 
     Private Sub btnmini_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmini.Click
@@ -118,7 +118,7 @@ Public Class Inicio
 
     End Sub
 
-    
+
     Private Sub btnsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsalir.Click
         End
     End Sub
@@ -127,15 +127,15 @@ Public Class Inicio
         End
     End Sub
 
-    Private Sub btnaddstock_Click(sender As System.Object, e As System.EventArgs) Handles btnaddstock.Click
+    Private Sub btnaddstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnaddstock.Click
         Me.Hide()
         Stock_de_Productos.Show()
 
     End Sub
 
 
-    
-    Private Sub btnmodistock_Click(sender As System.Object, e As System.EventArgs) Handles btnmodistock.Click
+
+    Private Sub btnmodistock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodistock.Click
         Me.Hide()
         EliminarSotck.Show()
 
@@ -149,4 +149,6 @@ Public Class Inicio
     Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
         MonthCalendar1.Visible = True
     End Sub
+
+  
 End Class
