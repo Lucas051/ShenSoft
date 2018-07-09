@@ -68,13 +68,16 @@ Partial Class Inicio
         Me.btnrealizarfact = New System.Windows.Forms.Button()
         Me.btnconslfact = New System.Windows.Forms.Button()
         Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.calculadora = New System.Windows.Forms.PictureBox()
+        Me.calculadoraImg = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Fecha = New System.Windows.Forms.Label()
         Me.hora = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,7 +97,7 @@ Partial Class Inicio
         Me.Panelclientes.SuspendLayout()
         Me.PanelFact.SuspendLayout()
         Me.Panel15.SuspendLayout()
-        CType(Me.calculadora, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.calculadoraImg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -323,6 +326,9 @@ Partial Class Inicio
         'panelmedio
         '
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.panelmedio.Controls.Add(Me.Label3)
+        Me.panelmedio.Controls.Add(Me.Label4)
+        Me.panelmedio.Controls.Add(Me.Label2)
         Me.panelmedio.Controls.Add(Me.MonthCalendar1)
         Me.panelmedio.Controls.Add(Me.Panel12)
         Me.panelmedio.Controls.Add(Me.panetlstock)
@@ -643,7 +649,7 @@ Partial Class Inicio
         'Panel15
         '
         Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel15.Controls.Add(Me.calculadora)
+        Me.Panel15.Controls.Add(Me.calculadoraImg)
         Me.Panel15.Controls.Add(Me.PictureBox6)
         Me.Panel15.Controls.Add(Me.Label1)
         Me.Panel15.Controls.Add(Me.Fecha)
@@ -654,15 +660,15 @@ Partial Class Inicio
         Me.Panel15.Size = New System.Drawing.Size(816, 66)
         Me.Panel15.TabIndex = 16
         '
-        'calculadora
+        'calculadoraImg
         '
-        Me.calculadora.Image = Global.proyecto.inicio.My.Resources.Resources.calculator
-        Me.calculadora.Location = New System.Drawing.Point(266, 7)
-        Me.calculadora.Name = "calculadora"
-        Me.calculadora.Size = New System.Drawing.Size(81, 50)
-        Me.calculadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.calculadora.TabIndex = 19
-        Me.calculadora.TabStop = False
+        Me.calculadoraImg.Image = Global.proyecto.inicio.My.Resources.Resources.calculator
+        Me.calculadoraImg.Location = New System.Drawing.Point(266, 7)
+        Me.calculadoraImg.Name = "calculadoraImg"
+        Me.calculadoraImg.Size = New System.Drawing.Size(81, 50)
+        Me.calculadoraImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.calculadoraImg.TabIndex = 19
+        Me.calculadoraImg.TabStop = False
         '
         'PictureBox6
         '
@@ -719,6 +725,42 @@ Partial Class Inicio
         Me.Panel7.Size = New System.Drawing.Size(5, 30)
         Me.Panel7.TabIndex = 12
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(317, 46)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(343, 33)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Envíos a domicilio sin cargo"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(298, 79)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(374, 33)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "Tel. 47322722 - Cel. 092165355"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label3.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(403, 110)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(158, 33)
+        Me.Label3.TabIndex = 21
+        Me.Label3.Text = "AMORIM 210"
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -740,6 +782,7 @@ Partial Class Inicio
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
+        Me.panelmedio.PerformLayout()
         Me.Panel12.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -751,7 +794,7 @@ Partial Class Inicio
         Me.PanelFact.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
-        CType(Me.calculadora, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.calculadoraImg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -805,7 +848,10 @@ Partial Class Inicio
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
-    Friend WithEvents calculadora As System.Windows.Forms.PictureBox
+    Friend WithEvents calculadoraImg As System.Windows.Forms.PictureBox
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

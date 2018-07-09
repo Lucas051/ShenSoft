@@ -157,4 +157,8 @@ Public Class Inicio
     End Sub
 
 
+    Private Sub calculadora_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles calculadoraImg.Click
+        Calculadora.Show()
+
+    End Sub
 End Class

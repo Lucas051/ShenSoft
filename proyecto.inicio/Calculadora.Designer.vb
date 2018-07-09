@@ -218,7 +218,7 @@ Partial Class Calculadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(266, 326)
+        Me.ClientSize = New System.Drawing.Size(259, 329)
         Me.Controls.Add(Me.btnPorcent)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnPor)
@@ -238,8 +238,9 @@ Partial Class Calculadora
         Me.Controls.Add(Me.btn0)
         Me.Controls.Add(Me.btncoma)
         Me.Controls.Add(Me.TxtCaja)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Calculadora"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Calculadora"
         Me.ResumeLayout(False)
         Me.PerformLayout()
