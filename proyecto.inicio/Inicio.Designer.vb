@@ -54,7 +54,6 @@ Partial Class Inicio
         Me.btnaddstock = New System.Windows.Forms.Button()
         Me.btnmodistock = New System.Windows.Forms.Button()
         Me.Panelproveedores = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnbuscarprov = New System.Windows.Forms.Button()
         Me.btnmodprov = New System.Windows.Forms.Button()
@@ -75,6 +74,7 @@ Partial Class Inicio
         Me.Fecha = New System.Windows.Forms.Label()
         Me.hora = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -411,9 +411,9 @@ Partial Class Inicio
         Me.panetlstock.Controls.Add(Me.Panel14)
         Me.panetlstock.Controls.Add(Me.btnaddstock)
         Me.panetlstock.Controls.Add(Me.btnmodistock)
-        Me.panetlstock.Location = New System.Drawing.Point(201, 233)
+        Me.panetlstock.Location = New System.Drawing.Point(200, 233)
         Me.panetlstock.Name = "panetlstock"
-        Me.panetlstock.Size = New System.Drawing.Size(198, 67)
+        Me.panetlstock.Size = New System.Drawing.Size(198, 62)
         Me.panetlstock.TabIndex = 14
         Me.panetlstock.Visible = False
         '
@@ -422,7 +422,7 @@ Partial Class Inicio
         Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.Panel13.Location = New System.Drawing.Point(192, 33)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(5, 30)
+        Me.Panel13.Size = New System.Drawing.Size(5, 27)
         Me.Panel13.TabIndex = 10
         '
         'Panel14
@@ -474,17 +474,9 @@ Partial Class Inicio
         Me.Panelproveedores.Controls.Add(Me.btnmodprov)
         Me.Panelproveedores.Location = New System.Drawing.Point(200, 368)
         Me.Panelproveedores.Name = "Panelproveedores"
-        Me.Panelproveedores.Size = New System.Drawing.Size(201, 72)
+        Me.Panelproveedores.Size = New System.Drawing.Size(201, 66)
         Me.Panelproveedores.TabIndex = 13
         Me.Panelproveedores.Visible = False
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(195, 39)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(5, 30)
-        Me.Panel7.TabIndex = 14
         '
         'Panel5
         '
@@ -594,18 +586,18 @@ Partial Class Inicio
         Me.PanelFact.Controls.Add(Me.Panel6)
         Me.PanelFact.Controls.Add(Me.btnrealizarfact)
         Me.PanelFact.Controls.Add(Me.btnconslfact)
-        Me.PanelFact.Location = New System.Drawing.Point(201, 166)
+        Me.PanelFact.Location = New System.Drawing.Point(200, 166)
         Me.PanelFact.Name = "PanelFact"
-        Me.PanelFact.Size = New System.Drawing.Size(198, 67)
+        Me.PanelFact.Size = New System.Drawing.Size(198, 61)
         Me.PanelFact.TabIndex = 0
         Me.PanelFact.Visible = False
         '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel11.Location = New System.Drawing.Point(192, 33)
+        Me.Panel11.Location = New System.Drawing.Point(192, 34)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(5, 30)
+        Me.Panel11.Size = New System.Drawing.Size(5, 26)
         Me.Panel11.TabIndex = 10
         '
         'Panel6
@@ -665,7 +657,7 @@ Partial Class Inicio
         'calculadora
         '
         Me.calculadora.Image = Global.proyecto.inicio.My.Resources.Resources.calculator
-        Me.calculadora.Location = New System.Drawing.Point(403, 7)
+        Me.calculadora.Location = New System.Drawing.Point(266, 7)
         Me.calculadora.Name = "calculadora"
         Me.calculadora.Size = New System.Drawing.Size(81, 50)
         Me.calculadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -675,7 +667,7 @@ Partial Class Inicio
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.proyecto.inicio.My.Resources.Resources.calendar
-        Me.PictureBox6.Location = New System.Drawing.Point(317, 4)
+        Me.PictureBox6.Location = New System.Drawing.Point(373, 5)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(71, 54)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -719,6 +711,14 @@ Partial Class Inicio
         '
         Me.Timer1.Enabled = True
         '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel7.Location = New System.Drawing.Point(195, 36)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(5, 30)
+        Me.Panel7.TabIndex = 12
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -729,6 +729,7 @@ Partial Class Inicio
         Me.Controls.Add(Me.panelmedio)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Inicio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "InicioP"
         Me.barratitulo.ResumeLayout(False)
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
@@ -781,11 +782,9 @@ Partial Class Inicio
     Friend WithEvents btndeudores As System.Windows.Forms.Button
     Friend WithEvents Panel9 As System.Windows.Forms.Panel
     Friend WithEvents Panelproveedores As System.Windows.Forms.Panel
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents btnbuscarprov As System.Windows.Forms.Button
     Friend WithEvents btnmodprov As System.Windows.Forms.Button
-    Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents PictureBoxsalir As System.Windows.Forms.PictureBox
     Friend WithEvents btnsalir As System.Windows.Forms.Button
@@ -807,4 +806,6 @@ Partial Class Inicio
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
     Friend WithEvents calculadora As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents Panel7 As System.Windows.Forms.Panel
 End Class

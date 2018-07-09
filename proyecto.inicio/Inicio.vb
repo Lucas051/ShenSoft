@@ -46,7 +46,9 @@ Public Class Inicio
         panetlstock.Visible = False
         Panelproveedores.Visible = False
         Panelclientes.Visible = False
-        PanelFact.Visible = True
+        'true and false para que si haces click de nuevo desaparezca
+        PanelFact.Visible = True And PanelFact.Visible = False
+
 
     End Sub
 
@@ -72,7 +74,8 @@ Public Class Inicio
         panetlstock.Visible = False
         Panelproveedores.Visible = False
         PanelFact.Visible = False
-        Panelclientes.Visible = True
+        'true and false para que si haces click de nuevo desaparezca
+        Panelclientes.Visible = True And Panelclientes.Visible = False
 
     End Sub
 
@@ -91,7 +94,8 @@ Public Class Inicio
         Panelclientes.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = False
-        panetlstock.Visible = True
+        'true and false para que si haces click de nuevo desaparezca
+        panetlstock.Visible = True And panetlstock.Visible = False
 
 
     End Sub
@@ -102,7 +106,8 @@ Public Class Inicio
         panetlstock.Visible = False
         Panelclientes.Visible = False
         PanelFact.Visible = False
-        Panelproveedores.Visible = True
+        'true and false para que si haces click de nuevo desaparezca
+        Panelproveedores.Visible = True And Panelproveedores.Visible = False
 
     End Sub
 
@@ -147,8 +152,9 @@ Public Class Inicio
     End Sub
 
     Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
-        MonthCalendar1.Visible = True
+        MonthCalendar1.Visible = True And MonthCalendar1.Visible = False
+
     End Sub
 
-  
+
 End Class
