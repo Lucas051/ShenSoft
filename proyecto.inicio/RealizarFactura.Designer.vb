@@ -38,8 +38,8 @@ Partial Class RealizarFactura
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
-        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -51,12 +51,13 @@ Partial Class RealizarFactura
         Me.atras = New System.Windows.Forms.Button()
         Me.buscarb = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridFacturas
@@ -65,7 +66,7 @@ Partial Class RealizarFactura
         Me.DataGridFacturas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
         Me.DataGridFacturas.Location = New System.Drawing.Point(247, 122)
         Me.DataGridFacturas.Name = "DataGridFacturas"
-        Me.DataGridFacturas.Size = New System.Drawing.Size(676, 192)
+        Me.DataGridFacturas.Size = New System.Drawing.Size(643, 192)
         Me.DataGridFacturas.TabIndex = 0
         '
         'Column1
@@ -148,7 +149,7 @@ Partial Class RealizarFactura
         '
         Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(849, 5)
+        Me.btnmini.Location = New System.Drawing.Point(835, 5)
         Me.btnmini.Name = "btnmini"
         Me.btnmini.Size = New System.Drawing.Size(25, 25)
         Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -158,6 +159,7 @@ Partial Class RealizarFactura
         'barratitulo
         '
         Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratitulo.Controls.Add(Me.Label4)
         Me.barratitulo.Controls.Add(Me.btnmini)
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
         Me.barratitulo.Controls.Add(Me.btnmaxi)
@@ -165,42 +167,42 @@ Partial Class RealizarFactura
         Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratitulo.Location = New System.Drawing.Point(0, 0)
         Me.barratitulo.Name = "barratitulo"
-        Me.barratitulo.Size = New System.Drawing.Size(942, 35)
+        Me.barratitulo.Size = New System.Drawing.Size(928, 35)
         Me.barratitulo.TabIndex = 36
         '
         'cerrarbtn
         '
         Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cerrarbtn.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
-        Me.cerrarbtn.Location = New System.Drawing.Point(911, 5)
+        Me.cerrarbtn.Location = New System.Drawing.Point(897, 5)
         Me.cerrarbtn.Name = "cerrarbtn"
         Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
         Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.cerrarbtn.TabIndex = 0
         Me.cerrarbtn.TabStop = False
         '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnmaxi.Location = New System.Drawing.Point(866, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
+        '
         'btnrestaurar
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnrestaurar.Location = New System.Drawing.Point(880, 5)
+        Me.btnrestaurar.Location = New System.Drawing.Point(866, 5)
         Me.btnrestaurar.Name = "btnrestaurar"
         Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
         Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnrestaurar.TabIndex = 3
         Me.btnrestaurar.TabStop = False
         Me.btnrestaurar.Visible = False
-        '
-        'btnmaxi
-        '
-        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(880, 5)
-        Me.btnmaxi.Name = "btnmaxi"
-        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
-        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmaxi.TabIndex = 2
-        Me.btnmaxi.TabStop = False
         '
         'Label1
         '
@@ -319,7 +321,7 @@ Partial Class RealizarFactura
         Me.atras.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.atras.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.atras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.atras.Location = New System.Drawing.Point(843, 357)
+        Me.atras.Location = New System.Drawing.Point(825, 357)
         Me.atras.Name = "atras"
         Me.atras.Size = New System.Drawing.Size(80, 26)
         Me.atras.TabIndex = 46
@@ -335,7 +337,7 @@ Partial Class RealizarFactura
         Me.buscarb.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buscarb.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.buscarb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buscarb.Location = New System.Drawing.Point(844, 90)
+        Me.buscarb.Location = New System.Drawing.Point(811, 90)
         Me.buscarb.Name = "buscarb"
         Me.buscarb.Size = New System.Drawing.Size(79, 26)
         Me.buscarb.TabIndex = 47
@@ -347,18 +349,29 @@ Partial Class RealizarFactura
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(715, 94)
+        Me.Label5.Location = New System.Drawing.Point(682, 94)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(123, 18)
         Me.Label5.TabIndex = 48
         Me.Label5.Text = "Buscar Productos"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label4.Location = New System.Drawing.Point(10, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(222, 19)
+        Me.Label4.TabIndex = 49
+        Me.Label4.Text = "La Pollería - Realizar Factura"
         '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(942, 395)
+        Me.ClientSize = New System.Drawing.Size(928, 395)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.buscarb)
         Me.Controls.Add(Me.atras)
@@ -385,9 +398,10 @@ Partial Class RealizarFactura
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
+        Me.barratitulo.PerformLayout()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,4 +435,5 @@ Partial Class RealizarFactura
     Friend WithEvents atras As System.Windows.Forms.Button
     Friend WithEvents buscarb As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

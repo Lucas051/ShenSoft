@@ -31,6 +31,7 @@ Partial Class buscarproductos
         Me.cod = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.atras = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +51,7 @@ Partial Class buscarproductos
         'barratitulo
         '
         Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratitulo.Controls.Add(Me.Label5)
         Me.barratitulo.Controls.Add(Me.btnmini)
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
         Me.barratitulo.Controls.Add(Me.btnmaxi)
@@ -112,13 +114,13 @@ Partial Class buscarproductos
         Me.cod.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.cod.Location = New System.Drawing.Point(17, 52)
         Me.cod.Name = "cod"
-        Me.cod.Size = New System.Drawing.Size(107, 18)
+        Me.cod.Size = New System.Drawing.Size(116, 18)
         Me.cod.TabIndex = 35
-        Me.cod.Text = "Buscar Factura"
+        Me.cod.Text = "Buscar Producto"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(130, 51)
+        Me.TextBox1.Location = New System.Drawing.Point(135, 50)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(107, 22)
@@ -140,6 +142,17 @@ Partial Class buscarproductos
         Me.atras.Text = "Atrás"
         Me.atras.UseVisualStyleBackColor = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label5.Location = New System.Drawing.Point(12, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(137, 19)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Buscar Productos"
+        '
         'buscarproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -153,9 +166,11 @@ Partial Class buscarproductos
         Me.Controls.Add(Me.DataGridbuscar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "buscarproductos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Buscar Productos"
         CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
+        Me.barratitulo.PerformLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
@@ -173,4 +188,5 @@ Partial Class buscarproductos
     Friend WithEvents cod As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents atras As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

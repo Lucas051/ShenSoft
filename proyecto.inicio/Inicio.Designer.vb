@@ -78,6 +78,7 @@ Partial Class Inicio
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +105,7 @@ Partial Class Inicio
         'barratitulo
         '
         Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratitulo.Controls.Add(Me.Label5)
         Me.barratitulo.Controls.Add(Me.btnmini)
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
         Me.barratitulo.Controls.Add(Me.btnmaxi)
@@ -118,7 +120,7 @@ Partial Class Inicio
         '
         Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(723, 5)
+        Me.btnmini.Location = New System.Drawing.Point(712, 6)
         Me.btnmini.Name = "btnmini"
         Me.btnmini.Size = New System.Drawing.Size(25, 25)
         Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -140,7 +142,7 @@ Partial Class Inicio
         '
         Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(754, 5)
+        Me.btnmaxi.Location = New System.Drawing.Point(749, 5)
         Me.btnmaxi.Name = "btnmaxi"
         Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
         Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -153,7 +155,7 @@ Partial Class Inicio
         Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
         Me.btnrestaurar.Location = New System.Drawing.Point(754, 5)
         Me.btnrestaurar.Name = "btnrestaurar"
-        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
+        Me.btnrestaurar.Size = New System.Drawing.Size(14, 25)
         Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnrestaurar.TabIndex = 3
         Me.btnrestaurar.TabStop = False
@@ -761,6 +763,17 @@ Partial Class Inicio
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "AMORIM 210"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label5.Location = New System.Drawing.Point(3, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(140, 19)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "La Pollería - Inicio"
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -774,6 +787,7 @@ Partial Class Inicio
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "InicioP"
         Me.barratitulo.ResumeLayout(False)
+        Me.barratitulo.PerformLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
@@ -854,4 +868,5 @@ Partial Class Inicio
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class
