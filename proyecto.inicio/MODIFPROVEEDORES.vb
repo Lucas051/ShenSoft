@@ -29,12 +29,11 @@ Public Class MODIFPROVEEDORES
         TextBox2.Text = ""
         TextBox3.Text = ""
         TextBox4.Text = ""
-        TextBox1.Text = ""
     End Sub
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
         Me.Hide()
-        InicioP.Show()
+        Consulta_proveedor.Show()
     End Sub
 
     Private Sub MODIFPROVEEDORES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -50,7 +49,7 @@ Public Class MODIFPROVEEDORES
 
     End Sub
 
-    Private Sub editar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class
