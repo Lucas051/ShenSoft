@@ -32,7 +32,6 @@ Partial Class MODIFPROVEEDORES
         Me.volver = New System.Windows.Forms.Button()
         Me.limpiar = New System.Windows.Forms.Button()
         Me.borrar = New System.Windows.Forms.Button()
-        Me.editar = New System.Windows.Forms.Button()
         Me.añadir = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -102,16 +101,16 @@ Partial Class MODIFPROVEEDORES
         '
         'volver
         '
-        Me.volver.Location = New System.Drawing.Point(611, 169)
+        Me.volver.Location = New System.Drawing.Point(540, 261)
         Me.volver.Name = "volver"
-        Me.volver.Size = New System.Drawing.Size(60, 152)
+        Me.volver.Size = New System.Drawing.Size(65, 73)
         Me.volver.TabIndex = 18
         Me.volver.Text = "VOLVER"
         Me.volver.UseVisualStyleBackColor = True
         '
         'limpiar
         '
-        Me.limpiar.Location = New System.Drawing.Point(540, 90)
+        Me.limpiar.Location = New System.Drawing.Point(540, 93)
         Me.limpiar.Name = "limpiar"
         Me.limpiar.Size = New System.Drawing.Size(65, 73)
         Me.limpiar.TabIndex = 17
@@ -120,21 +119,12 @@ Partial Class MODIFPROVEEDORES
         '
         'borrar
         '
-        Me.borrar.Location = New System.Drawing.Point(540, 248)
+        Me.borrar.Location = New System.Drawing.Point(540, 176)
         Me.borrar.Name = "borrar"
         Me.borrar.Size = New System.Drawing.Size(65, 73)
         Me.borrar.TabIndex = 16
         Me.borrar.Text = "BORRAR"
         Me.borrar.UseVisualStyleBackColor = True
-        '
-        'editar
-        '
-        Me.editar.Location = New System.Drawing.Point(540, 169)
-        Me.editar.Name = "editar"
-        Me.editar.Size = New System.Drawing.Size(65, 73)
-        Me.editar.TabIndex = 15
-        Me.editar.Text = "EDITAR"
-        Me.editar.UseVisualStyleBackColor = True
         '
         'añadir
         '
@@ -188,7 +178,6 @@ Partial Class MODIFPROVEEDORES
         Me.Controls.Add(Me.volver)
         Me.Controls.Add(Me.limpiar)
         Me.Controls.Add(Me.borrar)
-        Me.Controls.Add(Me.editar)
         Me.Controls.Add(Me.añadir)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "MODIFPROVEEDORES"
@@ -209,7 +198,6 @@ Partial Class MODIFPROVEEDORES
     Friend WithEvents volver As System.Windows.Forms.Button
     Friend WithEvents limpiar As System.Windows.Forms.Button
     Friend WithEvents borrar As System.Windows.Forms.Button
-    Friend WithEvents editar As System.Windows.Forms.Button
     Friend WithEvents añadir As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox

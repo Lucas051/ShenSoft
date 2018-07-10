@@ -20,7 +20,7 @@ Public Class EliminarSotck
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         Me.Hide()
-        Inicio.Show()
+        Stock_de_Productos.Show()
 
     End Sub
 

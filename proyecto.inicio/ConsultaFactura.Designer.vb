@@ -30,9 +30,9 @@ Partial Class ConsultaFactura
         'datagridconsulta
         '
         Me.datagridconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagridconsulta.Location = New System.Drawing.Point(12, 12)
+        Me.datagridconsulta.Location = New System.Drawing.Point(12, 42)
         Me.datagridconsulta.Name = "datagridconsulta"
-        Me.datagridconsulta.Size = New System.Drawing.Size(471, 225)
+        Me.datagridconsulta.Size = New System.Drawing.Size(195, 203)
         Me.datagridconsulta.TabIndex = 0
         '
         'Atras

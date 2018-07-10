@@ -77,22 +77,16 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buscar proveedores.Designer.vb">
-      <DependentUpon>Buscar proveedores.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Buscar proveedores.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BuscarClientesFact.Designer.vb">
       <DependentUpon>BuscarClientesFact.vb</DependentUpon>
     </Compile>
     <Compile Include="BuscarClientesFact.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calculadora.Designer.vb">
-      <DependentUpon>Calculadora.vb</DependentUpon>
+    <Compile Include="prove.Designer.vb">
+      <DependentUpon>prove.vb</DependentUpon>
     </Compile>
-    <Compile Include="Calculadora.vb">
+    <Compile Include="prove.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Clientes.Designer.vb">
@@ -126,16 +120,29 @@
     <Compile Include="EliminarSotck.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Facturacion.Designer.vb">
+      <DependentUpon>Facturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="buscarproductos.Designer.vb">
       <DependentUpon>buscarproductos.vb</DependentUpon>
     </Compile>
     <Compile Include="buscarproductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.vb">
-      <DependentUpon>Inicio.vb</DependentUpon>
+    <Compile Include="InicioP.Designer.vb">
+      <DependentUpon>InicioP.vb</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.vb">
+    <Compile Include="InicioP.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODIFPROVEEDORES.Designer.vb">
@@ -179,14 +186,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Buscar proveedores.resx">
-      <DependentUpon>Buscar proveedores.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BuscarClientesFact.resx">
       <DependentUpon>BuscarClientesFact.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Calculadora.resx">
-      <DependentUpon>Calculadora.vb</DependentUpon>
+    <EmbeddedResource Include="prove.resx">
+      <DependentUpon>prove.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
@@ -203,11 +207,17 @@
     <EmbeddedResource Include="EliminarSotck.resx">
       <DependentUpon>EliminarSotck.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="buscarproductos.resx">
-      <DependentUpon>buscarproductos.vb</DependentUpon>
+    <EmbeddedResource Include="Facturacion.resx">
+      <DependentUpon>Facturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarproductos.resx">
+      <DependentUpon>buscarproductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioP.resx">
+      <DependentUpon>InicioP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFPROVEEDORES.resx">
       <DependentUpon>MODIFPROVEEDORES.vb</DependentUpon>
@@ -307,15 +317,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\compras.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\salir1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calendar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calculator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

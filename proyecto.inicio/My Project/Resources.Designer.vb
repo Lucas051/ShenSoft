@@ -93,26 +93,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property calculator() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("calculator", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property calendar() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("calendar", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property calendario() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("calendario", resourceCulture)
@@ -246,16 +226,6 @@ Namespace My.Resources
         Friend ReadOnly Property salir() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("salir", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property salir1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("salir1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
