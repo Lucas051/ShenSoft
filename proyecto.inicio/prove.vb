@@ -1,4 +1,5 @@
-﻿Public Class Buscar_proveedores
+﻿Public Class prove
+
     Private Sub Buscar_proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
 
@@ -12,7 +13,8 @@
 
 
     End Sub
-    Private Sub TextBox1_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
 
             conexioon.Consulta = "SELECT * FROM proveedores WHERE nombre_prov LIKE '%" & TextBox1.Text & "%';"
