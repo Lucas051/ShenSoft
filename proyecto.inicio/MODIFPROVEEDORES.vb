@@ -33,7 +33,7 @@ Public Class MODIFPROVEEDORES
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
         Me.Hide()
-        Consulta_proveedor.Show()
+        Inicio.Show()
     End Sub
 
     Private Sub MODIFPROVEEDORES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

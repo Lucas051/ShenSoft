@@ -24,6 +24,7 @@ Partial Class Inicio
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.barratitulo = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
@@ -42,6 +43,9 @@ Partial Class Inicio
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnsalir = New System.Windows.Forms.Button()
         Me.panelmedio = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -54,6 +58,7 @@ Partial Class Inicio
         Me.btnaddstock = New System.Windows.Forms.Button()
         Me.btnmodistock = New System.Windows.Forms.Button()
         Me.Panelproveedores = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnbuscarprov = New System.Windows.Forms.Button()
         Me.btnmodprov = New System.Windows.Forms.Button()
@@ -74,11 +79,6 @@ Partial Class Inicio
         Me.Fecha = New System.Windows.Forms.Label()
         Me.hora = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,6 +115,17 @@ Partial Class Inicio
         Me.barratitulo.Name = "barratitulo"
         Me.barratitulo.Size = New System.Drawing.Size(816, 35)
         Me.barratitulo.TabIndex = 0
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label5.Location = New System.Drawing.Point(3, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(139, 19)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "La Pollería - Inicio"
         '
         'btnmini
         '
@@ -344,6 +355,42 @@ Partial Class Inicio
         Me.panelmedio.Size = New System.Drawing.Size(816, 471)
         Me.panelmedio.TabIndex = 2
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label3.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(403, 110)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(159, 33)
+        Me.Label3.TabIndex = 21
+        Me.Label3.Text = "AMORIM 210"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(298, 79)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(371, 33)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "Tel. 47322722 - Cel. 092165355"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(317, 46)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(345, 33)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Envíos a domicilio sin cargo"
+        '
         'MonthCalendar1
         '
         Me.MonthCalendar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -485,6 +532,14 @@ Partial Class Inicio
         Me.Panelproveedores.Size = New System.Drawing.Size(201, 66)
         Me.Panelproveedores.TabIndex = 13
         Me.Panelproveedores.Visible = False
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel7.Location = New System.Drawing.Point(195, 36)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(5, 30)
+        Me.Panel7.TabIndex = 12
         '
         'Panel5
         '
@@ -689,7 +744,7 @@ Partial Class Inicio
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label1.Location = New System.Drawing.Point(687, 48)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.Size = New System.Drawing.Size(75, 13)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "(Mes,Día,Año)"
         '
@@ -711,68 +766,13 @@ Partial Class Inicio
         Me.hora.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.hora.Location = New System.Drawing.Point(478, 7)
         Me.hora.Name = "hora"
-        Me.hora.Size = New System.Drawing.Size(148, 41)
+        Me.hora.Size = New System.Drawing.Size(144, 41)
         Me.hora.TabIndex = 0
         Me.hora.Text = "00:00:00"
         '
         'Timer1
         '
         Me.Timer1.Enabled = True
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(195, 36)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(5, 30)
-        Me.Panel7.TabIndex = 12
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(317, 46)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(343, 33)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Envíos a domicilio sin cargo"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(298, 79)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(374, 33)
-        Me.Label4.TabIndex = 20
-        Me.Label4.Text = "Tel. 47322722 - Cel. 092165355"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(403, 110)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(158, 33)
-        Me.Label3.TabIndex = 21
-        Me.Label3.Text = "AMORIM 210"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(3, 9)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(140, 19)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "La Pollería - Inicio"
         '
         'Inicio
         '

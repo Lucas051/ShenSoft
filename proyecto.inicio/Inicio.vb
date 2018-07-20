@@ -56,6 +56,10 @@ Public Class Inicio
         PanelFact.Visible = False
         Me.Hide()
         RealizarFactura.Show()
+       
+
+       
+
 
     End Sub
 
@@ -161,4 +165,6 @@ Public Class Inicio
         Calculadora.Show()
 
     End Sub
+
+ 
 End Class

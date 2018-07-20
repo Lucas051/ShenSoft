@@ -69,4 +69,5 @@ Public Class RealizarFactura
         descuent.Text = ""
         precioov.Text = ""
     End Sub
+
 End Class
