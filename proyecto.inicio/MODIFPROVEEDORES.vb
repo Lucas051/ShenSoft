@@ -33,7 +33,11 @@ Public Class MODIFPROVEEDORES
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
         Me.Hide()
+<<<<<<< HEAD
         Consulta_proveedor.Show()
+=======
+        Inicio.Show()
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
     End Sub
 
     Private Sub MODIFPROVEEDORES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -48,6 +52,7 @@ Public Class MODIFPROVEEDORES
         datafrancoxd.Columns(3).HeaderText = "Dirección"
 
     End Sub
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,4 +78,10 @@ Public Class MODIFPROVEEDORES
 
     End Sub
 >>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+
+    End Sub
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
 End Class

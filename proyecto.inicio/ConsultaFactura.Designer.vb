@@ -25,6 +25,7 @@ Partial Class ConsultaFactura
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Me.datagridconsulta = New System.Windows.Forms.DataGridView()
         Me.Atras = New System.Windows.Forms.Button()
         CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -167,6 +168,42 @@ Partial Class ConsultaFactura
         Me.ResumeLayout(False)
 
 >>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+        Me.datagridconsulta = New System.Windows.Forms.DataGridView()
+        Me.Atras = New System.Windows.Forms.Button()
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'datagridconsulta
+        '
+        Me.datagridconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridconsulta.Location = New System.Drawing.Point(12, 12)
+        Me.datagridconsulta.Name = "datagridconsulta"
+        Me.datagridconsulta.Size = New System.Drawing.Size(471, 225)
+        Me.datagridconsulta.TabIndex = 0
+        '
+        'Atras
+        '
+        Me.Atras.Location = New System.Drawing.Point(408, 243)
+        Me.Atras.Name = "Atras"
+        Me.Atras.Size = New System.Drawing.Size(75, 23)
+        Me.Atras.TabIndex = 1
+        Me.Atras.Text = "Atrás"
+        Me.Atras.UseVisualStyleBackColor = True
+        '
+        'ConsultaFactura
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(495, 278)
+        Me.Controls.Add(Me.Atras)
+        Me.Controls.Add(Me.datagridconsulta)
+        Me.Name = "ConsultaFactura"
+        Me.Text = "ConsultaFactura"
+        CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
     End Sub
     Friend WithEvents datagridconsulta As System.Windows.Forms.DataGridView
     Friend WithEvents Atras As System.Windows.Forms.Button

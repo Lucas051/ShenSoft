@@ -20,10 +20,11 @@ Public Class EliminarSotck
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         Me.Hide()
-        Stock_de_Productos.Show()
+        Inicio.Show()
 
     End Sub
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,6 +136,39 @@ Public Class EliminarSotck
 =======
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         'Intento de eliminar stock v 0.0.1
+=======
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
+
+        conexioon.Consulta = "DELETE FROM `stock` WHERE `stock`.`cod_producto` ='" + Str(txtcodigo.Text) + "'"
+        consultar()
+        dgvEliminar.DataSource = resultado
+
+
+
+<<<<<<< HEAD
+        MessageBox.Show("Dato Eliminado Correctamente.")
+     
+        conexioon.Consulta = "SELECT * FROM stock"
+        consultar()
+        dgvEliminar.DataSource = resultado
+>>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs)
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
+
+        dgvEliminar.Columns(0).HeaderText = "Código"
+        dgvEliminar.Columns(1).HeaderText = "Descripcion"
+        dgvEliminar.Columns(2).HeaderText = "Cantidad"
+        dgvEliminar.Columns(3).HeaderText = "Precio Costo"
+        dgvEliminar.Columns(4).HeaderText = "Precio Venta"""
+        dgvEliminar.Columns(5).HeaderText = "Proveedor"
+    End Sub
+
+<<<<<<< HEAD
+    Private Sub dgvEliminar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEliminar.CellContentClick
+=======
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        'Intento de eliminar stock v 0.0.1
 
         conexioon.Consulta = "DELETE FROM `stock` WHERE `stock`.`cod_producto` ='" + Str(txtcodigo.Text) + "'"
         consultar()
@@ -147,7 +181,7 @@ Public Class EliminarSotck
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()
         dgvEliminar.DataSource = resultado
->>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
 
         dgvEliminar.Columns(0).HeaderText = "Código"
         dgvEliminar.Columns(1).HeaderText = "Descripcion"

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
@@ -120,6 +123,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<<<<<<< HEAD
 =======
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -483,4 +487,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 >>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
 </root>

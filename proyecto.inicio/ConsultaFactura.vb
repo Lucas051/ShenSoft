@@ -2,7 +2,7 @@
 Public Class ConsultaFactura
     Private Sub Atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Atras.Click
         Me.Hide()
-        Facturacion.Show()
+        Inicio.Show()
 
     End Sub
 

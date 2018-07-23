@@ -32,7 +32,6 @@ Partial Class Stock_de_Productos
         Me.txtpreciostock = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
@@ -110,7 +109,11 @@ Partial Class Stock_de_Productos
         '
         'Button3
         '
+<<<<<<< HEAD
         Me.Button3.Location = New System.Drawing.Point(1, 197)
+=======
+        Me.Button3.Location = New System.Drawing.Point(1, 172)
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(81, 31)
         Me.Button3.TabIndex = 9
@@ -126,6 +129,7 @@ Partial Class Stock_de_Productos
         Me.Button4.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
         'Button5
         '
         Me.Button5.Location = New System.Drawing.Point(1, 150)
@@ -135,6 +139,8 @@ Partial Class Stock_de_Productos
         Me.Button5.Text = "Modificar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tabla"
         Me.Button5.UseVisualStyleBackColor = True
         '
+=======
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -186,7 +192,6 @@ Partial Class Stock_de_Productos
         Me.Controls.Add(Me.txtproveedor)
         Me.Controls.Add(Me.txtcantidad)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.txtpreciostock)
@@ -214,7 +219,6 @@ Partial Class Stock_de_Productos
     Friend WithEvents txtpreciostock As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents txtcantidad As System.Windows.Forms.TextBox
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Imports MySql.Data.MySqlClient
 Public Class Buscar_proveedores
     Dim resultado As DataTable
@@ -173,4 +174,31 @@ Public Class Buscar_proveedores
 
     End Sub
 >>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
+=======
+﻿Public Class Buscar_proveedores
+    Private Sub Buscar_proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Try
+
+            conexioon.Consulta = "SELECT * FROM proveedores;"
+            consultar()
+            dgvfran.DataSource = resultado
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+    End Sub
+    Private Sub TextBox1_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        Try
+
+            conexioon.Consulta = "SELECT * FROM proveedores WHERE nombre_prov LIKE '%" & TextBox1.Text & "%';"
+            consultar()
+            dgvfran.DataSource = resultado
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+>>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
 End Class
