@@ -47,19 +47,16 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles agregar.Click
-        If cant.Text = " " And precioov.Text = " " Then
-            MsgBox("Debe ingresar una cantidad y precio de venta")
 
-        Else
+        cantidadp = cant.Text
+        valor = Val(cantidadp) * Val(precioov.Text) - descuentop
+        descuentop = Val(valor) * Val(descuent.Text) / 100
+        valorTotal = Val(cantidadp) * Val(precioov.Text) - descuentop
 
-            cantidadp = cant.Text
-            valor = Val(cantidadp) * Val(precioov.Text) - descuentop
-            descuentop = Val(valor) * Val(descuent.Text) / 100
-            valorTotal = Val(cantidadp) * Val(precioov.Text) - descuentop
 
-            'Agrega valores de textbox a datagrid
-            DataGridFacturas.Rows.Add(codigo.Text, desc.Text, cantidadp, descuent.Text, precioov.Text, valorTotal)
-        End If
+
+        'Agrega valores de textbox a datagrid
+        DataGridFacturas.Rows.Add(codigo.Text, desc.Text, cantidadp, descuent.Text, precioov.Text, valorTotal)
     End Sub
 
     Private Sub limpiarv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles limpiarv.Click
@@ -69,5 +66,4 @@ Public Class RealizarFactura
         descuent.Text = ""
         precioov.Text = ""
     End Sub
-
 End Class

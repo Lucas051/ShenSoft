@@ -89,12 +89,6 @@
     <Compile Include="BuscarClientesFact.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calculadora.Designer.vb">
-      <DependentUpon>Calculadora.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Calculadora.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Clientes.Designer.vb">
       <DependentUpon>Clientes.vb</DependentUpon>
     </Compile>
@@ -184,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarClientesFact.resx">
       <DependentUpon>BuscarClientesFact.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Calculadora.resx">
-      <DependentUpon>Calculadora.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
@@ -310,12 +301,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salir1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calendar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calculator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
