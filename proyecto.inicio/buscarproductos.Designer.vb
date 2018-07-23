@@ -22,210 +22,6 @@ Partial Class buscarproductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Me.DataGridbuscar = New System.Windows.Forms.DataGridView()
-        Me.atras = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'DataGridbuscar
-        '
-        Me.DataGridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridbuscar.Location = New System.Drawing.Point(9, 26)
-        Me.DataGridbuscar.Name = "DataGridbuscar"
-        Me.DataGridbuscar.Size = New System.Drawing.Size(630, 211)
-        Me.DataGridbuscar.TabIndex = 33
-        '
-        'atras
-        '
-        Me.atras.Location = New System.Drawing.Point(579, 258)
-        Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(75, 23)
-        Me.atras.TabIndex = 34
-        Me.atras.Text = "Volver"
-        Me.atras.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(188, 288)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 35
-        Me.TextBox1.UseSystemPasswordChar = True
-        '
-        'buscarproductos
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 335)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.atras)
-        Me.Controls.Add(Me.DataGridbuscar)
-        Me.Name = "buscarproductos"
-        Me.Text = "Buscar Productos"
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
-    End Sub
-    Friend WithEvents DataGridbuscar As System.Windows.Forms.DataGridView
-    Friend WithEvents atras As System.Windows.Forms.Button
-=======
-        Me.DataGridbuscar = New System.Windows.Forms.DataGridView()
-        Me.atras = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'DataGridbuscar
-        '
-        Me.DataGridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridbuscar.Location = New System.Drawing.Point(9, 26)
-        Me.DataGridbuscar.Name = "DataGridbuscar"
-        Me.DataGridbuscar.Size = New System.Drawing.Size(630, 211)
-        Me.DataGridbuscar.TabIndex = 33
-        '
-        'atras
-        '
-        Me.atras.Location = New System.Drawing.Point(579, 258)
-        Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(75, 23)
-        Me.atras.TabIndex = 34
-        Me.atras.Text = "Volver"
-        Me.atras.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(188, 288)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 35
-        Me.TextBox1.UseSystemPasswordChar = True
-        '
-        'buscarproductos
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 335)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.atras)
-        Me.Controls.Add(Me.DataGridbuscar)
-        Me.Name = "buscarproductos"
-        Me.Text = "Buscar Productos"
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
-    End Sub
-    Friend WithEvents DataGridbuscar As System.Windows.Forms.DataGridView
-    Friend WithEvents atras As System.Windows.Forms.Button
->>>>>>> b9ac1fc0ad416c297c35c829e7c17ad9a49cbaf6
-=======
-        Me.DataGridbuscar = New System.Windows.Forms.DataGridView()
-        Me.atras = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'DataGridbuscar
-        '
-        Me.DataGridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridbuscar.Location = New System.Drawing.Point(9, 26)
-        Me.DataGridbuscar.Name = "DataGridbuscar"
-        Me.DataGridbuscar.Size = New System.Drawing.Size(630, 211)
-        Me.DataGridbuscar.TabIndex = 33
-        '
-        'atras
-        '
-        Me.atras.Location = New System.Drawing.Point(579, 258)
-        Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(75, 23)
-        Me.atras.TabIndex = 34
-        Me.atras.Text = "Volver"
-        Me.atras.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(188, 288)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 35
-        Me.TextBox1.UseSystemPasswordChar = True
-        '
-        'buscarproductos
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 335)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.atras)
-        Me.Controls.Add(Me.DataGridbuscar)
-        Me.Name = "buscarproductos"
-        Me.Text = "Buscar Productos"
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
-    End Sub
-    Friend WithEvents DataGridbuscar As System.Windows.Forms.DataGridView
-    Friend WithEvents atras As System.Windows.Forms.Button
->>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
-=======
-        Me.DataGridbuscar = New System.Windows.Forms.DataGridView()
-        Me.atras = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'DataGridbuscar
-        '
-        Me.DataGridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridbuscar.Location = New System.Drawing.Point(9, 26)
-        Me.DataGridbuscar.Name = "DataGridbuscar"
-        Me.DataGridbuscar.Size = New System.Drawing.Size(630, 211)
-        Me.DataGridbuscar.TabIndex = 33
-        '
-        'atras
-        '
-        Me.atras.Location = New System.Drawing.Point(579, 258)
-        Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(75, 23)
-        Me.atras.TabIndex = 34
-        Me.atras.Text = "Volver"
-        Me.atras.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(188, 288)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 35
-        Me.TextBox1.UseSystemPasswordChar = True
-        '
-        'buscarproductos
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 335)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.atras)
-        Me.Controls.Add(Me.DataGridbuscar)
-        Me.Name = "buscarproductos"
-        Me.Text = "Buscar Productos"
-        CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
-    End Sub
-    Friend WithEvents DataGridbuscar As System.Windows.Forms.DataGridView
-    Friend WithEvents atras As System.Windows.Forms.Button
->>>>>>> 62e125c36027cfa6bb4448f5a34b20b073f6979e
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-=======
         Me.DataGridbuscar = New System.Windows.Forms.DataGridView()
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
@@ -235,7 +31,6 @@ Partial Class buscarproductos
         Me.cod = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.atras = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,7 +50,6 @@ Partial Class buscarproductos
         'barratitulo
         '
         Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.barratitulo.Controls.Add(Me.Label5)
         Me.barratitulo.Controls.Add(Me.btnmini)
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
         Me.barratitulo.Controls.Add(Me.btnmaxi)
@@ -318,13 +112,13 @@ Partial Class buscarproductos
         Me.cod.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.cod.Location = New System.Drawing.Point(17, 52)
         Me.cod.Name = "cod"
-        Me.cod.Size = New System.Drawing.Size(116, 18)
+        Me.cod.Size = New System.Drawing.Size(107, 18)
         Me.cod.TabIndex = 35
-        Me.cod.Text = "Buscar Producto"
+        Me.cod.Text = "Buscar Factura"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(135, 50)
+        Me.TextBox1.Location = New System.Drawing.Point(130, 51)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(107, 22)
@@ -346,17 +140,6 @@ Partial Class buscarproductos
         Me.atras.Text = "Atrás"
         Me.atras.UseVisualStyleBackColor = False
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(12, 9)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(137, 19)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Buscar Productos"
-        '
         'buscarproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -370,11 +153,9 @@ Partial Class buscarproductos
         Me.Controls.Add(Me.DataGridbuscar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "buscarproductos"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Buscar Productos"
         CType(Me.DataGridbuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
-        Me.barratitulo.PerformLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
@@ -392,6 +173,4 @@ Partial Class buscarproductos
     Friend WithEvents cod As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents atras As System.Windows.Forms.Button
-    Friend WithEvents Label5 As System.Windows.Forms.Label
->>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
 End Class

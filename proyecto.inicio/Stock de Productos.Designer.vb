@@ -109,11 +109,7 @@ Partial Class Stock_de_Productos
         '
         'Button3
         '
-<<<<<<< HEAD
-        Me.Button3.Location = New System.Drawing.Point(1, 197)
-=======
         Me.Button3.Location = New System.Drawing.Point(1, 172)
->>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(81, 31)
         Me.Button3.TabIndex = 9
@@ -129,18 +125,6 @@ Partial Class Stock_de_Productos
         Me.Button4.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
-<<<<<<< HEAD
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(1, 150)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 41)
-        Me.Button5.TabIndex = 11
-        Me.Button5.Text = "Modificar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tabla"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-=======
->>>>>>> d19429f7d8081b4cb9859b313d55c7febe1d6b68
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
