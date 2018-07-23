@@ -485,6 +485,7 @@ Partial Class Inicio
         Me.Controls.Add(Me.panelmedio)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Inicio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "InicioP"
         Me.barratitulo.ResumeLayout(False)
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
