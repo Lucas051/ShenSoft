@@ -29,29 +29,29 @@ Partial Class Clientes
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(153, 71)
+        Me.Button1.Location = New System.Drawing.Point(217, 51)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(170, 40)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Agregar/Modificar cliente"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(153, 120)
+        Me.Button2.Location = New System.Drawing.Point(217, 176)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(170, 40)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Buscar cliente"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(153, 167)
+        Me.Button3.Location = New System.Drawing.Point(244, 117)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(113, 38)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "Volver"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Clientes
