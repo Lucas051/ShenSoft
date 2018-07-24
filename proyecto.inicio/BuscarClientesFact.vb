@@ -1,7 +1,6 @@
-﻿Imports System.Windows.Forms
-Public Class BuscarClientesFact
+﻿Public Class BuscarClientesFact
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Me.Hide()
         Cobrar.Show()
 
@@ -11,55 +10,50 @@ Public Class BuscarClientesFact
         conexioon.Consulta = "SELECT * FROM clientes"
         consultar()
         DGClientesFac.DataSource = resultado
+        'eliminar = "DELETE FROM proveedores WHERE num_prov= '" & TextBox1.Text & "'"
+        consultar()
+        conexioon.Consulta = "DELETE FROM proveedores WHERE num_prov= '" & TextBox1.Text & "'"
+        consultar()
+        dgvfran.DataSource = resultado
 
-        'Nombramos los encabezados del datagrid buscar
+
+
+        MessageBox.Show("Dato Eliminado Correctamente.")
+
+        conexioon.Consulta = "SELECT * FROM stock"
+        consultar()
+        dgvfran.DataSource = resultado
 
         DGClientesFac.Columns(0).HeaderText = "Número Cliente"
         DGClientesFac.Columns(1).HeaderText = "CI"
         DGClientesFac.Columns(2).HeaderText = "Nombre"
-        DGClientesFac.Columns(3).HeaderText = "Dirección"
-        DGClientesFac.Columns(4).HeaderText = "Telefono"
-        DGClientesFac.Columns(5).HeaderText = "Saldo"
+        DGClientesFac.Columns(3).HeaderText = "Saldo"
+        DGClientesFac.Columns(4).HeaderText = "Direccion"
+        DGClientesFac.Columns(5).HeaderText = "Telefono"
     End Sub
 
     Private Sub DGClientesFac_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGClientesFac.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        Cobrar.TextBoxCliente.Text = DGClientesFac.CurrentRow.Cells(2).Value.ToString 'enviamos nombre de cliente
+        Cobrar.TextBoxcliente.Text = DGClientesFac.CurrentRow.Cells(0).Value.ToString
         'close para cerrar el form
         Close()
         Cobrar.Show()
     End Sub
 
-    Private Sub atrasbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles atrasbtn.Click
-        Me.Hide()
-        Cobrar.Show()
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        'Dim consulta As String
+        ' Dim lista As Byte
+        ' If TextBox1.Text <> "" Then
+        ' consulta = "SELECT * FROM clientes WHERE num_prov= '" & TextBox1.Text & "'"
+        'conexion = New MySqlDataAdapter(consulta, ubicacion)
+        'resultado = DataTable
 
+
+        'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     End Sub
 
-    Private Sub btnmini_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmini.Click
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
+    Private Function dgvfran() As Object
+        Throw New NotImplementedException
+    End Function
 
-    Private Sub barratitulo_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
-
-    End Sub
-
-    Private Sub btnmaxi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmaxi.Click
-        Me.WindowState = FormWindowState.Maximized
-        'esconde boton, aparece restaurar
-        btnmaxi.Visible = False
-        btnrestaurar.Visible = True
-
-    End Sub
-
-    Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
-        End
-    End Sub
-
-    Private Sub btnrestaurar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrestaurar.Click
-        Me.WindowState = FormWindowState.Normal
-        'esconde boton, aparece restaurar
-        btnmaxi.Visible = True
-        btnrestaurar.Visible = False
-    End Sub
 End Class
