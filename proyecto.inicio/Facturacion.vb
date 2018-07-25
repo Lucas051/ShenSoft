@@ -12,10 +12,6 @@
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Me.Hide()
-        Inicio.Show()
-    End Sub
-
-    Private Sub Facturacion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
+        Form1.Show()
     End Sub
 End Class

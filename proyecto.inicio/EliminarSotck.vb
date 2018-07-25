@@ -58,4 +58,28 @@ Public Class EliminarSotck
     Private Sub dgvEliminar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEliminar.CellContentClick
 
     End Sub
+
+    Private Sub btnmini_Click(sender As System.Object, e As System.EventArgs) Handles btnmini.Click
+        Me.WindowState = FormWindowState.Minimized
+
+    End Sub
+
+    Private Sub btnrestaurar_Click(sender As System.Object, e As System.EventArgs) Handles btnrestaurar.Click
+        'restaura ventana
+        Me.WindowState = FormWindowState.Normal
+        'esconde boton, aparece maximizar
+        btnrestaurar.Visible = False
+        btnmaxi.Visible = True
+    End Sub
+
+    Private Sub btnmaxi_Click(sender As System.Object, e As System.EventArgs) Handles btnmaxi.Click
+        Me.WindowState = FormWindowState.Maximized
+
+        btnmaxi.Visible = False
+        btnrestaurar.Visible = True
+    End Sub
+
+    Private Sub cerrarbtn_Click(sender As System.Object, e As System.EventArgs) Handles cerrarbtn.Click
+        End
+    End Sub
 End Class

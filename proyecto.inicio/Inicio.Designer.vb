@@ -22,9 +22,7 @@ Partial Class Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.barratitulo = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
@@ -43,15 +41,6 @@ Partial Class Inicio
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnsalir = New System.Windows.Forms.Button()
         Me.panelmedio = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.panetlstock = New System.Windows.Forms.Panel()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
@@ -72,13 +61,6 @@ Partial Class Inicio
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnrealizarfact = New System.Windows.Forms.Button()
         Me.btnconslfact = New System.Windows.Forms.Button()
-        Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.calculadoraImg = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Fecha = New System.Windows.Forms.Label()
-        Me.hora = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,24 +70,15 @@ Partial Class Inicio
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelmedio.SuspendLayout()
-        Me.Panel12.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panetlstock.SuspendLayout()
         Me.Panelproveedores.SuspendLayout()
         Me.Panelclientes.SuspendLayout()
         Me.PanelFact.SuspendLayout()
-        Me.Panel15.SuspendLayout()
-        CType(Me.calculadoraImg, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'barratitulo
         '
         Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.barratitulo.Controls.Add(Me.Label5)
         Me.barratitulo.Controls.Add(Me.btnmini)
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
         Me.barratitulo.Controls.Add(Me.btnmaxi)
@@ -113,25 +86,14 @@ Partial Class Inicio
         Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratitulo.Location = New System.Drawing.Point(0, 0)
         Me.barratitulo.Name = "barratitulo"
-        Me.barratitulo.Size = New System.Drawing.Size(816, 35)
+        Me.barratitulo.Size = New System.Drawing.Size(984, 35)
         Me.barratitulo.TabIndex = 0
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(3, 9)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(139, 19)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "La Pollería - Inicio"
         '
         'btnmini
         '
         Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(712, 6)
+        Me.btnmini.Location = New System.Drawing.Point(891, 5)
         Me.btnmini.Name = "btnmini"
         Me.btnmini.Size = New System.Drawing.Size(25, 25)
         Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -142,7 +104,7 @@ Partial Class Inicio
         '
         Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cerrarbtn.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
-        Me.cerrarbtn.Location = New System.Drawing.Point(785, 5)
+        Me.cerrarbtn.Location = New System.Drawing.Point(953, 5)
         Me.cerrarbtn.Name = "cerrarbtn"
         Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
         Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -153,7 +115,7 @@ Partial Class Inicio
         '
         Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(749, 5)
+        Me.btnmaxi.Location = New System.Drawing.Point(922, 5)
         Me.btnmaxi.Name = "btnmaxi"
         Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
         Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -164,9 +126,9 @@ Partial Class Inicio
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnrestaurar.Location = New System.Drawing.Point(754, 5)
+        Me.btnrestaurar.Location = New System.Drawing.Point(922, 5)
         Me.btnrestaurar.Name = "btnrestaurar"
-        Me.btnrestaurar.Size = New System.Drawing.Size(14, 25)
+        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
         Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnrestaurar.TabIndex = 3
         Me.btnrestaurar.TabStop = False
@@ -190,7 +152,7 @@ Partial Class Inicio
         Me.Menuvertical.Dock = System.Windows.Forms.DockStyle.Left
         Me.Menuvertical.Location = New System.Drawing.Point(0, 35)
         Me.Menuvertical.Name = "Menuvertical"
-        Me.Menuvertical.Size = New System.Drawing.Size(200, 436)
+        Me.Menuvertical.Size = New System.Drawing.Size(200, 426)
         Me.Menuvertical.TabIndex = 1
         '
         'PictureBoxsalir
@@ -339,125 +301,15 @@ Partial Class Inicio
         'panelmedio
         '
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.panelmedio.Controls.Add(Me.Label3)
-        Me.panelmedio.Controls.Add(Me.Label4)
-        Me.panelmedio.Controls.Add(Me.Label2)
-        Me.panelmedio.Controls.Add(Me.MonthCalendar1)
-        Me.panelmedio.Controls.Add(Me.Panel12)
         Me.panelmedio.Controls.Add(Me.panetlstock)
         Me.panelmedio.Controls.Add(Me.Panelproveedores)
         Me.panelmedio.Controls.Add(Me.Panelclientes)
         Me.panelmedio.Controls.Add(Me.PanelFact)
-        Me.panelmedio.Controls.Add(Me.Panel15)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelmedio.Location = New System.Drawing.Point(0, 0)
         Me.panelmedio.Name = "panelmedio"
-        Me.panelmedio.Size = New System.Drawing.Size(816, 471)
+        Me.panelmedio.Size = New System.Drawing.Size(984, 461)
         Me.panelmedio.TabIndex = 2
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(403, 110)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(159, 33)
-        Me.Label3.TabIndex = 21
-        Me.Label3.Text = "AMORIM 210"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(298, 79)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(371, 33)
-        Me.Label4.TabIndex = 20
-        Me.Label4.Text = "Tel. 47322722 - Cel. 092165355"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(317, 46)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(345, 33)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Envíos a domicilio sin cargo"
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.MonthCalendar1.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MonthCalendar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.MonthCalendar1.Location = New System.Drawing.Point(568, 242)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 17
-        Me.MonthCalendar1.Visible = False
-        '
-        'Panel12
-        '
-        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel12.Controls.Add(Me.PictureBox2)
-        Me.Panel12.Controls.Add(Me.PictureBox3)
-        Me.Panel12.Controls.Add(Me.PictureBox4)
-        Me.Panel12.Controls.Add(Me.PictureBox5)
-        Me.Panel12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel12.Location = New System.Drawing.Point(0, 0)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(816, 35)
-        Me.Panel12.TabIndex = 15
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.PictureBox2.Location = New System.Drawing.Point(723, 5)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(25, 25)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
-        Me.PictureBox3.Location = New System.Drawing.Point(785, 5)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(25, 25)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox4.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.PictureBox4.Location = New System.Drawing.Point(754, 5)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(25, 25)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 2
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox5.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.PictureBox5.Location = New System.Drawing.Point(754, 5)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(25, 25)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 3
-        Me.PictureBox5.TabStop = False
-        Me.PictureBox5.Visible = False
         '
         'panetlstock
         '
@@ -466,9 +318,9 @@ Partial Class Inicio
         Me.panetlstock.Controls.Add(Me.Panel14)
         Me.panetlstock.Controls.Add(Me.btnaddstock)
         Me.panetlstock.Controls.Add(Me.btnmodistock)
-        Me.panetlstock.Location = New System.Drawing.Point(200, 233)
+        Me.panetlstock.Location = New System.Drawing.Point(202, 227)
         Me.panetlstock.Name = "panetlstock"
-        Me.panetlstock.Size = New System.Drawing.Size(198, 62)
+        Me.panetlstock.Size = New System.Drawing.Size(198, 67)
         Me.panetlstock.TabIndex = 14
         Me.panetlstock.Visible = False
         '
@@ -477,7 +329,7 @@ Partial Class Inicio
         Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.Panel13.Location = New System.Drawing.Point(192, 33)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(5, 27)
+        Me.Panel13.Size = New System.Drawing.Size(5, 30)
         Me.Panel13.TabIndex = 10
         '
         'Panel14
@@ -527,19 +379,19 @@ Partial Class Inicio
         Me.Panelproveedores.Controls.Add(Me.Panel5)
         Me.Panelproveedores.Controls.Add(Me.btnbuscarprov)
         Me.Panelproveedores.Controls.Add(Me.btnmodprov)
-        Me.Panelproveedores.Location = New System.Drawing.Point(200, 368)
+        Me.Panelproveedores.Location = New System.Drawing.Point(199, 361)
         Me.Panelproveedores.Name = "Panelproveedores"
-        Me.Panelproveedores.Size = New System.Drawing.Size(201, 66)
+        Me.Panelproveedores.Size = New System.Drawing.Size(201, 72)
         Me.Panelproveedores.TabIndex = 13
         Me.Panelproveedores.Visible = False
         '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(195, 36)
+        Me.Panel7.Location = New System.Drawing.Point(195, 39)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(5, 30)
-        Me.Panel7.TabIndex = 12
+        Me.Panel7.TabIndex = 14
         '
         'Panel5
         '
@@ -588,7 +440,7 @@ Partial Class Inicio
         Me.Panelclientes.Controls.Add(Me.btndeudores)
         Me.Panelclientes.Controls.Add(Me.Panel8)
         Me.Panelclientes.Controls.Add(Me.btnconsultclient)
-        Me.Panelclientes.Location = New System.Drawing.Point(200, 301)
+        Me.Panelclientes.Location = New System.Drawing.Point(202, 294)
         Me.Panelclientes.Name = "Panelclientes"
         Me.Panelclientes.Size = New System.Drawing.Size(198, 66)
         Me.Panelclientes.TabIndex = 9
@@ -649,18 +501,18 @@ Partial Class Inicio
         Me.PanelFact.Controls.Add(Me.Panel6)
         Me.PanelFact.Controls.Add(Me.btnrealizarfact)
         Me.PanelFact.Controls.Add(Me.btnconslfact)
-        Me.PanelFact.Location = New System.Drawing.Point(200, 166)
+        Me.PanelFact.Location = New System.Drawing.Point(202, 159)
         Me.PanelFact.Name = "PanelFact"
-        Me.PanelFact.Size = New System.Drawing.Size(198, 61)
+        Me.PanelFact.Size = New System.Drawing.Size(198, 67)
         Me.PanelFact.TabIndex = 0
         Me.PanelFact.Visible = False
         '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel11.Location = New System.Drawing.Point(192, 34)
+        Me.Panel11.Location = New System.Drawing.Point(192, 33)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(5, 26)
+        Me.Panel11.Size = New System.Drawing.Size(5, 30)
         Me.Panel11.TabIndex = 10
         '
         'Panel6
@@ -680,7 +532,7 @@ Partial Class Inicio
         Me.btnrealizarfact.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnrealizarfact.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnrealizarfact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnrealizarfact.Location = New System.Drawing.Point(-2, 0)
+        Me.btnrealizarfact.Location = New System.Drawing.Point(0, 0)
         Me.btnrealizarfact.Name = "btnrealizarfact"
         Me.btnrealizarfact.Size = New System.Drawing.Size(197, 30)
         Me.btnrealizarfact.TabIndex = 2
@@ -703,91 +555,18 @@ Partial Class Inicio
         Me.btnconslfact.Text = "Consulta de Fact."
         Me.btnconslfact.UseVisualStyleBackColor = False
         '
-        'Panel15
-        '
-        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel15.Controls.Add(Me.calculadoraImg)
-        Me.Panel15.Controls.Add(Me.PictureBox6)
-        Me.Panel15.Controls.Add(Me.Label1)
-        Me.Panel15.Controls.Add(Me.Fecha)
-        Me.Panel15.Controls.Add(Me.hora)
-        Me.Panel15.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel15.Location = New System.Drawing.Point(0, 405)
-        Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(816, 66)
-        Me.Panel15.TabIndex = 16
-        '
-        'calculadoraImg
-        '
-        Me.calculadoraImg.Image = Global.proyecto.inicio.My.Resources.Resources.calculator
-        Me.calculadoraImg.Location = New System.Drawing.Point(266, 7)
-        Me.calculadoraImg.Name = "calculadoraImg"
-        Me.calculadoraImg.Size = New System.Drawing.Size(81, 50)
-        Me.calculadoraImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.calculadoraImg.TabIndex = 19
-        Me.calculadoraImg.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.proyecto.inicio.My.Resources.Resources.calendar
-        Me.PictureBox6.Location = New System.Drawing.Point(373, 5)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(71, 54)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 18
-        Me.PictureBox6.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(687, 48)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 13)
-        Me.Label1.TabIndex = 17
-        Me.Label1.Text = "(Mes,Día,Año)"
-        '
-        'Fecha
-        '
-        Me.Fecha.AutoSize = True
-        Me.Fecha.Font = New System.Drawing.Font("Bahnschrift", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fecha.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Fecha.Location = New System.Drawing.Point(632, 8)
-        Me.Fecha.Name = "Fecha"
-        Me.Fecha.Size = New System.Drawing.Size(117, 40)
-        Me.Fecha.TabIndex = 1
-        Me.Fecha.Text = "Label2"
-        '
-        'hora
-        '
-        Me.hora.AutoSize = True
-        Me.hora.Font = New System.Drawing.Font("Bahnschrift", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.hora.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.hora.Location = New System.Drawing.Point(478, 7)
-        Me.hora.Name = "hora"
-        Me.hora.Size = New System.Drawing.Size(144, 41)
-        Me.hora.TabIndex = 0
-        Me.hora.Text = "00:00:00"
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(816, 471)
+        Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.Menuvertical)
         Me.Controls.Add(Me.barratitulo)
         Me.Controls.Add(Me.panelmedio)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Inicio"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "InicioP"
         Me.barratitulo.ResumeLayout(False)
-        Me.barratitulo.PerformLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
@@ -796,20 +575,10 @@ Partial Class Inicio
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
-        Me.panelmedio.PerformLayout()
-        Me.Panel12.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panetlstock.ResumeLayout(False)
         Me.Panelproveedores.ResumeLayout(False)
         Me.Panelclientes.ResumeLayout(False)
         Me.PanelFact.ResumeLayout(False)
-        Me.Panel15.ResumeLayout(False)
-        Me.Panel15.PerformLayout()
-        CType(Me.calculadoraImg, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -839,9 +608,11 @@ Partial Class Inicio
     Friend WithEvents btndeudores As System.Windows.Forms.Button
     Friend WithEvents Panel9 As System.Windows.Forms.Panel
     Friend WithEvents Panelproveedores As System.Windows.Forms.Panel
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents btnbuscarprov As System.Windows.Forms.Button
     Friend WithEvents btnmodprov As System.Windows.Forms.Button
+    Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents PictureBoxsalir As System.Windows.Forms.PictureBox
     Friend WithEvents btnsalir As System.Windows.Forms.Button
@@ -850,23 +621,4 @@ Partial Class Inicio
     Friend WithEvents Panel14 As System.Windows.Forms.Panel
     Friend WithEvents btnaddstock As System.Windows.Forms.Button
     Friend WithEvents btnmodistock As System.Windows.Forms.Button
-    Friend WithEvents Panel12 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
-    Friend WithEvents Panel15 As System.Windows.Forms.Panel
-    Friend WithEvents Fecha As System.Windows.Forms.Label
-    Friend WithEvents hora As System.Windows.Forms.Label
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
-    Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
-    Friend WithEvents calculadoraImg As System.Windows.Forms.PictureBox
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
-    Friend WithEvents Panel7 As System.Windows.Forms.Panel
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

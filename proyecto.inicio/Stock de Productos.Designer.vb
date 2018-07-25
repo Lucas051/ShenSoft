@@ -37,13 +37,23 @@ Partial Class Stock_de_Productos
         Me.txtproveedor = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.barratitulo = New System.Windows.Forms.Panel()
+        Me.btnmini = New System.Windows.Forms.PictureBox()
+        Me.cerrarbtn = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
+        Me.btnmaxi = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.barratitulo.SuspendLayout()
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(30, 22)
+        Me.Label1.Location = New System.Drawing.Point(31, 55)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 0
@@ -52,7 +62,7 @@ Partial Class Stock_de_Productos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(59, 48)
+        Me.Label2.Location = New System.Drawing.Point(60, 81)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 1
@@ -61,7 +71,7 @@ Partial Class Stock_de_Productos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(10, 77)
+        Me.Label3.Location = New System.Drawing.Point(11, 110)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(83, 13)
         Me.Label3.TabIndex = 2
@@ -70,7 +80,7 @@ Partial Class Stock_de_Productos
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(30, 9)
+        Me.Label4.Location = New System.Drawing.Point(31, 42)
         Me.Label4.MaximumSize = New System.Drawing.Size(300, 400)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(147, 13)
@@ -79,7 +89,7 @@ Partial Class Stock_de_Productos
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(112, 152)
+        Me.Button1.Location = New System.Drawing.Point(113, 185)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 4
@@ -88,28 +98,28 @@ Partial Class Stock_de_Productos
         '
         'txtdescripcion
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(99, 22)
+        Me.txtdescripcion.Location = New System.Drawing.Point(100, 55)
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.Size = New System.Drawing.Size(100, 20)
         Me.txtdescripcion.TabIndex = 6
         '
         'txtprecio
         '
-        Me.txtprecio.Location = New System.Drawing.Point(99, 48)
+        Me.txtprecio.Location = New System.Drawing.Point(100, 81)
         Me.txtprecio.Name = "txtprecio"
         Me.txtprecio.Size = New System.Drawing.Size(100, 20)
         Me.txtprecio.TabIndex = 7
         '
         'txtpreciostock
         '
-        Me.txtpreciostock.Location = New System.Drawing.Point(99, 74)
+        Me.txtpreciostock.Location = New System.Drawing.Point(100, 107)
         Me.txtpreciostock.Name = "txtpreciostock"
         Me.txtpreciostock.Size = New System.Drawing.Size(100, 20)
         Me.txtpreciostock.TabIndex = 8
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(1, 172)
+        Me.Button3.Location = New System.Drawing.Point(2, 205)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(81, 31)
         Me.Button3.TabIndex = 9
@@ -118,7 +128,7 @@ Partial Class Stock_de_Productos
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(112, 181)
+        Me.Button4.Location = New System.Drawing.Point(113, 214)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 22)
         Me.Button4.TabIndex = 10
@@ -128,7 +138,7 @@ Partial Class Stock_de_Productos
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(205, 9)
+        Me.DataGridView1.Location = New System.Drawing.Point(206, 42)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(551, 219)
@@ -136,14 +146,14 @@ Partial Class Stock_de_Productos
         '
         'txtcantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(99, 100)
+        Me.txtcantidad.Location = New System.Drawing.Point(100, 133)
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
         Me.txtcantidad.TabIndex = 13
         '
         'txtproveedor
         '
-        Me.txtproveedor.Location = New System.Drawing.Point(99, 126)
+        Me.txtproveedor.Location = New System.Drawing.Point(100, 159)
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtproveedor.TabIndex = 14
@@ -151,7 +161,7 @@ Partial Class Stock_de_Productos
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(44, 100)
+        Me.Label5.Location = New System.Drawing.Point(45, 133)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 15
@@ -160,17 +170,77 @@ Partial Class Stock_de_Productos
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(37, 126)
+        Me.Label6.Location = New System.Drawing.Point(38, 159)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Proveedor"
         '
+        'barratitulo
+        '
+        Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratitulo.Controls.Add(Me.btnmini)
+        Me.barratitulo.Controls.Add(Me.cerrarbtn)
+        Me.barratitulo.Controls.Add(Me.btnrestaurar)
+        Me.barratitulo.Controls.Add(Me.btnmaxi)
+        Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barratitulo.Location = New System.Drawing.Point(0, 0)
+        Me.barratitulo.Name = "barratitulo"
+        Me.barratitulo.Size = New System.Drawing.Size(823, 35)
+        Me.barratitulo.TabIndex = 17
+        '
+        'btnmini
+        '
+        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
+        Me.btnmini.Location = New System.Drawing.Point(730, 5)
+        Me.btnmini.Name = "btnmini"
+        Me.btnmini.Size = New System.Drawing.Size(25, 25)
+        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmini.TabIndex = 1
+        Me.btnmini.TabStop = False
+        '
+        'cerrarbtn
+        '
+        Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cerrarbtn.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
+        Me.cerrarbtn.Location = New System.Drawing.Point(792, 5)
+        Me.cerrarbtn.Name = "cerrarbtn"
+        Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
+        Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.cerrarbtn.TabIndex = 0
+        Me.cerrarbtn.TabStop = False
+        '
+        'btnrestaurar
+        '
+        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
+        Me.btnrestaurar.Location = New System.Drawing.Point(761, 5)
+        Me.btnrestaurar.Name = "btnrestaurar"
+        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
+        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnrestaurar.TabIndex = 3
+        Me.btnrestaurar.TabStop = False
+        Me.btnrestaurar.Visible = False
+        '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnmaxi.Location = New System.Drawing.Point(761, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
+        '
         'Stock_de_Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(758, 230)
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.ClientSize = New System.Drawing.Size(823, 319)
+        Me.Controls.Add(Me.barratitulo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtproveedor)
@@ -186,9 +256,15 @@ Partial Class Stock_de_Productos
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Stock_de_Productos"
         Me.Text = "Stock de Productos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.barratitulo.ResumeLayout(False)
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,4 +284,9 @@ Partial Class Stock_de_Productos
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents barratitulo As System.Windows.Forms.Panel
+    Friend WithEvents btnmini As System.Windows.Forms.PictureBox
+    Friend WithEvents cerrarbtn As System.Windows.Forms.PictureBox
+    Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
+    Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
 End Class

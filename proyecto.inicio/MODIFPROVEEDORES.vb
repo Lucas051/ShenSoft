@@ -20,15 +20,27 @@ Public Class MODIFPROVEEDORES
         Catch ex As Exception
 
             MessageBox.Show(ex.ToString)
-
+           
         End Try
-        
+
+        conexioon.Consulta = "SELECT * FROM proveedores"
+        consultar()
+        datafrancoxd.DataSource = resultado
+
+        datafrancoxd.Columns(0).HeaderText = "ID"
+        datafrancoxd.Columns(1).HeaderText = "Proveedor"
+        datafrancoxd.Columns(2).HeaderText = "Teléfono"
+        datafrancoxd.Columns(3).HeaderText = "Dirección"
+        datafrancoxd.Columns(4).HeaderText = "Saldo"
+
     End Sub
 
     Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles limpiar.Click
+        TextBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
         TextBox4.Text = ""
+
     End Sub
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
@@ -46,10 +58,25 @@ Public Class MODIFPROVEEDORES
         datafrancoxd.Columns(1).HeaderText = "Proveedor"
         datafrancoxd.Columns(2).HeaderText = "Teléfono"
         datafrancoxd.Columns(3).HeaderText = "Dirección"
+        datafrancoxd.Columns(4).HeaderText = "Saldo"
 
     End Sub
 
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
 
     End Sub
+
+    Private Sub editar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles editar.Click
+        Me.Hide()
+        Buscar_proveedores.Show()
+    End Sub
+
+    Private Sub btnmini_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmini.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
+        End
+    End Sub
+
 End Class

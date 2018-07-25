@@ -90,4 +90,28 @@ Public Class Stock_de_Productos
     Private Sub txtdescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtdescripcion.TextChanged
 
     End Sub
+
+    Private Sub btnmini_Click(sender As System.Object, e As System.EventArgs) Handles btnmini.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnmaxi_Click(sender As System.Object, e As System.EventArgs) Handles btnmaxi.Click
+        Me.WindowState = FormWindowState.Maximized
+
+        btnmaxi.Visible = False
+        btnrestaurar.Visible = True
+    End Sub
+
+    Private Sub cerrarbtn_Click(sender As System.Object, e As System.EventArgs) Handles cerrarbtn.Click
+        End
+    End Sub
+
+    Private Sub btnrestaurar_Click(sender As System.Object, e As System.EventArgs) Handles btnrestaurar.Click
+        'restaura ventana
+        Me.WindowState = FormWindowState.Normal
+        'esconde boton, aparece maximizar
+        btnrestaurar.Visible = False
+        btnmaxi.Visible = True
+    End Sub
+
 End Class
