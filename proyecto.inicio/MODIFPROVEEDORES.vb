@@ -45,7 +45,7 @@ Public Class MODIFPROVEEDORES
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
         Me.Hide()
-        Inicio.Show()
+        Consulta_proveedor.Show()
     End Sub
 
     Private Sub MODIFPROVEEDORES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -65,6 +65,7 @@ Public Class MODIFPROVEEDORES
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
 
     End Sub
+<<<<<<< HEAD
 
     Private Sub editar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles editar.Click
         Me.Hide()
@@ -79,4 +80,10 @@ Public Class MODIFPROVEEDORES
         End
     End Sub
 
+=======
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+
+    End Sub
+>>>>>>> 055dfdfd142acc6d8bc35f6c36a57adf3994943f
 End Class
