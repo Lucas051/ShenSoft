@@ -27,13 +27,23 @@ Partial Class EliminarSotck
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txtcodigo = New System.Windows.Forms.TextBox()
+        Me.barratitulo = New System.Windows.Forms.Panel()
+        Me.btnmini = New System.Windows.Forms.PictureBox()
+        Me.cerrarbtn = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
+        Me.btnmaxi = New System.Windows.Forms.PictureBox()
         CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.barratitulo.SuspendLayout()
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvEliminar
         '
         Me.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEliminar.Location = New System.Drawing.Point(1, -1)
+        Me.dgvEliminar.Location = New System.Drawing.Point(12, 53)
         Me.dgvEliminar.Name = "dgvEliminar"
         Me.dgvEliminar.ReadOnly = True
         Me.dgvEliminar.Size = New System.Drawing.Size(552, 287)
@@ -43,7 +53,7 @@ Partial Class EliminarSotck
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(604, 9)
+        Me.Label1.Location = New System.Drawing.Point(615, 63)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(94, 13)
         Me.Label1.TabIndex = 1
@@ -51,7 +61,7 @@ Partial Class EliminarSotck
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(607, 230)
+        Me.Button1.Location = New System.Drawing.Point(618, 284)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 56)
         Me.Button1.TabIndex = 2
@@ -60,7 +70,7 @@ Partial Class EliminarSotck
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(607, 146)
+        Me.Button2.Location = New System.Drawing.Point(618, 200)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 60)
         Me.Button2.TabIndex = 4
@@ -69,24 +79,90 @@ Partial Class EliminarSotck
         '
         'txtcodigo
         '
-        Me.txtcodigo.Location = New System.Drawing.Point(598, 76)
+        Me.txtcodigo.Location = New System.Drawing.Point(609, 130)
         Me.txtcodigo.Name = "txtcodigo"
         Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
         Me.txtcodigo.TabIndex = 5
+        '
+        'barratitulo
+        '
+        Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratitulo.Controls.Add(Me.btnmini)
+        Me.barratitulo.Controls.Add(Me.cerrarbtn)
+        Me.barratitulo.Controls.Add(Me.btnmaxi)
+        Me.barratitulo.Controls.Add(Me.btnrestaurar)
+        Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barratitulo.Location = New System.Drawing.Point(0, 0)
+        Me.barratitulo.Name = "barratitulo"
+        Me.barratitulo.Size = New System.Drawing.Size(748, 35)
+        Me.barratitulo.TabIndex = 18
+        '
+        'btnmini
+        '
+        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
+        Me.btnmini.Location = New System.Drawing.Point(655, 5)
+        Me.btnmini.Name = "btnmini"
+        Me.btnmini.Size = New System.Drawing.Size(25, 25)
+        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmini.TabIndex = 1
+        Me.btnmini.TabStop = False
+        '
+        'cerrarbtn
+        '
+        Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cerrarbtn.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
+        Me.cerrarbtn.Location = New System.Drawing.Point(717, 5)
+        Me.cerrarbtn.Name = "cerrarbtn"
+        Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
+        Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.cerrarbtn.TabIndex = 0
+        Me.cerrarbtn.TabStop = False
+        '
+        'btnrestaurar
+        '
+        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
+        Me.btnrestaurar.Location = New System.Drawing.Point(686, 5)
+        Me.btnrestaurar.Name = "btnrestaurar"
+        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
+        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnrestaurar.TabIndex = 3
+        Me.btnrestaurar.TabStop = False
+        Me.btnrestaurar.Visible = False
+        '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnmaxi.Location = New System.Drawing.Point(686, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
         '
         'EliminarSotck
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(726, 286)
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.ClientSize = New System.Drawing.Size(748, 352)
+        Me.Controls.Add(Me.barratitulo)
         Me.Controls.Add(Me.txtcodigo)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvEliminar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "EliminarSotck"
         Me.Text = "EliminarSotck"
         CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.barratitulo.ResumeLayout(False)
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -96,4 +172,9 @@ Partial Class EliminarSotck
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
+    Friend WithEvents barratitulo As System.Windows.Forms.Panel
+    Friend WithEvents btnmini As System.Windows.Forms.PictureBox
+    Friend WithEvents cerrarbtn As System.Windows.Forms.PictureBox
+    Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
+    Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
 End Class

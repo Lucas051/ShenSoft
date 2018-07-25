@@ -45,8 +45,8 @@ Public Class Inicio
         'ocultamos pestaña en pantalla y aparece facturacion
         Panelproveedores.Visible = False
         Panelclientes.Visible = False
+        PanelFact.Visible = True
         panetlstock.Visible = False
-        PanelFact.Visible = True And PanelFact.Visible = False ' true para que aparezca click y false desaparece
     End Sub
 
     Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
@@ -70,9 +70,8 @@ Public Class Inicio
         'ocultamos pestaña en pantalla y aparece clientes
         Panelproveedores.Visible = False
         PanelFact.Visible = False
+        Panelclientes.Visible = True
         panetlstock.Visible = False
-        Panelclientes.Visible = True And Panelclientes.Visible = False
-
     End Sub
 
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
@@ -86,10 +85,10 @@ Public Class Inicio
 
     Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
         'Abro el panel pero hago que se oculten los demás si están abiertos ,para no entreverarse
+        panetlstock.Visible = True
         Panelclientes.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = False
-        panetlstock.Visible = True And panetlstock.Visible = False ' true para que aparezca click y false desaparece
 
 
     End Sub
@@ -99,8 +98,8 @@ Public Class Inicio
         'ocultamos pestaña en pantalla y aparece proveedores
         Panelclientes.Visible = False
         PanelFact.Visible = False
+        Panelproveedores.Visible = True
         panetlstock.Visible = False
-        Panelproveedores.Visible = True And Panelproveedores.Visible = False
     End Sub
 
     Private Sub btnmodprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodprov.Click
@@ -138,7 +137,7 @@ Public Class Inicio
 
     End Sub
 
-    Private Sub panelmedio_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles panelmedio.Paint
+    Private Sub barratitulo_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
 
     End Sub
 End Class
