@@ -22,68 +22,6 @@ Partial Class Buscar_proveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-<<<<<<< HEAD
-        Me.dgvfran = New System.Windows.Forms.DataGridView()
-        Me.txtbuscarprov = New System.Windows.Forms.TextBox()
-        Me.ID = New System.Windows.Forms.Label()
-        Me.btnvolver = New System.Windows.Forms.Button()
-        CType(Me.dgvfran, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'dgvfran
-        '
-        Me.dgvfran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvfran.Location = New System.Drawing.Point(251, 0)
-        Me.dgvfran.Name = "dgvfran"
-        Me.dgvfran.Size = New System.Drawing.Size(422, 287)
-        Me.dgvfran.TabIndex = 0
-        '
-        'txtbuscarprov
-        '
-        Me.txtbuscarprov.Location = New System.Drawing.Point(76, 35)
-        Me.txtbuscarprov.Name = "txtbuscarprov"
-        Me.txtbuscarprov.Size = New System.Drawing.Size(100, 20)
-        Me.txtbuscarprov.TabIndex = 1
-        '
-        'ID
-        '
-        Me.ID.AutoSize = True
-        Me.ID.Location = New System.Drawing.Point(30, 42)
-        Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(40, 13)
-        Me.ID.TabIndex = 2
-        Me.ID.Text = "Buscar"
-        '
-        'btnvolver
-        '
-        Me.btnvolver.Location = New System.Drawing.Point(76, 90)
-        Me.btnvolver.Name = "btnvolver"
-        Me.btnvolver.Size = New System.Drawing.Size(75, 23)
-        Me.btnvolver.TabIndex = 3
-        Me.btnvolver.Text = "Volver"
-        Me.btnvolver.UseVisualStyleBackColor = True
-        '
-        'Buscar_proveedores
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(675, 286)
-        Me.Controls.Add(Me.btnvolver)
-        Me.Controls.Add(Me.ID)
-        Me.Controls.Add(Me.txtbuscarprov)
-        Me.Controls.Add(Me.dgvfran)
-        Me.Name = "Buscar_proveedores"
-        Me.Text = "Buscar_proveedores"
-        CType(Me.dgvfran, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
-    End Sub
-    Friend WithEvents dgvfran As System.Windows.Forms.DataGridView
-    Friend WithEvents txtbuscarprov As System.Windows.Forms.TextBox
-    Friend WithEvents ID As System.Windows.Forms.Label
-    Friend WithEvents btnvolver As System.Windows.Forms.Button
-=======
         Me.dgvfran = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ID = New System.Windows.Forms.Label()
@@ -200,5 +138,4 @@ Partial Class Buscar_proveedores
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
->>>>>>> 055dfdfd142acc6d8bc35f6c36a57adf3994943f
 End Class

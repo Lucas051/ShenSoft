@@ -114,10 +114,7 @@ Public Class Stock_de_Productos
         btnmaxi.Visible = True
     End Sub
 
-<<<<<<< HEAD
-=======
     Private Sub barratitulo_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
 
     End Sub
->>>>>>> 055dfdfd142acc6d8bc35f6c36a57adf3994943f
 End Class

@@ -102,6 +102,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexioon.vb" />
+    <Compile Include="Consulta proveedor.Designer.vb">
+      <DependentUpon>Consulta proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ConsultaFactura.Designer.vb">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta proveedor.resx">
+      <DependentUpon>Consulta proveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
