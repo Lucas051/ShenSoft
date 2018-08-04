@@ -53,29 +53,32 @@ Partial Class Stock_de_Productos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(31, 87)
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(31, 89)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 13)
+        Me.Label1.Size = New System.Drawing.Size(66, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Descripción"
+        Me.Label1.Text = "Descripción:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(60, 113)
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(61, 113)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(34, 13)
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Costo"
+        Me.Label2.Text = "Costo:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(11, 142)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 13)
+        Me.Label3.Size = New System.Drawing.Size(86, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Precio de Venta"
+        Me.Label3.Text = "Precio de Venta:"
         '
         'Label4
         '
@@ -163,20 +166,22 @@ Partial Class Stock_de_Productos
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(45, 165)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 13)
+        Me.Label5.Size = New System.Drawing.Size(52, 13)
         Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Cantidad"
+        Me.Label5.Text = "Cantidad:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(38, 191)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 13)
+        Me.Label6.Size = New System.Drawing.Size(59, 13)
         Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Proveedor"
+        Me.Label6.Text = "Proveedor:"
         '
         'barratitulo
         '
