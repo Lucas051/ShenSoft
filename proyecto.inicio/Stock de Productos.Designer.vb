@@ -32,7 +32,7 @@ Partial Class Stock_de_Productos
         Me.txtpreciostock = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DgvStock = New System.Windows.Forms.DataGridView()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -42,7 +42,7 @@ Partial Class Stock_de_Productos
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
         Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Class Stock_de_Productos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(31, 55)
+        Me.Label1.Location = New System.Drawing.Point(31, 87)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 0
@@ -62,7 +62,7 @@ Partial Class Stock_de_Productos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(60, 81)
+        Me.Label2.Location = New System.Drawing.Point(60, 113)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 1
@@ -71,7 +71,7 @@ Partial Class Stock_de_Productos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 110)
+        Me.Label3.Location = New System.Drawing.Point(11, 142)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(83, 13)
         Me.Label3.TabIndex = 2
@@ -80,16 +80,18 @@ Partial Class Stock_de_Productos
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(31, 42)
+        Me.Label4.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.InactiveBorder
+        Me.Label4.Location = New System.Drawing.Point(3, 9)
         Me.Label4.MaximumSize = New System.Drawing.Size(300, 400)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(147, 13)
+        Me.Label4.Size = New System.Drawing.Size(219, 16)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Ingreso de productos al stock" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(113, 185)
+        Me.Button1.Location = New System.Drawing.Point(113, 217)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 4
@@ -98,28 +100,28 @@ Partial Class Stock_de_Productos
         '
         'txtdescripcion
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(100, 55)
+        Me.txtdescripcion.Location = New System.Drawing.Point(100, 87)
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.Size = New System.Drawing.Size(100, 20)
         Me.txtdescripcion.TabIndex = 6
         '
         'txtprecio
         '
-        Me.txtprecio.Location = New System.Drawing.Point(100, 81)
+        Me.txtprecio.Location = New System.Drawing.Point(100, 113)
         Me.txtprecio.Name = "txtprecio"
         Me.txtprecio.Size = New System.Drawing.Size(100, 20)
         Me.txtprecio.TabIndex = 7
         '
         'txtpreciostock
         '
-        Me.txtpreciostock.Location = New System.Drawing.Point(100, 107)
+        Me.txtpreciostock.Location = New System.Drawing.Point(100, 139)
         Me.txtpreciostock.Name = "txtpreciostock"
         Me.txtpreciostock.Size = New System.Drawing.Size(100, 20)
         Me.txtpreciostock.TabIndex = 8
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(2, 205)
+        Me.Button3.Location = New System.Drawing.Point(2, 237)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(81, 31)
         Me.Button3.TabIndex = 9
@@ -128,32 +130,32 @@ Partial Class Stock_de_Productos
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(113, 214)
+        Me.Button4.Location = New System.Drawing.Point(113, 246)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 22)
         Me.Button4.TabIndex = 10
         Me.Button4.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'DgvStock
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(206, 42)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(551, 219)
-        Me.DataGridView1.TabIndex = 12
+        Me.DgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvStock.Location = New System.Drawing.Point(206, 42)
+        Me.DgvStock.Name = "DgvStock"
+        Me.DgvStock.ReadOnly = True
+        Me.DgvStock.Size = New System.Drawing.Size(605, 265)
+        Me.DgvStock.TabIndex = 12
         '
         'txtcantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(100, 133)
+        Me.txtcantidad.Location = New System.Drawing.Point(100, 165)
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
         Me.txtcantidad.TabIndex = 13
         '
         'txtproveedor
         '
-        Me.txtproveedor.Location = New System.Drawing.Point(100, 159)
+        Me.txtproveedor.Location = New System.Drawing.Point(100, 191)
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtproveedor.TabIndex = 14
@@ -161,7 +163,7 @@ Partial Class Stock_de_Productos
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(45, 133)
+        Me.Label5.Location = New System.Drawing.Point(45, 165)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 15
@@ -170,7 +172,7 @@ Partial Class Stock_de_Productos
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(38, 159)
+        Me.Label6.Location = New System.Drawing.Point(38, 191)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 16
@@ -183,6 +185,7 @@ Partial Class Stock_de_Productos
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
         Me.barratitulo.Controls.Add(Me.btnrestaurar)
         Me.barratitulo.Controls.Add(Me.btnmaxi)
+        Me.barratitulo.Controls.Add(Me.Label4)
         Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratitulo.Location = New System.Drawing.Point(0, 0)
         Me.barratitulo.Name = "barratitulo"
@@ -245,22 +248,22 @@ Partial Class Stock_de_Productos
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtproveedor)
         Me.Controls.Add(Me.txtcantidad)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DgvStock)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.txtpreciostock)
         Me.Controls.Add(Me.txtprecio)
         Me.Controls.Add(Me.txtdescripcion)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Stock_de_Productos"
         Me.Text = "Stock de Productos"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
+        Me.barratitulo.PerformLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -279,7 +282,7 @@ Partial Class Stock_de_Productos
     Friend WithEvents txtpreciostock As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DgvStock As System.Windows.Forms.DataGridView
     Friend WithEvents txtcantidad As System.Windows.Forms.TextBox
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label

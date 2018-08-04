@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class EliminarSotck
+Public Class SuspenderStock
 
-   Private Sub EliminarStock_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-  
+    Private Sub EliminarStock_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
 
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()
@@ -13,7 +13,7 @@ Public Class EliminarSotck
         dgvEliminar.Columns(1).HeaderText = "Descripcion"
         dgvEliminar.Columns(2).HeaderText = "Cantidad"
         dgvEliminar.Columns(3).HeaderText = "Precio Costo"
-        dgvEliminar.Columns(4).HeaderText = "Precio Venta""
+        dgvEliminar.Columns(4).HeaderText = "Precio Venta"""
         dgvEliminar.Columns(5).HeaderText = "Proveedor"
 
     End Sub
@@ -42,7 +42,7 @@ Public Class EliminarSotck
 
 
         MessageBox.Show("Dato Eliminado Correctamente.")
-     
+
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()
         dgvEliminar.DataSource = resultado

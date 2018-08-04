@@ -114,10 +114,10 @@
     <Compile Include="ConsultaFactura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarSotck.Designer.vb">
-      <DependentUpon>EliminarSotck.vb</DependentUpon>
+    <Compile Include="SuspenderSotck.Designer.vb">
+      <DependentUpon>SuspenderSotck.vb</DependentUpon>
     </Compile>
-    <Compile Include="EliminarSotck.vb">
+    <Compile Include="SuspenderSotck.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="buscarproductos.Designer.vb">
@@ -191,8 +191,8 @@
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarSotck.resx">
-      <DependentUpon>EliminarSotck.vb</DependentUpon>
+    <EmbeddedResource Include="SuspenderSotck.resx">
+      <DependentUpon>SuspenderSotck.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buscarproductos.resx">
       <DependentUpon>buscarproductos.vb</DependentUpon>

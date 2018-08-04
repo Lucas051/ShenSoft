@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class EliminarSotck
+Partial Class SuspenderStock
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -30,14 +30,14 @@ Partial Class EliminarSotck
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
-        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvEliminar
@@ -53,15 +53,17 @@ Partial Class EliminarSotck
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(615, 63)
+        Me.Label1.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Menu
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 13)
+        Me.Label1.Size = New System.Drawing.Size(170, 19)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Eliminar Productos"
+        Me.Label1.Text = "Suspender Productos"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(618, 284)
+        Me.Button1.Location = New System.Drawing.Point(618, 222)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 56)
         Me.Button1.TabIndex = 2
@@ -70,16 +72,16 @@ Partial Class EliminarSotck
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(618, 200)
+        Me.Button2.Location = New System.Drawing.Point(618, 156)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 60)
         Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Borrar"
+        Me.Button2.Text = "Suspender"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'txtcodigo
         '
-        Me.txtcodigo.Location = New System.Drawing.Point(609, 130)
+        Me.txtcodigo.Location = New System.Drawing.Point(611, 95)
         Me.txtcodigo.Name = "txtcodigo"
         Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
         Me.txtcodigo.TabIndex = 5
@@ -91,6 +93,7 @@ Partial Class EliminarSotck
         Me.barratitulo.Controls.Add(Me.cerrarbtn)
         Me.barratitulo.Controls.Add(Me.btnmaxi)
         Me.barratitulo.Controls.Add(Me.btnrestaurar)
+        Me.barratitulo.Controls.Add(Me.Label1)
         Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratitulo.Location = New System.Drawing.Point(0, 0)
         Me.barratitulo.Name = "barratitulo"
@@ -119,6 +122,17 @@ Partial Class EliminarSotck
         Me.cerrarbtn.TabIndex = 0
         Me.cerrarbtn.TabStop = False
         '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnmaxi.Location = New System.Drawing.Point(686, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
+        '
         'btnrestaurar
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -131,18 +145,7 @@ Partial Class EliminarSotck
         Me.btnrestaurar.TabStop = False
         Me.btnrestaurar.Visible = False
         '
-        'btnmaxi
-        '
-        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(686, 5)
-        Me.btnmaxi.Name = "btnmaxi"
-        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
-        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmaxi.TabIndex = 2
-        Me.btnmaxi.TabStop = False
-        '
-        'EliminarSotck
+        'SuspenderStock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -152,17 +155,17 @@ Partial Class EliminarSotck
         Me.Controls.Add(Me.txtcodigo)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvEliminar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "EliminarSotck"
-        Me.Text = "EliminarSotck"
+        Me.Name = "SuspenderStock"
+        Me.Text = "SuspenderSotck"
         CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
+        Me.barratitulo.PerformLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

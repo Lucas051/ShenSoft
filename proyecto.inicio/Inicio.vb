@@ -116,7 +116,8 @@ Public Class Inicio
 
     
     Private Sub btnsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsalir.Click
-        End
+        Me.Hide()
+        Verificacion.Show()
     End Sub
 
     Private Sub PictureBoxsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBoxsalir.Click
@@ -133,7 +134,7 @@ Public Class Inicio
     
     Private Sub btnmodistock_Click(sender As System.Object, e As System.EventArgs) Handles btnmodistock.Click
         Me.Hide()
-        EliminarSotck.Show()
+        SuspenderStock.Show()
 
     End Sub
 
