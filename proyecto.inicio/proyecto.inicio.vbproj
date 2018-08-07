@@ -89,12 +89,6 @@
     <Compile Include="BuscarClientesFact.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Clientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Cobrar.Designer.vb">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </Compile>
@@ -112,6 +106,12 @@
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
     </Compile>
     <Compile Include="ConsultaFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODIFICARCLIENTES.Designer.vb">
+      <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MODIFICARCLIENTES.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SuspenderSotck.Designer.vb">
@@ -179,9 +179,6 @@
     <EmbeddedResource Include="BuscarClientesFact.resx">
       <DependentUpon>BuscarClientesFact.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODIFICARCLIENTES.resx">
+      <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SuspenderSotck.resx">
       <DependentUpon>SuspenderSotck.vb</DependentUpon>

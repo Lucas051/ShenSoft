@@ -22,20 +22,20 @@ Partial Class Buscar_proveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgvfran = New System.Windows.Forms.DataGridView()
+        Me.dgvbuscarprov = New System.Windows.Forms.DataGridView()
         Me.txtbuscarprov = New System.Windows.Forms.TextBox()
         Me.ID = New System.Windows.Forms.Label()
         Me.btnvolver = New System.Windows.Forms.Button()
-        CType(Me.dgvfran, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvbuscarprov, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'dgvfran
+        'dgvbuscarprov
         '
-        Me.dgvfran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvfran.Location = New System.Drawing.Point(251, 0)
-        Me.dgvfran.Name = "dgvfran"
-        Me.dgvfran.Size = New System.Drawing.Size(422, 287)
-        Me.dgvfran.TabIndex = 0
+        Me.dgvbuscarprov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvbuscarprov.Location = New System.Drawing.Point(251, 0)
+        Me.dgvbuscarprov.Name = "dgvbuscarprov"
+        Me.dgvbuscarprov.Size = New System.Drawing.Size(422, 287)
+        Me.dgvbuscarprov.TabIndex = 0
         '
         'txtbuscarprov
         '
@@ -70,15 +70,15 @@ Partial Class Buscar_proveedores
         Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.ID)
         Me.Controls.Add(Me.txtbuscarprov)
-        Me.Controls.Add(Me.dgvfran)
+        Me.Controls.Add(Me.dgvbuscarprov)
         Me.Name = "Buscar_proveedores"
         Me.Text = "Buscar_proveedores"
-        CType(Me.dgvfran, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvbuscarprov, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents dgvfran As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvbuscarprov As System.Windows.Forms.DataGridView
     Friend WithEvents txtbuscarprov As System.Windows.Forms.TextBox
     Friend WithEvents ID As System.Windows.Forms.Label
     Friend WithEvents btnvolver As System.Windows.Forms.Button

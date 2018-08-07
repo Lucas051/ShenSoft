@@ -7,7 +7,7 @@ Public Class Buscar_proveedores
         Try
             conexioon.Consulta = "SELECT * FROM proveedores;"
             consultar()
-            dgvfran.DataSource = resultado
+            dgvbuscarprov.DataSource = resultado
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -21,7 +21,7 @@ Public Class Buscar_proveedores
             'BUSQUEDA EN DATAGRIDVIEW
             conexioon.Consulta = "SELECT * FROM proveedores WHERE nombre_prov LIKE '%" & txtbuscarprov.Text & "%';"
             consultar()
-            dgvfran.DataSource = resultado
+            dgvbuscarprov.DataSource = resultado
 
         Catch ex As Exception
 

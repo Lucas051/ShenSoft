@@ -45,7 +45,7 @@ Public Class Inicio
         'ocultamos pestaña en pantalla y aparece facturacion
         Panelproveedores.Visible = False
         Panelclientes.Visible = False
-        PanelFact.Visible = True
+        PanelFact.Visible = True And PanelFact.Visible = False
         panetlstock.Visible = False
     End Sub
 
@@ -70,22 +70,31 @@ Public Class Inicio
         'ocultamos pestaña en pantalla y aparece clientes
         Panelproveedores.Visible = False
         PanelFact.Visible = False
-        Panelclientes.Visible = True
+
         panetlstock.Visible = False
+        Panelclientes.Visible = True And Panelclientes.Visible = False
+
     End Sub
 
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
         Panelclientes.Visible = False
+        MODIFICARCLIENTES.Show()
+        Me.Hide()
+
+
     End Sub
 
     Private Sub btndeudores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btndeudores.Click
         Panelclientes.Visible = False
+        Me.Hide()
+        BuscarClientesFact.Show()
+
     End Sub
     '____________________________________________________________________________________________________________________________________________
 
     Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
         'Abro el panel pero hago que se oculten los demás si están abiertos ,para no entreverarse
-        panetlstock.Visible = True
+        panetlstock.Visible = True And panetlstock.Visible = False
         Panelclientes.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = False
@@ -98,7 +107,7 @@ Public Class Inicio
         'ocultamos pestaña en pantalla y aparece proveedores
         Panelclientes.Visible = False
         PanelFact.Visible = False
-        Panelproveedores.Visible = True
+        Panelproveedores.Visible = True And Panelproveedores.Visible = False
         panetlstock.Visible = False
     End Sub
 
