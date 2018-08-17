@@ -18,7 +18,7 @@ Public Class SuspenderStock
 
     End Sub
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
         Me.Hide()
         Inicio.Show()
 
@@ -32,7 +32,7 @@ Public Class SuspenderStock
 
     End Sub
 
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsuspender.Click
         'Intento de eliminar stock v 0.0.1
 
         conexioon.Consulta = "DELETE FROM `stock` WHERE `stock`.`cod_producto` ='" + Str(txtcodigo.Text) + "'"

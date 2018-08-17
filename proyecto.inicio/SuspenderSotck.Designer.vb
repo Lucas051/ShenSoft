@@ -24,8 +24,8 @@ Partial Class SuspenderStock
     Private Sub InitializeComponent()
         Me.dgvEliminar = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnvolver = New System.Windows.Forms.Button()
+        Me.btnsuspender = New System.Windows.Forms.Button()
         Me.txtcodigo = New System.Windows.Forms.TextBox()
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
@@ -61,23 +61,23 @@ Partial Class SuspenderStock
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Suspender Productos"
         '
-        'Button1
+        'btnvolver
         '
-        Me.Button1.Location = New System.Drawing.Point(618, 222)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 56)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Volver"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnvolver.Location = New System.Drawing.Point(618, 222)
+        Me.btnvolver.Name = "btnvolver"
+        Me.btnvolver.Size = New System.Drawing.Size(75, 56)
+        Me.btnvolver.TabIndex = 2
+        Me.btnvolver.Text = "Volver"
+        Me.btnvolver.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnsuspender
         '
-        Me.Button2.Location = New System.Drawing.Point(618, 156)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 60)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Suspender"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnsuspender.Location = New System.Drawing.Point(618, 156)
+        Me.btnsuspender.Name = "btnsuspender"
+        Me.btnsuspender.Size = New System.Drawing.Size(75, 60)
+        Me.btnsuspender.TabIndex = 4
+        Me.btnsuspender.Text = "Suspender"
+        Me.btnsuspender.UseVisualStyleBackColor = True
         '
         'txtcodigo
         '
@@ -153,8 +153,8 @@ Partial Class SuspenderStock
         Me.ClientSize = New System.Drawing.Size(748, 352)
         Me.Controls.Add(Me.barratitulo)
         Me.Controls.Add(Me.txtcodigo)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnsuspender)
+        Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.dgvEliminar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SuspenderStock"
@@ -172,8 +172,8 @@ Partial Class SuspenderStock
     End Sub
     Friend WithEvents dgvEliminar As System.Windows.Forms.DataGridView
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnvolver As System.Windows.Forms.Button
+    Friend WithEvents btnsuspender As System.Windows.Forms.Button
     Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
     Friend WithEvents barratitulo As System.Windows.Forms.Panel
     Friend WithEvents btnmini As System.Windows.Forms.PictureBox
