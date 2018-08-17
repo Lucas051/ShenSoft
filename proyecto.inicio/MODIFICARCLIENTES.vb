@@ -1,14 +1,14 @@
 ﻿Public Class MODIFICARCLIENTES
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
         Me.Hide()
         Inicio.Show()
 
     End Sub
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
         Try
-            
+
             If (txtcedula.Text <> "" And txtdireccion.Text <> "" And txtnombre.Text <> "" And txtsaldo.Text <> "" And txttelefono.Text <> "") Then
                 conexioon.Consulta = "INSERT INTO clientes (`num_cliente`,`CI`,`nombre_cliente `,`saldo_c`,`direccion_c`,`tel_c`) VALUES ('" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtsaldo.Text + "','" + txtdireccion.Text + "','" + txttelefono.Text + "');"
                 consultar()

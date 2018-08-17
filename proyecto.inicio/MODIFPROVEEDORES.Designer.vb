@@ -22,45 +22,45 @@ Partial Class MODIFPROVEEDORES
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtdireccion = New System.Windows.Forms.TextBox()
+        Me.txttelefono = New System.Windows.Forms.TextBox()
+        Me.txtproveedor = New System.Windows.Forms.TextBox()
         Me.datafrancoxd = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.volver = New System.Windows.Forms.Button()
-        Me.limpiar = New System.Windows.Forms.Button()
-        Me.borrar = New System.Windows.Forms.Button()
-        Me.editar = New System.Windows.Forms.Button()
-        Me.añadir = New System.Windows.Forms.Button()
+        Me.btnvolver = New System.Windows.Forms.Button()
+        Me.btnlimpiar = New System.Windows.Forms.Button()
+        Me.btnborrar = New System.Windows.Forms.Button()
+        Me.btneditar = New System.Windows.Forms.Button()
+        Me.btnañadir = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtsaldo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.datafrancoxd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox4
+        'txtdireccion
         '
-        Me.TextBox4.Location = New System.Drawing.Point(169, 97)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 27
+        Me.txtdireccion.Location = New System.Drawing.Point(169, 97)
+        Me.txtdireccion.Name = "txtdireccion"
+        Me.txtdireccion.Size = New System.Drawing.Size(100, 20)
+        Me.txtdireccion.TabIndex = 27
         '
-        'TextBox3
+        'txttelefono
         '
-        Me.TextBox3.Location = New System.Drawing.Point(169, 53)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 26
+        Me.txttelefono.Location = New System.Drawing.Point(169, 53)
+        Me.txttelefono.Name = "txttelefono"
+        Me.txttelefono.Size = New System.Drawing.Size(100, 20)
+        Me.txttelefono.TabIndex = 26
         '
-        'TextBox2
+        'txtproveedor
         '
-        Me.TextBox2.Location = New System.Drawing.Point(169, 11)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 25
+        Me.txtproveedor.Location = New System.Drawing.Point(169, 11)
+        Me.txtproveedor.Name = "txtproveedor"
+        Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
+        Me.txtproveedor.TabIndex = 25
         '
         'datafrancoxd
         '
@@ -100,50 +100,50 @@ Partial Class MODIFPROVEEDORES
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Proveedor"
         '
-        'volver
+        'btnvolver
         '
-        Me.volver.Location = New System.Drawing.Point(611, 169)
-        Me.volver.Name = "volver"
-        Me.volver.Size = New System.Drawing.Size(60, 152)
-        Me.volver.TabIndex = 18
-        Me.volver.Text = "VOLVER"
-        Me.volver.UseVisualStyleBackColor = True
+        Me.btnvolver.Location = New System.Drawing.Point(611, 169)
+        Me.btnvolver.Name = "btnvolver"
+        Me.btnvolver.Size = New System.Drawing.Size(60, 152)
+        Me.btnvolver.TabIndex = 18
+        Me.btnvolver.Text = "VOLVER"
+        Me.btnvolver.UseVisualStyleBackColor = True
         '
-        'limpiar
+        'btnlimpiar
         '
-        Me.limpiar.Location = New System.Drawing.Point(540, 90)
-        Me.limpiar.Name = "limpiar"
-        Me.limpiar.Size = New System.Drawing.Size(65, 73)
-        Me.limpiar.TabIndex = 17
-        Me.limpiar.Text = "LIMPIAR"
-        Me.limpiar.UseVisualStyleBackColor = True
+        Me.btnlimpiar.Location = New System.Drawing.Point(540, 90)
+        Me.btnlimpiar.Name = "btnlimpiar"
+        Me.btnlimpiar.Size = New System.Drawing.Size(65, 73)
+        Me.btnlimpiar.TabIndex = 17
+        Me.btnlimpiar.Text = "LIMPIAR"
+        Me.btnlimpiar.UseVisualStyleBackColor = True
         '
-        'borrar
+        'btnborrar
         '
-        Me.borrar.Location = New System.Drawing.Point(540, 248)
-        Me.borrar.Name = "borrar"
-        Me.borrar.Size = New System.Drawing.Size(65, 73)
-        Me.borrar.TabIndex = 16
-        Me.borrar.Text = "BORRAR"
-        Me.borrar.UseVisualStyleBackColor = True
+        Me.btnborrar.Location = New System.Drawing.Point(540, 248)
+        Me.btnborrar.Name = "btnborrar"
+        Me.btnborrar.Size = New System.Drawing.Size(65, 73)
+        Me.btnborrar.TabIndex = 16
+        Me.btnborrar.Text = "BORRAR"
+        Me.btnborrar.UseVisualStyleBackColor = True
         '
-        'editar
+        'btneditar
         '
-        Me.editar.Location = New System.Drawing.Point(540, 169)
-        Me.editar.Name = "editar"
-        Me.editar.Size = New System.Drawing.Size(65, 73)
-        Me.editar.TabIndex = 15
-        Me.editar.Text = "EDITAR"
-        Me.editar.UseVisualStyleBackColor = True
+        Me.btneditar.Location = New System.Drawing.Point(540, 169)
+        Me.btneditar.Name = "btneditar"
+        Me.btneditar.Size = New System.Drawing.Size(65, 73)
+        Me.btneditar.TabIndex = 15
+        Me.btneditar.Text = "EDITAR"
+        Me.btneditar.UseVisualStyleBackColor = True
         '
-        'añadir
+        'btnañadir
         '
-        Me.añadir.Location = New System.Drawing.Point(540, 11)
-        Me.añadir.Name = "añadir"
-        Me.añadir.Size = New System.Drawing.Size(65, 73)
-        Me.añadir.TabIndex = 14
-        Me.añadir.Text = "AÑADIR"
-        Me.añadir.UseVisualStyleBackColor = True
+        Me.btnañadir.Location = New System.Drawing.Point(540, 11)
+        Me.btnañadir.Name = "btnañadir"
+        Me.btnañadir.Size = New System.Drawing.Size(65, 73)
+        Me.btnañadir.TabIndex = 14
+        Me.btnañadir.Text = "AÑADIR"
+        Me.btnañadir.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -155,12 +155,12 @@ Partial Class MODIFPROVEEDORES
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
         '
-        'TextBox1
+        'txtsaldo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(169, 137)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 29
+        Me.txtsaldo.Location = New System.Drawing.Point(169, 137)
+        Me.txtsaldo.Name = "txtsaldo"
+        Me.txtsaldo.Size = New System.Drawing.Size(100, 20)
+        Me.txtsaldo.TabIndex = 29
         '
         'Label1
         '
@@ -177,19 +177,19 @@ Partial Class MODIFPROVEEDORES
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(673, 346)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtsaldo)
+        Me.Controls.Add(Me.txtdireccion)
+        Me.Controls.Add(Me.txttelefono)
+        Me.Controls.Add(Me.txtproveedor)
         Me.Controls.Add(Me.datafrancoxd)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.volver)
-        Me.Controls.Add(Me.limpiar)
-        Me.Controls.Add(Me.borrar)
-        Me.Controls.Add(Me.editar)
-        Me.Controls.Add(Me.añadir)
+        Me.Controls.Add(Me.btnvolver)
+        Me.Controls.Add(Me.btnlimpiar)
+        Me.Controls.Add(Me.btnborrar)
+        Me.Controls.Add(Me.btneditar)
+        Me.Controls.Add(Me.btnañadir)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "MODIFPROVEEDORES"
         Me.Text = "MODIFPROVEEDORES"
@@ -199,19 +199,19 @@ Partial Class MODIFPROVEEDORES
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
+    Friend WithEvents txttelefono As System.Windows.Forms.TextBox
+    Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
     Friend WithEvents datafrancoxd As System.Windows.Forms.DataGridView
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents volver As System.Windows.Forms.Button
-    Friend WithEvents limpiar As System.Windows.Forms.Button
-    Friend WithEvents borrar As System.Windows.Forms.Button
-    Friend WithEvents editar As System.Windows.Forms.Button
-    Friend WithEvents añadir As System.Windows.Forms.Button
+    Friend WithEvents btnvolver As System.Windows.Forms.Button
+    Friend WithEvents btnlimpiar As System.Windows.Forms.Button
+    Friend WithEvents btnborrar As System.Windows.Forms.Button
+    Friend WithEvents btneditar As System.Windows.Forms.Button
+    Friend WithEvents btnañadir As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtsaldo As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

@@ -1,13 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class MODIFPROVEEDORES
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles añadir.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnañadir.Click
 
         Try
 
-            If (TextBox2.Text <> "" And TextBox3.Text <> "" And TextBox4.Text <> "") Then
+            If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "") Then
 
-                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + TextBox2.Text + "' , '" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox1.Text + "' )"
+                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "','" + txtsaldo.Text + "' )"
                 consultar()
                 datafrancoxd.DataSource = resultado
 
@@ -22,18 +22,18 @@ Public Class MODIFPROVEEDORES
             MessageBox.Show(ex.ToString)
 
         End Try
-        
+
     End Sub
 
-    Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles limpiar.Click
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox4.Text = ""
+    Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiar.Click
+        txtproveedor.Text = ""
+        txttelefono.Text = ""
+        txtdireccion.Text = ""
     End Sub
 
-    Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
+    Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
         Me.Hide()
-        Consulta_proveedor.Show()
+        Inicio.Show()
     End Sub
 
     Private Sub MODIFPROVEEDORES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

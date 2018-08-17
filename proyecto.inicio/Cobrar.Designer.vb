@@ -26,27 +26,27 @@ Partial Class Cobrar
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
-        Me.btnmaxi = New System.Windows.Forms.PictureBox()
         Me.btnrestaurar = New System.Windows.Forms.PictureBox()
+        Me.btnmaxi = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
-        Me.TextBoxCliente = New System.Windows.Forms.TextBox()
+        Me.txtcliente = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.buscarClientebtn = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtvendedor = New System.Windows.Forms.TextBox()
+        Me.txttotalapagar = New System.Windows.Forms.TextBox()
+        Me.txtpagocon = New System.Windows.Forms.TextBox()
+        Me.txtdevolver = New System.Windows.Forms.TextBox()
         Me.atrasbtn = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btncobrar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -94,17 +94,6 @@ Partial Class Cobrar
         Me.cerrarbtn.TabIndex = 0
         Me.cerrarbtn.TabStop = False
         '
-        'btnmaxi
-        '
-        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(415, 5)
-        Me.btnmaxi.Name = "btnmaxi"
-        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
-        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmaxi.TabIndex = 2
-        Me.btnmaxi.TabStop = False
-        '
         'btnrestaurar
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -117,6 +106,17 @@ Partial Class Cobrar
         Me.btnrestaurar.TabStop = False
         Me.btnrestaurar.Visible = False
         '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnmaxi.Location = New System.Drawing.Point(415, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
+        '
         'cod
         '
         Me.cod.AutoSize = True
@@ -128,13 +128,13 @@ Partial Class Cobrar
         Me.cod.TabIndex = 37
         Me.cod.Text = "Vendedor"
         '
-        'TextBoxCliente
+        'txtcliente
         '
-        Me.TextBoxCliente.Location = New System.Drawing.Point(111, 274)
-        Me.TextBoxCliente.Multiline = True
-        Me.TextBoxCliente.Name = "TextBoxCliente"
-        Me.TextBoxCliente.Size = New System.Drawing.Size(121, 26)
-        Me.TextBoxCliente.TabIndex = 40
+        Me.txtcliente.Location = New System.Drawing.Point(111, 274)
+        Me.txtcliente.Multiline = True
+        Me.txtcliente.Name = "txtcliente"
+        Me.txtcliente.Size = New System.Drawing.Size(121, 26)
+        Me.txtcliente.TabIndex = 40
         '
         'Label4
         '
@@ -196,37 +196,37 @@ Partial Class Cobrar
         Me.buscarClientebtn.Text = "Buscar Cliente"
         Me.buscarClientebtn.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'txtvendedor
         '
-        Me.TextBox2.Location = New System.Drawing.Point(111, 233)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(121, 26)
-        Me.TextBox2.TabIndex = 48
+        Me.txtvendedor.Location = New System.Drawing.Point(111, 233)
+        Me.txtvendedor.Multiline = True
+        Me.txtvendedor.Name = "txtvendedor"
+        Me.txtvendedor.Size = New System.Drawing.Size(121, 26)
+        Me.txtvendedor.TabIndex = 48
         '
-        'TextBox3
+        'txttotalapagar
         '
-        Me.TextBox3.Location = New System.Drawing.Point(111, 320)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(121, 26)
-        Me.TextBox3.TabIndex = 49
+        Me.txttotalapagar.Location = New System.Drawing.Point(111, 320)
+        Me.txttotalapagar.Multiline = True
+        Me.txttotalapagar.Name = "txttotalapagar"
+        Me.txttotalapagar.Size = New System.Drawing.Size(121, 26)
+        Me.txttotalapagar.TabIndex = 49
         '
-        'TextBox4
+        'txtpagocon
         '
-        Me.TextBox4.Location = New System.Drawing.Point(111, 369)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(121, 26)
-        Me.TextBox4.TabIndex = 50
+        Me.txtpagocon.Location = New System.Drawing.Point(111, 369)
+        Me.txtpagocon.Multiline = True
+        Me.txtpagocon.Name = "txtpagocon"
+        Me.txtpagocon.Size = New System.Drawing.Size(121, 26)
+        Me.txtpagocon.TabIndex = 50
         '
-        'TextBox5
+        'txtdevolver
         '
-        Me.TextBox5.Location = New System.Drawing.Point(111, 416)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(121, 26)
-        Me.TextBox5.TabIndex = 51
+        Me.txtdevolver.Location = New System.Drawing.Point(111, 416)
+        Me.txtdevolver.Multiline = True
+        Me.txtdevolver.Name = "txtdevolver"
+        Me.txtdevolver.Size = New System.Drawing.Size(121, 26)
+        Me.txtdevolver.TabIndex = 51
         '
         'atrasbtn
         '
@@ -244,21 +244,21 @@ Partial Class Cobrar
         Me.atrasbtn.Text = "Atrás"
         Me.atrasbtn.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btncobrar
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(36, 462)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(196, 26)
-        Me.Button2.TabIndex = 53
-        Me.Button2.Text = "Cobrar Monto e Imprimir"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btncobrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btncobrar.FlatAppearance.BorderSize = 0
+        Me.btncobrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btncobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncobrar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncobrar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btncobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btncobrar.Location = New System.Drawing.Point(36, 462)
+        Me.btncobrar.Name = "btncobrar"
+        Me.btncobrar.Size = New System.Drawing.Size(196, 26)
+        Me.btncobrar.TabIndex = 53
+        Me.btncobrar.Text = "Cobrar Monto e Imprimir"
+        Me.btncobrar.UseVisualStyleBackColor = False
         '
         'Cobrar
         '
@@ -266,17 +266,17 @@ Partial Class Cobrar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(477, 548)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btncobrar)
         Me.Controls.Add(Me.atrasbtn)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtdevolver)
+        Me.Controls.Add(Me.txtpagocon)
+        Me.Controls.Add(Me.txttotalapagar)
+        Me.Controls.Add(Me.txtvendedor)
         Me.Controls.Add(Me.buscarClientebtn)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBoxCliente)
+        Me.Controls.Add(Me.txtcliente)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.barratitulo)
@@ -289,8 +289,8 @@ Partial Class Cobrar
         Me.barratitulo.ResumeLayout(False)
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -302,16 +302,16 @@ Partial Class Cobrar
     Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
     Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents cod As System.Windows.Forms.Label
-    Public WithEvents TextBoxCliente As System.Windows.Forms.TextBox
+    Public WithEvents txtcliente As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents buscarClientebtn As System.Windows.Forms.Button
-    Public WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Public WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Public WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Public WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Public WithEvents txtvendedor As System.Windows.Forms.TextBox
+    Public WithEvents txttotalapagar As System.Windows.Forms.TextBox
+    Public WithEvents txtpagocon As System.Windows.Forms.TextBox
+    Public WithEvents txtdevolver As System.Windows.Forms.TextBox
     Friend WithEvents atrasbtn As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btncobrar As System.Windows.Forms.Button
 End Class

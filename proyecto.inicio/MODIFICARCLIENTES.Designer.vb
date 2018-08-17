@@ -33,12 +33,12 @@ Partial Class MODIFICARCLIENTES
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.DgvClientes = New System.Windows.Forms.DataGridView()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnlimpiar = New System.Windows.Forms.Button()
+        Me.btnvolver = New System.Windows.Forms.Button()
         Me.txtsaldo = New System.Windows.Forms.TextBox()
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.txtcedula = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btningresar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -164,23 +164,23 @@ Partial Class MODIFICARCLIENTES
         Me.DgvClientes.Size = New System.Drawing.Size(605, 265)
         Me.DgvClientes.TabIndex = 27
         '
-        'Button4
+        'btnlimpiar
         '
-        Me.Button4.Location = New System.Drawing.Point(119, 245)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 22)
-        Me.Button4.TabIndex = 26
-        Me.Button4.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnlimpiar.Location = New System.Drawing.Point(119, 245)
+        Me.btnlimpiar.Name = "btnlimpiar"
+        Me.btnlimpiar.Size = New System.Drawing.Size(75, 22)
+        Me.btnlimpiar.TabIndex = 26
+        Me.btnlimpiar.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
+        Me.btnlimpiar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnvolver
         '
-        Me.Button3.Location = New System.Drawing.Point(8, 236)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(81, 31)
-        Me.Button3.TabIndex = 25
-        Me.Button3.Text = "Volver"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnvolver.Location = New System.Drawing.Point(8, 236)
+        Me.btnvolver.Name = "btnvolver"
+        Me.btnvolver.Size = New System.Drawing.Size(81, 31)
+        Me.btnvolver.TabIndex = 25
+        Me.btnvolver.Text = "Volver"
+        Me.btnvolver.UseVisualStyleBackColor = True
         '
         'txtsaldo
         '
@@ -203,14 +203,14 @@ Partial Class MODIFICARCLIENTES
         Me.txtcedula.Size = New System.Drawing.Size(100, 20)
         Me.txtcedula.TabIndex = 22
         '
-        'Button1
+        'btningresar
         '
-        Me.Button1.Location = New System.Drawing.Point(119, 216)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btningresar.Location = New System.Drawing.Point(119, 216)
+        Me.btningresar.Name = "btningresar"
+        Me.btningresar.Size = New System.Drawing.Size(75, 23)
+        Me.btningresar.TabIndex = 21
+        Me.btningresar.Text = "Ingresar"
+        Me.btningresar.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -253,12 +253,12 @@ Partial Class MODIFICARCLIENTES
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.DgvClientes)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnlimpiar)
+        Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.txtsaldo)
         Me.Controls.Add(Me.txtnombre)
         Me.Controls.Add(Me.txtcedula)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btningresar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -287,12 +287,12 @@ Partial Class MODIFICARCLIENTES
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
     Friend WithEvents DgvClientes As System.Windows.Forms.DataGridView
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnlimpiar As System.Windows.Forms.Button
+    Friend WithEvents btnvolver As System.Windows.Forms.Button
     Friend WithEvents txtsaldo As System.Windows.Forms.TextBox
     Friend WithEvents txtnombre As System.Windows.Forms.TextBox
     Friend WithEvents txtcedula As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btningresar As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label

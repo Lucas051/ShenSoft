@@ -5,34 +5,34 @@ Public Class buscarproductos
 
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()
-        DataGridbuscar.DataSource = resultado
+        dgvbuscar.DataSource = resultado
 
         'Nombramos los encabezados del datagrid buscar
 
-        DataGridbuscar.Columns(0).HeaderText = "Código"
-        DataGridbuscar.Columns(1).HeaderText = "Descrip."
-        DataGridbuscar.Columns(2).HeaderText = "Cantidad"
-        DataGridbuscar.Columns(3).HeaderText = "Precio Costo"
-        DataGridbuscar.Columns(4).HeaderText = "Precio Venta"
-        DataGridbuscar.Columns(5).HeaderText = "Proveedor"
+        dgvbuscar.Columns(0).HeaderText = "Código"
+        dgvbuscar.Columns(1).HeaderText = "Descrip."
+        dgvbuscar.Columns(2).HeaderText = "Cantidad"
+        dgvbuscar.Columns(3).HeaderText = "Precio Costo"
+        dgvbuscar.Columns(4).HeaderText = "Precio Venta"
+        dgvbuscar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
-    Private Sub DataGridbuscar_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridbuscar.CellClick
+    Private Sub DataGridbuscar_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscar.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        RealizarFactura.codigo.Text = DataGridbuscar.CurrentRow.Cells(0).Value.ToString
-        RealizarFactura.desc.Text = DataGridbuscar.CurrentRow.Cells(1).Value.ToString
-        RealizarFactura.precioov.Text = DataGridbuscar.CurrentRow.Cells(4).Value.ToString
+        RealizarFactura.codigo.Text = dgvbuscar.CurrentRow.Cells(0).Value.ToString
+        RealizarFactura.desc.Text = dgvbuscar.CurrentRow.Cells(1).Value.ToString
+        RealizarFactura.precioov.Text = dgvbuscar.CurrentRow.Cells(4).Value.ToString
         'close para cerrar el form
         Close()
         RealizarFactura.Show()
 
     End Sub
 
-    Private Sub DataGridbuscar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridbuscar.CellContentClick
+    Private Sub DataGridbuscar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscar.CellContentClick
 
     End Sub
 
-    Private Sub atras_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles atras.Click
+    Private Sub atras_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
         Me.Hide()
         Inicio.Show()
     End Sub
