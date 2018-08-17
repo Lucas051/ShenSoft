@@ -9,7 +9,7 @@ Public Class MODIFPROVEEDORES
 
                 conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "','" + txtsaldo.Text + "' )"
                 consultar()
-                datafrancoxd.DataSource = resultado
+                dgvproveedores.DataSource = resultado
 
                 MessageBox.Show("Datos Guardados.")
 
@@ -29,6 +29,7 @@ Public Class MODIFPROVEEDORES
         txtproveedor.Text = ""
         txttelefono.Text = ""
         txtdireccion.Text = ""
+        txtsaldo.Text = ""
     End Sub
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
@@ -40,12 +41,13 @@ Public Class MODIFPROVEEDORES
 
         conexioon.Consulta = "SELECT * FROM proveedores;"
         consultar()
-        datafrancoxd.DataSource = resultado
+        dgvproveedores.DataSource = resultado
 
-        datafrancoxd.Columns(0).HeaderText = "ID"
-        datafrancoxd.Columns(1).HeaderText = "Proveedor"
-        datafrancoxd.Columns(2).HeaderText = "Teléfono"
-        datafrancoxd.Columns(3).HeaderText = "Dirección"
+        dgvproveedores.Columns(0).HeaderText = "ID"
+        dgvproveedores.Columns(1).HeaderText = "Proveedor"
+        dgvproveedores.Columns(2).HeaderText = "Teléfono"
+        dgvproveedores.Columns(3).HeaderText = "Dirección"
+        dgvproveedores.Columns(3).HeaderText = "Saldo"
 
     End Sub
 

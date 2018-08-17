@@ -3,14 +3,14 @@
 Public Class Stock_de_Productos
 
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
         Me.Hide()
         Inicio.Show()
 
     End Sub
 
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
 
 
         Try
@@ -50,7 +50,7 @@ Public Class Stock_de_Productos
 
     End Sub
 
-    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiar.Click
 
         txtdescripcion.Text = ""
         txtprecio.Text = ""

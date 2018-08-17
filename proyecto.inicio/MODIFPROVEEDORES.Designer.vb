@@ -25,7 +25,7 @@ Partial Class MODIFPROVEEDORES
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txttelefono = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
-        Me.datafrancoxd = New System.Windows.Forms.DataGridView()
+        Me.dgvproveedores = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,7 +37,7 @@ Partial Class MODIFPROVEEDORES
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtsaldo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.datafrancoxd, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,16 +62,16 @@ Partial Class MODIFPROVEEDORES
         Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtproveedor.TabIndex = 25
         '
-        'datafrancoxd
+        'dgvproveedores
         '
-        Me.datafrancoxd.AllowUserToAddRows = False
-        Me.datafrancoxd.AllowUserToDeleteRows = False
-        Me.datafrancoxd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datafrancoxd.Location = New System.Drawing.Point(40, 191)
-        Me.datafrancoxd.Name = "datafrancoxd"
-        Me.datafrancoxd.ReadOnly = True
-        Me.datafrancoxd.Size = New System.Drawing.Size(443, 156)
-        Me.datafrancoxd.TabIndex = 23
+        Me.dgvproveedores.AllowUserToAddRows = False
+        Me.dgvproveedores.AllowUserToDeleteRows = False
+        Me.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvproveedores.Location = New System.Drawing.Point(40, 191)
+        Me.dgvproveedores.Name = "dgvproveedores"
+        Me.dgvproveedores.ReadOnly = True
+        Me.dgvproveedores.Size = New System.Drawing.Size(443, 156)
+        Me.dgvproveedores.TabIndex = 23
         '
         'Label4
         '
@@ -181,7 +181,7 @@ Partial Class MODIFPROVEEDORES
         Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.txttelefono)
         Me.Controls.Add(Me.txtproveedor)
-        Me.Controls.Add(Me.datafrancoxd)
+        Me.Controls.Add(Me.dgvproveedores)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -193,7 +193,7 @@ Partial Class MODIFPROVEEDORES
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "MODIFPROVEEDORES"
         Me.Text = "MODIFPROVEEDORES"
-        CType(Me.datafrancoxd, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -202,7 +202,7 @@ Partial Class MODIFPROVEEDORES
     Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
     Friend WithEvents txttelefono As System.Windows.Forms.TextBox
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
-    Friend WithEvents datafrancoxd As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvproveedores As System.Windows.Forms.DataGridView
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label

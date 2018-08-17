@@ -19,9 +19,9 @@ Public Class buscarproductos
 
     Private Sub DataGridbuscar_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscar.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        RealizarFactura.codigo.Text = dgvbuscar.CurrentRow.Cells(0).Value.ToString
-        RealizarFactura.desc.Text = dgvbuscar.CurrentRow.Cells(1).Value.ToString
-        RealizarFactura.precioov.Text = dgvbuscar.CurrentRow.Cells(4).Value.ToString
+        RealizarFactura.txtcodigo.Text = dgvbuscar.CurrentRow.Cells(0).Value.ToString
+        RealizarFactura.txtdesc.Text = dgvbuscar.CurrentRow.Cells(1).Value.ToString
+        RealizarFactura.txtprecioov.Text = dgvbuscar.CurrentRow.Cells(4).Value.ToString
         'close para cerrar el form
         Close()
         RealizarFactura.Show()

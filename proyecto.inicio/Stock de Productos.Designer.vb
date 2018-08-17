@@ -26,12 +26,12 @@ Partial Class Stock_de_Productos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btningresar = New System.Windows.Forms.Button()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.txtprecio = New System.Windows.Forms.TextBox()
         Me.txtpreciostock = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnvolver = New System.Windows.Forms.Button()
+        Me.btnlimpiar = New System.Windows.Forms.Button()
         Me.DgvStock = New System.Windows.Forms.DataGridView()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
@@ -92,14 +92,14 @@ Partial Class Stock_de_Productos
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Ingreso de productos al stock" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'Button1
+        'btningresar
         '
-        Me.Button1.Location = New System.Drawing.Point(113, 217)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btningresar.Location = New System.Drawing.Point(113, 217)
+        Me.btningresar.Name = "btningresar"
+        Me.btningresar.Size = New System.Drawing.Size(75, 23)
+        Me.btningresar.TabIndex = 4
+        Me.btningresar.Text = "Ingresar"
+        Me.btningresar.UseVisualStyleBackColor = True
         '
         'txtdescripcion
         '
@@ -122,23 +122,23 @@ Partial Class Stock_de_Productos
         Me.txtpreciostock.Size = New System.Drawing.Size(100, 20)
         Me.txtpreciostock.TabIndex = 8
         '
-        'Button3
+        'btnvolver
         '
-        Me.Button3.Location = New System.Drawing.Point(2, 237)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(81, 31)
-        Me.Button3.TabIndex = 9
-        Me.Button3.Text = "Volver"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnvolver.Location = New System.Drawing.Point(2, 237)
+        Me.btnvolver.Name = "btnvolver"
+        Me.btnvolver.Size = New System.Drawing.Size(81, 31)
+        Me.btnvolver.TabIndex = 9
+        Me.btnvolver.Text = "Volver"
+        Me.btnvolver.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnlimpiar
         '
-        Me.Button4.Location = New System.Drawing.Point(113, 246)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 22)
-        Me.Button4.TabIndex = 10
-        Me.Button4.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnlimpiar.Location = New System.Drawing.Point(113, 246)
+        Me.btnlimpiar.Name = "btnlimpiar"
+        Me.btnlimpiar.Size = New System.Drawing.Size(75, 22)
+        Me.btnlimpiar.TabIndex = 10
+        Me.btnlimpiar.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
+        Me.btnlimpiar.UseVisualStyleBackColor = True
         '
         'DgvStock
         '
@@ -254,12 +254,12 @@ Partial Class Stock_de_Productos
         Me.Controls.Add(Me.txtproveedor)
         Me.Controls.Add(Me.txtcantidad)
         Me.Controls.Add(Me.DgvStock)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnlimpiar)
+        Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.txtpreciostock)
         Me.Controls.Add(Me.txtprecio)
         Me.Controls.Add(Me.txtdescripcion)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btningresar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -281,12 +281,12 @@ Partial Class Stock_de_Productos
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btningresar As System.Windows.Forms.Button
     Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
     Friend WithEvents txtprecio As System.Windows.Forms.TextBox
     Friend WithEvents txtpreciostock As System.Windows.Forms.TextBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents btnvolver As System.Windows.Forms.Button
+    Friend WithEvents btnlimpiar As System.Windows.Forms.Button
     Friend WithEvents DgvStock As System.Windows.Forms.DataGridView
     Friend WithEvents txtcantidad As System.Windows.Forms.TextBox
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox

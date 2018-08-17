@@ -4,12 +4,12 @@ Imports System.Windows.Forms
 Public Class RealizarFactura
     Dim cantidadp, valor, descuentop, valorTotal As Integer
 
-    Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles guardarImprimir.Click
+    Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarImprimir.Click
         Me.Hide()
         Cobrar.Show()
     End Sub
 
-    Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles atras.Click
+    Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
         Me.Hide()
         Inicio.Show()
     End Sub
@@ -41,29 +41,29 @@ Public Class RealizarFactura
     End Sub
 
    
-    Private Sub buscarb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buscarb.Click
+    Private Sub buscarb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarb.Click
         Me.Hide()
         buscarproductos.Show()
     End Sub
 
-    Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles agregar.Click
+    Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregar.Click
 
-        cantidadp = cant.Text
-        valor = Val(cantidadp) * Val(precioov.Text) - descuentop
-        descuentop = Val(valor) * Val(descuent.Text) / 100
-        valorTotal = Val(cantidadp) * Val(precioov.Text) - descuentop
+        cantidadp = txtcant.Text
+        valor = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
+        descuentop = Val(valor) * Val(txtdescuent.Text) / 100
+        valorTotal = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
 
 
 
         'Agrega valores de textbox a datagrid
-        DataGridFacturas.Rows.Add(codigo.Text, desc.Text, cantidadp, descuent.Text, precioov.Text, valorTotal)
+        DataGridFacturas.Rows.Add(txtcodigo.Text, txtdesc.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
     End Sub
 
-    Private Sub limpiarv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles limpiarv.Click
-        codigo.Text = ""
-        desc.Text = ""
-        cant.Text = ""
-        descuent.Text = ""
-        precioov.Text = ""
+    Private Sub limpiarv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiarv.Click
+        txtcodigo.Text = ""
+        txtdesc.Text = ""
+        txtcant.Text = ""
+        txtdescuent.Text = ""
+        txtprecioov.Text = ""
     End Sub
 End Class
