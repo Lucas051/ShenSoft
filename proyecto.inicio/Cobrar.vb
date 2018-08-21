@@ -8,7 +8,7 @@ Public Class Cobrar
 
     Private Sub buscarClientebtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buscarClientebtn.Click
         Me.Hide()
-        BuscarClientesFact.Show()
+        BuscarClientes.Show()
     End Sub
 
     Private Sub atrasbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles atrasbtn.Click

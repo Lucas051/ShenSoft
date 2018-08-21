@@ -87,7 +87,7 @@ Public Class Inicio
     Private Sub btndeudores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btndeudores.Click
         Panelclientes.Visible = False
         Me.Hide()
-        BuscarClientesFact.Show()
+        BuscarClientes.Show()
 
     End Sub
     '____________________________________________________________________________________________________________________________________________

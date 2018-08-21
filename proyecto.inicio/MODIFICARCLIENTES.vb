@@ -10,7 +10,7 @@
         Try
 
             If (txtcedula.Text <> "" And txtdireccion.Text <> "" And txtnombre.Text <> "" And txtsaldo.Text <> "" And txttelefono.Text <> "") Then
-                conexioon.Consulta = "INSERT INTO clientes (`num_cliente`,`CI`,`nombre_cliente `,`saldo_c`,`direccion_c`,`tel_c`) VALUES ('" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtsaldo.Text + "','" + txtdireccion.Text + "','" + txttelefono.Text + "');"
+                conexioon.Consulta = "INSERT INTO clientes (CI,nombre_cliente,saldo_c,direccion_c,tel_c) VALUES ('" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtsaldo.Text + "','" + txtdireccion.Text + "','" + txttelefono.Text + "');"
                 consultar()
                 DgvClientes.DataSource = resultado
             Else
