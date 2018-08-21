@@ -108,11 +108,11 @@ Partial Class buscarproductos
         'cod
         '
         Me.cod.AutoSize = True
-        Me.cod.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cod.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.cod.Location = New System.Drawing.Point(17, 52)
         Me.cod.Name = "cod"
-        Me.cod.Size = New System.Drawing.Size(108, 18)
+        Me.cod.Size = New System.Drawing.Size(109, 18)
         Me.cod.TabIndex = 35
         Me.cod.Text = "Buscar Factura"
         '
@@ -130,7 +130,7 @@ Partial Class buscarproductos
         Me.btnatras.FlatAppearance.BorderSize = 0
         Me.btnatras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnatras.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnatras.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnatras.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnatras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnatras.Location = New System.Drawing.Point(607, 292)

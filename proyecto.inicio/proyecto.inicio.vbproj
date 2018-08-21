@@ -83,12 +83,13 @@
     <Compile Include="Buscar proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscarClientesFact.Designer.vb">
-      <DependentUpon>BuscarClientesFact.vb</DependentUpon>
+    <Compile Include="BuscarClientes.Designer.vb">
+      <DependentUpon>BuscarClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="BuscarClientesFact.vb">
+    <Compile Include="BuscarClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BuscarClientesCobrar.vb" />
     <Compile Include="Cobrar.Designer.vb">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </Compile>
@@ -170,8 +171,8 @@
     <EmbeddedResource Include="Buscar proveedores.resx">
       <DependentUpon>Buscar proveedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscarClientesFact.resx">
-      <DependentUpon>BuscarClientesFact.vb</DependentUpon>
+    <EmbeddedResource Include="BuscarClientes.resx">
+      <DependentUpon>BuscarClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
