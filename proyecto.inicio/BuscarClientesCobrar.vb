@@ -1,3 +1,0 @@
-﻿Module BuscarClientesCobrar
-
-End Module
