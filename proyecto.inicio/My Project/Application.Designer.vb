@@ -34,7 +34,11 @@ Namespace My
         Protected Overrides Sub OnCreateMainForm()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Me.MainForm = Global.proyecto.inicio.BuscarClientesCobrar
+=======
+            Me.MainForm = Global.proyecto.inicio.RealizarFactura
+>>>>>>> 36a69774f74956436592eb9930255f31328ed644
 =======
             Me.MainForm = Global.proyecto.inicio.RealizarFactura
 >>>>>>> 36a69774f74956436592eb9930255f31328ed644

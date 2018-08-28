@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿Imports MySql.Data.MySqlClient
 Public Class BuscarClientesCobrar
 
@@ -62,6 +63,11 @@ Public Class BuscarClientesCobrar
         Cobrar.Show()
     End Sub
 End Class
+=======
+﻿Module BuscarClientesCobrar
+
+End Module
+>>>>>>> 36a69774f74956436592eb9930255f31328ed644
 =======
 ﻿Module BuscarClientesCobrar
 

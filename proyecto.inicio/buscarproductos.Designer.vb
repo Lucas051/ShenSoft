@@ -24,6 +24,7 @@ Partial Class buscarproductos
     Private Sub InitializeComponent()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Me.dgvbuscar = New System.Windows.Forms.DataGridView()
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
@@ -166,6 +167,8 @@ Partial Class buscarproductos
         Me.PerformLayout()
 
 =======
+=======
+>>>>>>> 36a69774f74956436592eb9930255f31328ed644
 =======
 >>>>>>> 36a69774f74956436592eb9930255f31328ed644
         Me.dgvbuscar = New System.Windows.Forms.DataGridView()
