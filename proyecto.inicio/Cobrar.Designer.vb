@@ -29,19 +29,7 @@ Partial Class Cobrar
         Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Me.TXTcliente = New System.Windows.Forms.TextBox()
-=======
         Me.txtcliente = New System.Windows.Forms.TextBox()
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
-        Me.txtcliente = New System.Windows.Forms.TextBox()
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
-        Me.txtcliente = New System.Windows.Forms.TextBox()
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -140,39 +128,13 @@ Partial Class Cobrar
         Me.cod.TabIndex = 37
         Me.cod.Text = "Vendedor"
         '
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'TXTcliente
-        '
-        Me.TXTcliente.Location = New System.Drawing.Point(111, 274)
-        Me.TXTcliente.Multiline = True
-        Me.TXTcliente.Name = "TXTcliente"
-        Me.TXTcliente.Size = New System.Drawing.Size(121, 26)
-        Me.TXTcliente.TabIndex = 40
-=======
         'txtcliente
         '
-=======
-        'txtcliente
-        '
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
-        'txtcliente
-        '
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
         Me.txtcliente.Location = New System.Drawing.Point(111, 274)
         Me.txtcliente.Multiline = True
         Me.txtcliente.Name = "txtcliente"
         Me.txtcliente.Size = New System.Drawing.Size(121, 26)
         Me.txtcliente.TabIndex = 40
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
         '
         'Label4
         '
@@ -314,19 +276,7 @@ Partial Class Cobrar
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Me.Controls.Add(Me.TXTcliente)
-=======
         Me.Controls.Add(Me.txtcliente)
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
-        Me.Controls.Add(Me.txtcliente)
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
-        Me.Controls.Add(Me.txtcliente)
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.barratitulo)
@@ -352,19 +302,7 @@ Partial Class Cobrar
     Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
     Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents cod As System.Windows.Forms.Label
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Public WithEvents TXTcliente As System.Windows.Forms.TextBox
-=======
     Public WithEvents txtcliente As System.Windows.Forms.TextBox
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
-    Public WithEvents txtcliente As System.Windows.Forms.TextBox
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
-=======
-    Public WithEvents txtcliente As System.Windows.Forms.TextBox
->>>>>>> 36a69774f74956436592eb9930255f31328ed644
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
