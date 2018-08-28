@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class ConsultaFactura
-    Private Sub Atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Atras.Click
+    Private Sub Atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAtras.Click
         Me.Hide()
         Inicio.Show()
 

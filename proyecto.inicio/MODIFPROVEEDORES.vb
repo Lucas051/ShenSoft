@@ -1,15 +1,15 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class MODIFPROVEEDORES
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles añadir.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnañadir.Click
 
         Try
 
-            If (TextBox2.Text <> "" And TextBox3.Text <> "" And TextBox4.Text <> "") Then
+            If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "") Then
 
-                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + TextBox2.Text + "' , '" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox1.Text + "' )"
+                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "','" + txtsaldo.Text + "' )"
                 consultar()
-                datafrancoxd.DataSource = resultado
+                dgvproveedores.DataSource = resultado
 
                 MessageBox.Show("Datos Guardados.")
 
@@ -22,30 +22,32 @@ Public Class MODIFPROVEEDORES
             MessageBox.Show(ex.ToString)
 
         End Try
-        
+
     End Sub
 
-    Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles limpiar.Click
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox4.Text = ""
+    Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiar.Click
+        txtproveedor.Text = ""
+        txttelefono.Text = ""
+        txtdireccion.Text = ""
+        txtsaldo.Text = ""
     End Sub
 
-    Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles volver.Click
+    Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
         Me.Hide()
-        Consulta_proveedor.Show()
+        Inicio.Show()
     End Sub
 
     Private Sub MODIFPROVEEDORES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         conexioon.Consulta = "SELECT * FROM proveedores;"
         consultar()
-        datafrancoxd.DataSource = resultado
+        dgvproveedores.DataSource = resultado
 
-        datafrancoxd.Columns(0).HeaderText = "ID"
-        datafrancoxd.Columns(1).HeaderText = "Proveedor"
-        datafrancoxd.Columns(2).HeaderText = "Teléfono"
-        datafrancoxd.Columns(3).HeaderText = "Dirección"
+        dgvproveedores.Columns(0).HeaderText = "ID"
+        dgvproveedores.Columns(1).HeaderText = "Proveedor"
+        dgvproveedores.Columns(2).HeaderText = "Teléfono"
+        dgvproveedores.Columns(3).HeaderText = "Dirección"
+        dgvproveedores.Columns(3).HeaderText = "Saldo"
 
     End Sub
 

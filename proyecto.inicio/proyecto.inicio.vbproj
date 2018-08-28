@@ -83,18 +83,26 @@
     <Compile Include="Buscar proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscarClientesFact.Designer.vb">
-      <DependentUpon>BuscarClientesFact.vb</DependentUpon>
+    <Compile Include="BuscarClientes.Designer.vb">
+      <DependentUpon>BuscarClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="BuscarClientesFact.vb">
+    <Compile Include="BuscarClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Compile Include="BuscarClientesCobrar.Designer.vb">
+      <DependentUpon>BuscarClientesCobrar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.vb">
+    <Compile Include="BuscarClientesCobrar.vb">
       <SubType>Form</SubType>
     </Compile>
+=======
+    <Compile Include="BuscarClientesCobrar.vb" />
+>>>>>>> 36a69774f74956436592eb9930255f31328ed644
+=======
+    <Compile Include="BuscarClientesCobrar.vb" />
+>>>>>>> 36a69774f74956436592eb9930255f31328ed644
     <Compile Include="Cobrar.Designer.vb">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </Compile>
@@ -102,22 +110,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexioon.vb" />
-    <Compile Include="Consulta proveedor.Designer.vb">
-      <DependentUpon>Consulta proveedor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consulta proveedor.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ConsultaFactura.Designer.vb">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
     </Compile>
     <Compile Include="ConsultaFactura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarSotck.Designer.vb">
-      <DependentUpon>EliminarSotck.vb</DependentUpon>
+    <Compile Include="MODIFICARCLIENTES.Designer.vb">
+      <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </Compile>
-    <Compile Include="EliminarSotck.vb">
+    <Compile Include="MODIFICARCLIENTES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuspenderSotck.Designer.vb">
+      <DependentUpon>SuspenderSotck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SuspenderSotck.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="buscarproductos.Designer.vb">
@@ -176,23 +184,29 @@
     <EmbeddedResource Include="Buscar proveedores.resx">
       <DependentUpon>Buscar proveedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscarClientesFact.resx">
-      <DependentUpon>BuscarClientesFact.vb</DependentUpon>
+    <EmbeddedResource Include="BuscarClientes.resx">
+      <DependentUpon>BuscarClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <EmbeddedResource Include="BuscarClientesCobrar.resx">
+      <DependentUpon>BuscarClientesCobrar.vb</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 36a69774f74956436592eb9930255f31328ed644
+=======
+>>>>>>> 36a69774f74956436592eb9930255f31328ed644
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consulta proveedor.resx">
-      <DependentUpon>Consulta proveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarSotck.resx">
-      <DependentUpon>EliminarSotck.vb</DependentUpon>
+    <EmbeddedResource Include="MODIFICARCLIENTES.resx">
+      <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuspenderSotck.resx">
+      <DependentUpon>SuspenderSotck.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buscarproductos.resx">
       <DependentUpon>buscarproductos.vb</DependentUpon>

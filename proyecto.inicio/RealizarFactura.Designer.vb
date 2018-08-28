@@ -30,33 +30,33 @@ Partial Class RealizarFactura
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod = New System.Windows.Forms.Label()
-        Me.codigo = New System.Windows.Forms.TextBox()
-        Me.cant = New System.Windows.Forms.TextBox()
-        Me.descuent = New System.Windows.Forms.TextBox()
-        Me.precioov = New System.Windows.Forms.TextBox()
-        Me.desc = New System.Windows.Forms.TextBox()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
+        Me.txtcant = New System.Windows.Forms.TextBox()
+        Me.txtdescuent = New System.Windows.Forms.TextBox()
+        Me.txtprecioov = New System.Windows.Forms.TextBox()
+        Me.txtdesc = New System.Windows.Forms.TextBox()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
-        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.agregar = New System.Windows.Forms.Button()
-        Me.limpiarv = New System.Windows.Forms.Button()
-        Me.guardarImprimir = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.atras = New System.Windows.Forms.Button()
-        Me.buscarb = New System.Windows.Forms.Button()
+        Me.btnagregar = New System.Windows.Forms.Button()
+        Me.btnlimpiarv = New System.Windows.Forms.Button()
+        Me.btnguardarImprimir = New System.Windows.Forms.Button()
+        Me.btnborrar = New System.Windows.Forms.Button()
+        Me.btnatras = New System.Windows.Forms.Button()
+        Me.btnbuscarb = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridFacturas
@@ -109,40 +109,40 @@ Partial Class RealizarFactura
         Me.cod.TabIndex = 22
         Me.cod.Text = "Código"
         '
-        'codigo
+        'txtcodigo
         '
-        Me.codigo.Location = New System.Drawing.Point(113, 122)
-        Me.codigo.Name = "codigo"
-        Me.codigo.Size = New System.Drawing.Size(100, 20)
-        Me.codigo.TabIndex = 27
+        Me.txtcodigo.Location = New System.Drawing.Point(113, 122)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
+        Me.txtcodigo.TabIndex = 27
         '
-        'cant
+        'txtcant
         '
-        Me.cant.Location = New System.Drawing.Point(113, 185)
-        Me.cant.Name = "cant"
-        Me.cant.Size = New System.Drawing.Size(100, 20)
-        Me.cant.TabIndex = 28
+        Me.txtcant.Location = New System.Drawing.Point(113, 185)
+        Me.txtcant.Name = "txtcant"
+        Me.txtcant.Size = New System.Drawing.Size(100, 20)
+        Me.txtcant.TabIndex = 28
         '
-        'descuent
+        'txtdescuent
         '
-        Me.descuent.Location = New System.Drawing.Point(113, 217)
-        Me.descuent.Name = "descuent"
-        Me.descuent.Size = New System.Drawing.Size(100, 20)
-        Me.descuent.TabIndex = 29
+        Me.txtdescuent.Location = New System.Drawing.Point(113, 217)
+        Me.txtdescuent.Name = "txtdescuent"
+        Me.txtdescuent.Size = New System.Drawing.Size(100, 20)
+        Me.txtdescuent.TabIndex = 29
         '
-        'precioov
+        'txtprecioov
         '
-        Me.precioov.Location = New System.Drawing.Point(113, 249)
-        Me.precioov.Name = "precioov"
-        Me.precioov.Size = New System.Drawing.Size(100, 20)
-        Me.precioov.TabIndex = 30
+        Me.txtprecioov.Location = New System.Drawing.Point(113, 249)
+        Me.txtprecioov.Name = "txtprecioov"
+        Me.txtprecioov.Size = New System.Drawing.Size(100, 20)
+        Me.txtprecioov.TabIndex = 30
         '
-        'desc
+        'txtdesc
         '
-        Me.desc.Location = New System.Drawing.Point(113, 153)
-        Me.desc.Name = "desc"
-        Me.desc.Size = New System.Drawing.Size(100, 20)
-        Me.desc.TabIndex = 31
+        Me.txtdesc.Location = New System.Drawing.Point(113, 153)
+        Me.txtdesc.Name = "txtdesc"
+        Me.txtdesc.Size = New System.Drawing.Size(100, 20)
+        Me.txtdesc.TabIndex = 31
         '
         'btnmini
         '
@@ -179,6 +179,17 @@ Partial Class RealizarFactura
         Me.cerrarbtn.TabIndex = 0
         Me.cerrarbtn.TabStop = False
         '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnmaxi.Location = New System.Drawing.Point(880, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
+        '
         'btnrestaurar
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -191,17 +202,6 @@ Partial Class RealizarFactura
         Me.btnrestaurar.TabStop = False
         Me.btnrestaurar.Visible = False
         '
-        'btnmaxi
-        '
-        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(880, 5)
-        Me.btnmaxi.Name = "btnmaxi"
-        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
-        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmaxi.TabIndex = 2
-        Me.btnmaxi.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -209,7 +209,7 @@ Partial Class RealizarFactura
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(17, 152)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 18)
+        Me.Label1.Size = New System.Drawing.Size(86, 18)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Descripción"
         '
@@ -231,7 +231,7 @@ Partial Class RealizarFactura
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(25, 216)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 18)
+        Me.Label3.Size = New System.Drawing.Size(78, 18)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Descuento"
         '
@@ -242,105 +242,105 @@ Partial Class RealizarFactura
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(11, 248)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(91, 18)
+        Me.Label6.Size = New System.Drawing.Size(90, 18)
         Me.Label6.TabIndex = 41
         Me.Label6.Text = "Precio Venta"
         '
-        'agregar
+        'btnagregar
         '
-        Me.agregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.agregar.FlatAppearance.BorderSize = 0
-        Me.agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.agregar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.agregar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.agregar.Location = New System.Drawing.Point(133, 288)
-        Me.agregar.Name = "agregar"
-        Me.agregar.Size = New System.Drawing.Size(80, 26)
-        Me.agregar.TabIndex = 42
-        Me.agregar.Text = "Agregar"
-        Me.agregar.UseVisualStyleBackColor = False
+        Me.btnagregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnagregar.FlatAppearance.BorderSize = 0
+        Me.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnagregar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnagregar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnagregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnagregar.Location = New System.Drawing.Point(133, 288)
+        Me.btnagregar.Name = "btnagregar"
+        Me.btnagregar.Size = New System.Drawing.Size(80, 26)
+        Me.btnagregar.TabIndex = 42
+        Me.btnagregar.Text = "Agregar"
+        Me.btnagregar.UseVisualStyleBackColor = False
         '
-        'limpiarv
+        'btnlimpiarv
         '
-        Me.limpiarv.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.limpiarv.FlatAppearance.BorderSize = 0
-        Me.limpiarv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.limpiarv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.limpiarv.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.limpiarv.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.limpiarv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.limpiarv.Location = New System.Drawing.Point(39, 288)
-        Me.limpiarv.Name = "limpiarv"
-        Me.limpiarv.Size = New System.Drawing.Size(80, 26)
-        Me.limpiarv.TabIndex = 43
-        Me.limpiarv.Text = "Limpiar Campos"
-        Me.limpiarv.UseVisualStyleBackColor = False
+        Me.btnlimpiarv.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnlimpiarv.FlatAppearance.BorderSize = 0
+        Me.btnlimpiarv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnlimpiarv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnlimpiarv.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnlimpiarv.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnlimpiarv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnlimpiarv.Location = New System.Drawing.Point(39, 288)
+        Me.btnlimpiarv.Name = "btnlimpiarv"
+        Me.btnlimpiarv.Size = New System.Drawing.Size(80, 26)
+        Me.btnlimpiarv.TabIndex = 43
+        Me.btnlimpiarv.Text = "Limpiar Campos"
+        Me.btnlimpiarv.UseVisualStyleBackColor = False
         '
-        'guardarImprimir
+        'btnguardarImprimir
         '
-        Me.guardarImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.guardarImprimir.FlatAppearance.BorderSize = 0
-        Me.guardarImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.guardarImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.guardarImprimir.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.guardarImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.guardarImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.guardarImprimir.Location = New System.Drawing.Point(247, 329)
-        Me.guardarImprimir.Name = "guardarImprimir"
-        Me.guardarImprimir.Size = New System.Drawing.Size(145, 26)
-        Me.guardarImprimir.TabIndex = 44
-        Me.guardarImprimir.Text = "Guardar e Imprimir"
-        Me.guardarImprimir.UseVisualStyleBackColor = False
+        Me.btnguardarImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnguardarImprimir.FlatAppearance.BorderSize = 0
+        Me.btnguardarImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnguardarImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnguardarImprimir.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnguardarImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnguardarImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnguardarImprimir.Location = New System.Drawing.Point(247, 329)
+        Me.btnguardarImprimir.Name = "btnguardarImprimir"
+        Me.btnguardarImprimir.Size = New System.Drawing.Size(145, 26)
+        Me.btnguardarImprimir.TabIndex = 44
+        Me.btnguardarImprimir.Text = "Guardar e Imprimir"
+        Me.btnguardarImprimir.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnborrar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(408, 329)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 26)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "Borrar Línea"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnborrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnborrar.FlatAppearance.BorderSize = 0
+        Me.btnborrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnborrar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnborrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnborrar.Location = New System.Drawing.Point(408, 329)
+        Me.btnborrar.Name = "btnborrar"
+        Me.btnborrar.Size = New System.Drawing.Size(114, 26)
+        Me.btnborrar.TabIndex = 45
+        Me.btnborrar.Text = "Borrar Línea"
+        Me.btnborrar.UseVisualStyleBackColor = False
         '
-        'atras
+        'btnatras
         '
-        Me.atras.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.atras.FlatAppearance.BorderSize = 0
-        Me.atras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.atras.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.atras.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.atras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.atras.Location = New System.Drawing.Point(843, 357)
-        Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(80, 26)
-        Me.atras.TabIndex = 46
-        Me.atras.Text = "Atrás"
-        Me.atras.UseVisualStyleBackColor = False
+        Me.btnatras.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnatras.FlatAppearance.BorderSize = 0
+        Me.btnatras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnatras.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnatras.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnatras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnatras.Location = New System.Drawing.Point(843, 357)
+        Me.btnatras.Name = "btnatras"
+        Me.btnatras.Size = New System.Drawing.Size(80, 26)
+        Me.btnatras.TabIndex = 46
+        Me.btnatras.Text = "Atrás"
+        Me.btnatras.UseVisualStyleBackColor = False
         '
-        'buscarb
+        'btnbuscarb
         '
-        Me.buscarb.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buscarb.FlatAppearance.BorderSize = 0
-        Me.buscarb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.buscarb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.buscarb.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buscarb.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.buscarb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buscarb.Location = New System.Drawing.Point(844, 90)
-        Me.buscarb.Name = "buscarb"
-        Me.buscarb.Size = New System.Drawing.Size(79, 26)
-        Me.buscarb.TabIndex = 47
-        Me.buscarb.Text = "Buscar"
-        Me.buscarb.UseVisualStyleBackColor = False
+        Me.btnbuscarb.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnbuscarb.FlatAppearance.BorderSize = 0
+        Me.btnbuscarb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnbuscarb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnbuscarb.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnbuscarb.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnbuscarb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnbuscarb.Location = New System.Drawing.Point(844, 90)
+        Me.btnbuscarb.Name = "btnbuscarb"
+        Me.btnbuscarb.Size = New System.Drawing.Size(79, 26)
+        Me.btnbuscarb.TabIndex = 47
+        Me.btnbuscarb.Text = "Buscar"
+        Me.btnbuscarb.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -349,7 +349,7 @@ Partial Class RealizarFactura
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(715, 94)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(123, 18)
+        Me.Label5.Size = New System.Drawing.Size(125, 18)
         Me.Label5.TabIndex = 48
         Me.Label5.Text = "Buscar Productos"
         '
@@ -360,22 +360,22 @@ Partial Class RealizarFactura
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(942, 395)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.buscarb)
-        Me.Controls.Add(Me.atras)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.guardarImprimir)
-        Me.Controls.Add(Me.limpiarv)
-        Me.Controls.Add(Me.agregar)
+        Me.Controls.Add(Me.btnbuscarb)
+        Me.Controls.Add(Me.btnatras)
+        Me.Controls.Add(Me.btnborrar)
+        Me.Controls.Add(Me.btnguardarImprimir)
+        Me.Controls.Add(Me.btnlimpiarv)
+        Me.Controls.Add(Me.btnagregar)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.barratitulo)
-        Me.Controls.Add(Me.desc)
-        Me.Controls.Add(Me.precioov)
-        Me.Controls.Add(Me.descuent)
-        Me.Controls.Add(Me.cant)
-        Me.Controls.Add(Me.codigo)
+        Me.Controls.Add(Me.txtdesc)
+        Me.Controls.Add(Me.txtprecioov)
+        Me.Controls.Add(Me.txtdescuent)
+        Me.Controls.Add(Me.txtcant)
+        Me.Controls.Add(Me.txtcodigo)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.DataGridFacturas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -386,19 +386,19 @@ Partial Class RealizarFactura
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridFacturas As System.Windows.Forms.DataGridView
     Friend WithEvents cod As System.Windows.Forms.Label
-    Public WithEvents codigo As System.Windows.Forms.TextBox
-    Public WithEvents cant As System.Windows.Forms.TextBox
-    Public WithEvents descuent As System.Windows.Forms.TextBox
-    Public WithEvents precioov As System.Windows.Forms.TextBox
-    Public WithEvents desc As System.Windows.Forms.TextBox
+    Public WithEvents txtcodigo As System.Windows.Forms.TextBox
+    Public WithEvents txtcant As System.Windows.Forms.TextBox
+    Public WithEvents txtdescuent As System.Windows.Forms.TextBox
+    Public WithEvents txtprecioov As System.Windows.Forms.TextBox
+    Public WithEvents txtdesc As System.Windows.Forms.TextBox
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -414,11 +414,11 @@ Partial Class RealizarFactura
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents agregar As System.Windows.Forms.Button
-    Friend WithEvents limpiarv As System.Windows.Forms.Button
-    Friend WithEvents guardarImprimir As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents atras As System.Windows.Forms.Button
-    Friend WithEvents buscarb As System.Windows.Forms.Button
+    Friend WithEvents btnagregar As System.Windows.Forms.Button
+    Friend WithEvents btnlimpiarv As System.Windows.Forms.Button
+    Friend WithEvents btnguardarImprimir As System.Windows.Forms.Button
+    Friend WithEvents btnborrar As System.Windows.Forms.Button
+    Friend WithEvents btnatras As System.Windows.Forms.Button
+    Friend WithEvents btnbuscarb As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

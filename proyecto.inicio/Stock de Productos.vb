@@ -3,14 +3,14 @@
 Public Class Stock_de_Productos
 
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
         Me.Hide()
         Inicio.Show()
 
     End Sub
 
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
 
 
         Try
@@ -21,11 +21,11 @@ Public Class Stock_de_Productos
                 conexioon.Consulta = "INSERT INTO `stock` (`descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `num_prov`) VALUES ('" + txtdescripcion.Text + "','" + txtcantidad.Text + "','" + txtprecio.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "');"
 
                 consultar()
-                DataGridView1.DataSource = resultado
+                DgvStock.DataSource = resultado
 
 
                 MessageBox.Show("Datos Guardados Correctamente.")
-                MessageBox.Show("El ID producto se agregará automáticamente.")
+
 
             Else
                 MessageBox.Show("Se deben rellenar todos los campos.")
@@ -34,23 +34,23 @@ Public Class Stock_de_Productos
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-        'Acaaaaaaaaaaa Actualizooooooooooooooo El DGV de mierdaaaaaaaaaaaaaaaaaaaa repitiendo el comando creo que se puede mejorar...
+        'Actualizar el Dgv de mi tabla stoc
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()
-        DataGridView1.DataSource = resultado
+        DgvStock.DataSource = resultado
 
         'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-        DataGridView1.Columns(0).HeaderText = "Código"
-        DataGridView1.Columns(1).HeaderText = "Descripcion"
-        DataGridView1.Columns(2).HeaderText = "Cantidad"
-        DataGridView1.Columns(3).HeaderText = "Precio Costo"
-        DataGridView1.Columns(4).HeaderText = "Precio Venta"
-        DataGridView1.Columns(5).HeaderText = "Proveedor"
+        DgvStock.Columns(0).HeaderText = "Código"
+        DgvStock.Columns(1).HeaderText = "Descripcion"
+        DgvStock.Columns(2).HeaderText = "Cantidad"
+        DgvStock.Columns(3).HeaderText = "Precio Costo"
+        DgvStock.Columns(4).HeaderText = "Precio Venta"
+        DgvStock.Columns(5).HeaderText = "Proveedor"
         'Proximamente Solo en Cines
 
     End Sub
 
-    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiar.Click
 
         txtdescripcion.Text = ""
         txtprecio.Text = ""
@@ -63,7 +63,7 @@ Public Class Stock_de_Productos
 
     Private Sub Button5_Click(sender As System.Object, e As System.EventArgs)
         Me.Hide()
-        EliminarSotck.Show()
+        SuspenderStock.Show()
 
     End Sub
 
@@ -71,23 +71,50 @@ Public Class Stock_de_Productos
         'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
         conexioon.Consulta = "SELECT * FROM stock"
         consultar()
-        DataGridView1.DataSource = resultado
+        DgvStock.DataSource = resultado
 
         'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-        DataGridView1.Columns(0).HeaderText = "Código"
-        DataGridView1.Columns(1).HeaderText = "Descripcion"
-        DataGridView1.Columns(2).HeaderText = "Cantidad"
-        DataGridView1.Columns(3).HeaderText = "Precio Costo"
-        DataGridView1.Columns(4).HeaderText = "Precio Venta"
-        DataGridView1.Columns(5).HeaderText = "Proveedor"
+        DgvStock.Columns(0).HeaderText = "Código"
+        DgvStock.Columns(1).HeaderText = "Descripcion"
+        DgvStock.Columns(2).HeaderText = "Cantidad"
+        DgvStock.Columns(3).HeaderText = "Precio Costo"
+        DgvStock.Columns(4).HeaderText = "Precio Venta"
+        DgvStock.Columns(5).HeaderText = "Proveedor"
         'Proximamente Solo en Cines
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvStock.CellContentClick
 
     End Sub
 
     Private Sub txtdescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtdescripcion.TextChanged
+
+    End Sub
+
+    Private Sub btnmini_Click(sender As System.Object, e As System.EventArgs) Handles btnmini.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnmaxi_Click(sender As System.Object, e As System.EventArgs) Handles btnmaxi.Click
+        Me.WindowState = FormWindowState.Maximized
+
+        btnmaxi.Visible = False
+        btnrestaurar.Visible = True
+    End Sub
+
+    Private Sub cerrarbtn_Click(sender As System.Object, e As System.EventArgs) Handles cerrarbtn.Click
+        End
+    End Sub
+
+    Private Sub btnrestaurar_Click(sender As System.Object, e As System.EventArgs) Handles btnrestaurar.Click
+        'restaura ventana
+        Me.WindowState = FormWindowState.Normal
+        'esconde boton, aparece maximizar
+        btnrestaurar.Visible = False
+        btnmaxi.Visible = True
+    End Sub
+
+    Private Sub barratitulo_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
 
     End Sub
 End Class
