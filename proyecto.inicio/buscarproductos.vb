@@ -2,33 +2,36 @@
 Public Class buscarproductos
 
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-        conexioon.Consulta = "SELECT * FROM stock"
-        consultar()
-        dgvbuscar.DataSource = resultado
+        Try
+            conexioon.Consulta = "SELECT * FROM stock"
+            consultar()
+            dgvbuscarStock.DataSource = resultado
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
         'Nombramos los encabezados del datagrid buscar
 
-        dgvbuscar.Columns(0).HeaderText = "Código"
-        dgvbuscar.Columns(1).HeaderText = "Descrip."
-        dgvbuscar.Columns(2).HeaderText = "Cantidad"
-        dgvbuscar.Columns(3).HeaderText = "Precio Costo"
-        dgvbuscar.Columns(4).HeaderText = "Precio Venta"
-        dgvbuscar.Columns(5).HeaderText = "Proveedor"
+        dgvbuscarStock.Columns(0).HeaderText = "Código"
+        dgvbuscarStock.Columns(1).HeaderText = "Descrip."
+        dgvbuscarStock.Columns(2).HeaderText = "Cantidad"
+        dgvbuscarStock.Columns(3).HeaderText = "Precio Costo"
+        dgvbuscarStock.Columns(4).HeaderText = "Precio Venta"
+        dgvbuscarStock.Columns(5).HeaderText = "Proveedor"
     End Sub
 
-    Private Sub DataGridbuscar_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscar.CellClick
+    Private Sub DataGridbuscar_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarStock.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        RealizarFactura.txtcodigo.Text = dgvbuscar.CurrentRow.Cells(0).Value.ToString
-        RealizarFactura.txtdesc.Text = dgvbuscar.CurrentRow.Cells(1).Value.ToString
-        RealizarFactura.txtprecioov.Text = dgvbuscar.CurrentRow.Cells(4).Value.ToString
+        RealizarFactura.txtcodigo.Text = dgvbuscarStock.CurrentRow.Cells(0).Value.ToString
+        RealizarFactura.txtdesc.Text = dgvbuscarStock.CurrentRow.Cells(1).Value.ToString
+        RealizarFactura.txtprecioov.Text = dgvbuscarStock.CurrentRow.Cells(4).Value.ToString
         'close para cerrar el form
         Close()
         RealizarFactura.Show()
 
     End Sub
 
-    Private Sub DataGridbuscar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscar.CellContentClick
+    Private Sub DataGridbuscar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarStock.CellContentClick
 
     End Sub
 
@@ -62,4 +65,15 @@ Public Class buscarproductos
         End
     End Sub
 
+    Private Sub txtbuscarFac_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarFac.TextChanged
+        Try
+            'BUSQUEDA DINAMICA EN DATAGRIDVIEW
+            conexioon.Consulta = "SELECT * FROM stock WHERE cod_producto LIKE '%" & txtbuscarFac.Text & "%' and descripcion LIKE '%" & txtbuscarFac.Text & "%';"
+            consultar()
+            dgvbuscarStock.DataSource = resultado
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

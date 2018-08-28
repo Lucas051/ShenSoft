@@ -22,16 +22,16 @@ Partial Class buscarproductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgvbuscar = New System.Windows.Forms.DataGridView()
+        Me.dgvbuscarStock = New System.Windows.Forms.DataGridView()
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cerrarbtn = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
         Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
-        Me.btnbuscarf = New System.Windows.Forms.TextBox()
+        Me.txtbuscarFac = New System.Windows.Forms.TextBox()
         Me.btnatras = New System.Windows.Forms.Button()
-        CType(Me.dgvbuscar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvbuscarStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,13 +39,13 @@ Partial Class buscarproductos
         CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'dgvbuscar
+        'dgvbuscarStock
         '
-        Me.dgvbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvbuscar.Location = New System.Drawing.Point(20, 84)
-        Me.dgvbuscar.Name = "dgvbuscar"
-        Me.dgvbuscar.Size = New System.Drawing.Size(667, 198)
-        Me.dgvbuscar.TabIndex = 33
+        Me.dgvbuscarStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvbuscarStock.Location = New System.Drawing.Point(20, 84)
+        Me.dgvbuscarStock.Name = "dgvbuscarStock"
+        Me.dgvbuscarStock.Size = New System.Drawing.Size(667, 198)
+        Me.dgvbuscarStock.TabIndex = 33
         '
         'barratitulo
         '
@@ -116,13 +116,13 @@ Partial Class buscarproductos
         Me.cod.TabIndex = 35
         Me.cod.Text = "Buscar Factura"
         '
-        'btnbuscarf
+        'txtbuscarFac
         '
-        Me.btnbuscarf.Location = New System.Drawing.Point(130, 51)
-        Me.btnbuscarf.Multiline = True
-        Me.btnbuscarf.Name = "btnbuscarf"
-        Me.btnbuscarf.Size = New System.Drawing.Size(107, 22)
-        Me.btnbuscarf.TabIndex = 36
+        Me.txtbuscarFac.Location = New System.Drawing.Point(130, 51)
+        Me.txtbuscarFac.Multiline = True
+        Me.txtbuscarFac.Name = "txtbuscarFac"
+        Me.txtbuscarFac.Size = New System.Drawing.Size(107, 22)
+        Me.txtbuscarFac.TabIndex = 36
         '
         'btnatras
         '
@@ -147,14 +147,14 @@ Partial Class buscarproductos
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(701, 330)
         Me.Controls.Add(Me.btnatras)
-        Me.Controls.Add(Me.btnbuscarf)
+        Me.Controls.Add(Me.txtbuscarFac)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.barratitulo)
-        Me.Controls.Add(Me.dgvbuscar)
+        Me.Controls.Add(Me.dgvbuscarStock)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "buscarproductos"
         Me.Text = "Buscar Productos"
-        CType(Me.dgvbuscar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvbuscarStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
@@ -164,13 +164,13 @@ Partial Class buscarproductos
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents dgvbuscar As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvbuscarStock As System.Windows.Forms.DataGridView
     Friend WithEvents barratitulo As System.Windows.Forms.Panel
     Friend WithEvents btnmini As System.Windows.Forms.PictureBox
     Friend WithEvents cerrarbtn As System.Windows.Forms.PictureBox
     Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
     Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents cod As System.Windows.Forms.Label
-    Friend WithEvents btnbuscarf As System.Windows.Forms.TextBox
+    Friend WithEvents txtbuscarFac As System.Windows.Forms.TextBox
     Friend WithEvents btnatras As System.Windows.Forms.Button
 End Class
