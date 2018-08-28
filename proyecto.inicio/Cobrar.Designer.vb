@@ -29,7 +29,7 @@ Partial Class Cobrar
         Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnmaxi = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
-        Me.txtcliente = New System.Windows.Forms.TextBox()
+        Me.txtclientes = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -128,13 +128,13 @@ Partial Class Cobrar
         Me.cod.TabIndex = 37
         Me.cod.Text = "Vendedor"
         '
-        'txtcliente
+        'txtclientes
         '
-        Me.txtcliente.Location = New System.Drawing.Point(111, 274)
-        Me.txtcliente.Multiline = True
-        Me.txtcliente.Name = "txtcliente"
-        Me.txtcliente.Size = New System.Drawing.Size(121, 26)
-        Me.txtcliente.TabIndex = 40
+        Me.txtclientes.Location = New System.Drawing.Point(111, 274)
+        Me.txtclientes.Multiline = True
+        Me.txtclientes.Name = "txtclientes"
+        Me.txtclientes.Size = New System.Drawing.Size(121, 26)
+        Me.txtclientes.TabIndex = 40
         '
         'Label4
         '
@@ -276,7 +276,7 @@ Partial Class Cobrar
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtcliente)
+        Me.Controls.Add(Me.txtclientes)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.barratitulo)
@@ -302,7 +302,7 @@ Partial Class Cobrar
     Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
     Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents cod As System.Windows.Forms.Label
-    Public WithEvents txtcliente As System.Windows.Forms.TextBox
+    Public WithEvents txtclientes As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label

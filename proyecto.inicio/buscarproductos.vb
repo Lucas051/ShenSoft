@@ -61,4 +61,5 @@ Public Class buscarproductos
     Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
         End
     End Sub
+
 End Class
