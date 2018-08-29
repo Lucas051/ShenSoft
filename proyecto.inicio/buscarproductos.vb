@@ -1,7 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class buscarproductos
+    'variables para mover form en none
+    Private IsFormBeingDragged As Boolean = False
+    Private MouseDownX As Integer
+    Private MouseDownY As Integer
+
 
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        InitializeComponent()
         Try
             conexioon.Consulta = "SELECT * FROM stock"
             consultar()
@@ -76,4 +82,51 @@ Public Class buscarproductos
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    '///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    'Para mover FORM en NONE
+
+
+    Private Sub buscarproductos_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseDown
+
+        If e.Button = MouseButtons.Left Then
+
+            IsFormBeingDragged = True
+
+            MouseDownX = e.X
+
+            MouseDownY = e.Y
+
+        End If
+
+    End Sub
+
+    Private Sub buscarproductos_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseUp
+
+
+        If e.Button = MouseButtons.Left Then
+
+            IsFormBeingDragged = False
+
+        End If
+
+    End Sub
+
+    Private Sub buscarproductos_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseMove
+
+        If IsFormBeingDragged Then
+            Dim temp As Point = New Point()
+            temp.X = Me.Location.X + (e.X - MouseDownX)
+            temp.Y = Me.Location.Y + (e.Y - MouseDownY)
+
+            Me.Location = temp
+
+            temp = Nothing
+
+        End If
+
+    End Sub
+    '///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 End Class

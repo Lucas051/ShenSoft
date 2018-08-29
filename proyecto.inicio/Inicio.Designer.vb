@@ -22,13 +22,24 @@ Partial Class Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.barratitulo = New System.Windows.Forms.Panel()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
+        Me.barratituloInicio = New System.Windows.Forms.Panel()
+        Me.btnmini = New System.Windows.Forms.PictureBox()
+        Me.cerrarbtn = New System.Windows.Forms.PictureBox()
+        Me.btnmaxi = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.Menuvertical = New System.Windows.Forms.Panel()
+        Me.PictureBoxsalir = New System.Windows.Forms.PictureBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnclientes = New System.Windows.Forms.Button()
+        Me.btnprov = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnstock = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnfacturacion = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnsalir = New System.Windows.Forms.Button()
         Me.panelmedio = New System.Windows.Forms.Panel()
         Me.panetlstock = New System.Windows.Forms.Panel()
@@ -51,43 +62,78 @@ Partial Class Inicio
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnrealizarfact = New System.Windows.Forms.Button()
         Me.btnconslfact = New System.Windows.Forms.Button()
-        Me.PictureBoxsalir = New System.Windows.Forms.PictureBox()
-        Me.btnclientes = New System.Windows.Forms.Button()
-        Me.btnprov = New System.Windows.Forms.Button()
-        Me.btnstock = New System.Windows.Forms.Button()
-        Me.btnfacturacion = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnmini = New System.Windows.Forms.PictureBox()
-        Me.cerrarbtn = New System.Windows.Forms.PictureBox()
-        Me.btnmaxi = New System.Windows.Forms.PictureBox()
-        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
-        Me.barratitulo.SuspendLayout()
+        Me.barratituloInicio.SuspendLayout()
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Menuvertical.SuspendLayout()
+        CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelmedio.SuspendLayout()
         Me.panetlstock.SuspendLayout()
         Me.Panelproveedores.SuspendLayout()
         Me.Panelclientes.SuspendLayout()
         Me.PanelFact.SuspendLayout()
-        CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'barratitulo
+        'barratituloInicio
         '
-        Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.barratitulo.Controls.Add(Me.btnmini)
-        Me.barratitulo.Controls.Add(Me.cerrarbtn)
-        Me.barratitulo.Controls.Add(Me.btnmaxi)
-        Me.barratitulo.Controls.Add(Me.btnrestaurar)
-        Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barratitulo.Location = New System.Drawing.Point(0, 0)
-        Me.barratitulo.Name = "barratitulo"
-        Me.barratitulo.Size = New System.Drawing.Size(984, 35)
-        Me.barratitulo.TabIndex = 0
+        Me.barratituloInicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratituloInicio.Controls.Add(Me.btnmini)
+        Me.barratituloInicio.Controls.Add(Me.cerrarbtn)
+        Me.barratituloInicio.Controls.Add(Me.btnmaxi)
+        Me.barratituloInicio.Controls.Add(Me.btnrestaurar)
+        Me.barratituloInicio.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barratituloInicio.Location = New System.Drawing.Point(0, 0)
+        Me.barratituloInicio.Name = "barratituloInicio"
+        Me.barratituloInicio.Size = New System.Drawing.Size(984, 35)
+        Me.barratituloInicio.TabIndex = 0
+        '
+        'btnmini
+        '
+        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmini.Image = CType(resources.GetObject("btnmini.Image"), System.Drawing.Image)
+        Me.btnmini.Location = New System.Drawing.Point(891, 5)
+        Me.btnmini.Name = "btnmini"
+        Me.btnmini.Size = New System.Drawing.Size(25, 25)
+        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmini.TabIndex = 1
+        Me.btnmini.TabStop = False
+        '
+        'cerrarbtn
+        '
+        Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cerrarbtn.Image = CType(resources.GetObject("cerrarbtn.Image"), System.Drawing.Image)
+        Me.cerrarbtn.Location = New System.Drawing.Point(953, 5)
+        Me.cerrarbtn.Name = "cerrarbtn"
+        Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
+        Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.cerrarbtn.TabIndex = 0
+        Me.cerrarbtn.TabStop = False
+        '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = CType(resources.GetObject("btnmaxi.Image"), System.Drawing.Image)
+        Me.btnmaxi.Location = New System.Drawing.Point(922, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
+        '
+        'btnrestaurar
+        '
+        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnrestaurar.Image = CType(resources.GetObject("btnrestaurar.Image"), System.Drawing.Image)
+        Me.btnrestaurar.Location = New System.Drawing.Point(922, 5)
+        Me.btnrestaurar.Name = "btnrestaurar"
+        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
+        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnrestaurar.TabIndex = 3
+        Me.btnrestaurar.TabStop = False
+        Me.btnrestaurar.Visible = False
         '
         'Menuvertical
         '
@@ -109,6 +155,16 @@ Partial Class Inicio
         Me.Menuvertical.Name = "Menuvertical"
         Me.Menuvertical.Size = New System.Drawing.Size(200, 426)
         Me.Menuvertical.TabIndex = 1
+        '
+        'PictureBoxsalir
+        '
+        Me.PictureBoxsalir.Image = Global.proyecto.inicio.My.Resources.Resources.salir1
+        Me.PictureBoxsalir.Location = New System.Drawing.Point(16, 384)
+        Me.PictureBoxsalir.Name = "PictureBoxsalir"
+        Me.PictureBoxsalir.Size = New System.Drawing.Size(33, 30)
+        Me.PictureBoxsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxsalir.TabIndex = 12
+        Me.PictureBoxsalir.TabStop = False
         '
         'Panel9
         '
@@ -133,6 +189,40 @@ Partial Class Inicio
         Me.Panel3.Size = New System.Drawing.Size(5, 30)
         Me.Panel3.TabIndex = 9
         '
+        'btnclientes
+        '
+        Me.btnclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnclientes.FlatAppearance.BorderSize = 0
+        Me.btnclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclientes.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnclientes.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnclientes.Image = Global.proyecto.inicio.My.Resources.Resources.clientes1
+        Me.btnclientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnclientes.Location = New System.Drawing.Point(0, 266)
+        Me.btnclientes.Name = "btnclientes"
+        Me.btnclientes.Size = New System.Drawing.Size(200, 30)
+        Me.btnclientes.TabIndex = 8
+        Me.btnclientes.Text = "        Clientes"
+        Me.btnclientes.UseVisualStyleBackColor = False
+        '
+        'btnprov
+        '
+        Me.btnprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnprov.FlatAppearance.BorderSize = 0
+        Me.btnprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnprov.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnprov.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnprov.Image = Global.proyecto.inicio.My.Resources.Resources.compras
+        Me.btnprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnprov.Location = New System.Drawing.Point(1, 333)
+        Me.btnprov.Name = "btnprov"
+        Me.btnprov.Size = New System.Drawing.Size(199, 30)
+        Me.btnprov.TabIndex = 8
+        Me.btnprov.Text = "          Proveedores"
+        Me.btnprov.UseVisualStyleBackColor = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -141,6 +231,23 @@ Partial Class Inicio
         Me.Panel2.Size = New System.Drawing.Size(5, 30)
         Me.Panel2.TabIndex = 7
         '
+        'btnstock
+        '
+        Me.btnstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnstock.FlatAppearance.BorderSize = 0
+        Me.btnstock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnstock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnstock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnstock.Image = Global.proyecto.inicio.My.Resources.Resources.stock1
+        Me.btnstock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnstock.Location = New System.Drawing.Point(3, 198)
+        Me.btnstock.Name = "btnstock"
+        Me.btnstock.Size = New System.Drawing.Size(197, 30)
+        Me.btnstock.TabIndex = 6
+        Me.btnstock.Text = "            Stock de Prod."
+        Me.btnstock.UseVisualStyleBackColor = False
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -148,6 +255,33 @@ Partial Class Inicio
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(5, 30)
         Me.Panel1.TabIndex = 5
+        '
+        'btnfacturacion
+        '
+        Me.btnfacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnfacturacion.FlatAppearance.BorderSize = 0
+        Me.btnfacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnfacturacion.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnfacturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnfacturacion.Image = Global.proyecto.inicio.My.Resources.Resources.venta
+        Me.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnfacturacion.Location = New System.Drawing.Point(1, 131)
+        Me.btnfacturacion.Name = "btnfacturacion"
+        Me.btnfacturacion.Size = New System.Drawing.Size(200, 30)
+        Me.btnfacturacion.TabIndex = 1
+        Me.btnfacturacion.Text = "          Facturación"
+        Me.btnfacturacion.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
+        Me.PictureBox1.Location = New System.Drawing.Point(-45, -68)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(292, 248)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'btnsalir
         '
@@ -422,167 +556,34 @@ Partial Class Inicio
         Me.btnconslfact.Text = "Consulta de Fact."
         Me.btnconslfact.UseVisualStyleBackColor = False
         '
-        'PictureBoxsalir
-        '
-        Me.PictureBoxsalir.Image = Global.proyecto.inicio.My.Resources.Resources.salir1
-        Me.PictureBoxsalir.Location = New System.Drawing.Point(16, 384)
-        Me.PictureBoxsalir.Name = "PictureBoxsalir"
-        Me.PictureBoxsalir.Size = New System.Drawing.Size(33, 30)
-        Me.PictureBoxsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBoxsalir.TabIndex = 12
-        Me.PictureBoxsalir.TabStop = False
-        '
-        'btnclientes
-        '
-        Me.btnclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnclientes.FlatAppearance.BorderSize = 0
-        Me.btnclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclientes.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnclientes.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnclientes.Image = Global.proyecto.inicio.My.Resources.Resources.clientes1
-        Me.btnclientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnclientes.Location = New System.Drawing.Point(0, 266)
-        Me.btnclientes.Name = "btnclientes"
-        Me.btnclientes.Size = New System.Drawing.Size(200, 30)
-        Me.btnclientes.TabIndex = 8
-        Me.btnclientes.Text = "        Clientes"
-        Me.btnclientes.UseVisualStyleBackColor = False
-        '
-        'btnprov
-        '
-        Me.btnprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnprov.FlatAppearance.BorderSize = 0
-        Me.btnprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnprov.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnprov.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnprov.Image = Global.proyecto.inicio.My.Resources.Resources.compras
-        Me.btnprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnprov.Location = New System.Drawing.Point(1, 333)
-        Me.btnprov.Name = "btnprov"
-        Me.btnprov.Size = New System.Drawing.Size(199, 30)
-        Me.btnprov.TabIndex = 8
-        Me.btnprov.Text = "          Proveedores"
-        Me.btnprov.UseVisualStyleBackColor = False
-        '
-        'btnstock
-        '
-        Me.btnstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnstock.FlatAppearance.BorderSize = 0
-        Me.btnstock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnstock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnstock.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnstock.Image = Global.proyecto.inicio.My.Resources.Resources.stock1
-        Me.btnstock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnstock.Location = New System.Drawing.Point(3, 198)
-        Me.btnstock.Name = "btnstock"
-        Me.btnstock.Size = New System.Drawing.Size(197, 30)
-        Me.btnstock.TabIndex = 6
-        Me.btnstock.Text = "            Stock de Prod."
-        Me.btnstock.UseVisualStyleBackColor = False
-        '
-        'btnfacturacion
-        '
-        Me.btnfacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnfacturacion.FlatAppearance.BorderSize = 0
-        Me.btnfacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnfacturacion.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnfacturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnfacturacion.Image = Global.proyecto.inicio.My.Resources.Resources.venta
-        Me.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnfacturacion.Location = New System.Drawing.Point(1, 131)
-        Me.btnfacturacion.Name = "btnfacturacion"
-        Me.btnfacturacion.Size = New System.Drawing.Size(200, 30)
-        Me.btnfacturacion.TabIndex = 1
-        Me.btnfacturacion.Text = "          Facturación"
-        Me.btnfacturacion.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
-        Me.PictureBox1.Location = New System.Drawing.Point(-45, -68)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(292, 248)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'btnmini
-        '
-        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(891, 5)
-        Me.btnmini.Name = "btnmini"
-        Me.btnmini.Size = New System.Drawing.Size(25, 25)
-        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmini.TabIndex = 1
-        Me.btnmini.TabStop = False
-        '
-        'cerrarbtn
-        '
-        Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cerrarbtn.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
-        Me.cerrarbtn.Location = New System.Drawing.Point(953, 5)
-        Me.cerrarbtn.Name = "cerrarbtn"
-        Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
-        Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.cerrarbtn.TabIndex = 0
-        Me.cerrarbtn.TabStop = False
-        '
-        'btnmaxi
-        '
-        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(922, 5)
-        Me.btnmaxi.Name = "btnmaxi"
-        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
-        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmaxi.TabIndex = 2
-        Me.btnmaxi.TabStop = False
-        '
-        'btnrestaurar
-        '
-        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnrestaurar.Location = New System.Drawing.Point(922, 5)
-        Me.btnrestaurar.Name = "btnrestaurar"
-        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
-        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnrestaurar.TabIndex = 3
-        Me.btnrestaurar.TabStop = False
-        Me.btnrestaurar.Visible = False
-        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.Menuvertical)
-        Me.Controls.Add(Me.barratitulo)
+        Me.Controls.Add(Me.barratituloInicio)
         Me.Controls.Add(Me.panelmedio)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Inicio"
         Me.Text = "InicioP"
-        Me.barratitulo.ResumeLayout(False)
+        Me.barratituloInicio.ResumeLayout(False)
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Menuvertical.ResumeLayout(False)
+        CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
         Me.panetlstock.ResumeLayout(False)
         Me.Panelproveedores.ResumeLayout(False)
         Me.Panelclientes.ResumeLayout(False)
         Me.PanelFact.ResumeLayout(False)
-        CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents barratitulo As System.Windows.Forms.Panel
+    Friend WithEvents barratituloInicio As System.Windows.Forms.Panel
     Friend WithEvents btnmini As System.Windows.Forms.PictureBox
     Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
     Friend WithEvents cerrarbtn As System.Windows.Forms.PictureBox

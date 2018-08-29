@@ -2,6 +2,11 @@
 Imports System.Runtime.InteropServices
 
 Public Class Inicio
+    'Variables para mover form en none
+    Private IsFormBeingDragged As Boolean = False
+    Private MouseDownX As Integer
+    Private MouseDownY As Integer
+
 
     Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
         End
@@ -35,12 +40,7 @@ Public Class Inicio
 
     '  private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam)
 
-    Private Sub barratitulo_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratitulo.MouseDown
-        ' ReleaseCapture();
-        ' SendMessage(this.Handle, 0x112, 0xf012, 0);
-    End Sub
-
-
+ 
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
         'ocultamos pestaña en pantalla y aparece facturacion
         Panelproveedores.Visible = False
@@ -123,7 +123,7 @@ Public Class Inicio
 
     End Sub
 
-    
+
     Private Sub btnsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsalir.Click
         Me.Hide()
         Verificacion.Show()
@@ -133,21 +133,51 @@ Public Class Inicio
         End
     End Sub
 
-    Private Sub btnaddstock_Click(sender As System.Object, e As System.EventArgs) Handles btnaddstock.Click
+    Private Sub btnaddstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnaddstock.Click
         Me.Hide()
         Stock_de_Productos.Show()
 
     End Sub
 
 
-    
-    Private Sub btnmodistock_Click(sender As System.Object, e As System.EventArgs) Handles btnmodistock.Click
+
+    Private Sub btnmodistock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodistock.Click
         Me.Hide()
         SuspenderStock.Show()
 
     End Sub
 
-    Private Sub barratitulo_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
+    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    'MOVER FORM EN NONE
+    Private Sub barratitulo_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseDown
+        If e.Button = MouseButtons.Left Then
+
+            IsFormBeingDragged = True
+            MouseDownX = e.X
+            MouseDownY = e.Y
+
+        End If
 
     End Sub
+
+
+    Private Sub barratituloInicio_MouseMove_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseMove
+        If IsFormBeingDragged Then
+            Dim temp As Point = New Point()
+            temp.X = Me.Location.X + (e.X - MouseDownX)
+            temp.Y = Me.Location.Y + (e.Y - MouseDownY)
+
+            Me.Location = temp
+
+            temp = Nothing
+
+        End If
+    End Sub
+
+    Private Sub barratituloInicio_MouseUp_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseUp
+        If e.Button = MouseButtons.Left Then
+            IsFormBeingDragged = False
+        End If
+    End Sub
+    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 End Class

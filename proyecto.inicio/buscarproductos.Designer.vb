@@ -22,6 +22,7 @@ Partial Class buscarproductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(buscarproductos))
         Me.dgvbuscarStock = New System.Windows.Forms.DataGridView()
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
@@ -63,7 +64,7 @@ Partial Class buscarproductos
         'btnmini
         '
         Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
+        Me.btnmini.Image = CType(resources.GetObject("btnmini.Image"), System.Drawing.Image)
         Me.btnmini.Location = New System.Drawing.Point(608, 5)
         Me.btnmini.Name = "btnmini"
         Me.btnmini.Size = New System.Drawing.Size(25, 25)
@@ -74,7 +75,7 @@ Partial Class buscarproductos
         'cerrarbtn
         '
         Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cerrarbtn.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
+        Me.cerrarbtn.Image = CType(resources.GetObject("cerrarbtn.Image"), System.Drawing.Image)
         Me.cerrarbtn.Location = New System.Drawing.Point(670, 5)
         Me.cerrarbtn.Name = "cerrarbtn"
         Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
@@ -85,7 +86,7 @@ Partial Class buscarproductos
         'btnmaxi
         '
         Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnmaxi.Image = CType(resources.GetObject("btnmaxi.Image"), System.Drawing.Image)
         Me.btnmaxi.Location = New System.Drawing.Point(639, 5)
         Me.btnmaxi.Name = "btnmaxi"
         Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
@@ -96,7 +97,7 @@ Partial Class buscarproductos
         'btnrestaurar
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
+        Me.btnrestaurar.Image = CType(resources.GetObject("btnrestaurar.Image"), System.Drawing.Image)
         Me.btnrestaurar.Location = New System.Drawing.Point(639, 5)
         Me.btnrestaurar.Name = "btnrestaurar"
         Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
