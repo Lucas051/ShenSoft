@@ -35,7 +35,7 @@ Public Class Stock_de_Productos
             MessageBox.Show(ex.ToString)
         End Try
         'Actualizar el Dgv de mi tabla stoc
-        conexioon.Consulta = "SELECT * FROM stock"
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
         consultar()
         DgvStock.DataSource = resultado
 
@@ -69,7 +69,7 @@ Public Class Stock_de_Productos
 
     Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
-        conexioon.Consulta = "SELECT * FROM stock"
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
         consultar()
         DgvStock.DataSource = resultado
 

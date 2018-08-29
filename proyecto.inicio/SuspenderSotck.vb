@@ -5,7 +5,7 @@ Public Class SuspenderStock
     Private Sub EliminarStock_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
 
-        conexioon.Consulta = "SELECT * FROM stock"
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
         consultar()
         dgvEliminar.DataSource = resultado
 
@@ -33,17 +33,17 @@ Public Class SuspenderStock
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsuspender.Click
-        'Intento de eliminar stock v 0.0.1
+        Try
 
-        conexioon.Consulta = "DELETE FROM `stock` WHERE `stock`.`cod_producto` ='" + Str(txtcodigo.Text) + "'"
-        consultar()
-        dgvEliminar.DataSource = resultado
+            conexioon.Consulta = " UPDATE stock SET cantidad = 0 WHERE cod_producto ='" + Str(txtcodigo.Text) + "'"
+            consultar()
 
+            MessageBox.Show("Dato Suspendido Correctamente.")
 
-
-        MessageBox.Show("Dato Eliminado Correctamente.")
-
-        conexioon.Consulta = "SELECT * FROM stock"
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
         consultar()
         dgvEliminar.DataSource = resultado
 
@@ -81,5 +81,9 @@ Public Class SuspenderStock
 
     Private Sub cerrarbtn_Click(sender As System.Object, e As System.EventArgs) Handles cerrarbtn.Click
         End
+    End Sub
+
+    Private Sub barratitulo_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
+
     End Sub
 End Class

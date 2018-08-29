@@ -108,6 +108,12 @@
     <Compile Include="ConsultaFactura.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formnuevo.Designer.vb">
+      <DependentUpon>formnuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formnuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MODIFICARCLIENTES.Designer.vb">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formnuevo.resx">
+      <DependentUpon>formnuevo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
