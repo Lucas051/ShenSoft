@@ -25,8 +25,6 @@ Partial Class Stock_de_Productos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.btningresar = New System.Windows.Forms.Button()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.txtprecio = New System.Windows.Forms.TextBox()
         Me.txtpreciostock = New System.Windows.Forms.TextBox()
@@ -37,17 +35,9 @@ Partial Class Stock_de_Productos
         Me.txtproveedor = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.barratitulo = New System.Windows.Forms.Panel()
-        Me.btnmini = New System.Windows.Forms.PictureBox()
-        Me.cerrarbtn = New System.Windows.Forms.PictureBox()
-        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
-        Me.btnmaxi = New System.Windows.Forms.PictureBox()
+        Me.btningresar = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DgvStock, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.barratitulo.SuspendLayout()
-        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -79,27 +69,6 @@ Partial Class Stock_de_Productos
         Me.Label3.Size = New System.Drawing.Size(86, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Precio de Venta:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        Me.Label4.Location = New System.Drawing.Point(3, 9)
-        Me.Label4.MaximumSize = New System.Drawing.Size(300, 400)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(219, 16)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Ingreso de productos al stock" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'btningresar
-        '
-        Me.btningresar.Location = New System.Drawing.Point(113, 217)
-        Me.btningresar.Name = "btningresar"
-        Me.btningresar.Size = New System.Drawing.Size(75, 23)
-        Me.btningresar.TabIndex = 4
-        Me.btningresar.Text = "Ingresar"
-        Me.btningresar.UseVisualStyleBackColor = True
         '
         'txtdescripcion
         '
@@ -183,64 +152,25 @@ Partial Class Stock_de_Productos
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Proveedor:"
         '
-        'barratitulo
+        'btningresar
         '
-        Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.barratitulo.Controls.Add(Me.btnmini)
-        Me.barratitulo.Controls.Add(Me.cerrarbtn)
-        Me.barratitulo.Controls.Add(Me.btnrestaurar)
-        Me.barratitulo.Controls.Add(Me.btnmaxi)
-        Me.barratitulo.Controls.Add(Me.Label4)
-        Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barratitulo.Location = New System.Drawing.Point(0, 0)
-        Me.barratitulo.Name = "barratitulo"
-        Me.barratitulo.Size = New System.Drawing.Size(823, 35)
-        Me.barratitulo.TabIndex = 17
+        Me.btningresar.Location = New System.Drawing.Point(113, 217)
+        Me.btningresar.Name = "btningresar"
+        Me.btningresar.Size = New System.Drawing.Size(75, 23)
+        Me.btningresar.TabIndex = 4
+        Me.btningresar.Text = "Ingresar"
+        Me.btningresar.UseVisualStyleBackColor = True
         '
-        'btnmini
+        'Label4
         '
-        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(730, 5)
-        Me.btnmini.Name = "btnmini"
-        Me.btnmini.Size = New System.Drawing.Size(25, 25)
-        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmini.TabIndex = 1
-        Me.btnmini.TabStop = False
-        '
-        'cerrarbtn
-        '
-        Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cerrarbtn.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
-        Me.cerrarbtn.Location = New System.Drawing.Point(792, 5)
-        Me.cerrarbtn.Name = "cerrarbtn"
-        Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
-        Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.cerrarbtn.TabIndex = 0
-        Me.cerrarbtn.TabStop = False
-        '
-        'btnrestaurar
-        '
-        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnrestaurar.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnrestaurar.Location = New System.Drawing.Point(761, 5)
-        Me.btnrestaurar.Name = "btnrestaurar"
-        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
-        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnrestaurar.TabIndex = 3
-        Me.btnrestaurar.TabStop = False
-        Me.btnrestaurar.Visible = False
-        '
-        'btnmaxi
-        '
-        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnmaxi.Location = New System.Drawing.Point(761, 5)
-        Me.btnmaxi.Name = "btnmaxi"
-        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
-        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmaxi.TabIndex = 2
-        Me.btnmaxi.TabStop = False
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(46, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(142, 24)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Agregar Stock"
         '
         'Stock_de_Productos
         '
@@ -248,7 +178,7 @@ Partial Class Stock_de_Productos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.ClientSize = New System.Drawing.Size(823, 319)
-        Me.Controls.Add(Me.barratitulo)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtproveedor)
@@ -267,12 +197,6 @@ Partial Class Stock_de_Productos
         Me.Name = "Stock_de_Productos"
         Me.Text = "Stock de Productos"
         CType(Me.DgvStock, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.barratitulo.ResumeLayout(False)
-        Me.barratitulo.PerformLayout()
-        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -280,8 +204,6 @@ Partial Class Stock_de_Productos
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents btningresar As System.Windows.Forms.Button
     Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
     Friend WithEvents txtprecio As System.Windows.Forms.TextBox
     Friend WithEvents txtpreciostock As System.Windows.Forms.TextBox
@@ -292,9 +214,6 @@ Partial Class Stock_de_Productos
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents barratitulo As System.Windows.Forms.Panel
-    Friend WithEvents btnmini As System.Windows.Forms.PictureBox
-    Friend WithEvents cerrarbtn As System.Windows.Forms.PictureBox
-    Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
-    Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
+    Friend WithEvents btningresar As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

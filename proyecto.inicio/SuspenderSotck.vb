@@ -18,11 +18,7 @@ Public Class SuspenderStock
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
-        Me.Hide()
-        Inicio.Show()
-
-    End Sub
+   
 
 
 
@@ -51,39 +47,24 @@ Public Class SuspenderStock
         dgvEliminar.Columns(1).HeaderText = "Descripcion"
         dgvEliminar.Columns(2).HeaderText = "Cantidad"
         dgvEliminar.Columns(3).HeaderText = "Precio Costo"
-        dgvEliminar.Columns(4).HeaderText = "Precio Venta"""
+        dgvEliminar.Columns(4).HeaderText = "Precio Venta"
         dgvEliminar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
-    Private Sub dgvEliminar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEliminar.CellContentClick
+    
+    
 
+    Private Sub Button1_Click_1(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad = 0"
+        consultar()
+        dgvEliminar.DataSource = resultado
+        dgvEliminar.Columns(0).HeaderText = "Código"
+        dgvEliminar.Columns(1).HeaderText = "Descripcion"
+        dgvEliminar.Columns(2).HeaderText = "Cantidad"
+        dgvEliminar.Columns(3).HeaderText = "Precio Costo"
+        dgvEliminar.Columns(4).HeaderText = "Precio Venta"
+        dgvEliminar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
-    Private Sub btnmini_Click(sender As System.Object, e As System.EventArgs) Handles btnmini.Click
-        Me.WindowState = FormWindowState.Minimized
-
-    End Sub
-
-    Private Sub btnrestaurar_Click(sender As System.Object, e As System.EventArgs) Handles btnrestaurar.Click
-        'restaura ventana
-        Me.WindowState = FormWindowState.Normal
-        'esconde boton, aparece maximizar
-        btnrestaurar.Visible = False
-        btnmaxi.Visible = True
-    End Sub
-
-    Private Sub btnmaxi_Click(sender As System.Object, e As System.EventArgs) Handles btnmaxi.Click
-        Me.WindowState = FormWindowState.Maximized
-
-        btnmaxi.Visible = False
-        btnrestaurar.Visible = True
-    End Sub
-
-    Private Sub cerrarbtn_Click(sender As System.Object, e As System.EventArgs) Handles cerrarbtn.Click
-        End
-    End Sub
-
-    Private Sub barratitulo_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
-
-    End Sub
+    
 End Class
