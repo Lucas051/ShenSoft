@@ -37,4 +37,8 @@ Public Class Cobrar
         btnmaxi.Visible = True
         btnrestaurar.Visible = False
     End Sub
+
+    Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
+
+    End Sub
 End Class

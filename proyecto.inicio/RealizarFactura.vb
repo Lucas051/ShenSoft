@@ -14,33 +14,11 @@ Public Class RealizarFactura
         Inicio.Show()
     End Sub
 
-    Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
+    Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         End
 
     End Sub
 
-    Private Sub btnmaxi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmaxi.Click
-        'maximiza ventana
-        Me.WindowState = FormWindowState.Maximized
-        'esconde boton, aparece restaurar
-        btnmaxi.Visible = False
-        btnrestaurar.Visible = True
-    End Sub
-
-    Private Sub btnmini_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmini.Click
-        'minimiza ventana
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub btnrestaurar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrestaurar.Click
-        'restaura ventana
-        Me.WindowState = FormWindowState.Normal
-        'esconde boton, aparece maximizar
-        btnrestaurar.Visible = False
-        btnmaxi.Visible = True
-    End Sub
-
-   
     Private Sub buscarb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarb.Click
         Me.Hide()
         buscarproductos.Show()
