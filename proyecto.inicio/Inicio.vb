@@ -2,6 +2,7 @@
 Imports System.Runtime.InteropServices
 
 Public Class Inicio
+
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
     Private MouseDownX As Integer
@@ -17,7 +18,7 @@ Public Class Inicio
         Me.WindowState = FormWindowState.Maximized
         'esconde boton, aparece restaurar
         btnmaxi.Visible = False
-        btnrestaurar.visible = True
+        btnrestaurar.Visible = True
     End Sub
 
     Private Sub btnmini_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmini.Click
@@ -34,15 +35,9 @@ Public Class Inicio
         btnmaxi.Visible = True
     End Sub
 
-    '[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-    '   private extern static void ReleaseCapture()
-    ' [DllImport("user32.DLL", EntryPoint = "SendMessage")]
 
-    '  private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam)
 
- 
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
-        'ocultamos pestaña en pantalla y aparece facturacion
         Panelproveedores.Visible = False
         Panelclientes.Visible = False
         PanelFact.Visible = True And PanelFact.Visible = False
@@ -50,16 +45,26 @@ Public Class Inicio
     End Sub
 
     Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
-        PanelFact.Visible = False
-        Me.Hide()
-        RealizarFactura.Show()
+        Dim llamar As New RealizarFactura
+        PanelDeTodos.Controls.Clear()
+        llamar.TopLevel = False
+        llamar.Parent = PanelDeTodos
+        llamar.Show()
+        llamar.Dock = DockStyle.Fill
+        PanelDeTodos.Visible = True
+
+
 
     End Sub
 
     Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
-        PanelFact.Visible = False
-        Me.Hide()
-        ConsultaFactura.Show()
+        Dim llamar1 As New ConsultaFactura
+        PanelDeTodos.Controls.Clear()
+        llamar1.TopLevel = False
+        llamar1.Parent = PanelDeTodos
+        llamar1.Show()
+        llamar1.Dock = DockStyle.Fill
+        PanelDeTodos.Visible = True
 
     End Sub
 
@@ -67,27 +72,34 @@ Public Class Inicio
 
 
     Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
-        'ocultamos pestaña en pantalla y aparece clientes
-        Panelproveedores.Visible = False
-        PanelFact.Visible = False
-
-        panetlstock.Visible = False
         Panelclientes.Visible = True And Panelclientes.Visible = False
+        panetlstock.Visible = False
+        PanelFact.Visible = False
+        Panelproveedores.Visible = False
 
     End Sub
 
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
-        Panelclientes.Visible = False
-        MODIFICARCLIENTES.Show()
-        Me.Hide()
+        Dim llamar3 As New MODIFICARCLIENTES
+        PanelDeTodos.Controls.Clear()
+        llamar3.TopLevel = False
+        llamar3.Parent = PanelDeTodos
+        llamar3.Show()
+        llamar3.Dock = DockStyle.Fill
 
+
+        PanelDeTodos.Visible = True
 
     End Sub
 
     Private Sub btndeudores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btndeudores.Click
-        Panelclientes.Visible = False
-        Me.Hide()
-        BuscarClientes.Show()
+        Dim llamar6 As New BuscarClientes
+        PanelDeTodos.Controls.Clear()
+        llamar6.TopLevel = False
+        llamar6.Parent = PanelDeTodos
+        llamar6.Show()
+        llamar6.Dock = DockStyle.Fill
+        PanelDeTodos.Visible = True
 
     End Sub
     '____________________________________________________________________________________________________________________________________________
@@ -112,15 +124,24 @@ Public Class Inicio
     End Sub
 
     Private Sub btnmodprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodprov.Click
-        Me.Hide()
-        MODIFPROVEEDORES.Show()
+        Dim llamar2 As New MODIFPROVEEDORES
+        PanelDeTodos.Controls.Clear()
+        llamar2.TopLevel = False
+        llamar2.Parent = PanelDeTodos
+        llamar2.Show()
+        llamar2.Dock = DockStyle.Fill
+        PanelDeTodos.Visible = True
 
     End Sub
 
     Private Sub btnbuscarprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarprov.Click
-        Me.Hide()
-        Buscar_proveedores.Show()
-
+        Dim llamar As New Buscar_proveedores 
+        PanelDeTodos.Controls.Clear()
+        llamar.TopLevel = False
+        llamar.Parent = PanelDeTodos
+        llamar.Show()
+        llamar.Dock = DockStyle.Fill
+        PanelDeTodos.Visible = True
     End Sub
 
 
@@ -134,16 +155,27 @@ Public Class Inicio
     End Sub
 
     Private Sub btnaddstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnaddstock.Click
-        Me.Hide()
-        Stock_de_Productos.Show()
+        Dim llamar4 As New Stock_de_Productos
+        PanelDeTodos.Controls.Clear()
+        llamar4.TopLevel = False
+        llamar4.Parent = PanelDeTodos
+        llamar4.Show()
+        llamar4.Dock = DockStyle.Fill
+        PanelDeTodos.Visible = True
 
     End Sub
 
 
 
     Private Sub btnmodistock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodistock.Click
-        Me.Hide()
-        SuspenderStock.Show()
+        Dim llamar5 As New SuspenderStock
+        PanelDeTodos.Controls.Clear()
+        llamar5.TopLevel = False
+        llamar5.Parent = PanelDeTodos
+        llamar5.Show()
+        llamar5.Dock = DockStyle.Fill
+        PanelDeTodos.Visible = True
+
 
     End Sub
 
@@ -180,4 +212,13 @@ Public Class Inicio
         End If
     End Sub
     '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    Private Sub PanelDeTodos_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles PanelDeTodos.Paint
+        PanelDeTodos.Visible = False
+
+    End Sub
+
+    Private Sub barratituloInicio_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratituloInicio.Paint
+
+    End Sub
 End Class

@@ -35,7 +35,7 @@ Public Class Stock_de_Productos
             MessageBox.Show(ex.ToString)
         End Try
         'Actualizar el Dgv de mi tabla stoc
-        conexioon.Consulta = "SELECT * FROM stock"
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
         consultar()
         DgvStock.DataSource = resultado
 
@@ -69,7 +69,7 @@ Public Class Stock_de_Productos
 
     Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
-        conexioon.Consulta = "SELECT * FROM stock"
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
         consultar()
         DgvStock.DataSource = resultado
 
@@ -91,30 +91,4 @@ Public Class Stock_de_Productos
 
     End Sub
 
-    Private Sub btnmini_Click(sender As System.Object, e As System.EventArgs) Handles btnmini.Click
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub btnmaxi_Click(sender As System.Object, e As System.EventArgs) Handles btnmaxi.Click
-        Me.WindowState = FormWindowState.Maximized
-
-        btnmaxi.Visible = False
-        btnrestaurar.Visible = True
-    End Sub
-
-    Private Sub cerrarbtn_Click(sender As System.Object, e As System.EventArgs) Handles cerrarbtn.Click
-        End
-    End Sub
-
-    Private Sub btnrestaurar_Click(sender As System.Object, e As System.EventArgs) Handles btnrestaurar.Click
-        'restaura ventana
-        Me.WindowState = FormWindowState.Normal
-        'esconde boton, aparece maximizar
-        btnrestaurar.Visible = False
-        btnmaxi.Visible = True
-    End Sub
-
-    Private Sub barratitulo_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
-
-    End Sub
 End Class

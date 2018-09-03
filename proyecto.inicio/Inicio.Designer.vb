@@ -62,6 +62,7 @@ Partial Class Inicio
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnrealizarfact = New System.Windows.Forms.Button()
         Me.btnconslfact = New System.Windows.Forms.Button()
+        Me.PanelDeTodos = New System.Windows.Forms.Panel()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -306,6 +307,7 @@ Partial Class Inicio
         Me.panelmedio.Controls.Add(Me.Panelproveedores)
         Me.panelmedio.Controls.Add(Me.Panelclientes)
         Me.panelmedio.Controls.Add(Me.PanelFact)
+        Me.panelmedio.Controls.Add(Me.PanelDeTodos)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelmedio.Location = New System.Drawing.Point(0, 0)
         Me.panelmedio.Name = "panelmedio"
@@ -556,6 +558,14 @@ Partial Class Inicio
         Me.btnconslfact.Text = "Consulta de Fact."
         Me.btnconslfact.UseVisualStyleBackColor = False
         '
+        'PanelDeTodos
+        '
+        Me.PanelDeTodos.BackColor = System.Drawing.Color.Maroon
+        Me.PanelDeTodos.Location = New System.Drawing.Point(202, 35)
+        Me.PanelDeTodos.Name = "PanelDeTodos"
+        Me.PanelDeTodos.Size = New System.Drawing.Size(782, 426)
+        Me.PanelDeTodos.TabIndex = 15
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -622,4 +632,5 @@ Partial Class Inicio
     Friend WithEvents Panel14 As System.Windows.Forms.Panel
     Friend WithEvents btnaddstock As System.Windows.Forms.Button
     Friend WithEvents btnmodistock As System.Windows.Forms.Button
+    Friend WithEvents PanelDeTodos As System.Windows.Forms.Panel
 End Class

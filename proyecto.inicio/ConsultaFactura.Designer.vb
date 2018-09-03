@@ -23,7 +23,6 @@ Partial Class ConsultaFactura
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.datagridconsulta = New System.Windows.Forms.DataGridView()
-        Me.btnAtras = New System.Windows.Forms.Button()
         CType(Me.datagridconsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,21 +34,11 @@ Partial Class ConsultaFactura
         Me.datagridconsulta.Size = New System.Drawing.Size(471, 225)
         Me.datagridconsulta.TabIndex = 0
         '
-        'btnAtras
-        '
-        Me.btnAtras.Location = New System.Drawing.Point(408, 243)
-        Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(75, 23)
-        Me.btnAtras.TabIndex = 1
-        Me.btnAtras.Text = "Atrás"
-        Me.btnAtras.UseVisualStyleBackColor = True
-        '
         'ConsultaFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(495, 278)
-        Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.datagridconsulta)
         Me.Name = "ConsultaFactura"
         Me.Text = "ConsultaFactura"
@@ -58,5 +47,4 @@ Partial Class ConsultaFactura
 
     End Sub
     Friend WithEvents datagridconsulta As System.Windows.Forms.DataGridView
-    Friend WithEvents btnAtras As System.Windows.Forms.Button
 End Class
