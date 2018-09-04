@@ -11,8 +11,14 @@ Public Class Stock_de_Productos
 
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
+        Try
+            If txtdescripcion.Text = Consulta = "SELECT descripcion FROM stock" Then
+                Consulta = "UPDATE stock set cantidad = cantidad +'" + Str(txtcantidad.Text) + "'"
+            End If
 
+        Catch ex As Exception
 
+        End Try
         Try
 
             If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
