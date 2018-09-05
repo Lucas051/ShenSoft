@@ -17,7 +17,7 @@ Public Class Stock_de_Productos
             End If
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString)
         End Try
         Try
 
@@ -29,6 +29,17 @@ Public Class Stock_de_Productos
                 consultar()
                 DgvStock.DataSource = resultado
 
+                Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
+                consultar()
+                DgvStock.DataSource = resultado
+
+                'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+                DgvStock.Columns(0).HeaderText = "Código"
+                DgvStock.Columns(1).HeaderText = "Descripcion"
+                DgvStock.Columns(2).HeaderText = "Cantidad"
+                DgvStock.Columns(3).HeaderText = "Precio Costo"
+                DgvStock.Columns(4).HeaderText = "Precio Venta"
+                DgvStock.Columns(5).HeaderText = "Proveedor"
 
                 MessageBox.Show("Datos Guardados Correctamente.")
 
@@ -40,19 +51,8 @@ Public Class Stock_de_Productos
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-        'Actualizar el Dgv de mi tabla stoc
-        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
-        consultar()
-        DgvStock.DataSource = resultado
 
-        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-        DgvStock.Columns(0).HeaderText = "Código"
-        DgvStock.Columns(1).HeaderText = "Descripcion"
-        DgvStock.Columns(2).HeaderText = "Cantidad"
-        DgvStock.Columns(3).HeaderText = "Precio Costo"
-        DgvStock.Columns(4).HeaderText = "Precio Venta"
-        DgvStock.Columns(5).HeaderText = "Proveedor"
-        'Proximamente Solo en Cines
+
 
     End Sub
 

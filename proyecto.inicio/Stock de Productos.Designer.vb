@@ -96,7 +96,7 @@ Partial Class Stock_de_Productos
         Me.btnvolver.Location = New System.Drawing.Point(2, 237)
         Me.btnvolver.Name = "btnvolver"
         Me.btnvolver.Size = New System.Drawing.Size(81, 31)
-        Me.btnvolver.TabIndex = 9
+        Me.btnvolver.TabIndex = 13
         Me.btnvolver.Text = "Volver"
         Me.btnvolver.UseVisualStyleBackColor = True
         '
@@ -105,7 +105,7 @@ Partial Class Stock_de_Productos
         Me.btnlimpiar.Location = New System.Drawing.Point(113, 246)
         Me.btnlimpiar.Name = "btnlimpiar"
         Me.btnlimpiar.Size = New System.Drawing.Size(75, 22)
-        Me.btnlimpiar.TabIndex = 10
+        Me.btnlimpiar.TabIndex = 14
         Me.btnlimpiar.Text = "Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Campos"
         Me.btnlimpiar.UseVisualStyleBackColor = True
         '
@@ -123,14 +123,14 @@ Partial Class Stock_de_Productos
         Me.txtcantidad.Location = New System.Drawing.Point(100, 165)
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
-        Me.txtcantidad.TabIndex = 13
+        Me.txtcantidad.TabIndex = 9
         '
         'txtproveedor
         '
         Me.txtproveedor.Location = New System.Drawing.Point(100, 191)
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
-        Me.txtproveedor.TabIndex = 14
+        Me.txtproveedor.TabIndex = 10
         '
         'Label5
         '
