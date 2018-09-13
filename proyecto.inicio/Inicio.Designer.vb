@@ -50,7 +50,6 @@ Partial Class Inicio
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnsalir = New System.Windows.Forms.Button()
         Me.PanelFact = New System.Windows.Forms.Panel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnrealizarfact = New System.Windows.Forms.Button()
         Me.btnconslfact = New System.Windows.Forms.Button()
@@ -65,6 +64,7 @@ Partial Class Inicio
         Me.btndeudores = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.btnconsultclient = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -206,17 +206,18 @@ Partial Class Inicio
         'Menuvertical
         '
         Me.Menuvertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Menuvertical.Controls.Add(Me.PictureBoxsalir)
         Me.Menuvertical.Controls.Add(Me.panelstock)
+        Me.Menuvertical.Controls.Add(Me.btnstock)
+        Me.Menuvertical.Controls.Add(Me.PanelFact)
+        Me.Menuvertical.Controls.Add(Me.PictureBoxsalir)
         Me.Menuvertical.Controls.Add(Me.Panel9)
         Me.Menuvertical.Controls.Add(Me.Panel4)
         Me.Menuvertical.Controls.Add(Me.Panel3)
         Me.Menuvertical.Controls.Add(Me.btnclientes)
         Me.Menuvertical.Controls.Add(Me.btnprov)
-        Me.Menuvertical.Controls.Add(Me.btnstock)
         Me.Menuvertical.Controls.Add(Me.btnfacturacion)
-        Me.Menuvertical.Controls.Add(Me.PictureBox1)
         Me.Menuvertical.Controls.Add(Me.btnsalir)
+        Me.Menuvertical.Controls.Add(Me.PictureBox1)
         Me.Menuvertical.Dock = System.Windows.Forms.DockStyle.Left
         Me.Menuvertical.Location = New System.Drawing.Point(0, 35)
         Me.Menuvertical.Name = "Menuvertical"
@@ -240,7 +241,7 @@ Partial Class Inicio
         Me.panelstock.Controls.Add(Me.Panel14)
         Me.panelstock.Controls.Add(Me.btnaddstock)
         Me.panelstock.Controls.Add(Me.btnmodistock)
-        Me.panelstock.Location = New System.Drawing.Point(3, 269)
+        Me.panelstock.Location = New System.Drawing.Point(0, 232)
         Me.panelstock.Name = "panelstock"
         Me.panelstock.Size = New System.Drawing.Size(198, 67)
         Me.panelstock.TabIndex = 14
@@ -361,7 +362,7 @@ Partial Class Inicio
         Me.btnstock.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnstock.Image = Global.proyecto.inicio.My.Resources.Resources.stock1
         Me.btnstock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnstock.Location = New System.Drawing.Point(0, 197)
+        Me.btnstock.Location = New System.Drawing.Point(0, 195)
         Me.btnstock.Name = "btnstock"
         Me.btnstock.Size = New System.Drawing.Size(197, 30)
         Me.btnstock.TabIndex = 6
@@ -390,7 +391,7 @@ Partial Class Inicio
         Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
         Me.PictureBox1.Location = New System.Drawing.Point(-45, -68)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(292, 248)
+        Me.PictureBox1.Size = New System.Drawing.Size(292, 267)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -414,30 +415,22 @@ Partial Class Inicio
         'PanelFact
         '
         Me.PanelFact.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PanelFact.Controls.Add(Me.Panel11)
+        Me.PanelFact.Controls.Add(Me.Panel1)
         Me.PanelFact.Controls.Add(Me.Panel6)
-        Me.PanelFact.Controls.Add(Me.btnrealizarfact)
         Me.PanelFact.Controls.Add(Me.btnconslfact)
-        Me.PanelFact.Location = New System.Drawing.Point(151, 146)
+        Me.PanelFact.Controls.Add(Me.btnrealizarfact)
+        Me.PanelFact.Location = New System.Drawing.Point(0, 167)
         Me.PanelFact.Name = "PanelFact"
         Me.PanelFact.Size = New System.Drawing.Size(198, 67)
         Me.PanelFact.TabIndex = 0
         Me.PanelFact.Visible = False
-        '
-        'Panel11
-        '
-        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel11.Location = New System.Drawing.Point(192, 33)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(5, 30)
-        Me.Panel11.TabIndex = 10
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.Panel6.Location = New System.Drawing.Point(192, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(5, 30)
+        Me.Panel6.Size = New System.Drawing.Size(5, 60)
         Me.Panel6.TabIndex = 9
         '
         'btnrealizarfact
@@ -453,7 +446,7 @@ Partial Class Inicio
         Me.btnrealizarfact.Name = "btnrealizarfact"
         Me.btnrealizarfact.Size = New System.Drawing.Size(197, 30)
         Me.btnrealizarfact.TabIndex = 2
-        Me.btnrealizarfact.Text = "Realizar Factura"
+        Me.btnrealizarfact.Text = "    Realizar Factura"
         Me.btnrealizarfact.UseVisualStyleBackColor = False
         '
         'btnconslfact
@@ -469,7 +462,7 @@ Partial Class Inicio
         Me.btnconslfact.Name = "btnconslfact"
         Me.btnconslfact.Size = New System.Drawing.Size(197, 29)
         Me.btnconslfact.TabIndex = 3
-        Me.btnconslfact.Text = "Consulta de Fact."
+        Me.btnconslfact.Text = "     Consulta de Fact."
         Me.btnconslfact.UseVisualStyleBackColor = False
         '
         'panelmedio
@@ -478,7 +471,6 @@ Partial Class Inicio
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.panelmedio.Controls.Add(Me.Panelproveedores)
         Me.panelmedio.Controls.Add(Me.Panelclientes)
-        Me.panelmedio.Controls.Add(Me.PanelFact)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelmedio.Location = New System.Drawing.Point(200, 35)
         Me.panelmedio.Name = "panelmedio"
@@ -607,6 +599,14 @@ Partial Class Inicio
         Me.btnconsultclient.Text = "Agregar  Clientes"
         Me.btnconsultclient.UseVisualStyleBackColor = False
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(5, 60)
+        Me.Panel1.TabIndex = 14
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -658,7 +658,6 @@ Partial Class Inicio
     Friend WithEvents PictureBoxsalir As System.Windows.Forms.PictureBox
     Friend WithEvents btnsalir As System.Windows.Forms.Button
     Friend WithEvents PanelFact As System.Windows.Forms.Panel
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents btnrealizarfact As System.Windows.Forms.Button
     Friend WithEvents btnconslfact As System.Windows.Forms.Button
@@ -683,4 +682,5 @@ Partial Class Inicio
     Friend WithEvents btnRestaura As System.Windows.Forms.PictureBox
     Friend WithEvents btnMaximizar As System.Windows.Forms.PictureBox
     Friend WithEvents LabelInicio As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

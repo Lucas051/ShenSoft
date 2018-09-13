@@ -12,7 +12,7 @@ Public Class Inicio
     Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Localiza por defecto lo botones en la posición inicial y oculta panels en caso de ser visibles
         btnfacturacion.Location = New Point(0, 131)
-        btnstock.Location = New Point(0, 197)
+        btnstock.Location = New Point(0, 195)
         PanelFact.Hide()
         panelstock.Hide()
 
@@ -47,10 +47,6 @@ Public Class Inicio
 
 
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
-        'Panelproveedores.Visible = False
-        ' Panelclientes.Visible = False
-        'panetlstock.Visible = False
-        '  PanelFact.Visible = True And PanelFact.Visible = False
         If PanelFact.Visible = True Then
             PanelFact.Visible = False
         Else
@@ -64,7 +60,7 @@ Public Class Inicio
 
         If PanelFact.Visible = False Then
             btnfacturacion.Location = New Point(0, 131)
-            btnstock.Location = New Point(0, 197)
+            btnstock.Location = New Point(0, 195)
         End If
 
 
@@ -131,11 +127,22 @@ Public Class Inicio
     '____________________________________________________________________________________________________________________________________________
 
     Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
-        'ocultamos pestaña en pantalla y aparece proveedores
-        Panelclientes.Visible = False
-        PanelFact.Visible = False
-        Panelproveedores.Visible = False
-        panelstock.Visible = True And panelstock.Visible = False
+        If panelstock.Visible = True Then
+            panelstock.Visible = False
+        Else
+            panelstock.Visible = True
+        End If
+
+        btnfacturacion.Location = New Point(0, 131)
+        btnstock.Location = New Point(0, 233)
+        panelstock.Location = New Point(0, 232)
+        PanelFact.Hide()
+
+        If PanelFact.Visible = False Then
+            btnfacturacion.Location = New Point(0, 131)
+            btnstock.Location = New Point(0, 195)
+        End If
+
     End Sub
     '___________________________________________________________________________________________________________________________________________
 
