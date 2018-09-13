@@ -11,8 +11,14 @@ Public Class Stock_de_Productos
 
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
+        Try
+            If txtdescripcion.Text = Consulta = "SELECT descripcion FROM stock" Then
+                Consulta = "UPDATE stock set cantidad = cantidad +'" + Str(txtcantidad.Text) + "'"
+            End If
 
-
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
         Try
 
             If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
@@ -23,6 +29,17 @@ Public Class Stock_de_Productos
                 consultar()
                 DgvStock.DataSource = resultado
 
+                Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
+                consultar()
+                DgvStock.DataSource = resultado
+
+                'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+                DgvStock.Columns(0).HeaderText = "Código"
+                DgvStock.Columns(1).HeaderText = "Descripcion"
+                DgvStock.Columns(2).HeaderText = "Cantidad"
+                DgvStock.Columns(3).HeaderText = "Precio Costo"
+                DgvStock.Columns(4).HeaderText = "Precio Venta"
+                DgvStock.Columns(5).HeaderText = "Proveedor"
 
                 MessageBox.Show("Datos Guardados Correctamente.")
 
@@ -34,19 +51,8 @@ Public Class Stock_de_Productos
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-        'Actualizar el Dgv de mi tabla stoc
-        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
-        consultar()
-        DgvStock.DataSource = resultado
 
-        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-        DgvStock.Columns(0).HeaderText = "Código"
-        DgvStock.Columns(1).HeaderText = "Descripcion"
-        DgvStock.Columns(2).HeaderText = "Cantidad"
-        DgvStock.Columns(3).HeaderText = "Precio Costo"
-        DgvStock.Columns(4).HeaderText = "Precio Venta"
-        DgvStock.Columns(5).HeaderText = "Proveedor"
-        'Proximamente Solo en Cines
+
 
     End Sub
 

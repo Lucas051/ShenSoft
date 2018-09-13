@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 14-06-2018 a las 23:20:19
+-- Tiempo de generación: 07-06-2018 a las 20:59:08
 -- Versión del servidor: 5.7.21
 -- Versión de PHP: 5.6.35
 
@@ -132,16 +132,9 @@ CREATE TABLE IF NOT EXISTS `proveedores` (
   `nombre_prov` varchar(40) DEFAULT NULL,
   `tel_p` varchar(40) DEFAULT NULL,
   `direccion_p` varchar(40) DEFAULT NULL,
-  `saldo_p` int(11) DEFAULT NULL,
+  `saldo_p` int(11) NOT NULL,
   PRIMARY KEY (`num_prov`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `proveedores`
---
-
-INSERT INTO `proveedores` (`num_prov`, `nombre_prov`, `tel_p`, `direccion_p`, `saldo_p`) VALUES
-(1, 'Juan', '438567', 'Hola probando', NULL);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -159,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `stock` (
   `num_prov` int(11) DEFAULT NULL,
   PRIMARY KEY (`cod_producto`),
   KEY `num_prov` (`num_prov`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `stock`
@@ -168,9 +161,7 @@ CREATE TABLE IF NOT EXISTS `stock` (
 INSERT INTO `stock` (`cod_producto`, `descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `num_prov`) VALUES
 (1, 'asdasd', NULL, 321, 444, NULL),
 (2, 'asdasd', '3', 233, 4444, NULL),
-(3, 'Hola anduvo', '23', 234, 3333, NULL),
-(4, 'adasdas', NULL, 344, 444, NULL),
-(5, 'gfhgfh', NULL, 233, 400, NULL);
+(3, 'Hola anduvo', '23', 234, 3333, NULL);
 
 --
 -- Restricciones para tablas volcadas
