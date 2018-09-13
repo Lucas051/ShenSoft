@@ -5,7 +5,7 @@ Public Class MODIFPROVEEDORES
 
         Try
 
-            If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "") Then
+            If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "" And txtsaldo.Text <> "") Then
 
                 conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "','" + txtsaldo.Text + "' )"
                 consultar()
@@ -49,11 +49,12 @@ Public Class MODIFPROVEEDORES
         dgvproveedores.Columns(1).HeaderText = "Proveedor"
         dgvproveedores.Columns(2).HeaderText = "Teléfono"
         dgvproveedores.Columns(3).HeaderText = "Dirección"
-        dgvproveedores.Columns(3).HeaderText = "Saldo"
+        dgvproveedores.Columns(4).HeaderText = "Saldo"
 
     End Sub
 
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
-
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarprov.Click
+        Me.Hide()
+        Buscar_proveedores.Show()
     End Sub
 End Class

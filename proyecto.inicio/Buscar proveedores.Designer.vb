@@ -32,9 +32,9 @@ Partial Class Buscar_proveedores
         'dgvbuscarprov
         '
         Me.dgvbuscarprov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvbuscarprov.Location = New System.Drawing.Point(251, 0)
+        Me.dgvbuscarprov.Location = New System.Drawing.Point(208, 12)
         Me.dgvbuscarprov.Name = "dgvbuscarprov"
-        Me.dgvbuscarprov.Size = New System.Drawing.Size(422, 287)
+        Me.dgvbuscarprov.Size = New System.Drawing.Size(729, 341)
         Me.dgvbuscarprov.TabIndex = 0
         '
         'txtbuscarprov
@@ -66,11 +66,12 @@ Partial Class Buscar_proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(675, 286)
+        Me.ClientSize = New System.Drawing.Size(949, 416)
         Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.ID)
         Me.Controls.Add(Me.txtbuscarprov)
         Me.Controls.Add(Me.dgvbuscarprov)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Buscar_proveedores"
         Me.Text = "Buscar_proveedores"
         CType(Me.dgvbuscarprov, System.ComponentModel.ISupportInitialize).EndInit()

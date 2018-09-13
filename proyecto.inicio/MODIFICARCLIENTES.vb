@@ -31,7 +31,11 @@
 
             End If
 
+        Catch ex As Exception
 
+            MessageBox.Show(ex.ToString)
+
+        End Try
 
 
     End Sub
