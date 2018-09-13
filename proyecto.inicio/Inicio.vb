@@ -9,6 +9,15 @@ Public Class Inicio
     Private MouseDownY As Integer
 
 
+    Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Localiza por defecto lo botones en la posición inicial y oculta panels en caso de ser visibles
+        btnfacturacion.Location = New Point(0, 131)
+        btnstock.Location = New Point(0, 197)
+        PanelFact.Hide()
+        panelstock.Hide()
+
+    End Sub
+
     Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
         End
     End Sub
@@ -38,10 +47,26 @@ Public Class Inicio
 
 
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
-        Panelproveedores.Visible = False
-        Panelclientes.Visible = False
-        panetlstock.Visible = False
-        PanelFact.Visible = True And PanelFact.Visible = False
+        'Panelproveedores.Visible = False
+        ' Panelclientes.Visible = False
+        'panetlstock.Visible = False
+        '  PanelFact.Visible = True And PanelFact.Visible = False
+        If PanelFact.Visible = True Then
+            PanelFact.Visible = False
+        Else
+            PanelFact.Visible = True
+        End If
+
+        btnfacturacion.Location = New Point(0, 131)
+        PanelFact.Location = New Point(0, 167)
+        btnstock.Location = New Point(0, 233)
+        panelstock.Hide()
+
+        If PanelFact.Visible = False Then
+            btnfacturacion.Location = New Point(0, 131)
+            btnstock.Location = New Point(0, 197)
+        End If
+
 
     End Sub
 
@@ -73,7 +98,7 @@ Public Class Inicio
 
 
     Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
-        panetlstock.Visible = False
+        panelstock.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = False
         Panelclientes.Visible = True And Panelclientes.Visible = False
@@ -110,7 +135,7 @@ Public Class Inicio
         Panelclientes.Visible = False
         PanelFact.Visible = False
         Panelproveedores.Visible = False
-        panetlstock.Visible = True And panetlstock.Visible = False
+        panelstock.Visible = True And panelstock.Visible = False
     End Sub
     '___________________________________________________________________________________________________________________________________________
 
@@ -118,7 +143,7 @@ Public Class Inicio
         'ocultamos pestaña en pantalla y aparece proveedores
         Panelclientes.Visible = False
         PanelFact.Visible = False
-        panetlstock.Visible = False
+        panelstock.Visible = False
         Panelproveedores.Visible = True And Panelproveedores.Visible = False
     End Sub
 
@@ -240,4 +265,6 @@ Public Class Inicio
         btnmaxi.Visible = False
         btnrestaurar.Visible = True
     End Sub
+
+
 End Class
