@@ -22,6 +22,7 @@ Partial Class Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.barratituloInicio = New System.Windows.Forms.Panel()
         Me.LabelInicio = New System.Windows.Forms.Label()
@@ -34,25 +35,27 @@ Partial Class Inicio
         Me.btnRestaura = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.Menuvertical = New System.Windows.Forms.Panel()
+        Me.lblHora = New System.Windows.Forms.Label()
         Me.PictureBoxsalir = New System.Windows.Forms.PictureBox()
-        Me.panelstock = New System.Windows.Forms.Panel()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.btnaddstock = New System.Windows.Forms.Button()
-        Me.btnmodistock = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnclientes = New System.Windows.Forms.Button()
         Me.btnprov = New System.Windows.Forms.Button()
-        Me.btnstock = New System.Windows.Forms.Button()
         Me.btnfacturacion = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnsalir = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelFact = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.btnrealizarfact = New System.Windows.Forms.Button()
         Me.btnconslfact = New System.Windows.Forms.Button()
+        Me.btnrealizarfact = New System.Windows.Forms.Button()
+        Me.panelstock = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.btnaddstock = New System.Windows.Forms.Button()
+        Me.btnmodistock = New System.Windows.Forms.Button()
+        Me.btnstock = New System.Windows.Forms.Button()
         Me.panelmedio = New System.Windows.Forms.Panel()
         Me.Panelproveedores = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -64,7 +67,9 @@ Partial Class Inicio
         Me.btndeudores = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.btnconsultclient = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
+        Me.DTPickerFecha = New System.Windows.Forms.DateTimePicker()
+        Me.lblFecha = New System.Windows.Forms.Label()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,9 +81,9 @@ Partial Class Inicio
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Menuvertical.SuspendLayout()
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelstock.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelFact.SuspendLayout()
+        Me.panelstock.SuspendLayout()
         Me.panelmedio.SuspendLayout()
         Me.Panelproveedores.SuspendLayout()
         Me.Panelclientes.SuspendLayout()
@@ -87,6 +92,7 @@ Partial Class Inicio
         'barratituloInicio
         '
         Me.barratituloInicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratituloInicio.Controls.Add(Me.DTPickerFecha)
         Me.barratituloInicio.Controls.Add(Me.LabelInicio)
         Me.barratituloInicio.Controls.Add(Me.btnMinimizar)
         Me.barratituloInicio.Controls.Add(Me.btnmini)
@@ -206,12 +212,12 @@ Partial Class Inicio
         'Menuvertical
         '
         Me.Menuvertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Menuvertical.Controls.Add(Me.panelstock)
-        Me.Menuvertical.Controls.Add(Me.btnstock)
-        Me.Menuvertical.Controls.Add(Me.PanelFact)
         Me.Menuvertical.Controls.Add(Me.PictureBoxsalir)
+        Me.Menuvertical.Controls.Add(Me.PanelFact)
+        Me.Menuvertical.Controls.Add(Me.panelstock)
         Me.Menuvertical.Controls.Add(Me.Panel9)
         Me.Menuvertical.Controls.Add(Me.Panel4)
+        Me.Menuvertical.Controls.Add(Me.btnstock)
         Me.Menuvertical.Controls.Add(Me.Panel3)
         Me.Menuvertical.Controls.Add(Me.btnclientes)
         Me.Menuvertical.Controls.Add(Me.btnprov)
@@ -224,6 +230,17 @@ Partial Class Inicio
         Me.Menuvertical.Size = New System.Drawing.Size(200, 555)
         Me.Menuvertical.TabIndex = 1
         '
+        'lblHora
+        '
+        Me.lblHora.AutoSize = True
+        Me.lblHora.Font = New System.Drawing.Font("Bahnschrift Light", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHora.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblHora.Location = New System.Drawing.Point(24, 26)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(144, 41)
+        Me.lblHora.TabIndex = 13
+        Me.lblHora.Text = "00:00:00"
+        '
         'PictureBoxsalir
         '
         Me.PictureBoxsalir.Image = Global.proyecto.inicio.My.Resources.Resources.salir1
@@ -233,67 +250,6 @@ Partial Class Inicio
         Me.PictureBoxsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBoxsalir.TabIndex = 12
         Me.PictureBoxsalir.TabStop = False
-        '
-        'panelstock
-        '
-        Me.panelstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.panelstock.Controls.Add(Me.Panel13)
-        Me.panelstock.Controls.Add(Me.Panel14)
-        Me.panelstock.Controls.Add(Me.btnaddstock)
-        Me.panelstock.Controls.Add(Me.btnmodistock)
-        Me.panelstock.Location = New System.Drawing.Point(0, 232)
-        Me.panelstock.Name = "panelstock"
-        Me.panelstock.Size = New System.Drawing.Size(198, 67)
-        Me.panelstock.TabIndex = 14
-        Me.panelstock.Visible = False
-        '
-        'Panel13
-        '
-        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel13.Location = New System.Drawing.Point(192, 33)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(5, 30)
-        Me.Panel13.TabIndex = 10
-        '
-        'Panel14
-        '
-        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel14.Location = New System.Drawing.Point(192, 0)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(5, 30)
-        Me.Panel14.TabIndex = 9
-        '
-        'btnaddstock
-        '
-        Me.btnaddstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnaddstock.FlatAppearance.BorderSize = 0
-        Me.btnaddstock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnaddstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnaddstock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnaddstock.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnaddstock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnaddstock.Location = New System.Drawing.Point(0, 0)
-        Me.btnaddstock.Name = "btnaddstock"
-        Me.btnaddstock.Size = New System.Drawing.Size(197, 30)
-        Me.btnaddstock.TabIndex = 2
-        Me.btnaddstock.Text = "Agregar Stock"
-        Me.btnaddstock.UseVisualStyleBackColor = False
-        '
-        'btnmodistock
-        '
-        Me.btnmodistock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnmodistock.FlatAppearance.BorderSize = 0
-        Me.btnmodistock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnmodistock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnmodistock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnmodistock.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnmodistock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnmodistock.Location = New System.Drawing.Point(0, 31)
-        Me.btnmodistock.Name = "btnmodistock"
-        Me.btnmodistock.Size = New System.Drawing.Size(197, 29)
-        Me.btnmodistock.TabIndex = 3
-        Me.btnmodistock.Text = "Modificar Stock"
-        Me.btnmodistock.UseVisualStyleBackColor = False
         '
         'Panel9
         '
@@ -352,23 +308,6 @@ Partial Class Inicio
         Me.btnprov.Text = "          Proveedores"
         Me.btnprov.UseVisualStyleBackColor = False
         '
-        'btnstock
-        '
-        Me.btnstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnstock.FlatAppearance.BorderSize = 0
-        Me.btnstock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnstock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnstock.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnstock.Image = Global.proyecto.inicio.My.Resources.Resources.stock1
-        Me.btnstock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnstock.Location = New System.Drawing.Point(0, 195)
-        Me.btnstock.Name = "btnstock"
-        Me.btnstock.Size = New System.Drawing.Size(197, 30)
-        Me.btnstock.TabIndex = 6
-        Me.btnstock.Text = "            Stock de Prod."
-        Me.btnstock.UseVisualStyleBackColor = False
-        '
         'btnfacturacion
         '
         Me.btnfacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
@@ -379,22 +318,12 @@ Partial Class Inicio
         Me.btnfacturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnfacturacion.Image = Global.proyecto.inicio.My.Resources.Resources.venta
         Me.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnfacturacion.Location = New System.Drawing.Point(0, 131)
+        Me.btnfacturacion.Location = New System.Drawing.Point(0, 167)
         Me.btnfacturacion.Name = "btnfacturacion"
         Me.btnfacturacion.Size = New System.Drawing.Size(200, 30)
         Me.btnfacturacion.TabIndex = 1
         Me.btnfacturacion.Text = "          Facturación"
         Me.btnfacturacion.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
-        Me.PictureBox1.Location = New System.Drawing.Point(-45, -68)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(292, 267)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'btnsalir
         '
@@ -412,6 +341,16 @@ Partial Class Inicio
         Me.btnsalir.Text = "Cerrar Sesión"
         Me.btnsalir.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
+        Me.PictureBox1.Location = New System.Drawing.Point(-45, -68)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(292, 267)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'PanelFact
         '
         Me.PanelFact.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
@@ -419,11 +358,19 @@ Partial Class Inicio
         Me.PanelFact.Controls.Add(Me.Panel6)
         Me.PanelFact.Controls.Add(Me.btnconslfact)
         Me.PanelFact.Controls.Add(Me.btnrealizarfact)
-        Me.PanelFact.Location = New System.Drawing.Point(0, 167)
+        Me.PanelFact.Location = New System.Drawing.Point(1, 201)
         Me.PanelFact.Name = "PanelFact"
         Me.PanelFact.Size = New System.Drawing.Size(198, 67)
         Me.PanelFact.TabIndex = 0
         Me.PanelFact.Visible = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(5, 60)
+        Me.Panel1.TabIndex = 14
         '
         'Panel6
         '
@@ -432,22 +379,6 @@ Partial Class Inicio
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(5, 60)
         Me.Panel6.TabIndex = 9
-        '
-        'btnrealizarfact
-        '
-        Me.btnrealizarfact.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnrealizarfact.FlatAppearance.BorderSize = 0
-        Me.btnrealizarfact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnrealizarfact.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnrealizarfact.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnrealizarfact.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnrealizarfact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnrealizarfact.Location = New System.Drawing.Point(0, 0)
-        Me.btnrealizarfact.Name = "btnrealizarfact"
-        Me.btnrealizarfact.Size = New System.Drawing.Size(197, 30)
-        Me.btnrealizarfact.TabIndex = 2
-        Me.btnrealizarfact.Text = "    Realizar Factura"
-        Me.btnrealizarfact.UseVisualStyleBackColor = False
         '
         'btnconslfact
         '
@@ -465,10 +396,106 @@ Partial Class Inicio
         Me.btnconslfact.Text = "     Consulta de Fact."
         Me.btnconslfact.UseVisualStyleBackColor = False
         '
+        'btnrealizarfact
+        '
+        Me.btnrealizarfact.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnrealizarfact.FlatAppearance.BorderSize = 0
+        Me.btnrealizarfact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnrealizarfact.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnrealizarfact.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnrealizarfact.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnrealizarfact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnrealizarfact.Location = New System.Drawing.Point(0, 0)
+        Me.btnrealizarfact.Name = "btnrealizarfact"
+        Me.btnrealizarfact.Size = New System.Drawing.Size(197, 30)
+        Me.btnrealizarfact.TabIndex = 2
+        Me.btnrealizarfact.Text = "    Realizar Factura"
+        Me.btnrealizarfact.UseVisualStyleBackColor = False
+        '
+        'panelstock
+        '
+        Me.panelstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.panelstock.Controls.Add(Me.Panel2)
+        Me.panelstock.Controls.Add(Me.Panel11)
+        Me.panelstock.Controls.Add(Me.btnaddstock)
+        Me.panelstock.Controls.Add(Me.btnmodistock)
+        Me.panelstock.Location = New System.Drawing.Point(0, 269)
+        Me.panelstock.Name = "panelstock"
+        Me.panelstock.Size = New System.Drawing.Size(198, 67)
+        Me.panelstock.TabIndex = 14
+        Me.panelstock.Visible = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel2.Location = New System.Drawing.Point(193, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(5, 64)
+        Me.Panel2.TabIndex = 17
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel11.Location = New System.Drawing.Point(0, 3)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(5, 64)
+        Me.Panel11.TabIndex = 16
+        '
+        'btnaddstock
+        '
+        Me.btnaddstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnaddstock.FlatAppearance.BorderSize = 0
+        Me.btnaddstock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnaddstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnaddstock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnaddstock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnaddstock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnaddstock.Location = New System.Drawing.Point(0, 0)
+        Me.btnaddstock.Name = "btnaddstock"
+        Me.btnaddstock.Size = New System.Drawing.Size(197, 30)
+        Me.btnaddstock.TabIndex = 2
+        Me.btnaddstock.Text = "Agregar Stock"
+        Me.btnaddstock.UseVisualStyleBackColor = False
+        '
+        'btnmodistock
+        '
+        Me.btnmodistock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnmodistock.FlatAppearance.BorderSize = 0
+        Me.btnmodistock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnmodistock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnmodistock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnmodistock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnmodistock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnmodistock.Location = New System.Drawing.Point(0, 31)
+        Me.btnmodistock.Name = "btnmodistock"
+        Me.btnmodistock.Size = New System.Drawing.Size(197, 29)
+        Me.btnmodistock.TabIndex = 3
+        Me.btnmodistock.Text = "Modificar Stock"
+        Me.btnmodistock.UseVisualStyleBackColor = False
+        '
+        'btnstock
+        '
+        Me.btnstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnstock.FlatAppearance.BorderSize = 0
+        Me.btnstock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnstock.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnstock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnstock.Image = Global.proyecto.inicio.My.Resources.Resources.stock1
+        Me.btnstock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnstock.Location = New System.Drawing.Point(0, 235)
+        Me.btnstock.Name = "btnstock"
+        Me.btnstock.Size = New System.Drawing.Size(197, 30)
+        Me.btnstock.TabIndex = 6
+        Me.btnstock.Text = "            Stock de Prod."
+        Me.btnstock.UseVisualStyleBackColor = False
+        '
         'panelmedio
         '
         Me.panelmedio.AutoSize = True
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.panelmedio.Controls.Add(Me.lblFecha)
+        Me.panelmedio.Controls.Add(Me.lblHora)
         Me.panelmedio.Controls.Add(Me.Panelproveedores)
         Me.panelmedio.Controls.Add(Me.Panelclientes)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
@@ -599,13 +626,28 @@ Partial Class Inicio
         Me.btnconsultclient.Text = "Agregar  Clientes"
         Me.btnconsultclient.UseVisualStyleBackColor = False
         '
-        'Panel1
+        'TimerHora
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(5, 60)
-        Me.Panel1.TabIndex = 14
+        Me.TimerHora.Enabled = True
+        Me.TimerHora.Interval = 1000
+        '
+        'DTPickerFecha
+        '
+        Me.DTPickerFecha.Location = New System.Drawing.Point(89, 9)
+        Me.DTPickerFecha.Name = "DTPickerFecha"
+        Me.DTPickerFecha.Size = New System.Drawing.Size(200, 20)
+        Me.DTPickerFecha.TabIndex = 14
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Bahnschrift Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblFecha.Location = New System.Drawing.Point(28, 91)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(61, 23)
+        Me.lblFecha.TabIndex = 14
+        Me.lblFecha.Text = "Fecha"
         '
         'Inicio
         '
@@ -631,10 +673,11 @@ Partial Class Inicio
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Menuvertical.ResumeLayout(False)
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelstock.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelFact.ResumeLayout(False)
+        Me.panelstock.ResumeLayout(False)
         Me.panelmedio.ResumeLayout(False)
+        Me.panelmedio.PerformLayout()
         Me.Panelproveedores.ResumeLayout(False)
         Me.Panelclientes.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -668,8 +711,6 @@ Partial Class Inicio
     Friend WithEvents btnbuscarprov As System.Windows.Forms.Button
     Friend WithEvents btnmodprov As System.Windows.Forms.Button
     Friend WithEvents panelstock As System.Windows.Forms.Panel
-    Friend WithEvents Panel13 As System.Windows.Forms.Panel
-    Friend WithEvents Panel14 As System.Windows.Forms.Panel
     Friend WithEvents btnaddstock As System.Windows.Forms.Button
     Friend WithEvents btnmodistock As System.Windows.Forms.Button
     Friend WithEvents Panelclientes As System.Windows.Forms.Panel
@@ -683,4 +724,10 @@ Partial Class Inicio
     Friend WithEvents btnMaximizar As System.Windows.Forms.PictureBox
     Friend WithEvents LabelInicio As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents lblHora As System.Windows.Forms.Label
+    Friend WithEvents TimerHora As System.Windows.Forms.Timer
+    Friend WithEvents DTPickerFecha As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lblFecha As System.Windows.Forms.Label
 End Class

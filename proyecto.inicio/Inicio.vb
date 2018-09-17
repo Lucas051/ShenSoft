@@ -10,9 +10,13 @@ Public Class Inicio
 
 
     Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        TimerHora.Start()
+        DTPickerFecha.Visible = False
+
         'Localiza por defecto lo botones en la posición inicial y oculta panels en caso de ser visibles
-        btnfacturacion.Location = New Point(0, 131)
-        btnstock.Location = New Point(0, 195)
+        btnfacturacion.Location = New Point(0, 167)
+        btnstock.Location = New Point(0, 235)
         PanelFact.Hide()
         panelstock.Hide()
 
@@ -53,14 +57,14 @@ Public Class Inicio
             PanelFact.Visible = True
         End If
 
-        btnfacturacion.Location = New Point(0, 131)
-        PanelFact.Location = New Point(0, 167)
-        btnstock.Location = New Point(0, 233)
+        btnfacturacion.Location = New Point(0, 167)
+        PanelFact.Location = New Point(1, 201)
+        btnstock.Location = New Point(0, 270)
         panelstock.Hide()
 
         If PanelFact.Visible = False Then
-            btnfacturacion.Location = New Point(0, 131)
-            btnstock.Location = New Point(0, 195)
+            btnfacturacion.Location = New Point(0, 167)
+            btnstock.Location = New Point(0, 235)
         End If
 
 
@@ -134,7 +138,7 @@ Public Class Inicio
         End If
 
         btnfacturacion.Location = New Point(0, 131)
-        btnstock.Location = New Point(0, 233)
+        btnstock.Location = New Point(0, 235)
         panelstock.Location = New Point(0, 232)
         PanelFact.Hide()
 
@@ -274,4 +278,13 @@ Public Class Inicio
     End Sub
 
 
+    Private Sub TimerHora_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerHora.Tick
+        Dim fecha As String
+        fecha = DTPickerFecha.Text
+        lblFecha.Text = fecha
+
+        lblHora.Text = TimeOfDay.TimeOfDay.ToString
+        TimerHora.Enabled = True
+        '////////////////////////////////////////////
+    End Sub
 End Class
