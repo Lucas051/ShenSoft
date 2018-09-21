@@ -25,6 +25,7 @@ Partial Class Inicio
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.barratituloInicio = New System.Windows.Forms.Panel()
+        Me.DTPickerFecha = New System.Windows.Forms.DateTimePicker()
         Me.LabelInicio = New System.Windows.Forms.Label()
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnmini = New System.Windows.Forms.PictureBox()
@@ -35,16 +36,7 @@ Partial Class Inicio
         Me.btnRestaura = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.Menuvertical = New System.Windows.Forms.Panel()
-        Me.lblHora = New System.Windows.Forms.Label()
         Me.PictureBoxsalir = New System.Windows.Forms.PictureBox()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btnclientes = New System.Windows.Forms.Button()
-        Me.btnprov = New System.Windows.Forms.Button()
-        Me.btnfacturacion = New System.Windows.Forms.Button()
-        Me.btnsalir = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelFact = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -55,21 +47,27 @@ Partial Class Inicio
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.btnaddstock = New System.Windows.Forms.Button()
         Me.btnmodistock = New System.Windows.Forms.Button()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.btnstock = New System.Windows.Forms.Button()
+        Me.btnclientes = New System.Windows.Forms.Button()
+        Me.btnprov = New System.Windows.Forms.Button()
+        Me.btnfacturacion = New System.Windows.Forms.Button()
+        Me.btnsalir = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblHora = New System.Windows.Forms.Label()
         Me.panelmedio = New System.Windows.Forms.Panel()
+        Me.lblFecha = New System.Windows.Forms.Label()
         Me.Panelproveedores = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnbuscarprov = New System.Windows.Forms.Button()
         Me.btnmodprov = New System.Windows.Forms.Button()
         Me.Panelclientes = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.btndeudores = New System.Windows.Forms.Button()
-        Me.Panel8 = New System.Windows.Forms.Panel()
         Me.btnconsultclient = New System.Windows.Forms.Button()
         Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
-        Me.DTPickerFecha = New System.Windows.Forms.DateTimePicker()
-        Me.lblFecha = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,9 +79,9 @@ Partial Class Inicio
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Menuvertical.SuspendLayout()
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelFact.SuspendLayout()
         Me.panelstock.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelmedio.SuspendLayout()
         Me.Panelproveedores.SuspendLayout()
         Me.Panelclientes.SuspendLayout()
@@ -107,6 +105,13 @@ Partial Class Inicio
         Me.barratituloInicio.Name = "barratituloInicio"
         Me.barratituloInicio.Size = New System.Drawing.Size(1147, 35)
         Me.barratituloInicio.TabIndex = 0
+        '
+        'DTPickerFecha
+        '
+        Me.DTPickerFecha.Location = New System.Drawing.Point(89, 9)
+        Me.DTPickerFecha.Name = "DTPickerFecha"
+        Me.DTPickerFecha.Size = New System.Drawing.Size(200, 20)
+        Me.DTPickerFecha.TabIndex = 14
         '
         'LabelInicio
         '
@@ -216,9 +221,7 @@ Partial Class Inicio
         Me.Menuvertical.Controls.Add(Me.PanelFact)
         Me.Menuvertical.Controls.Add(Me.panelstock)
         Me.Menuvertical.Controls.Add(Me.Panel9)
-        Me.Menuvertical.Controls.Add(Me.Panel4)
         Me.Menuvertical.Controls.Add(Me.btnstock)
-        Me.Menuvertical.Controls.Add(Me.Panel3)
         Me.Menuvertical.Controls.Add(Me.btnclientes)
         Me.Menuvertical.Controls.Add(Me.btnprov)
         Me.Menuvertical.Controls.Add(Me.btnfacturacion)
@@ -230,17 +233,6 @@ Partial Class Inicio
         Me.Menuvertical.Size = New System.Drawing.Size(200, 555)
         Me.Menuvertical.TabIndex = 1
         '
-        'lblHora
-        '
-        Me.lblHora.AutoSize = True
-        Me.lblHora.Font = New System.Drawing.Font("Bahnschrift Light", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHora.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblHora.Location = New System.Drawing.Point(24, 26)
-        Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(144, 41)
-        Me.lblHora.TabIndex = 13
-        Me.lblHora.Text = "00:00:00"
-        '
         'PictureBoxsalir
         '
         Me.PictureBoxsalir.Image = Global.proyecto.inicio.My.Resources.Resources.salir1
@@ -250,106 +242,6 @@ Partial Class Inicio
         Me.PictureBoxsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBoxsalir.TabIndex = 12
         Me.PictureBoxsalir.TabStop = False
-        '
-        'Panel9
-        '
-        Me.Panel9.Location = New System.Drawing.Point(197, 299)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(200, 100)
-        Me.Panel9.TabIndex = 10
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(0, 369)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(5, 30)
-        Me.Panel4.TabIndex = 9
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(0, 422)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(5, 30)
-        Me.Panel3.TabIndex = 9
-        '
-        'btnclientes
-        '
-        Me.btnclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnclientes.FlatAppearance.BorderSize = 0
-        Me.btnclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclientes.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnclientes.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnclientes.Image = Global.proyecto.inicio.My.Resources.Resources.clientes1
-        Me.btnclientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnclientes.Location = New System.Drawing.Point(0, 362)
-        Me.btnclientes.Name = "btnclientes"
-        Me.btnclientes.Size = New System.Drawing.Size(200, 30)
-        Me.btnclientes.TabIndex = 8
-        Me.btnclientes.Text = "        Clientes"
-        Me.btnclientes.UseVisualStyleBackColor = False
-        '
-        'btnprov
-        '
-        Me.btnprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnprov.FlatAppearance.BorderSize = 0
-        Me.btnprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnprov.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnprov.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnprov.Image = Global.proyecto.inicio.My.Resources.Resources.compras
-        Me.btnprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnprov.Location = New System.Drawing.Point(-2, 422)
-        Me.btnprov.Name = "btnprov"
-        Me.btnprov.Size = New System.Drawing.Size(199, 30)
-        Me.btnprov.TabIndex = 8
-        Me.btnprov.Text = "          Proveedores"
-        Me.btnprov.UseVisualStyleBackColor = False
-        '
-        'btnfacturacion
-        '
-        Me.btnfacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnfacturacion.FlatAppearance.BorderSize = 0
-        Me.btnfacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnfacturacion.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnfacturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnfacturacion.Image = Global.proyecto.inicio.My.Resources.Resources.venta
-        Me.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnfacturacion.Location = New System.Drawing.Point(0, 167)
-        Me.btnfacturacion.Name = "btnfacturacion"
-        Me.btnfacturacion.Size = New System.Drawing.Size(200, 30)
-        Me.btnfacturacion.TabIndex = 1
-        Me.btnfacturacion.Text = "          Facturación"
-        Me.btnfacturacion.UseVisualStyleBackColor = False
-        '
-        'btnsalir
-        '
-        Me.btnsalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnsalir.FlatAppearance.BorderSize = 0
-        Me.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnsalir.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnsalir.Location = New System.Drawing.Point(28, 482)
-        Me.btnsalir.Name = "btnsalir"
-        Me.btnsalir.Size = New System.Drawing.Size(173, 30)
-        Me.btnsalir.TabIndex = 11
-        Me.btnsalir.Text = "Cerrar Sesión"
-        Me.btnsalir.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
-        Me.PictureBox1.Location = New System.Drawing.Point(-45, -68)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(292, 267)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'PanelFact
         '
@@ -473,6 +365,13 @@ Partial Class Inicio
         Me.btnmodistock.Text = "Modificar Stock"
         Me.btnmodistock.UseVisualStyleBackColor = False
         '
+        'Panel9
+        '
+        Me.Panel9.Location = New System.Drawing.Point(197, 299)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(200, 100)
+        Me.Panel9.TabIndex = 10
+        '
         'btnstock
         '
         Me.btnstock.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
@@ -490,19 +389,118 @@ Partial Class Inicio
         Me.btnstock.Text = "            Stock de Prod."
         Me.btnstock.UseVisualStyleBackColor = False
         '
+        'btnclientes
+        '
+        Me.btnclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnclientes.FlatAppearance.BorderSize = 0
+        Me.btnclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclientes.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnclientes.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnclientes.Image = Global.proyecto.inicio.My.Resources.Resources.clientes1
+        Me.btnclientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnclientes.Location = New System.Drawing.Point(0, 303)
+        Me.btnclientes.Name = "btnclientes"
+        Me.btnclientes.Size = New System.Drawing.Size(200, 30)
+        Me.btnclientes.TabIndex = 8
+        Me.btnclientes.Text = "        Clientes"
+        Me.btnclientes.UseVisualStyleBackColor = False
+        '
+        'btnprov
+        '
+        Me.btnprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnprov.FlatAppearance.BorderSize = 0
+        Me.btnprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnprov.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnprov.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnprov.Image = Global.proyecto.inicio.My.Resources.Resources.compras
+        Me.btnprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnprov.Location = New System.Drawing.Point(0, 371)
+        Me.btnprov.Name = "btnprov"
+        Me.btnprov.Size = New System.Drawing.Size(199, 30)
+        Me.btnprov.TabIndex = 8
+        Me.btnprov.Text = "          Proveedores"
+        Me.btnprov.UseVisualStyleBackColor = False
+        '
+        'btnfacturacion
+        '
+        Me.btnfacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnfacturacion.FlatAppearance.BorderSize = 0
+        Me.btnfacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnfacturacion.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnfacturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnfacturacion.Image = Global.proyecto.inicio.My.Resources.Resources.venta
+        Me.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnfacturacion.Location = New System.Drawing.Point(0, 167)
+        Me.btnfacturacion.Name = "btnfacturacion"
+        Me.btnfacturacion.Size = New System.Drawing.Size(200, 30)
+        Me.btnfacturacion.TabIndex = 1
+        Me.btnfacturacion.Text = "          Facturación"
+        Me.btnfacturacion.UseVisualStyleBackColor = False
+        '
+        'btnsalir
+        '
+        Me.btnsalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnsalir.FlatAppearance.BorderSize = 0
+        Me.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnsalir.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnsalir.Location = New System.Drawing.Point(28, 482)
+        Me.btnsalir.Name = "btnsalir"
+        Me.btnsalir.Size = New System.Drawing.Size(173, 30)
+        Me.btnsalir.TabIndex = 11
+        Me.btnsalir.Text = "Cerrar Sesión"
+        Me.btnsalir.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
+        Me.PictureBox1.Location = New System.Drawing.Point(-45, -68)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(292, 267)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'lblHora
+        '
+        Me.lblHora.AutoSize = True
+        Me.lblHora.Font = New System.Drawing.Font("Bahnschrift Light", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHora.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblHora.Location = New System.Drawing.Point(24, 26)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(144, 41)
+        Me.lblHora.TabIndex = 13
+        Me.lblHora.Text = "00:00:00"
+        '
         'panelmedio
         '
         Me.panelmedio.AutoSize = True
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.panelmedio.Controls.Add(Me.Panelclientes)
         Me.panelmedio.Controls.Add(Me.lblFecha)
         Me.panelmedio.Controls.Add(Me.lblHora)
         Me.panelmedio.Controls.Add(Me.Panelproveedores)
-        Me.panelmedio.Controls.Add(Me.Panelclientes)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelmedio.Location = New System.Drawing.Point(200, 35)
         Me.panelmedio.Name = "panelmedio"
         Me.panelmedio.Size = New System.Drawing.Size(947, 555)
         Me.panelmedio.TabIndex = 2
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Bahnschrift Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblFecha.Location = New System.Drawing.Point(28, 91)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(61, 23)
+        Me.lblFecha.TabIndex = 14
+        Me.lblFecha.Text = "Fecha"
         '
         'Panelproveedores
         '
@@ -511,7 +509,7 @@ Partial Class Inicio
         Me.Panelproveedores.Controls.Add(Me.Panel5)
         Me.Panelproveedores.Controls.Add(Me.btnbuscarprov)
         Me.Panelproveedores.Controls.Add(Me.btnmodprov)
-        Me.Panelproveedores.Location = New System.Drawing.Point(538, 327)
+        Me.Panelproveedores.Location = New System.Drawing.Point(538, 410)
         Me.Panelproveedores.Name = "Panelproveedores"
         Me.Panelproveedores.Size = New System.Drawing.Size(198, 72)
         Me.Panelproveedores.TabIndex = 13
@@ -569,22 +567,14 @@ Partial Class Inicio
         '
         Me.Panelclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panelclientes.Controls.Add(Me.Panel10)
-        Me.Panelclientes.Controls.Add(Me.btndeudores)
         Me.Panelclientes.Controls.Add(Me.Panel8)
+        Me.Panelclientes.Controls.Add(Me.btndeudores)
         Me.Panelclientes.Controls.Add(Me.btnconsultclient)
-        Me.Panelclientes.Location = New System.Drawing.Point(538, 260)
+        Me.Panelclientes.Location = New System.Drawing.Point(133, 290)
         Me.Panelclientes.Name = "Panelclientes"
         Me.Panelclientes.Size = New System.Drawing.Size(198, 66)
         Me.Panelclientes.TabIndex = 9
         Me.Panelclientes.Visible = False
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(192, 36)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(5, 30)
-        Me.Panel10.TabIndex = 10
         '
         'btndeudores
         '
@@ -601,14 +591,6 @@ Partial Class Inicio
         Me.btndeudores.TabIndex = 9
         Me.btndeudores.Text = "Deudores"
         Me.btndeudores.UseVisualStyleBackColor = False
-        '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(192, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(5, 30)
-        Me.Panel8.TabIndex = 8
         '
         'btnconsultclient
         '
@@ -631,23 +613,21 @@ Partial Class Inicio
         Me.TimerHora.Enabled = True
         Me.TimerHora.Interval = 1000
         '
-        'DTPickerFecha
+        'Panel8
         '
-        Me.DTPickerFecha.Location = New System.Drawing.Point(89, 9)
-        Me.DTPickerFecha.Name = "DTPickerFecha"
-        Me.DTPickerFecha.Size = New System.Drawing.Size(200, 20)
-        Me.DTPickerFecha.TabIndex = 14
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel8.Location = New System.Drawing.Point(192, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(5, 60)
+        Me.Panel8.TabIndex = 15
         '
-        'lblFecha
+        'Panel10
         '
-        Me.lblFecha.AutoSize = True
-        Me.lblFecha.Font = New System.Drawing.Font("Bahnschrift Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblFecha.Location = New System.Drawing.Point(28, 91)
-        Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(61, 23)
-        Me.lblFecha.TabIndex = 14
-        Me.lblFecha.Text = "Fecha"
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel10.Location = New System.Drawing.Point(0, 0)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(5, 60)
+        Me.Panel10.TabIndex = 16
         '
         'Inicio
         '
@@ -673,9 +653,9 @@ Partial Class Inicio
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Menuvertical.ResumeLayout(False)
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelFact.ResumeLayout(False)
         Me.panelstock.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
         Me.panelmedio.PerformLayout()
         Me.Panelproveedores.ResumeLayout(False)
@@ -692,8 +672,6 @@ Partial Class Inicio
     Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnfacturacion As System.Windows.Forms.Button
-    Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btnclientes As System.Windows.Forms.Button
     Friend WithEvents btnprov As System.Windows.Forms.Button
     Friend WithEvents btnstock As System.Windows.Forms.Button
@@ -714,9 +692,7 @@ Partial Class Inicio
     Friend WithEvents btnaddstock As System.Windows.Forms.Button
     Friend WithEvents btnmodistock As System.Windows.Forms.Button
     Friend WithEvents Panelclientes As System.Windows.Forms.Panel
-    Friend WithEvents Panel10 As System.Windows.Forms.Panel
     Friend WithEvents btndeudores As System.Windows.Forms.Button
-    Friend WithEvents Panel8 As System.Windows.Forms.Panel
     Friend WithEvents btnconsultclient As System.Windows.Forms.Button
     Friend WithEvents btnMinimizar As System.Windows.Forms.PictureBox
     Friend WithEvents btnCerrar As System.Windows.Forms.PictureBox
@@ -730,4 +706,6 @@ Partial Class Inicio
     Friend WithEvents TimerHora As System.Windows.Forms.Timer
     Friend WithEvents DTPickerFecha As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblFecha As System.Windows.Forms.Label
+    Friend WithEvents Panel10 As System.Windows.Forms.Panel
+    Friend WithEvents Panel8 As System.Windows.Forms.Panel
 End Class

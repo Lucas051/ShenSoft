@@ -60,11 +60,15 @@ Public Class Inicio
         btnfacturacion.Location = New Point(0, 167)
         PanelFact.Location = New Point(1, 201)
         btnstock.Location = New Point(0, 270)
+        btnclientes.Location = New Point(0, 338)
+        btnprov.Location = New Point(0, 404)
         panelstock.Hide()
 
         If PanelFact.Visible = False Then
             btnfacturacion.Location = New Point(0, 167)
             btnstock.Location = New Point(0, 235)
+            btnclientes.Location = New Point(0, 303)
+            btnprov.Location = New Point(0, 371)
         End If
 
 
@@ -97,13 +101,6 @@ Public Class Inicio
     '___________________________________________________________________________________________________________________________________________
 
 
-    Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
-        panelstock.Visible = False
-        PanelFact.Visible = False
-        Panelproveedores.Visible = False
-        Panelclientes.Visible = True And Panelclientes.Visible = False
-
-    End Sub
 
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
         Dim llamar3 As New MODIFICARCLIENTES
@@ -137,14 +134,19 @@ Public Class Inicio
             panelstock.Visible = True
         End If
 
-        btnfacturacion.Location = New Point(0, 131)
+        btnfacturacion.Location = New Point(0, 167)
         btnstock.Location = New Point(0, 235)
-        panelstock.Location = New Point(0, 232)
+        panelstock.Location = New Point(0, 269)
+        btnclientes.Location = New Point(0, 336)
+        btnprov.Location = New Point(0, 404)
         PanelFact.Hide()
 
         If PanelFact.Visible = False Then
-            btnfacturacion.Location = New Point(0, 131)
-            btnstock.Location = New Point(0, 195)
+            btnfacturacion.Location = New Point(0, 167)
+            btnstock.Location = New Point(0, 235)
+            btnclientes.Location = New Point(0, 304)
+            btnprov.Location = New Point(0, 360)
+
         End If
 
     End Sub
@@ -170,7 +172,7 @@ Public Class Inicio
     End Sub
 
     Private Sub btnbuscarprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarprov.Click
-        Dim llamar As New Buscar_proveedores 
+        Dim llamar As New Buscar_proveedores
         panelmedio.Controls.Clear()
         llamar.TopLevel = False
         llamar.Parent = panelmedio
