@@ -54,7 +54,12 @@ Public Class MODIFPROVEEDORES
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarprov.Click
-        Me.Hide()
-        Buscar_proveedores.Show()
+        Dim llamar As New Buscar_proveedores
+        Inicio.panelmedio.Controls.Clear()
+        llamar.TopLevel = False
+        llamar.Parent = Inicio.panelmedio
+        llamar.Show()
+        llamar.Dock = DockStyle.Fill
+        Inicio.panelmedio.Visible = True
     End Sub
 End Class

@@ -55,12 +55,16 @@ Partial Class Buscar_proveedores
         '
         'btnvolver
         '
-        Me.btnvolver.Location = New System.Drawing.Point(83, 97)
+        Me.btnvolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnvolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnvolver.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnvolver.Location = New System.Drawing.Point(78, 108)
         Me.btnvolver.Name = "btnvolver"
-        Me.btnvolver.Size = New System.Drawing.Size(75, 23)
-        Me.btnvolver.TabIndex = 3
+        Me.btnvolver.Size = New System.Drawing.Size(80, 28)
+        Me.btnvolver.TabIndex = 19
         Me.btnvolver.Text = "Volver"
-        Me.btnvolver.UseVisualStyleBackColor = True
+        Me.btnvolver.UseVisualStyleBackColor = False
         '
         'Buscar_proveedores
         '

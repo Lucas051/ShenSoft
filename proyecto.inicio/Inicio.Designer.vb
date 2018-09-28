@@ -47,6 +47,9 @@ Partial Class Inicio
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.btnaddstock = New System.Windows.Forms.Button()
         Me.btnmodistock = New System.Windows.Forms.Button()
+        Me.Panelproveedores = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.btnmodprov = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.btnstock = New System.Windows.Forms.Button()
         Me.btnclientes = New System.Windows.Forms.Button()
@@ -62,11 +65,6 @@ Partial Class Inicio
         Me.btndeudores = New System.Windows.Forms.Button()
         Me.btnconsultclient = New System.Windows.Forms.Button()
         Me.lblFecha = New System.Windows.Forms.Label()
-        Me.Panelproveedores = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnbuscarprov = New System.Windows.Forms.Button()
-        Me.btnmodprov = New System.Windows.Forms.Button()
         Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,10 +79,10 @@ Partial Class Inicio
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelFact.SuspendLayout()
         Me.panelstock.SuspendLayout()
+        Me.Panelproveedores.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelmedio.SuspendLayout()
         Me.Panelclientes.SuspendLayout()
-        Me.Panelproveedores.SuspendLayout()
         Me.SuspendLayout()
         '
         'barratituloInicio
@@ -220,6 +218,7 @@ Partial Class Inicio
         Me.Menuvertical.Controls.Add(Me.PictureBoxsalir)
         Me.Menuvertical.Controls.Add(Me.PanelFact)
         Me.Menuvertical.Controls.Add(Me.panelstock)
+        Me.Menuvertical.Controls.Add(Me.Panelproveedores)
         Me.Menuvertical.Controls.Add(Me.Panel9)
         Me.Menuvertical.Controls.Add(Me.btnstock)
         Me.Menuvertical.Controls.Add(Me.btnclientes)
@@ -365,6 +364,41 @@ Partial Class Inicio
         Me.btnmodistock.Text = "Modificar Stock"
         Me.btnmodistock.UseVisualStyleBackColor = False
         '
+        'Panelproveedores
+        '
+        Me.Panelproveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panelproveedores.Controls.Add(Me.Panel7)
+        Me.Panelproveedores.Controls.Add(Me.btnmodprov)
+        Me.Panelproveedores.Location = New System.Drawing.Point(3, 407)
+        Me.Panelproveedores.Name = "Panelproveedores"
+        Me.Panelproveedores.Size = New System.Drawing.Size(198, 31)
+        Me.Panelproveedores.TabIndex = 13
+        Me.Panelproveedores.Visible = False
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel7.Location = New System.Drawing.Point(193, 1)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(5, 30)
+        Me.Panel7.TabIndex = 12
+        '
+        'btnmodprov
+        '
+        Me.btnmodprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnmodprov.FlatAppearance.BorderSize = 0
+        Me.btnmodprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnmodprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnmodprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnmodprov.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnmodprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnmodprov.Location = New System.Drawing.Point(3, 4)
+        Me.btnmodprov.Name = "btnmodprov"
+        Me.btnmodprov.Size = New System.Drawing.Size(197, 29)
+        Me.btnmodprov.TabIndex = 8
+        Me.btnmodprov.Text = "Gestionar Prov."
+        Me.btnmodprov.UseVisualStyleBackColor = False
+        '
         'Panel9
         '
         Me.Panel9.Location = New System.Drawing.Point(197, 299)
@@ -484,7 +518,6 @@ Partial Class Inicio
         Me.panelmedio.Controls.Add(Me.Panelclientes)
         Me.panelmedio.Controls.Add(Me.lblFecha)
         Me.panelmedio.Controls.Add(Me.lblHora)
-        Me.panelmedio.Controls.Add(Me.Panelproveedores)
         Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelmedio.Location = New System.Drawing.Point(200, 35)
         Me.panelmedio.Name = "panelmedio"
@@ -563,67 +596,6 @@ Partial Class Inicio
         Me.lblFecha.TabIndex = 14
         Me.lblFecha.Text = "Fecha"
         '
-        'Panelproveedores
-        '
-        Me.Panelproveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Panelproveedores.Controls.Add(Me.Panel7)
-        Me.Panelproveedores.Controls.Add(Me.Panel5)
-        Me.Panelproveedores.Controls.Add(Me.btnbuscarprov)
-        Me.Panelproveedores.Controls.Add(Me.btnmodprov)
-        Me.Panelproveedores.Location = New System.Drawing.Point(538, 410)
-        Me.Panelproveedores.Name = "Panelproveedores"
-        Me.Panelproveedores.Size = New System.Drawing.Size(198, 72)
-        Me.Panelproveedores.TabIndex = 13
-        Me.Panelproveedores.Visible = False
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(193, 1)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(5, 30)
-        Me.Panel7.TabIndex = 12
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(193, 42)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(5, 30)
-        Me.Panel5.TabIndex = 11
-        '
-        'btnbuscarprov
-        '
-        Me.btnbuscarprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnbuscarprov.FlatAppearance.BorderSize = 0
-        Me.btnbuscarprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnbuscarprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnbuscarprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnbuscarprov.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnbuscarprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnbuscarprov.Location = New System.Drawing.Point(1, 36)
-        Me.btnbuscarprov.Name = "btnbuscarprov"
-        Me.btnbuscarprov.Size = New System.Drawing.Size(197, 29)
-        Me.btnbuscarprov.TabIndex = 9
-        Me.btnbuscarprov.Text = "Consulta de Prov."
-        Me.btnbuscarprov.UseVisualStyleBackColor = False
-        '
-        'btnmodprov
-        '
-        Me.btnmodprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnmodprov.FlatAppearance.BorderSize = 0
-        Me.btnmodprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnmodprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnmodprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnmodprov.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnmodprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnmodprov.Location = New System.Drawing.Point(1, 1)
-        Me.btnmodprov.Name = "btnmodprov"
-        Me.btnmodprov.Size = New System.Drawing.Size(197, 29)
-        Me.btnmodprov.TabIndex = 8
-        Me.btnmodprov.Text = "Modificar Prov."
-        Me.btnmodprov.UseVisualStyleBackColor = False
-        '
         'TimerHora
         '
         Me.TimerHora.Enabled = True
@@ -655,11 +627,11 @@ Partial Class Inicio
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelFact.ResumeLayout(False)
         Me.panelstock.ResumeLayout(False)
+        Me.Panelproveedores.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
         Me.panelmedio.PerformLayout()
         Me.Panelclientes.ResumeLayout(False)
-        Me.Panelproveedores.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -685,8 +657,6 @@ Partial Class Inicio
     Friend WithEvents panelmedio As System.Windows.Forms.Panel
     Friend WithEvents Panelproveedores As System.Windows.Forms.Panel
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents btnbuscarprov As System.Windows.Forms.Button
     Friend WithEvents btnmodprov As System.Windows.Forms.Button
     Friend WithEvents panelstock As System.Windows.Forms.Panel
     Friend WithEvents btnaddstock As System.Windows.Forms.Button

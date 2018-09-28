@@ -171,17 +171,6 @@ Public Class Inicio
 
     End Sub
 
-    Private Sub btnbuscarprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarprov.Click
-        Dim llamar As New Buscar_proveedores
-        panelmedio.Controls.Clear()
-        llamar.TopLevel = False
-        llamar.Parent = panelmedio
-        llamar.Show()
-        llamar.Dock = DockStyle.Fill
-        panelmedio.Visible = True
-    End Sub
-
-
     Private Sub btnsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsalir.Click
         Me.Hide()
         Verificacion.Show()
@@ -290,5 +279,7 @@ Public Class Inicio
         '////////////////////////////////////////////
     End Sub
 
-   
+    Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
+
+    End Sub
 End Class
