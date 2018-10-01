@@ -28,9 +28,15 @@ Public Class Buscar_proveedores
         End Try
     End Sub
 
-    Private Sub btnvolver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
-        Me.Hide()
-        Inicio.Show()
-    End Sub
+    Private Sub btnvolver_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
 
+        Dim llamar As New MODIFPROVEEDORES
+        Inicio.panelmedio.Controls.Clear()
+        llamar.TopLevel = False
+        llamar.Parent = Inicio.panelmedio
+        llamar.Show()
+        llamar.Dock = DockStyle.Fill
+        Inicio.panelmedio.Visible = True
+
+    End Sub
 End Class

@@ -12,9 +12,17 @@ Public Class Stock_de_Productos
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
         Try
-            If txtdescripcion.Text = Consulta = "SELECT descripcion FROM stock" Then
-                Consulta = "UPDATE stock set cantidad = cantidad +'" + Str(txtcantidad.Text) + "'"
-            End If
+            Dim Codigo As String
+            For Each row As DataGridViewRow In Me.DgvStock.Rows
+
+                Codigo = row.Cells(1).Value
+                If txtdescripcion.Text = Codigo Then
+                    Consulta = "UPDATE stock set cantidad=cantidad +('" + txtcantidad.Text + "') WHERE descripcion = ('" + txtdescripcion.Text + "') "
+                End If
+
+            Next
+
+
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -89,9 +97,7 @@ Public Class Stock_de_Productos
         'Proximamente Solo en Cines
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvStock.CellContentClick
 
-    End Sub
 
     Private Sub txtdescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtdescripcion.TextChanged
 

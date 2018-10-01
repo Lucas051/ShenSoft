@@ -25,7 +25,7 @@ Partial Class SuspenderStock
         Me.dgvEliminar = New System.Windows.Forms.DataGridView()
         Me.btnsuspender = New System.Windows.Forms.Button()
         Me.txtcodigo = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnmostrardatos = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgvEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,14 +56,14 @@ Partial Class SuspenderStock
         Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
         Me.txtcodigo.TabIndex = 5
         '
-        'Button1
+        'btnmostrardatos
         '
-        Me.Button1.Location = New System.Drawing.Point(611, 240)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 56)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Mostrar Datos Suspendidos"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnmostrardatos.Location = New System.Drawing.Point(611, 240)
+        Me.btnmostrardatos.Name = "btnmostrardatos"
+        Me.btnmostrardatos.Size = New System.Drawing.Size(100, 56)
+        Me.btnmostrardatos.TabIndex = 6
+        Me.btnmostrardatos.Text = "Mostrar Datos Suspendidos"
+        Me.btnmostrardatos.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -83,7 +83,7 @@ Partial Class SuspenderStock
         Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.ClientSize = New System.Drawing.Size(748, 352)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnmostrardatos)
         Me.Controls.Add(Me.txtcodigo)
         Me.Controls.Add(Me.btnsuspender)
         Me.Controls.Add(Me.dgvEliminar)
@@ -98,6 +98,6 @@ Partial Class SuspenderStock
     Friend WithEvents dgvEliminar As System.Windows.Forms.DataGridView
     Friend WithEvents btnsuspender As System.Windows.Forms.Button
     Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnmostrardatos As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

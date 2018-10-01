@@ -19,15 +19,6 @@ Public Class SuspenderStock
     End Sub
 
    
-
-
-
-
-
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs)
-
-    End Sub
-
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsuspender.Click
         Try
 
@@ -51,10 +42,10 @@ Public Class SuspenderStock
         dgvEliminar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
-    
-    
 
-    Private Sub Button1_Click_1(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmostrardatos.Click
         conexioon.Consulta = "SELECT * FROM stock WHERE cantidad = 0"
         consultar()
         dgvEliminar.DataSource = resultado
@@ -66,5 +57,5 @@ Public Class SuspenderStock
         dgvEliminar.Columns(5).HeaderText = "Proveedor"
     End Sub
 
-    
+
 End Class
