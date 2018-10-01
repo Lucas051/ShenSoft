@@ -17,12 +17,29 @@ Public Class Inicio
         'Localiza por defecto lo botones en la posición inicial y oculta panels en caso de ser visibles
         btnfacturacion.Location = New Point(0, 167)
         btnstock.Location = New Point(0, 235)
+        btnclientes.Location = New Point(0, 303)
+        btnprov.Location = New Point(0, 371)
         PanelFact.Hide()
         panelstock.Hide()
+        Panelclientes.Hide()
+        Panelproveedores.Hide()
 
     End Sub
 
     Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
+        End
+    End Sub
+
+    Private Sub btnSalir1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir1.Click
+        End
+    End Sub
+
+    Private Sub btnCerrarSesion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrarSesion.Click
+        Me.Hide()
+        Verificacion.Show()
+    End Sub
+
+    Private Sub PictureBoxsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBoxsalir.Click
         End
     End Sub
 
@@ -49,7 +66,8 @@ Public Class Inicio
     End Sub
 
 
-
+    '/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    'Configuraciones para el movimiento de desplazar los botones menu izquierdo
     Private Sub btnfacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfacturacion.Click
         If PanelFact.Visible = True Then
             PanelFact.Visible = False
@@ -63,6 +81,9 @@ Public Class Inicio
         btnclientes.Location = New Point(0, 338)
         btnprov.Location = New Point(0, 404)
         panelstock.Hide()
+        Panelclientes.Hide()
+        Panelproveedores.Hide()
+
 
         If PanelFact.Visible = False Then
             btnfacturacion.Location = New Point(0, 167)
@@ -73,6 +94,88 @@ Public Class Inicio
 
 
     End Sub
+
+
+    Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
+        If panelstock.Visible = True Then
+            panelstock.Visible = False
+        Else
+            panelstock.Visible = True
+        End If
+
+        btnfacturacion.Location = New Point(0, 167)
+        btnstock.Location = New Point(0, 235)
+        panelstock.Location = New Point(0, 269)
+        btnclientes.Location = New Point(0, 338)
+        btnprov.Location = New Point(0, 406)
+        PanelFact.Hide()
+        Panelclientes.Hide()
+        Panelproveedores.Hide()
+
+        If panelstock.Visible = False Then
+            btnfacturacion.Location = New Point(0, 167)
+            btnstock.Location = New Point(0, 235)
+            btnclientes.Location = New Point(0, 303)
+            btnprov.Location = New Point(0, 371)
+
+        End If
+
+    End Sub
+
+
+    Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
+        If Panelclientes.Visible = True Then
+            Panelclientes.Visible = False
+        Else
+            Panelclientes.Visible = True
+        End If
+
+        btnfacturacion.Location = New Point(0, 167)
+        btnstock.Location = New Point(0, 235)
+        btnclientes.Location = New Point(0, 303)
+        Panelclientes.Location = New Point(0, 337)
+        btnprov.Location = New Point(0, 406)
+        PanelFact.Hide()
+        panelstock.Hide()
+        Panelproveedores.Hide()
+
+        If Panelclientes.Visible = False Then
+            btnfacturacion.Location = New Point(0, 167)
+            btnstock.Location = New Point(0, 235)
+            btnclientes.Location = New Point(0, 303)
+            btnprov.Location = New Point(0, 371)
+
+        End If
+    End Sub
+
+
+    Private Sub btnprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnprov.Click
+        If Panelproveedores.Visible = True Then
+            Panelproveedores.Visible = False
+        Else
+            Panelproveedores.Visible = True
+        End If
+
+        btnfacturacion.Location = New Point(0, 167)
+        btnstock.Location = New Point(0, 235)
+        btnclientes.Location = New Point(0, 303)
+        btnprov.Location = New Point(0, 371)
+        Panelproveedores.Location = New Point(0, 405)
+        PanelFact.Hide()
+        Panelclientes.Hide()
+        panelstock.Hide()
+
+        If Panelproveedores.Visible = False Then
+            btnfacturacion.Location = New Point(0, 167)
+            btnstock.Location = New Point(0, 235)
+            btnclientes.Location = New Point(0, 303)
+            btnprov.Location = New Point(0, 371)
+
+        End If
+
+    End Sub
+  
+    '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
         Dim llamar As New RealizarFactura
@@ -98,8 +201,7 @@ Public Class Inicio
 
     End Sub
 
-    '___________________________________________________________________________________________________________________________________________
-
+    '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
@@ -125,40 +227,7 @@ Public Class Inicio
         panelmedio.Visible = True
 
     End Sub
-    '____________________________________________________________________________________________________________________________________________
 
-    Private Sub btnstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstock.Click
-        If panelstock.Visible = True Then
-            panelstock.Visible = False
-        Else
-            panelstock.Visible = True
-        End If
-
-        btnfacturacion.Location = New Point(0, 167)
-        btnstock.Location = New Point(0, 235)
-        panelstock.Location = New Point(0, 269)
-        btnclientes.Location = New Point(0, 336)
-        btnprov.Location = New Point(0, 404)
-        PanelFact.Hide()
-
-        If PanelFact.Visible = False Then
-            btnfacturacion.Location = New Point(0, 167)
-            btnstock.Location = New Point(0, 235)
-            btnclientes.Location = New Point(0, 304)
-            btnprov.Location = New Point(0, 360)
-
-        End If
-
-    End Sub
-    '___________________________________________________________________________________________________________________________________________
-
-    Private Sub btnprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnprov.Click
-        'ocultamos pestaña en pantalla y aparece proveedores
-        Panelclientes.Visible = False
-        PanelFact.Visible = False
-        panelstock.Visible = False
-        Panelproveedores.Visible = True And Panelproveedores.Visible = False
-    End Sub
 
     Private Sub btnmodprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodprov.Click
         Dim llamar2 As New MODIFPROVEEDORES
@@ -171,14 +240,6 @@ Public Class Inicio
 
     End Sub
 
-    Private Sub btnsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsalir.Click
-        Me.Hide()
-        Verificacion.Show()
-    End Sub
-
-    Private Sub PictureBoxsalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBoxsalir.Click
-        End
-    End Sub
 
     Private Sub btnaddstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnaddstock.Click
         Dim llamar4 As New Stock_de_Productos
@@ -279,7 +340,6 @@ Public Class Inicio
         '////////////////////////////////////////////
     End Sub
 
-    Private Sub btnclientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnclientes.Click
 
-    End Sub
+    
 End Class
