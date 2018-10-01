@@ -1,12 +1,29 @@
 ﻿Public Class MODIFICARCLIENTES
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         Inicio.Show()
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
+
+    Private Sub MODIFICARCLIENTES_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+        conexioon.Consulta = "SELECT * FROM clientes"
+        consultar()
+        DgvClientes.DataSource = resultado
+
+        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+        DgvClientes.Columns(0).HeaderText = "Código"
+        DgvClientes.Columns(1).HeaderText = "Cédula"
+        DgvClientes.Columns(2).HeaderText = "Nombre"
+        DgvClientes.Columns(3).HeaderText = "Saldo"
+        DgvClientes.Columns(4).HeaderText = "Direccion"
+        DgvClientes.Columns(5).HeaderText = "Telefono"
+    End Sub
+
+    Private Sub btnañadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnañadir.Click
+
         Try
 
             If (txtcedula.Text <> "" And txtdireccion.Text <> "" And txtnombre.Text <> "" And txttelefono.Text <> "") Then
@@ -37,20 +54,15 @@
 
         End Try
 
-
     End Sub
 
-    Private Sub MODIFICARCLIENTES_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        conexioon.Consulta = "SELECT * FROM clientes"
-        consultar()
-        DgvClientes.DataSource = resultado
+    Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
 
-        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-        DgvClientes.Columns(0).HeaderText = "Código"
-        DgvClientes.Columns(1).HeaderText = "Cédula"
-        DgvClientes.Columns(2).HeaderText = "Nombre"
-        DgvClientes.Columns(3).HeaderText = "Saldo"
-        DgvClientes.Columns(4).HeaderText = "Direccion"
-        DgvClientes.Columns(5).HeaderText = "Telefono"
+        txtcedula.Text = ""
+        txtdireccion.Text = ""
+        txtnombre.Text = ""
+        txtsaldo.Text = ""
+        txttelefono.Text = ""
+
     End Sub
 End Class

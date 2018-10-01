@@ -29,7 +29,6 @@ Partial Class MODIFPROVEEDORES
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnvolver = New System.Windows.Forms.Button()
         Me.btnlimpiar = New System.Windows.Forms.Button()
         Me.btnborrar = New System.Windows.Forms.Button()
         Me.btnañadir = New System.Windows.Forms.Button()
@@ -105,19 +104,6 @@ Partial Class MODIFPROVEEDORES
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Proveedor"
         '
-        'btnvolver
-        '
-        Me.btnvolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnvolver.Font = New System.Drawing.Font("Bahnschrift Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnvolver.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnvolver.Location = New System.Drawing.Point(183, 342)
-        Me.btnvolver.Name = "btnvolver"
-        Me.btnvolver.Size = New System.Drawing.Size(80, 28)
-        Me.btnvolver.TabIndex = 18
-        Me.btnvolver.Text = "Volver"
-        Me.btnvolver.UseVisualStyleBackColor = False
-        '
         'btnlimpiar
         '
         Me.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
@@ -150,9 +136,9 @@ Partial Class MODIFPROVEEDORES
         Me.btnañadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnañadir.Font = New System.Drawing.Font("Bahnschrift Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnañadir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnañadir.Location = New System.Drawing.Point(11, 308)
+        Me.btnañadir.Location = New System.Drawing.Point(12, 308)
         Me.btnañadir.Name = "btnañadir"
-        Me.btnañadir.Size = New System.Drawing.Size(80, 28)
+        Me.btnañadir.Size = New System.Drawing.Size(165, 28)
         Me.btnañadir.TabIndex = 14
         Me.btnañadir.Text = "Añadir"
         Me.btnañadir.UseVisualStyleBackColor = False
@@ -216,7 +202,6 @@ Partial Class MODIFPROVEEDORES
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnañadir)
@@ -235,7 +220,6 @@ Partial Class MODIFPROVEEDORES
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btnvolver As System.Windows.Forms.Button
     Friend WithEvents btnlimpiar As System.Windows.Forms.Button
     Friend WithEvents btnborrar As System.Windows.Forms.Button
     Friend WithEvents btnañadir As System.Windows.Forms.Button
