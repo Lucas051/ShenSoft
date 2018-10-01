@@ -23,6 +23,7 @@ Public Class Inicio
         panelstock.Hide()
         Panelclientes.Hide()
         Panelproveedores.Hide()
+        panelOpciones.Width = 59
 
     End Sub
 
@@ -342,4 +343,55 @@ Public Class Inicio
 
 
     
+    Private Sub PTBabrir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PTBabrir.Click
+        PTBabrir.Hide()
+        While (panelOpciones.Width < 168)
+            panelOpciones.Width = panelOpciones.Width + 1
+        End While
+        PTBocultar.Show()
+    End Sub
+
+    Private Sub PTBocultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PTBocultar.Click
+        PTBocultar.Hide()
+        While (panelOpciones.Width > 59)
+            panelOpciones.Width -= 1
+        End While
+        PTBabrir.Show()
+    End Sub
+
+
+    Private Sub btnOcultar_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOcultar.MouseLeave
+        btnOcultar.ForeColor = Color.Blue
+
+    End Sub
+
+    Private Sub btnOcultar_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btnOcultar.MouseMove
+        btnOcultar.ForeColor = Color.LightGray
+
+    End Sub
+
+    Private Sub btncalculadora_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncalculadora.MouseLeave
+        btnOcultar.ForeColor = Color.Blue
+    End Sub
+
+    Private Sub btncalculadora_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncalculadora.MouseMove
+        btnOcultar.ForeColor = Color.LightGray
+    End Sub
+
+    Private Sub btncalendario_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncalendario.MouseLeave
+        btnOcultar.ForeColor = Color.Blue
+    End Sub
+
+    Private Sub btncalendario_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncalendario.MouseMove
+        btnOcultar.ForeColor = Color.LightGray
+    End Sub
+
+    Private Sub btncharts_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncharts.MouseLeave
+        btnOcultar.ForeColor = Color.Blue
+    End Sub
+
+    Private Sub btncharts_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncharts.MouseMove
+        btnOcultar.ForeColor = Color.LightGray
+    End Sub
+
 End Class

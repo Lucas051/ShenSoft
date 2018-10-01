@@ -121,7 +121,7 @@ Partial Class Verificacion
         Me.Label1.ForeColor = System.Drawing.Color.DimGray
         Me.Label1.Location = New System.Drawing.Point(445, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(184, 29)
+        Me.Label1.Size = New System.Drawing.Size(185, 29)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "INICIAR SESIÓN"
         '

@@ -57,4 +57,6 @@ Public Class Verificacion
         Inicio.Show()
         'por el momento dejamos la seguridad como segundo plano, para poder seguir con otras funciones mas importantes del programa
     End Sub
+
+
 End Class
