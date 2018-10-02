@@ -67,6 +67,7 @@ Partial Class Inicio
         Me.lblHora = New System.Windows.Forms.Label()
         Me.panelmedio = New System.Windows.Forms.Panel()
         Me.panelOpciones = New System.Windows.Forms.Panel()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.PTBcalendario = New System.Windows.Forms.PictureBox()
         Me.PTBcalculadora = New System.Windows.Forms.PictureBox()
         Me.PTBcharts = New System.Windows.Forms.PictureBox()
@@ -621,6 +622,7 @@ Partial Class Inicio
         '
         Me.panelmedio.AutoSize = True
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.panelmedio.Controls.Add(Me.MonthCalendar1)
         Me.panelmedio.Controls.Add(Me.panelOpciones)
         Me.panelmedio.Controls.Add(Me.lblFecha)
         Me.panelmedio.Controls.Add(Me.lblHora)
@@ -647,6 +649,13 @@ Partial Class Inicio
         Me.panelOpciones.Name = "panelOpciones"
         Me.panelOpciones.Size = New System.Drawing.Size(166, 555)
         Me.panelOpciones.TabIndex = 15
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(539, 222)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 16
+        Me.MonthCalendar1.Visible = False
         '
         'PTBcalendario
         '
@@ -873,4 +882,5 @@ Partial Class Inicio
     Friend WithEvents btncalendario As System.Windows.Forms.Button
     Friend WithEvents btncalculadora As System.Windows.Forms.Button
     Friend WithEvents PTBocultar As System.Windows.Forms.PictureBox
+    Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
 End Class

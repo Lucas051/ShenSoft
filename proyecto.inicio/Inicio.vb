@@ -394,4 +394,12 @@ Public Class Inicio
         btnOcultar.ForeColor = Color.LightGray
     End Sub
 
+    
+    Private Sub PTBcalendario_Click(sender As System.Object, e As System.EventArgs) Handles PTBcalendario.Click
+        If MonthCalendar1.Visible = False Then
+            MonthCalendar1.Visible = True
+        Else
+            MonthCalendar1.Visible = False
+        End If
+    End Sub
 End Class
