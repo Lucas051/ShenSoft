@@ -42,6 +42,11 @@
                 DgvClientes.Columns(3).HeaderText = "Direccion"
                 DgvClientes.Columns(4).HeaderText = "Telefono"
                 DgvClientes.Columns(5).HeaderText = "Saldo"
+                txtcedula.Text = ""
+                txtdireccion.Text = ""
+                txtnombre.Text = ""
+                txtsaldo.Text = ""
+                txttelefono.Text = ""
 
             Else
                 MessageBox.Show("Debes rellenar todos los campos")
