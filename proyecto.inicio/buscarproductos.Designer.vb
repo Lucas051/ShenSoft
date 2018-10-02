@@ -22,22 +22,11 @@ Partial Class buscarproductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(buscarproductos))
         Me.dgvbuscarStock = New System.Windows.Forms.DataGridView()
-        Me.barratitulo = New System.Windows.Forms.Panel()
-        Me.btnmini = New System.Windows.Forms.PictureBox()
-        Me.cerrarbtn = New System.Windows.Forms.PictureBox()
-        Me.btnmaxi = New System.Windows.Forms.PictureBox()
-        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
         Me.txtbuscarFac = New System.Windows.Forms.TextBox()
         Me.btnatras = New System.Windows.Forms.Button()
         CType(Me.dgvbuscarStock, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.barratitulo.SuspendLayout()
-        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvbuscarStock
@@ -47,64 +36,6 @@ Partial Class buscarproductos
         Me.dgvbuscarStock.Name = "dgvbuscarStock"
         Me.dgvbuscarStock.Size = New System.Drawing.Size(667, 198)
         Me.dgvbuscarStock.TabIndex = 33
-        '
-        'barratitulo
-        '
-        Me.barratitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.barratitulo.Controls.Add(Me.btnmini)
-        Me.barratitulo.Controls.Add(Me.cerrarbtn)
-        Me.barratitulo.Controls.Add(Me.btnmaxi)
-        Me.barratitulo.Controls.Add(Me.btnrestaurar)
-        Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barratitulo.Location = New System.Drawing.Point(0, 0)
-        Me.barratitulo.Name = "barratitulo"
-        Me.barratitulo.Size = New System.Drawing.Size(701, 35)
-        Me.barratitulo.TabIndex = 34
-        '
-        'btnmini
-        '
-        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmini.Image = CType(resources.GetObject("btnmini.Image"), System.Drawing.Image)
-        Me.btnmini.Location = New System.Drawing.Point(608, 5)
-        Me.btnmini.Name = "btnmini"
-        Me.btnmini.Size = New System.Drawing.Size(25, 25)
-        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmini.TabIndex = 1
-        Me.btnmini.TabStop = False
-        '
-        'cerrarbtn
-        '
-        Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cerrarbtn.Image = CType(resources.GetObject("cerrarbtn.Image"), System.Drawing.Image)
-        Me.cerrarbtn.Location = New System.Drawing.Point(670, 5)
-        Me.cerrarbtn.Name = "cerrarbtn"
-        Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
-        Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.cerrarbtn.TabIndex = 0
-        Me.cerrarbtn.TabStop = False
-        '
-        'btnmaxi
-        '
-        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmaxi.Image = CType(resources.GetObject("btnmaxi.Image"), System.Drawing.Image)
-        Me.btnmaxi.Location = New System.Drawing.Point(639, 5)
-        Me.btnmaxi.Name = "btnmaxi"
-        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
-        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmaxi.TabIndex = 2
-        Me.btnmaxi.TabStop = False
-        '
-        'btnrestaurar
-        '
-        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnrestaurar.Image = CType(resources.GetObject("btnrestaurar.Image"), System.Drawing.Image)
-        Me.btnrestaurar.Location = New System.Drawing.Point(639, 5)
-        Me.btnrestaurar.Name = "btnrestaurar"
-        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
-        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnrestaurar.TabIndex = 3
-        Me.btnrestaurar.TabStop = False
-        Me.btnrestaurar.Visible = False
         '
         'cod
         '
@@ -146,31 +77,20 @@ Partial Class buscarproductos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(701, 330)
+        Me.ClientSize = New System.Drawing.Size(892, 349)
         Me.Controls.Add(Me.btnatras)
         Me.Controls.Add(Me.txtbuscarFac)
         Me.Controls.Add(Me.cod)
-        Me.Controls.Add(Me.barratitulo)
         Me.Controls.Add(Me.dgvbuscarStock)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "buscarproductos"
         Me.Text = "Buscar Productos"
         CType(Me.dgvbuscarStock, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.barratitulo.ResumeLayout(False)
-        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgvbuscarStock As System.Windows.Forms.DataGridView
-    Friend WithEvents barratitulo As System.Windows.Forms.Panel
-    Friend WithEvents btnmini As System.Windows.Forms.PictureBox
-    Friend WithEvents cerrarbtn As System.Windows.Forms.PictureBox
-    Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
-    Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents cod As System.Windows.Forms.Label
     Friend WithEvents txtbuscarFac As System.Windows.Forms.TextBox
     Friend WithEvents btnatras As System.Windows.Forms.Button

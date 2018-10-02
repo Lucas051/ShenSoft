@@ -54,9 +54,9 @@ Partial Class RealizarFactura
         '
         Me.DataGridFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridFacturas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
-        Me.DataGridFacturas.Location = New System.Drawing.Point(259, 72)
+        Me.DataGridFacturas.Location = New System.Drawing.Point(210, 72)
         Me.DataGridFacturas.Name = "DataGridFacturas"
-        Me.DataGridFacturas.Size = New System.Drawing.Size(676, 320)
+        Me.DataGridFacturas.Size = New System.Drawing.Size(644, 320)
         Me.DataGridFacturas.TabIndex = 0
         '
         'Column1
@@ -92,45 +92,45 @@ Partial Class RealizarFactura
         'cod
         '
         Me.cod.AutoSize = True
-        Me.cod.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cod.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.cod.Location = New System.Drawing.Point(61, 71)
+        Me.cod.Location = New System.Drawing.Point(40, 71)
         Me.cod.Name = "cod"
-        Me.cod.Size = New System.Drawing.Size(53, 18)
+        Me.cod.Size = New System.Drawing.Size(56, 18)
         Me.cod.TabIndex = 22
         Me.cod.Text = "Código"
         '
         'txtcodigo
         '
-        Me.txtcodigo.Location = New System.Drawing.Point(125, 72)
+        Me.txtcodigo.Location = New System.Drawing.Point(104, 72)
         Me.txtcodigo.Name = "txtcodigo"
         Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
         Me.txtcodigo.TabIndex = 27
         '
         'txtcant
         '
-        Me.txtcant.Location = New System.Drawing.Point(125, 135)
+        Me.txtcant.Location = New System.Drawing.Point(104, 135)
         Me.txtcant.Name = "txtcant"
         Me.txtcant.Size = New System.Drawing.Size(100, 20)
         Me.txtcant.TabIndex = 28
         '
         'txtdescuent
         '
-        Me.txtdescuent.Location = New System.Drawing.Point(125, 167)
+        Me.txtdescuent.Location = New System.Drawing.Point(104, 167)
         Me.txtdescuent.Name = "txtdescuent"
         Me.txtdescuent.Size = New System.Drawing.Size(100, 20)
         Me.txtdescuent.TabIndex = 29
         '
         'txtprecioov
         '
-        Me.txtprecioov.Location = New System.Drawing.Point(125, 199)
+        Me.txtprecioov.Location = New System.Drawing.Point(104, 199)
         Me.txtprecioov.Name = "txtprecioov"
         Me.txtprecioov.Size = New System.Drawing.Size(100, 20)
         Me.txtprecioov.TabIndex = 30
         '
         'txtdesc
         '
-        Me.txtdesc.Location = New System.Drawing.Point(125, 103)
+        Me.txtdesc.Location = New System.Drawing.Point(104, 103)
         Me.txtdesc.Name = "txtdesc"
         Me.txtdesc.Size = New System.Drawing.Size(100, 20)
         Me.txtdesc.TabIndex = 31
@@ -138,20 +138,20 @@ Partial Class RealizarFactura
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(29, 102)
+        Me.Label1.Location = New System.Drawing.Point(8, 102)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 18)
+        Me.Label1.Size = New System.Drawing.Size(87, 18)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Descripción"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(48, 134)
+        Me.Label2.Location = New System.Drawing.Point(27, 134)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 18)
         Me.Label2.TabIndex = 38
@@ -160,22 +160,22 @@ Partial Class RealizarFactura
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(37, 166)
+        Me.Label3.Location = New System.Drawing.Point(16, 166)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 18)
+        Me.Label3.Size = New System.Drawing.Size(80, 18)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Descuento"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(23, 198)
+        Me.Label6.Location = New System.Drawing.Point(2, 198)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 18)
+        Me.Label6.Size = New System.Drawing.Size(92, 18)
         Me.Label6.TabIndex = 41
         Me.Label6.Text = "Precio Venta"
         '
@@ -185,10 +185,10 @@ Partial Class RealizarFactura
         Me.btnagregar.FlatAppearance.BorderSize = 0
         Me.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnagregar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnagregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnagregar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnagregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnagregar.Location = New System.Drawing.Point(145, 238)
+        Me.btnagregar.Location = New System.Drawing.Point(124, 238)
         Me.btnagregar.Name = "btnagregar"
         Me.btnagregar.Size = New System.Drawing.Size(80, 26)
         Me.btnagregar.TabIndex = 42
@@ -201,10 +201,10 @@ Partial Class RealizarFactura
         Me.btnlimpiarv.FlatAppearance.BorderSize = 0
         Me.btnlimpiarv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnlimpiarv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnlimpiarv.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnlimpiarv.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnlimpiarv.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnlimpiarv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnlimpiarv.Location = New System.Drawing.Point(51, 238)
+        Me.btnlimpiarv.Location = New System.Drawing.Point(30, 238)
         Me.btnlimpiarv.Name = "btnlimpiarv"
         Me.btnlimpiarv.Size = New System.Drawing.Size(80, 26)
         Me.btnlimpiarv.TabIndex = 43
@@ -217,10 +217,10 @@ Partial Class RealizarFactura
         Me.btnguardarImprimir.FlatAppearance.BorderSize = 0
         Me.btnguardarImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnguardarImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnguardarImprimir.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnguardarImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnguardarImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnguardarImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnguardarImprimir.Location = New System.Drawing.Point(259, 517)
+        Me.btnguardarImprimir.Location = New System.Drawing.Point(177, 517)
         Me.btnguardarImprimir.Name = "btnguardarImprimir"
         Me.btnguardarImprimir.Size = New System.Drawing.Size(145, 26)
         Me.btnguardarImprimir.TabIndex = 44
@@ -233,10 +233,10 @@ Partial Class RealizarFactura
         Me.btnborrar.FlatAppearance.BorderSize = 0
         Me.btnborrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnborrar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnborrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnborrar.Location = New System.Drawing.Point(259, 410)
+        Me.btnborrar.Location = New System.Drawing.Point(177, 410)
         Me.btnborrar.Name = "btnborrar"
         Me.btnborrar.Size = New System.Drawing.Size(114, 26)
         Me.btnborrar.TabIndex = 45
@@ -249,10 +249,10 @@ Partial Class RealizarFactura
         Me.btnatras.FlatAppearance.BorderSize = 0
         Me.btnatras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnatras.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnatras.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnatras.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnatras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnatras.Location = New System.Drawing.Point(856, 517)
+        Me.btnatras.Location = New System.Drawing.Point(774, 517)
         Me.btnatras.Name = "btnatras"
         Me.btnatras.Size = New System.Drawing.Size(80, 26)
         Me.btnatras.TabIndex = 46
@@ -265,10 +265,10 @@ Partial Class RealizarFactura
         Me.btnbuscarb.FlatAppearance.BorderSize = 0
         Me.btnbuscarb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnbuscarb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnbuscarb.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnbuscarb.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnbuscarb.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnbuscarb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnbuscarb.Location = New System.Drawing.Point(856, 40)
+        Me.btnbuscarb.Location = New System.Drawing.Point(775, 40)
         Me.btnbuscarb.Name = "btnbuscarb"
         Me.btnbuscarb.Size = New System.Drawing.Size(79, 26)
         Me.btnbuscarb.TabIndex = 47
@@ -278,18 +278,18 @@ Partial Class RealizarFactura
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(727, 44)
+        Me.Label5.Location = New System.Drawing.Point(646, 44)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(125, 18)
+        Me.Label5.Size = New System.Drawing.Size(128, 18)
         Me.Label5.TabIndex = 48
         Me.Label5.Text = "Buscar Productos"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(853, 410)
+        Me.Label4.Location = New System.Drawing.Point(771, 410)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 13)
         Me.Label4.TabIndex = 49
@@ -300,7 +300,7 @@ Partial Class RealizarFactura
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(947, 555)
+        Me.ClientSize = New System.Drawing.Size(895, 555)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnbuscarb)

@@ -231,7 +231,7 @@ Public Class Inicio
 
 
     Private Sub btnmodprov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodprov.Click
-        Dim llamar2 As New MODIFPROVEEDORES
+        Dim llamar2 As New Gestionproveedores
         panelmedio.Controls.Clear()
         llamar2.TopLevel = False
         llamar2.Parent = panelmedio
@@ -393,5 +393,4 @@ Public Class Inicio
     Private Sub btncharts_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncharts.MouseMove
         btnOcultar.ForeColor = Color.LightGray
     End Sub
-
 End Class

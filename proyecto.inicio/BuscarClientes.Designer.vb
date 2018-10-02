@@ -23,41 +23,44 @@ Partial Class BuscarClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dcvclientes = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.Label()
         Me.txtbuscarc = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.dcvclientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dcvclientes
         '
         Me.dcvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dcvclientes.Location = New System.Drawing.Point(231, 12)
+        Me.dcvclientes.Location = New System.Drawing.Point(154, 39)
         Me.dcvclientes.Name = "dcvclientes"
         Me.dcvclientes.Size = New System.Drawing.Size(697, 330)
         Me.dcvclientes.TabIndex = 0
         '
-        'ID
-        '
-        Me.ID.AutoSize = True
-        Me.ID.Location = New System.Drawing.Point(12, 46)
-        Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(40, 13)
-        Me.ID.TabIndex = 10
-        Me.ID.Text = "Buscar"
-        '
         'txtbuscarc
         '
-        Me.txtbuscarc.Location = New System.Drawing.Point(58, 46)
+        Me.txtbuscarc.Location = New System.Drawing.Point(12, 60)
         Me.txtbuscarc.Name = "txtbuscarc"
         Me.txtbuscarc.Size = New System.Drawing.Size(100, 20)
         Me.txtbuscarc.TabIndex = 9
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(36, 39)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 18)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Buscar"
         '
         'BuscarClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(943, 405)
-        Me.Controls.Add(Me.ID)
+        Me.BackColor = System.Drawing.Color.Silver
+        Me.ClientSize = New System.Drawing.Size(896, 405)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtbuscarc)
         Me.Controls.Add(Me.dcvclientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -69,6 +72,6 @@ Partial Class BuscarClientes
 
     End Sub
     Friend WithEvents dcvclientes As System.Windows.Forms.DataGridView
-    Friend WithEvents ID As System.Windows.Forms.Label
     Friend WithEvents txtbuscarc As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

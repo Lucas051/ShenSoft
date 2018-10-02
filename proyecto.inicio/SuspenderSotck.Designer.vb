@@ -33,7 +33,7 @@ Partial Class SuspenderStock
         'dgvEliminar
         '
         Me.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEliminar.Location = New System.Drawing.Point(12, 53)
+        Me.dgvEliminar.Location = New System.Drawing.Point(53, 53)
         Me.dgvEliminar.Name = "dgvEliminar"
         Me.dgvEliminar.ReadOnly = True
         Me.dgvEliminar.Size = New System.Drawing.Size(552, 287)
@@ -42,7 +42,7 @@ Partial Class SuspenderStock
         '
         'btnsuspender
         '
-        Me.btnsuspender.Location = New System.Drawing.Point(618, 156)
+        Me.btnsuspender.Location = New System.Drawing.Point(664, 156)
         Me.btnsuspender.Name = "btnsuspender"
         Me.btnsuspender.Size = New System.Drawing.Size(75, 60)
         Me.btnsuspender.TabIndex = 4
@@ -51,14 +51,14 @@ Partial Class SuspenderStock
         '
         'txtcodigo
         '
-        Me.txtcodigo.Location = New System.Drawing.Point(611, 95)
+        Me.txtcodigo.Location = New System.Drawing.Point(652, 95)
         Me.txtcodigo.Name = "txtcodigo"
         Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
         Me.txtcodigo.TabIndex = 5
         '
         'btnmostrardatos
         '
-        Me.btnmostrardatos.Location = New System.Drawing.Point(611, 240)
+        Me.btnmostrardatos.Location = New System.Drawing.Point(652, 241)
         Me.btnmostrardatos.Name = "btnmostrardatos"
         Me.btnmostrardatos.Size = New System.Drawing.Size(100, 56)
         Me.btnmostrardatos.TabIndex = 6
@@ -70,7 +70,7 @@ Partial Class SuspenderStock
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(29, 18)
+        Me.Label1.Location = New System.Drawing.Point(70, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(133, 20)
         Me.Label1.TabIndex = 7
@@ -81,7 +81,7 @@ Partial Class SuspenderStock
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(748, 352)
+        Me.ClientSize = New System.Drawing.Size(780, 352)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnmostrardatos)
         Me.Controls.Add(Me.txtcodigo)

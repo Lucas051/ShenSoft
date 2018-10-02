@@ -36,7 +36,7 @@ Public Class Buscar_proveedores
 
     Private Sub btnvolver_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        Dim llamar As New MODIFPROVEEDORES
+        Dim llamar As New Gestionproveedores
         Inicio.panelmedio.Controls.Clear()
         llamar.TopLevel = False
         llamar.Parent = Inicio.panelmedio

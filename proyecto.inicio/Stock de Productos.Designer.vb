@@ -177,7 +177,7 @@ Partial Class Stock_de_Productos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(823, 319)
+        Me.ClientSize = New System.Drawing.Size(868, 319)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)

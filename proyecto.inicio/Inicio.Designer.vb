@@ -66,6 +66,7 @@ Partial Class Inicio
         Me.btnSalir1 = New System.Windows.Forms.Button()
         Me.lblHora = New System.Windows.Forms.Label()
         Me.panelmedio = New System.Windows.Forms.Panel()
+        Me.lblFecha = New System.Windows.Forms.Label()
         Me.panelOpciones = New System.Windows.Forms.Panel()
         Me.PTBcalendario = New System.Windows.Forms.PictureBox()
         Me.PTBcalculadora = New System.Windows.Forms.PictureBox()
@@ -76,7 +77,6 @@ Partial Class Inicio
         Me.btncalculadora = New System.Windows.Forms.Button()
         Me.btncharts = New System.Windows.Forms.Button()
         Me.btncalendario = New System.Windows.Forms.Button()
-        Me.lblFecha = New System.Windows.Forms.Label()
         Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -619,20 +619,32 @@ Partial Class Inicio
         '
         'panelmedio
         '
+        Me.panelmedio.AllowDrop = True
         Me.panelmedio.AutoSize = True
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.panelmedio.Controls.Add(Me.panelOpciones)
         Me.panelmedio.Controls.Add(Me.lblFecha)
         Me.panelmedio.Controls.Add(Me.lblHora)
-        Me.panelmedio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelmedio.Location = New System.Drawing.Point(200, 35)
         Me.panelmedio.Name = "panelmedio"
-        Me.panelmedio.Size = New System.Drawing.Size(947, 555)
+        Me.panelmedio.Size = New System.Drawing.Size(888, 564)
         Me.panelmedio.TabIndex = 2
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblFecha.Location = New System.Drawing.Point(28, 91)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(64, 24)
+        Me.lblFecha.TabIndex = 14
+        Me.lblFecha.Text = "Fecha"
         '
         'panelOpciones
         '
+        Me.panelOpciones.AllowDrop = True
         Me.panelOpciones.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.panelOpciones.CausesValidation = False
         Me.panelOpciones.Controls.Add(Me.PTBcalendario)
         Me.panelOpciones.Controls.Add(Me.PTBcalculadora)
         Me.panelOpciones.Controls.Add(Me.PTBcharts)
@@ -642,10 +654,11 @@ Partial Class Inicio
         Me.panelOpciones.Controls.Add(Me.btncalculadora)
         Me.panelOpciones.Controls.Add(Me.btncharts)
         Me.panelOpciones.Controls.Add(Me.btncalendario)
+        Me.panelOpciones.Cursor = System.Windows.Forms.Cursors.SizeAll
         Me.panelOpciones.Dock = System.Windows.Forms.DockStyle.Right
-        Me.panelOpciones.Location = New System.Drawing.Point(781, 0)
+        Me.panelOpciones.Location = New System.Drawing.Point(975, 35)
         Me.panelOpciones.Name = "panelOpciones"
-        Me.panelOpciones.Size = New System.Drawing.Size(166, 555)
+        Me.panelOpciones.Size = New System.Drawing.Size(172, 555)
         Me.panelOpciones.TabIndex = 15
         '
         'PTBcalendario
@@ -762,17 +775,6 @@ Partial Class Inicio
         Me.btncalendario.Text = "Calendario"
         Me.btncalendario.UseVisualStyleBackColor = False
         '
-        'lblFecha
-        '
-        Me.lblFecha.AutoSize = True
-        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblFecha.Location = New System.Drawing.Point(28, 91)
-        Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(64, 24)
-        Me.lblFecha.TabIndex = 14
-        Me.lblFecha.Text = "Fecha"
-        '
         'TimerHora
         '
         Me.TimerHora.Enabled = True
@@ -783,6 +785,7 @@ Partial Class Inicio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1147, 590)
+        Me.Controls.Add(Me.panelOpciones)
         Me.Controls.Add(Me.panelmedio)
         Me.Controls.Add(Me.Menuvertical)
         Me.Controls.Add(Me.barratituloInicio)
