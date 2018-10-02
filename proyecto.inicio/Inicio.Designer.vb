@@ -66,8 +66,8 @@ Partial Class Inicio
         Me.btnSalir1 = New System.Windows.Forms.Button()
         Me.lblHora = New System.Windows.Forms.Label()
         Me.panelmedio = New System.Windows.Forms.Panel()
-        Me.panelOpciones = New System.Windows.Forms.Panel()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.panelOpciones = New System.Windows.Forms.Panel()
         Me.PTBcalendario = New System.Windows.Forms.PictureBox()
         Me.PTBcalculadora = New System.Windows.Forms.PictureBox()
         Me.PTBcharts = New System.Windows.Forms.PictureBox()
@@ -632,6 +632,13 @@ Partial Class Inicio
         Me.panelmedio.Size = New System.Drawing.Size(947, 555)
         Me.panelmedio.TabIndex = 2
         '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(539, 222)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 16
+        Me.MonthCalendar1.Visible = False
+        '
         'panelOpciones
         '
         Me.panelOpciones.BackColor = System.Drawing.Color.LightSteelBlue
@@ -649,13 +656,6 @@ Partial Class Inicio
         Me.panelOpciones.Name = "panelOpciones"
         Me.panelOpciones.Size = New System.Drawing.Size(166, 555)
         Me.panelOpciones.TabIndex = 15
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(539, 222)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 16
-        Me.MonthCalendar1.Visible = False
         '
         'PTBcalendario
         '
