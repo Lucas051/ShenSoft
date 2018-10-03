@@ -40,7 +40,6 @@ Partial Class Calculadora
         Me.btn3 = New System.Windows.Forms.Button()
         Me.btnPor = New System.Windows.Forms.Button()
         Me.btnborrar = New System.Windows.Forms.Button()
-        Me.btnPorcent = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TxtCaja
@@ -48,7 +47,7 @@ Partial Class Calculadora
         Me.TxtCaja.Location = New System.Drawing.Point(12, 13)
         Me.TxtCaja.Multiline = True
         Me.TxtCaja.Name = "TxtCaja"
-        Me.TxtCaja.Size = New System.Drawing.Size(177, 46)
+        Me.TxtCaja.Size = New System.Drawing.Size(235, 46)
         Me.TxtCaja.TabIndex = 0
         '
         'btncoma
@@ -80,7 +79,7 @@ Partial Class Calculadora
         '
         'btnmenos
         '
-        Me.btnmenos.Location = New System.Drawing.Point(195, 65)
+        Me.btnmenos.Location = New System.Drawing.Point(195, 117)
         Me.btnmenos.Name = "btnmenos"
         Me.btnmenos.Size = New System.Drawing.Size(55, 46)
         Me.btnmenos.TabIndex = 4
@@ -116,7 +115,7 @@ Partial Class Calculadora
         '
         'btnmas
         '
-        Me.btnmas.Location = New System.Drawing.Point(195, 117)
+        Me.btnmas.Location = New System.Drawing.Point(195, 169)
         Me.btnmas.Name = "btnmas"
         Me.btnmas.Size = New System.Drawing.Size(55, 46)
         Me.btnmas.TabIndex = 8
@@ -152,7 +151,7 @@ Partial Class Calculadora
         '
         'btnDivid
         '
-        Me.btnDivid.Location = New System.Drawing.Point(195, 169)
+        Me.btnDivid.Location = New System.Drawing.Point(195, 221)
         Me.btnDivid.Name = "btnDivid"
         Me.btnDivid.Size = New System.Drawing.Size(55, 46)
         Me.btnDivid.TabIndex = 12
@@ -188,7 +187,7 @@ Partial Class Calculadora
         '
         'btnPor
         '
-        Me.btnPor.Location = New System.Drawing.Point(195, 221)
+        Me.btnPor.Location = New System.Drawing.Point(134, 221)
         Me.btnPor.Name = "btnPor"
         Me.btnPor.Size = New System.Drawing.Size(55, 46)
         Me.btnPor.TabIndex = 16
@@ -198,28 +197,18 @@ Partial Class Calculadora
         'btnborrar
         '
         Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnborrar.Location = New System.Drawing.Point(195, 13)
+        Me.btnborrar.Location = New System.Drawing.Point(195, 65)
         Me.btnborrar.Name = "btnborrar"
         Me.btnborrar.Size = New System.Drawing.Size(55, 46)
         Me.btnborrar.TabIndex = 17
         Me.btnborrar.Text = "←"
         Me.btnborrar.UseVisualStyleBackColor = True
         '
-        'btnPorcent
-        '
-        Me.btnPorcent.Location = New System.Drawing.Point(134, 221)
-        Me.btnPorcent.Name = "btnPorcent"
-        Me.btnPorcent.Size = New System.Drawing.Size(55, 46)
-        Me.btnPorcent.TabIndex = 18
-        Me.btnPorcent.Text = "%"
-        Me.btnPorcent.UseVisualStyleBackColor = True
-        '
         'Calculadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(259, 329)
-        Me.Controls.Add(Me.btnPorcent)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnPor)
         Me.Controls.Add(Me.btn3)
@@ -264,5 +253,4 @@ Partial Class Calculadora
     Friend WithEvents btn3 As System.Windows.Forms.Button
     Friend WithEvents btnPor As System.Windows.Forms.Button
     Friend WithEvents btnborrar As System.Windows.Forms.Button
-    Friend WithEvents btnPorcent As System.Windows.Forms.Button
 End Class
