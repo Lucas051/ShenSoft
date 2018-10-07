@@ -9,6 +9,12 @@ Public Class Buscar_proveedores
             consultar()
             dgvbuscarprov.DataSource = resultado
 
+            dgvbuscarprov.Columns(0).HeaderText = "ID"
+            dgvbuscarprov.Columns(1).HeaderText = "Proveedor"
+            dgvbuscarprov.Columns(2).HeaderText = "Teléfono"
+            dgvbuscarprov.Columns(3).HeaderText = "Dirección"
+            dgvbuscarprov.Columns(4).HeaderText = "Saldo"
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -28,9 +34,9 @@ Public Class Buscar_proveedores
         End Try
     End Sub
 
-    Private Sub btnvolver_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
+    Private Sub btnvolver_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        Dim llamar As New MODIFPROVEEDORES
+        Dim llamar As New Gestionproveedores
         Inicio.panelmedio.Controls.Clear()
         llamar.TopLevel = False
         llamar.Parent = Inicio.panelmedio

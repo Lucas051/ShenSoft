@@ -22,132 +22,56 @@ Partial Class BuscarClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dcvclientesFac = New System.Windows.Forms.DataGridView()
-        Me.btnvolver = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtnombrec = New System.Windows.Forms.TextBox()
-        Me.txtcodigoc = New System.Windows.Forms.TextBox()
-        Me.ID = New System.Windows.Forms.Label()
+        Me.dcvclientes = New System.Windows.Forms.DataGridView()
         Me.txtbuscarc = New System.Windows.Forms.TextBox()
-        CType(Me.dcvclientesFac, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label2 = New System.Windows.Forms.Label()
+        CType(Me.dcvclientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'dcvclientesFac
+        'dcvclientes
         '
-        Me.dcvclientesFac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dcvclientesFac.Location = New System.Drawing.Point(249, 12)
-        Me.dcvclientesFac.Name = "dcvclientesFac"
-        Me.dcvclientesFac.Size = New System.Drawing.Size(439, 221)
-        Me.dcvclientesFac.TabIndex = 0
-        '
-        'btnvolver
-        '
-        Me.btnvolver.Location = New System.Drawing.Point(371, 257)
-        Me.btnvolver.Name = "btnvolver"
-        Me.btnvolver.Size = New System.Drawing.Size(75, 23)
-        Me.btnvolver.TabIndex = 1
-        Me.btnvolver.Text = "Volver"
-        Me.btnvolver.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(164, 106)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Buscar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(164, 159)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 159)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Nombre"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 111)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Codigo"
-        '
-        'txtnombrec
-        '
-        Me.txtnombrec.Location = New System.Drawing.Point(58, 156)
-        Me.txtnombrec.Name = "txtnombrec"
-        Me.txtnombrec.Size = New System.Drawing.Size(100, 20)
-        Me.txtnombrec.TabIndex = 12
-        '
-        'txtcodigoc
-        '
-        Me.txtcodigoc.Location = New System.Drawing.Point(58, 108)
-        Me.txtcodigoc.Name = "txtcodigoc"
-        Me.txtcodigoc.Size = New System.Drawing.Size(100, 20)
-        Me.txtcodigoc.TabIndex = 11
-        '
-        'ID
-        '
-        Me.ID.AutoSize = True
-        Me.ID.Location = New System.Drawing.Point(12, 46)
-        Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(40, 13)
-        Me.ID.TabIndex = 10
-        Me.ID.Text = "Buscar"
+        Me.dcvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dcvclientes.Location = New System.Drawing.Point(154, 39)
+        Me.dcvclientes.Name = "dcvclientes"
+        Me.dcvclientes.Size = New System.Drawing.Size(697, 330)
+        Me.dcvclientes.TabIndex = 0
         '
         'txtbuscarc
         '
-        Me.txtbuscarc.Location = New System.Drawing.Point(58, 46)
+        Me.txtbuscarc.Location = New System.Drawing.Point(12, 60)
         Me.txtbuscarc.Name = "txtbuscarc"
         Me.txtbuscarc.Size = New System.Drawing.Size(100, 20)
         Me.txtbuscarc.TabIndex = 9
         '
-        'BuscarClientesFact
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(36, 39)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 18)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Buscar"
+        '
+        'BuscarClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(700, 292)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button3)
+        Me.BackColor = System.Drawing.Color.Silver
+        Me.ClientSize = New System.Drawing.Size(896, 405)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtnombrec)
-        Me.Controls.Add(Me.txtcodigoc)
-        Me.Controls.Add(Me.ID)
         Me.Controls.Add(Me.txtbuscarc)
-        Me.Controls.Add(Me.btnvolver)
-        Me.Controls.Add(Me.dcvclientesFac)
-        Me.Name = "BuscarClientesFact"
+        Me.Controls.Add(Me.dcvclientes)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "BuscarClientes"
         Me.Text = "BuscarClientesFact"
-        CType(Me.dcvclientesFac, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dcvclientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents dcvclientesFac As System.Windows.Forms.DataGridView
-    Friend WithEvents btnvolver As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtnombrec As System.Windows.Forms.TextBox
-    Friend WithEvents txtcodigoc As System.Windows.Forms.TextBox
-    Friend WithEvents ID As System.Windows.Forms.Label
+    Friend WithEvents dcvclientes As System.Windows.Forms.DataGridView
     Friend WithEvents txtbuscarc As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

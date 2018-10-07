@@ -25,7 +25,6 @@ Partial Class Buscar_proveedores
         Me.dgvbuscarprov = New System.Windows.Forms.DataGridView()
         Me.txtbuscarprov = New System.Windows.Forms.TextBox()
         Me.ID = New System.Windows.Forms.Label()
-        Me.btnvolver = New System.Windows.Forms.Button()
         CType(Me.dgvbuscarprov, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,25 +52,11 @@ Partial Class Buscar_proveedores
         Me.ID.TabIndex = 2
         Me.ID.Text = "Buscar"
         '
-        'btnvolver
-        '
-        Me.btnvolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnvolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnvolver.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnvolver.Location = New System.Drawing.Point(78, 108)
-        Me.btnvolver.Name = "btnvolver"
-        Me.btnvolver.Size = New System.Drawing.Size(80, 28)
-        Me.btnvolver.TabIndex = 19
-        Me.btnvolver.Text = "Volver"
-        Me.btnvolver.UseVisualStyleBackColor = False
-        '
         'Buscar_proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(949, 416)
-        Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.ID)
         Me.Controls.Add(Me.txtbuscarprov)
         Me.Controls.Add(Me.dgvbuscarprov)
@@ -86,5 +71,4 @@ Partial Class Buscar_proveedores
     Friend WithEvents dgvbuscarprov As System.Windows.Forms.DataGridView
     Friend WithEvents txtbuscarprov As System.Windows.Forms.TextBox
     Friend WithEvents ID As System.Windows.Forms.Label
-    Friend WithEvents btnvolver As System.Windows.Forms.Button
 End Class

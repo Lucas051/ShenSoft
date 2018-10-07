@@ -15,30 +15,6 @@ Public Class BuscarClientesCobrar
         DGVbuscarclientes.Columns(4).HeaderText = "Telefono"
         DGVbuscarclientes.Columns(5).HeaderText = "Saldo"
     End Sub
-    Private Sub btnmini_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmini.Click
-        'minimiza ventana
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub btnmaxi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmaxi.Click
-        'maximiza ventana
-        Me.WindowState = FormWindowState.Maximized
-        'esconde boton, aparece restaurar
-        btnmaxi.Visible = False
-        btnrestaurar.Visible = True
-    End Sub
-
-    Private Sub btnrestaurar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrestaurar.Click
-        'restaura ventana
-        Me.WindowState = FormWindowState.Normal
-        'esconde boton, aparece maximizar
-        btnrestaurar.Visible = False
-        btnmaxi.Visible = True
-    End Sub
-
-    Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click
-        End
-    End Sub
 
     Private Sub DGVbuscarclientes_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVbuscarclientes.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
