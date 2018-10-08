@@ -109,6 +109,12 @@
     <Compile Include="MODIFICARCLIENTES.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SearchProducts.Designer.vb">
+      <DependentUpon>SearchProducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SuspenderSotck.Designer.vb">
       <DependentUpon>SuspenderSotck.vb</DependentUpon>
     </Compile>

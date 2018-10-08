@@ -44,7 +44,6 @@ Public Class buscarproductos
         '  llamar.Show()
         '  llamar.Dock = DockStyle.Fill
         ' Inicio.panelmedio.Visible = True
-        End
     End Sub
 
 
