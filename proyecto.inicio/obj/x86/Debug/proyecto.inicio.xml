@@ -15,6 +15,10 @@ proyecto.inicio
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
+</member><member name="P:proyecto.inicio.My.Resources.Resources._1333_door_512">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:proyecto.inicio.My.Resources.Resources.arrowleft">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
