@@ -393,10 +393,6 @@ Public Class Inicio
     Private Sub btncharts_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncharts.MouseMove
         btnOcultar.ForeColor = Color.LightGray
     End Sub
-<<<<<<< HEAD
-=======
-
-    
     Private Sub PTBcalendario_Click(sender As System.Object, e As System.EventArgs) Handles PTBcalendario.Click
         If MonthCalendar1.Visible = False Then
             MonthCalendar1.Visible = True
@@ -405,6 +401,4 @@ Public Class Inicio
         End If
     End Sub
 
-    
->>>>>>> 25905067e6b1961d50771f9ee41abc6411002820
 End Class
