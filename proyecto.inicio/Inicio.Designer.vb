@@ -453,12 +453,12 @@ Partial Class Inicio
         Me.panelmedio.Controls.Add(Me.lblHora)
         Me.panelmedio.Location = New System.Drawing.Point(200, 35)
         Me.panelmedio.Name = "panelmedio"
-        Me.panelmedio.Size = New System.Drawing.Size(888, 564)
+        Me.panelmedio.Size = New System.Drawing.Size(897, 564)
         Me.panelmedio.TabIndex = 2
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(539, 222)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(640, 222)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 16
         Me.MonthCalendar1.Visible = False

@@ -37,20 +37,21 @@ Public Class buscarproductos
 
     End Sub
 
-    Private Sub DataGridbuscar_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarStock.CellContentClick
-
+    Private Sub btnatrasFacturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatrasFacturacion.Click
+        '  Dim llamar As New RealizarFactura
+        '   llamar.TopLevel = False
+        '  llamar.Parent = Inicio.panelmedio
+        '  llamar.Show()
+        '  llamar.Dock = DockStyle.Fill
+        ' Inicio.panelmedio.Visible = True
+        End
     End Sub
 
-    Private Sub atras_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
-        Me.Hide()
-        Inicio.Show()
-    End Sub
 
-
-    Private Sub txtbuscarFac_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarFac.TextChanged
+    Private Sub txtbuscarProductos_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarProductos.TextChanged
         Try
             'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM stock WHERE cod_producto LIKE '%" & txtbuscarFac.Text & "%' and descripcion LIKE '%" & txtbuscarFac.Text & "%';"
+            conexioon.Consulta = "SELECT * FROM stock WHERE cod_producto LIKE '%" & txtbuscarProductos.Text & "%' and descripcion LIKE '%" & txtbuscarProductos.Text & "%';"
             consultar()
             dgvbuscarStock.DataSource = resultado
 

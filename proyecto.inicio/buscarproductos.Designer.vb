@@ -24,8 +24,8 @@ Partial Class buscarproductos
     Private Sub InitializeComponent()
         Me.dgvbuscarStock = New System.Windows.Forms.DataGridView()
         Me.cod = New System.Windows.Forms.Label()
-        Me.txtbuscarFac = New System.Windows.Forms.TextBox()
-        Me.btnatras = New System.Windows.Forms.Button()
+        Me.txtbuscarProductos = New System.Windows.Forms.TextBox()
+        Me.btnatrasFacturacion = New System.Windows.Forms.Button()
         CType(Me.dgvbuscarStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,42 +44,42 @@ Partial Class buscarproductos
         Me.cod.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.cod.Location = New System.Drawing.Point(17, 52)
         Me.cod.Name = "cod"
-        Me.cod.Size = New System.Drawing.Size(109, 18)
+        Me.cod.Size = New System.Drawing.Size(128, 18)
         Me.cod.TabIndex = 35
-        Me.cod.Text = "Buscar Factura"
+        Me.cod.Text = "Buscar Productos"
         '
-        'txtbuscarFac
+        'txtbuscarProductos
         '
-        Me.txtbuscarFac.Location = New System.Drawing.Point(130, 51)
-        Me.txtbuscarFac.Multiline = True
-        Me.txtbuscarFac.Name = "txtbuscarFac"
-        Me.txtbuscarFac.Size = New System.Drawing.Size(107, 22)
-        Me.txtbuscarFac.TabIndex = 36
+        Me.txtbuscarProductos.Location = New System.Drawing.Point(151, 48)
+        Me.txtbuscarProductos.Multiline = True
+        Me.txtbuscarProductos.Name = "txtbuscarProductos"
+        Me.txtbuscarProductos.Size = New System.Drawing.Size(123, 22)
+        Me.txtbuscarProductos.TabIndex = 36
         '
-        'btnatras
+        'btnatrasFacturacion
         '
-        Me.btnatras.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnatras.FlatAppearance.BorderSize = 0
-        Me.btnatras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnatras.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnatras.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnatras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnatras.Location = New System.Drawing.Point(607, 292)
-        Me.btnatras.Name = "btnatras"
-        Me.btnatras.Size = New System.Drawing.Size(80, 26)
-        Me.btnatras.TabIndex = 47
-        Me.btnatras.Text = "Atrás"
-        Me.btnatras.UseVisualStyleBackColor = False
+        Me.btnatrasFacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnatrasFacturacion.FlatAppearance.BorderSize = 0
+        Me.btnatrasFacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnatrasFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnatrasFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnatrasFacturacion.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnatrasFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnatrasFacturacion.Location = New System.Drawing.Point(607, 300)
+        Me.btnatrasFacturacion.Name = "btnatrasFacturacion"
+        Me.btnatrasFacturacion.Size = New System.Drawing.Size(80, 26)
+        Me.btnatrasFacturacion.TabIndex = 47
+        Me.btnatrasFacturacion.Text = "Atrás"
+        Me.btnatrasFacturacion.UseVisualStyleBackColor = False
         '
         'buscarproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(892, 349)
-        Me.Controls.Add(Me.btnatras)
-        Me.Controls.Add(Me.txtbuscarFac)
+        Me.ClientSize = New System.Drawing.Size(720, 349)
+        Me.Controls.Add(Me.btnatrasFacturacion)
+        Me.Controls.Add(Me.txtbuscarProductos)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.dgvbuscarStock)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -92,6 +92,6 @@ Partial Class buscarproductos
     End Sub
     Friend WithEvents dgvbuscarStock As System.Windows.Forms.DataGridView
     Friend WithEvents cod As System.Windows.Forms.Label
-    Friend WithEvents txtbuscarFac As System.Windows.Forms.TextBox
-    Friend WithEvents btnatras As System.Windows.Forms.Button
+    Friend WithEvents txtbuscarProductos As System.Windows.Forms.TextBox
+    Friend WithEvents btnatrasFacturacion As System.Windows.Forms.Button
 End Class

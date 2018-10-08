@@ -19,9 +19,9 @@ Public Class RealizarFactura
 
     End Sub
 
-    Private Sub buscarb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarb.Click
-        Me.Hide()
+    Private Sub buscarproductos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarproductos.Click
         buscarproductos.Show()
+
     End Sub
 
     Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregar.Click

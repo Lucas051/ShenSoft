@@ -26,7 +26,6 @@ C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarClientes.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarClientesCobrar.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Cobrar.resources
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.ConsultaFactura.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.MODIFICARCLIENTES.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.SuspenderStock.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.buscarproductos.resources

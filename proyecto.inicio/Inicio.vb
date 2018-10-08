@@ -191,16 +191,16 @@ Public Class Inicio
 
     End Sub
 
-    Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
-        Dim llamar1 As New ConsultaFactura
-        panelmedio.Controls.Clear()
-        llamar1.TopLevel = False
-        llamar1.Parent = panelmedio
-        llamar1.Show()
-        llamar1.Dock = DockStyle.Fill
-        panelmedio.Visible = True
+    ' Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
+    'Dim llamar1 As New ConsultaFactura
+    '    panelmedio.Controls.Clear()
+    '    llamar1.TopLevel = False
+    '    llamar1.Parent = panelmedio
+    '    llamar1.Show()
+    '    llamar1.Dock = DockStyle.Fill
+    '   panelmedio.Visible = True
 
-    End Sub
+    '  End Sub
 
     '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -342,7 +342,7 @@ Public Class Inicio
     End Sub
 
 
-    
+
     Private Sub PTBabrir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PTBabrir.Click
         PTBabrir.Hide()
         While (panelOpciones.Width < 168)
@@ -393,7 +393,7 @@ Public Class Inicio
     Private Sub btncharts_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncharts.MouseMove
         btnOcultar.ForeColor = Color.LightGray
     End Sub
-    Private Sub PTBcalendario_Click(sender As System.Object, e As System.EventArgs) Handles PTBcalendario.Click
+    Private Sub PTBcalendario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PTBcalendario.Click
         If MonthCalendar1.Visible = False Then
             MonthCalendar1.Visible = True
         Else

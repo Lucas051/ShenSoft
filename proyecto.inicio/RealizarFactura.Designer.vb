@@ -44,7 +44,7 @@ Partial Class RealizarFactura
         Me.btnguardarImprimir = New System.Windows.Forms.Button()
         Me.btnborrar = New System.Windows.Forms.Button()
         Me.btnatras = New System.Windows.Forms.Button()
-        Me.btnbuscarb = New System.Windows.Forms.Button()
+        Me.btnbuscarproductos = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -259,21 +259,21 @@ Partial Class RealizarFactura
         Me.btnatras.Text = "Atrás"
         Me.btnatras.UseVisualStyleBackColor = False
         '
-        'btnbuscarb
+        'btnbuscarproductos
         '
-        Me.btnbuscarb.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnbuscarb.FlatAppearance.BorderSize = 0
-        Me.btnbuscarb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnbuscarb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnbuscarb.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnbuscarb.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnbuscarb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnbuscarb.Location = New System.Drawing.Point(775, 40)
-        Me.btnbuscarb.Name = "btnbuscarb"
-        Me.btnbuscarb.Size = New System.Drawing.Size(79, 26)
-        Me.btnbuscarb.TabIndex = 47
-        Me.btnbuscarb.Text = "Buscar"
-        Me.btnbuscarb.UseVisualStyleBackColor = False
+        Me.btnbuscarproductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnbuscarproductos.FlatAppearance.BorderSize = 0
+        Me.btnbuscarproductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnbuscarproductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnbuscarproductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnbuscarproductos.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnbuscarproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnbuscarproductos.Location = New System.Drawing.Point(775, 40)
+        Me.btnbuscarproductos.Name = "btnbuscarproductos"
+        Me.btnbuscarproductos.Size = New System.Drawing.Size(79, 26)
+        Me.btnbuscarproductos.TabIndex = 47
+        Me.btnbuscarproductos.Text = "Buscar"
+        Me.btnbuscarproductos.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -303,7 +303,7 @@ Partial Class RealizarFactura
         Me.ClientSize = New System.Drawing.Size(895, 555)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.btnbuscarb)
+        Me.Controls.Add(Me.btnbuscarproductos)
         Me.Controls.Add(Me.btnatras)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnguardarImprimir)
@@ -351,7 +351,7 @@ Partial Class RealizarFactura
     Friend WithEvents btnguardarImprimir As System.Windows.Forms.Button
     Friend WithEvents btnborrar As System.Windows.Forms.Button
     Friend WithEvents btnatras As System.Windows.Forms.Button
-    Friend WithEvents btnbuscarb As System.Windows.Forms.Button
+    Friend WithEvents btnbuscarproductos As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
