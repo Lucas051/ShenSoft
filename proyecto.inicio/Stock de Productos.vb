@@ -94,7 +94,6 @@ Public Class Stock_de_Productos
         DgvStock.Columns(3).HeaderText = "Precio Costo"
         DgvStock.Columns(4).HeaderText = "Precio Venta"
         DgvStock.Columns(5).HeaderText = "Proveedor"
-        'Proximamente Solo en Cines
     End Sub
 
 

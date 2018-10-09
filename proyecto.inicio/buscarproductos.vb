@@ -7,16 +7,20 @@ Public Class buscarproductos
 
 
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        InitializeComponent()
+        '    InitializeComponent()
         Try
-            conexioon.Consulta = "SELECT * FROM stock"
             consultar()
             dgvbuscarStock.DataSource = resultado
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
 
-        'Nombramos los encabezados del datagrid buscar
+            Consulta = "SELECT * FROM stock"
+            consultar()
+            dgvbuscarStock.DataSource = resultado
+            'Nombramos los encabezados del datagrid buscar
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
 
         dgvbuscarStock.Columns(0).HeaderText = "Código"
         dgvbuscarStock.Columns(1).HeaderText = "Descrip."

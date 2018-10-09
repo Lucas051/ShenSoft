@@ -189,6 +189,9 @@
     <EmbeddedResource Include="MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SearchProducts.resx">
+      <DependentUpon>SearchProducts.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuspenderSotck.resx">
       <DependentUpon>SuspenderSotck.vb</DependentUpon>
     </EmbeddedResource>
