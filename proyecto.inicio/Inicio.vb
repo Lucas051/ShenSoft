@@ -191,16 +191,16 @@ Public Class Inicio
 
     End Sub
 
-    ' Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
-    'Dim llamar1 As New ConsultaFactura
-    '    panelmedio.Controls.Clear()
-    '    llamar1.TopLevel = False
-    '    llamar1.Parent = panelmedio
-    '    llamar1.Show()
-    '    llamar1.Dock = DockStyle.Fill
-    '   panelmedio.Visible = True
+    Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
+        Dim llamar1 As New ConsultaFactura
+        panelmedio.Controls.Clear()
+        llamar1.TopLevel = False
+        llamar1.Parent = panelmedio
+        llamar1.Show()
+        llamar1.Dock = DockStyle.Fill
+        panelmedio.Visible = True
 
-    '  End Sub
+    End Sub
 
     '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -400,5 +400,6 @@ Public Class Inicio
             MonthCalendar1.Visible = False
         End If
     End Sub
+
 
 End Class

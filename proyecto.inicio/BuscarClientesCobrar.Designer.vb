@@ -32,9 +32,9 @@ Partial Class BuscarClientesCobrar
         'DGVbuscarclientes
         '
         Me.DGVbuscarclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVbuscarclientes.Location = New System.Drawing.Point(46, 88)
+        Me.DGVbuscarclientes.Location = New System.Drawing.Point(35, 60)
         Me.DGVbuscarclientes.Name = "DGVbuscarclientes"
-        Me.DGVbuscarclientes.Size = New System.Drawing.Size(682, 241)
+        Me.DGVbuscarclientes.Size = New System.Drawing.Size(557, 241)
         Me.DGVbuscarclientes.TabIndex = 36
         '
         'btnatras
@@ -46,7 +46,7 @@ Partial Class BuscarClientesCobrar
         Me.btnatras.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnatras.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnatras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnatras.Location = New System.Drawing.Point(648, 358)
+        Me.btnatras.Location = New System.Drawing.Point(512, 321)
         Me.btnatras.Name = "btnatras"
         Me.btnatras.Size = New System.Drawing.Size(80, 26)
         Me.btnatras.TabIndex = 48
@@ -55,7 +55,7 @@ Partial Class BuscarClientesCobrar
         '
         'btnbuscarf
         '
-        Me.btnbuscarf.Location = New System.Drawing.Point(157, 60)
+        Me.btnbuscarf.Location = New System.Drawing.Point(96, 32)
         Me.btnbuscarf.Multiline = True
         Me.btnbuscarf.Name = "btnbuscarf"
         Me.btnbuscarf.Size = New System.Drawing.Size(107, 22)
@@ -66,17 +66,17 @@ Partial Class BuscarClientesCobrar
         Me.cod.AutoSize = True
         Me.cod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cod.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.cod.Location = New System.Drawing.Point(42, 60)
+        Me.cod.Location = New System.Drawing.Point(31, 32)
         Me.cod.Name = "cod"
-        Me.cod.Size = New System.Drawing.Size(109, 18)
+        Me.cod.Size = New System.Drawing.Size(59, 18)
         Me.cod.TabIndex = 49
-        Me.cod.Text = "Buscar Factura"
+        Me.cod.Text = "Buscar:"
         '
         'BuscarClientesCobrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 396)
+        Me.ClientSize = New System.Drawing.Size(615, 375)
         Me.Controls.Add(Me.btnbuscarf)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.btnatras)

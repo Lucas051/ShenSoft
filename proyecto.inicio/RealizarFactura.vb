@@ -20,7 +20,7 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub buscarproductos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarproductos.Click
-        buscarproductos.Show()
+        SearchProducts.Show()
 
     End Sub
 

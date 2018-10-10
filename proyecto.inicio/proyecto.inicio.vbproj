@@ -103,6 +103,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexioon.vb" />
+    <Compile Include="ConsultaFactura.Designer.vb">
+      <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MODIFICARCLIENTES.Designer.vb">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </Compile>
@@ -119,12 +125,6 @@
       <DependentUpon>SuspenderSotck.vb</DependentUpon>
     </Compile>
     <Compile Include="SuspenderSotck.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="buscarproductos.Designer.vb">
-      <DependentUpon>buscarproductos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="buscarproductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio.Designer.vb">
@@ -186,6 +186,9 @@
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaFactura.resx">
+      <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuspenderSotck.resx">
       <DependentUpon>SuspenderSotck.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="buscarproductos.resx">
-      <DependentUpon>buscarproductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
