@@ -4,6 +4,8 @@ Public Class Stock_de_Productos
 
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
+        Me.Hide()
+        Inicio.Show()
 
     End Sub
 

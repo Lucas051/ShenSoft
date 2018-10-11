@@ -28,6 +28,7 @@ Partial Class Stock_de_Productos
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.txtprecio = New System.Windows.Forms.TextBox()
         Me.txtpreciostock = New System.Windows.Forms.TextBox()
+        Me.btnvolver = New System.Windows.Forms.Button()
         Me.btnlimpiar = New System.Windows.Forms.Button()
         Me.DgvStock = New System.Windows.Forms.DataGridView()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
@@ -36,7 +37,6 @@ Partial Class Stock_de_Productos
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btningresar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnvolver = New System.Windows.Forms.Button()
         CType(Me.DgvStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -90,6 +90,15 @@ Partial Class Stock_de_Productos
         Me.txtpreciostock.Name = "txtpreciostock"
         Me.txtpreciostock.Size = New System.Drawing.Size(100, 20)
         Me.txtpreciostock.TabIndex = 8
+        '
+        'btnvolver
+        '
+        Me.btnvolver.Location = New System.Drawing.Point(2, 237)
+        Me.btnvolver.Name = "btnvolver"
+        Me.btnvolver.Size = New System.Drawing.Size(81, 31)
+        Me.btnvolver.TabIndex = 13
+        Me.btnvolver.Text = "Volver"
+        Me.btnvolver.UseVisualStyleBackColor = True
         '
         'btnlimpiar
         '
@@ -163,15 +172,6 @@ Partial Class Stock_de_Productos
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Agregar Stock"
         '
-        'btnvolver
-        '
-        Me.btnvolver.Location = New System.Drawing.Point(760, 3)
-        Me.btnvolver.Name = "btnvolver"
-        Me.btnvolver.Size = New System.Drawing.Size(81, 41)
-        Me.btnvolver.TabIndex = 13
-        Me.btnvolver.Text = "Ver Proveedores"
-        Me.btnvolver.UseVisualStyleBackColor = True
-        '
         'Stock_de_Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -207,6 +207,7 @@ Partial Class Stock_de_Productos
     Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
     Friend WithEvents txtprecio As System.Windows.Forms.TextBox
     Friend WithEvents txtpreciostock As System.Windows.Forms.TextBox
+    Friend WithEvents btnvolver As System.Windows.Forms.Button
     Friend WithEvents btnlimpiar As System.Windows.Forms.Button
     Friend WithEvents DgvStock As System.Windows.Forms.DataGridView
     Friend WithEvents txtcantidad As System.Windows.Forms.TextBox
@@ -215,5 +216,4 @@ Partial Class Stock_de_Productos
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents btningresar As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents btnvolver As System.Windows.Forms.Button
 End Class
