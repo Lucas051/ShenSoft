@@ -80,6 +80,7 @@ Partial Class Inicio
         Me.btncharts = New System.Windows.Forms.Button()
         Me.btncalendario = New System.Windows.Forms.Button()
         Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
+        Me.PnlCalculadora = New System.Windows.Forms.Panel()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -649,6 +650,7 @@ Partial Class Inicio
         Me.panelmedio.AllowDrop = True
         Me.panelmedio.AutoSize = True
         Me.panelmedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.panelmedio.Controls.Add(Me.PnlCalculadora)
         Me.panelmedio.Controls.Add(Me.MonthCalendar1)
         Me.panelmedio.Controls.Add(Me.lblFecha)
         Me.panelmedio.Controls.Add(Me.lblHora)
@@ -820,6 +822,15 @@ Partial Class Inicio
         Me.TimerHora.Enabled = True
         Me.TimerHora.Interval = 1000
         '
+        'PnlCalculadora
+        '
+        Me.PnlCalculadora.BackColor = System.Drawing.Color.Red
+        Me.PnlCalculadora.Location = New System.Drawing.Point(659, 41)
+        Me.PnlCalculadora.Name = "PnlCalculadora"
+        Me.PnlCalculadora.Size = New System.Drawing.Size(229, 190)
+        Me.PnlCalculadora.TabIndex = 17
+        Me.PnlCalculadora.Visible = False
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -919,4 +930,5 @@ Partial Class Inicio
     Friend WithEvents PTBocultar As System.Windows.Forms.PictureBox
     Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PnlCalculadora As System.Windows.Forms.Panel
 End Class
