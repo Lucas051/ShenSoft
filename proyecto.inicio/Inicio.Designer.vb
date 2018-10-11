@@ -122,7 +122,7 @@ Partial Class Inicio
         Me.barratituloInicio.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratituloInicio.Location = New System.Drawing.Point(0, 0)
         Me.barratituloInicio.Name = "barratituloInicio"
-        Me.barratituloInicio.Size = New System.Drawing.Size(1147, 35)
+        Me.barratituloInicio.Size = New System.Drawing.Size(1070, 35)
         Me.barratituloInicio.TabIndex = 0
         '
         'DTPickerFecha
@@ -147,7 +147,7 @@ Partial Class Inicio
         '
         Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMinimizar.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnMinimizar.Location = New System.Drawing.Point(1057, 4)
+        Me.btnMinimizar.Location = New System.Drawing.Point(980, 4)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(25, 25)
         Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -158,7 +158,7 @@ Partial Class Inicio
         '
         Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmini.Image = CType(resources.GetObject("btnmini.Image"), System.Drawing.Image)
-        Me.btnmini.Location = New System.Drawing.Point(1197, 5)
+        Me.btnmini.Location = New System.Drawing.Point(1120, 5)
         Me.btnmini.Name = "btnmini"
         Me.btnmini.Size = New System.Drawing.Size(25, 25)
         Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -169,7 +169,7 @@ Partial Class Inicio
         '
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCerrar.Image = Global.proyecto.inicio.My.Resources.Resources.cerrar
-        Me.btnCerrar.Location = New System.Drawing.Point(1119, 4)
+        Me.btnCerrar.Location = New System.Drawing.Point(1042, 4)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(25, 25)
         Me.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -180,7 +180,7 @@ Partial Class Inicio
         '
         Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cerrarbtn.Image = CType(resources.GetObject("cerrarbtn.Image"), System.Drawing.Image)
-        Me.cerrarbtn.Location = New System.Drawing.Point(1259, 5)
+        Me.cerrarbtn.Location = New System.Drawing.Point(1182, 5)
         Me.cerrarbtn.Name = "cerrarbtn"
         Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
         Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -191,7 +191,7 @@ Partial Class Inicio
         '
         Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmaxi.Image = CType(resources.GetObject("btnmaxi.Image"), System.Drawing.Image)
-        Me.btnmaxi.Location = New System.Drawing.Point(1228, 5)
+        Me.btnmaxi.Location = New System.Drawing.Point(1151, 5)
         Me.btnmaxi.Name = "btnmaxi"
         Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
         Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -202,7 +202,7 @@ Partial Class Inicio
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnrestaurar.Image = CType(resources.GetObject("btnrestaurar.Image"), System.Drawing.Image)
-        Me.btnrestaurar.Location = New System.Drawing.Point(1228, 5)
+        Me.btnrestaurar.Location = New System.Drawing.Point(1151, 5)
         Me.btnrestaurar.Name = "btnrestaurar"
         Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
         Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -214,7 +214,7 @@ Partial Class Inicio
         '
         Me.btnRestaura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRestaura.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnRestaura.Location = New System.Drawing.Point(1088, 4)
+        Me.btnRestaura.Location = New System.Drawing.Point(1011, 4)
         Me.btnRestaura.Name = "btnRestaura"
         Me.btnRestaura.Size = New System.Drawing.Size(25, 25)
         Me.btnRestaura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -226,7 +226,7 @@ Partial Class Inicio
         '
         Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMaximizar.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnMaximizar.Location = New System.Drawing.Point(1088, 4)
+        Me.btnMaximizar.Location = New System.Drawing.Point(1011, 4)
         Me.btnMaximizar.Name = "btnMaximizar"
         Me.btnMaximizar.Size = New System.Drawing.Size(25, 25)
         Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -654,7 +654,7 @@ Partial Class Inicio
         Me.panelmedio.Controls.Add(Me.lblHora)
         Me.panelmedio.Location = New System.Drawing.Point(200, 35)
         Me.panelmedio.Name = "panelmedio"
-        Me.panelmedio.Size = New System.Drawing.Size(897, 564)
+        Me.panelmedio.Size = New System.Drawing.Size(897, 560)
         Me.panelmedio.TabIndex = 2
         '
         'MonthCalendar1
@@ -691,7 +691,7 @@ Partial Class Inicio
         Me.panelOpciones.Controls.Add(Me.btncalendario)
         Me.panelOpciones.Cursor = System.Windows.Forms.Cursors.Default
         Me.panelOpciones.Dock = System.Windows.Forms.DockStyle.Right
-        Me.panelOpciones.Location = New System.Drawing.Point(1088, 35)
+        Me.panelOpciones.Location = New System.Drawing.Point(1011, 35)
         Me.panelOpciones.Name = "panelOpciones"
         Me.panelOpciones.Size = New System.Drawing.Size(59, 555)
         Me.panelOpciones.TabIndex = 15
@@ -824,7 +824,7 @@ Partial Class Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1147, 590)
+        Me.ClientSize = New System.Drawing.Size(1070, 590)
         Me.Controls.Add(Me.panelOpciones)
         Me.Controls.Add(Me.panelmedio)
         Me.Controls.Add(Me.Menuvertical)
