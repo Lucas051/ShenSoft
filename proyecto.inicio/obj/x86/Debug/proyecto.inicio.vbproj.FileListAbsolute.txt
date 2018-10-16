@@ -83,3 +83,5 @@ C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyect
 C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.vbproj.GenerateResource.Cache
 C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.CalculadorA2.resources
 C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Estadistica_de_Stock.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.CalculadorA2.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Estadistica_de_Stock.resources

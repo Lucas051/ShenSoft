@@ -1,10 +1,9 @@
 ﻿Imports System.Windows.Forms
+Imports System.Runtime.InteropServices
+
 Public Class Cobrar
 
 
-    Private Sub barratitulo_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles barratitulo.Paint
-
-    End Sub
 
     Private Sub buscarClientebtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buscarClientebtn.Click
         Me.Hide()

@@ -439,4 +439,5 @@ Public Class Inicio
         Estadistica_de_Stock.Show()
 
     End Sub
+
 End Class
