@@ -1,11 +1,13 @@
-﻿Public Class Calculadora
+﻿Public Class CalculadorA2
+
+
     Dim Dato As Double
     Dim Dato2 As Double
     Dim Resultado As Double
     Dim Ope As Double
     Dim Btn As Double
 
-   
+
     Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
         TxtCaja.Clear()
         btncoma.Enabled = True

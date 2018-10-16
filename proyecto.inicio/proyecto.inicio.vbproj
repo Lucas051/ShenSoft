@@ -96,6 +96,12 @@
     <Compile Include="BuscarClientesCobrar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CalculadorA2.Designer.vb">
+      <DependentUpon>CalculadorA2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CalculadorA2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cobrar.Designer.vb">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </Compile>
@@ -107,6 +113,12 @@
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
     </Compile>
     <Compile Include="ConsultaFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadistica de Stock.Designer.vb">
+      <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadistica de Ventas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODIFICARCLIENTES.Designer.vb">
@@ -183,11 +195,17 @@
     <EmbeddedResource Include="BuscarClientesCobrar.resx">
       <DependentUpon>BuscarClientesCobrar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalculadorA2.resx">
+      <DependentUpon>CalculadorA2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadistica de Stock.resx">
+      <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
