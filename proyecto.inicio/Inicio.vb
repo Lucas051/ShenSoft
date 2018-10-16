@@ -10,9 +10,15 @@ Public Class Inicio
 
 
     Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim llamarInicio As New PlantillaInicio
+        panelmedio.Controls.Clear()
+        llamarInicio.TopLevel = False
+        llamarInicio.Parent = panelmedio
+        llamarInicio.Show()
+        llamarInicio.Dock = DockStyle.Fill
 
-        TimerHora.Start()
-        DTPickerFecha.Visible = False
+
+        panelmedio.Visible = True
 
         'Localiza por defecto lo botones en la posición inicial y oculta panels en caso de ser visibles
         btnfacturacion.Location = New Point(0, 167)
@@ -192,7 +198,7 @@ Public Class Inicio
     End Sub
 
     Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
-        Dim llamar1 As New ConsultaFactura
+        Dim llamar1 As New ConsultaVentas
         panelmedio.Controls.Clear()
         llamar1.TopLevel = False
         llamar1.Parent = panelmedio
@@ -204,7 +210,18 @@ Public Class Inicio
 
     '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        Dim llamarInicio As New PlantillaInicio
+        panelmedio.Controls.Clear()
+        llamarInicio.TopLevel = False
+        llamarInicio.Parent = panelmedio
+        llamarInicio.Show()
+        llamarInicio.Dock = DockStyle.Fill
 
+
+        panelmedio.Visible = True
+    End Sub
+    '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Private Sub btnconsultclient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconsultclient.Click
         Dim llamar3 As New MODIFICARCLIENTES
         panelmedio.Controls.Clear()
@@ -331,15 +348,6 @@ Public Class Inicio
     End Sub
 
 
-    Private Sub TimerHora_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerHora.Tick
-        Dim fecha As String
-        fecha = DTPickerFecha.Text
-        lblFecha.Text = fecha
-
-        lblHora.Text = TimeOfDay.TimeOfDay.ToString
-        TimerHora.Enabled = True
-        '////////////////////////////////////////////
-    End Sub
 
 
 
@@ -415,29 +423,11 @@ Public Class Inicio
     End Sub
 
 
- 
-    
-
-    
-
-    Private Sub PictureBox1_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox1.Click
-
-        panelmedio.Controls.Clear()
-        TimerHora.Enabled = True
-        Dim fecha As String
-        fecha = DTPickerFecha.Text
-        lblFecha.Text = fecha
-
-        lblHora.Text = TimeOfDay.TimeOfDay.ToString
-        TimerHora.Enabled = True
-
-        panelmedio.Visible = True
-       
-    End Sub
 
     Private Sub PTBcharts_Click(sender As System.Object, e As System.EventArgs) Handles PTBcharts.Click
         Estadistica_de_Stock.Show()
 
     End Sub
+
 
 End Class

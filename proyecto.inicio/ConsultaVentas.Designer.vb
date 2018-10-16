@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ConsultaFactura
+Partial Class ConsultaVentas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -52,7 +52,7 @@ Partial Class ConsultaFactura
         Me.dgvConsultaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsultaFacturas.Location = New System.Drawing.Point(12, 60)
         Me.dgvConsultaFacturas.Name = "dgvConsultaFacturas"
-        Me.dgvConsultaFacturas.Size = New System.Drawing.Size(850, 372)
+        Me.dgvConsultaFacturas.Size = New System.Drawing.Size(581, 372)
         Me.dgvConsultaFacturas.TabIndex = 2
         '
         'btnDetalle

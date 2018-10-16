@@ -3,10 +3,11 @@ Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
 Public Class SearchProducts
 
-    'variables para mover form en none
+    'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
     Private MouseDownX As Integer
     Private MouseDownY As Integer
+
 
     Private Sub SearchProducts_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
@@ -30,13 +31,20 @@ Public Class SearchProducts
     End Sub
 
     Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarstock.CellClick
+        Dim llamar As New RealizarFactura
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        RealizarFactura.txtcodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
-        RealizarFactura.txtdesc.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
-        RealizarFactura.txtprecioov.Text = dgvbuscarstock.CurrentRow.Cells(4).Value.ToString
+        llamar.txtcodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
+        llamar.txtdesc.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
+        llamar.txtprecioov.Text = dgvbuscarstock.CurrentRow.Cells(4).Value.ToString
         'close para cerrar el form
         Close()
-        RealizarFactura.Show()
+
+
+        llamar.TopLevel = False
+        llamar.Parent = Inicio.panelmedio
+        llamar.Show()
+        llamar.Dock = DockStyle.Fill
+        Inicio.panelmedio.Visible = True
     End Sub
 
     Private Sub txtbuscarstock_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarstock.TextChanged
@@ -50,51 +58,6 @@ Public Class SearchProducts
             MsgBox(ex.Message)
         End Try
     End Sub
-
-    '///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    'Para mover FORM en NONE
-
-
-    Private Sub SearchProducts_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseDown
-
-        If e.Button = MouseButtons.Left Then
-
-            IsFormBeingDragged = True
-
-            MouseDownX = e.X
-
-            MouseDownY = e.Y
-
-        End If
-
-    End Sub
-
-    Private Sub SearchProducts_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseUp
-
-
-        If e.Button = MouseButtons.Left Then
-
-            IsFormBeingDragged = False
-
-        End If
-
-    End Sub
-
-    Private Sub SearchProducts_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseMove
-
-        If IsFormBeingDragged Then
-            Dim temp As Point = New Point()
-            temp.X = Me.Location.X + (e.X - MouseDownX)
-            temp.Y = Me.Location.Y + (e.Y - MouseDownY)
-
-            Me.Location = temp
-
-            temp = Nothing
-
-        End If
-
-    End Sub
-    '///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
@@ -121,4 +84,39 @@ Public Class SearchProducts
         Inicio.Show()
 
     End Sub
+
+
+    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    'MOVER FORM EN NONE
+    Private Sub barratituloInicio_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseDown
+        If e.Button = MouseButtons.Left Then
+
+            IsFormBeingDragged = True
+            MouseDownX = e.X
+            MouseDownY = e.Y
+
+        End If
+
+    End Sub
+
+
+    Private Sub barratituloInicio_MouseMove_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseMove
+        If IsFormBeingDragged Then
+            Dim temp As Point = New Point()
+            temp.X = Me.Location.X + (e.X - MouseDownX)
+            temp.Y = Me.Location.Y + (e.Y - MouseDownY)
+
+            Me.Location = temp
+
+            temp = Nothing
+
+        End If
+    End Sub
+
+    Private Sub barratituloInicio_MouseUp_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseUp
+        If e.Button = MouseButtons.Left Then
+            IsFormBeingDragged = False
+        End If
+    End Sub
+    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 End Class

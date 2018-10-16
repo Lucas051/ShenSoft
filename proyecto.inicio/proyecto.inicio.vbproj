@@ -109,10 +109,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexioon.vb" />
-    <Compile Include="ConsultaFactura.Designer.vb">
-      <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    <Compile Include="ConsultaVentas.Designer.vb">
+      <DependentUpon>ConsultaVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="ConsultaFactura.vb">
+    <Compile Include="ConsultaVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estadistica de Stock.Designer.vb">
@@ -125,6 +125,12 @@
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </Compile>
     <Compile Include="MODIFICARCLIENTES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaInicio.Designer.vb">
+      <DependentUpon>PlantillaInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaInicio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchProducts.Designer.vb">
@@ -201,14 +207,17 @@
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaFactura.resx">
-      <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    <EmbeddedResource Include="ConsultaVentas.resx">
+      <DependentUpon>ConsultaVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadistica de Stock.resx">
       <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaInicio.resx">
+      <DependentUpon>PlantillaInicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchProducts.resx">
       <DependentUpon>SearchProducts.vb</DependentUpon>

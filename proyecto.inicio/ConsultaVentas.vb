@@ -1,6 +1,6 @@
-﻿Public Class ConsultaFactura
+﻿Public Class ConsultaVentas
 
- 
+
     Private Sub ConsultaFactura_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
 

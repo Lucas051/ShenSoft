@@ -10,8 +10,15 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
-        Me.Hide()
-        Inicio.Show()
+        Dim llamarInicio As New PlantillaInicio
+        Inicio.panelmedio.Controls.Clear()
+        llamarInicio.TopLevel = False
+        llamarInicio.Parent = Inicio.panelmedio
+        llamarInicio.Show()
+        llamarInicio.Dock = DockStyle.Fill
+
+
+        Inicio.panelmedio.Visible = True
     End Sub
 
     Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -35,13 +42,13 @@ Public Class RealizarFactura
 
         'Agrega valores de textbox a datagrid
         DataGridFacturas.Rows.Add(txtcodigo.Text, txtdesc.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
+
+        txtcodigo.Clear()
+        txtdesc.Clear()
+        txtcant.Clear()
+        txtdescuent.Clear()
+        txtprecioov.Clear()
+
     End Sub
 
-    Private Sub limpiarv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiarv.Click
-        txtcodigo.Text = ""
-        txtdesc.Text = ""
-        txtcant.Text = ""
-        txtdescuent.Text = ""
-        txtprecioov.Text = ""
-    End Sub
 End Class

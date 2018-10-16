@@ -22,10 +22,8 @@ Partial Class Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.barratituloInicio = New System.Windows.Forms.Panel()
-        Me.DTPickerFecha = New System.Windows.Forms.DateTimePicker()
         Me.LabelInicio = New System.Windows.Forms.Label()
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnmini = New System.Windows.Forms.PictureBox()
@@ -69,8 +67,6 @@ Partial Class Inicio
         Me.panelmedio = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.PnlCalculadorA2 = New System.Windows.Forms.Panel()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.lblFecha = New System.Windows.Forms.Label()
@@ -84,7 +80,6 @@ Partial Class Inicio
         Me.btncalculadora = New System.Windows.Forms.Button()
         Me.btncharts = New System.Windows.Forms.Button()
         Me.btncalendario = New System.Windows.Forms.Button()
-        Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,7 +110,6 @@ Partial Class Inicio
         'barratituloInicio
         '
         Me.barratituloInicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.barratituloInicio.Controls.Add(Me.DTPickerFecha)
         Me.barratituloInicio.Controls.Add(Me.LabelInicio)
         Me.barratituloInicio.Controls.Add(Me.btnMinimizar)
         Me.barratituloInicio.Controls.Add(Me.btnmini)
@@ -130,13 +124,6 @@ Partial Class Inicio
         Me.barratituloInicio.Name = "barratituloInicio"
         Me.barratituloInicio.Size = New System.Drawing.Size(1147, 35)
         Me.barratituloInicio.TabIndex = 0
-        '
-        'DTPickerFecha
-        '
-        Me.DTPickerFecha.Location = New System.Drawing.Point(89, 9)
-        Me.DTPickerFecha.Name = "DTPickerFecha"
-        Me.DTPickerFecha.Size = New System.Drawing.Size(200, 20)
-        Me.DTPickerFecha.TabIndex = 14
         '
         'LabelInicio
         '
@@ -671,8 +658,6 @@ Partial Class Inicio
         Me.Panel4.AutoSize = True
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Panel5)
-        Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1062, 667)
@@ -686,28 +671,6 @@ Partial Class Inicio
         Me.Panel5.Size = New System.Drawing.Size(259, 329)
         Me.Panel5.TabIndex = 17
         Me.Panel5.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(28, 91)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 24)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Fecha"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(24, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(149, 39)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "00:00:00"
         '
         'PnlCalculadorA2
         '
@@ -875,11 +838,6 @@ Partial Class Inicio
         Me.btncalendario.Text = "Calendario"
         Me.btncalendario.UseVisualStyleBackColor = False
         '
-        'TimerHora
-        '
-        Me.TimerHora.Enabled = True
-        Me.TimerHora.Interval = 1000
-        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -914,7 +872,6 @@ Partial Class Inicio
         Me.panelmedio.ResumeLayout(False)
         Me.panelmedio.PerformLayout()
         Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
         Me.panelOpciones.ResumeLayout(False)
         CType(Me.PTBcalendario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PTBcalculadora, System.ComponentModel.ISupportInitialize).EndInit()
@@ -961,8 +918,6 @@ Partial Class Inicio
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents lblHora As System.Windows.Forms.Label
-    Friend WithEvents TimerHora As System.Windows.Forms.Timer
-    Friend WithEvents DTPickerFecha As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblFecha As System.Windows.Forms.Label
     Friend WithEvents Panel10 As System.Windows.Forms.Panel
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
@@ -984,6 +939,4 @@ Partial Class Inicio
     Friend WithEvents PnlCalculadorA2 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

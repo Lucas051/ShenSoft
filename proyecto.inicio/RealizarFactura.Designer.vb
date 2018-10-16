@@ -40,7 +40,6 @@ Partial Class RealizarFactura
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnagregar = New System.Windows.Forms.Button()
-        Me.btnlimpiarv = New System.Windows.Forms.Button()
         Me.btnguardarImprimir = New System.Windows.Forms.Button()
         Me.btnborrar = New System.Windows.Forms.Button()
         Me.btnatras = New System.Windows.Forms.Button()
@@ -188,28 +187,12 @@ Partial Class RealizarFactura
         Me.btnagregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnagregar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnagregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnagregar.Location = New System.Drawing.Point(124, 238)
+        Me.btnagregar.Location = New System.Drawing.Point(30, 238)
         Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(80, 26)
+        Me.btnagregar.Size = New System.Drawing.Size(174, 26)
         Me.btnagregar.TabIndex = 42
         Me.btnagregar.Text = "Agregar"
         Me.btnagregar.UseVisualStyleBackColor = False
-        '
-        'btnlimpiarv
-        '
-        Me.btnlimpiarv.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnlimpiarv.FlatAppearance.BorderSize = 0
-        Me.btnlimpiarv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnlimpiarv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnlimpiarv.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnlimpiarv.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnlimpiarv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnlimpiarv.Location = New System.Drawing.Point(30, 238)
-        Me.btnlimpiarv.Name = "btnlimpiarv"
-        Me.btnlimpiarv.Size = New System.Drawing.Size(80, 26)
-        Me.btnlimpiarv.TabIndex = 43
-        Me.btnlimpiarv.Text = "Limpiar Campos"
-        Me.btnlimpiarv.UseVisualStyleBackColor = False
         '
         'btnguardarImprimir
         '
@@ -220,11 +203,11 @@ Partial Class RealizarFactura
         Me.btnguardarImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnguardarImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnguardarImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnguardarImprimir.Location = New System.Drawing.Point(177, 517)
+        Me.btnguardarImprimir.Location = New System.Drawing.Point(210, 517)
         Me.btnguardarImprimir.Name = "btnguardarImprimir"
         Me.btnguardarImprimir.Size = New System.Drawing.Size(145, 26)
         Me.btnguardarImprimir.TabIndex = 44
-        Me.btnguardarImprimir.Text = "Guardar e Imprimir"
+        Me.btnguardarImprimir.Text = "Cobrar Venta"
         Me.btnguardarImprimir.UseVisualStyleBackColor = False
         '
         'btnborrar
@@ -236,7 +219,7 @@ Partial Class RealizarFactura
         Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnborrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnborrar.Location = New System.Drawing.Point(177, 410)
+        Me.btnborrar.Location = New System.Drawing.Point(210, 410)
         Me.btnborrar.Name = "btnborrar"
         Me.btnborrar.Size = New System.Drawing.Size(114, 26)
         Me.btnborrar.TabIndex = 45
@@ -289,9 +272,10 @@ Partial Class RealizarFactura
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(771, 410)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(766, 410)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 13)
+        Me.Label4.Size = New System.Drawing.Size(88, 18)
         Me.Label4.TabIndex = 49
         Me.Label4.Text = "Monto Total"
         '
@@ -307,7 +291,6 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.btnatras)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnguardarImprimir)
-        Me.Controls.Add(Me.btnlimpiarv)
         Me.Controls.Add(Me.btnagregar)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
@@ -347,7 +330,6 @@ Partial Class RealizarFactura
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents btnagregar As System.Windows.Forms.Button
-    Friend WithEvents btnlimpiarv As System.Windows.Forms.Button
     Friend WithEvents btnguardarImprimir As System.Windows.Forms.Button
     Friend WithEvents btnborrar As System.Windows.Forms.Button
     Friend WithEvents btnatras As System.Windows.Forms.Button
