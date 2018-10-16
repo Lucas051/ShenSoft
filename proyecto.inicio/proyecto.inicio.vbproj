@@ -115,6 +115,12 @@
     <Compile Include="ConsultaFactura.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Estadistica de Stock.Designer.vb">
+      <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadistica de Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MODIFICARCLIENTES.Designer.vb">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaFactura.resx">
       <DependentUpon>ConsultaFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadistica de Stock.resx">
+      <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>

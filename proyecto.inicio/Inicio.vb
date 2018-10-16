@@ -434,4 +434,9 @@ Public Class Inicio
         panelmedio.Visible = True
        
     End Sub
+
+    Private Sub PTBcharts_Click(sender As System.Object, e As System.EventArgs) Handles PTBcharts.Click
+        Estadistica_de_Stock.Show()
+
+    End Sub
 End Class
