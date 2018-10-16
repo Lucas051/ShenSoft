@@ -96,6 +96,12 @@
     <Compile Include="BuscarClientesCobrar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CalculadorA2.Designer.vb">
+      <DependentUpon>CalculadorA2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CalculadorA2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cobrar.Designer.vb">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarClientesCobrar.resx">
       <DependentUpon>BuscarClientesCobrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadorA2.resx">
+      <DependentUpon>CalculadorA2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>

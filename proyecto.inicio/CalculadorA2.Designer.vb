@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Calculadora
+Partial Class CalculadorA2
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -204,7 +204,7 @@ Partial Class Calculadora
         Me.btnborrar.Text = "←"
         Me.btnborrar.UseVisualStyleBackColor = True
         '
-        'Calculadora
+        'CalculadorA2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -228,7 +228,7 @@ Partial Class Calculadora
         Me.Controls.Add(Me.btncoma)
         Me.Controls.Add(Me.TxtCaja)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "Calculadora"
+        Me.Name = "CalculadorA2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Calculadora"
         Me.ResumeLayout(False)
