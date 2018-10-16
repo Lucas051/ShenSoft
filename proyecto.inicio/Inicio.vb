@@ -310,24 +310,24 @@ Public Class Inicio
         End
     End Sub
 
-    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
+    Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestaura.Click
-        'maximiza ventana
-        Me.WindowState = FormWindowState.Maximized
+    Private Sub btnRestaura_Click_1(sender As System.Object, e As System.EventArgs) Handles btnRestaura.Click
+        'Normaliza  ventana
+        Me.WindowState = FormWindowState.Normal
         'esconde boton, aparece restaurar
-        btnmaxi.Visible = True
-        btnrestaurar.Visible = False
+        btnMaximizar.Visible = True
+        btnRestaura.Visible = False
     End Sub
 
-    Private Sub PictureBox5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMaximizar.Click
+    Private Sub btnMaximizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMaximizar.Click
         'maximiza ventana
         Me.WindowState = FormWindowState.Maximized
         'esconde boton, aparece restaurar
-        btnmaxi.Visible = False
-        btnrestaurar.Visible = True
+        btnMaximizar.Visible = False
+        btnRestaura.Visible = True
     End Sub
 
 
@@ -403,7 +403,35 @@ Public Class Inicio
 
 
     Private Sub PTBcalculadora_Click(sender As System.Object, e As System.EventArgs) Handles PTBcalculadora.Click
-        CalculadorA2.Show()
+        Dim llamar As New CalculadorA2
+        PnlCalculadorA2.Controls.Clear()
+        llamar.TopLevel = False
+        llamar.Parent = PnlCalculadorA2
+        llamar.Show()
+        llamar.Dock = DockStyle.Fill
+        PnlCalculadorA2.Visible = True And PnlCalculadorA2.Visible = False
 
+
+    End Sub
+
+
+ 
+    
+
+    
+
+    Private Sub PictureBox1_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox1.Click
+
+        panelmedio.Controls.Clear()
+        TimerHora.Enabled = True
+        Dim fecha As String
+        fecha = DTPickerFecha.Text
+        lblFecha.Text = fecha
+
+        lblHora.Text = TimeOfDay.TimeOfDay.ToString
+        TimerHora.Enabled = True
+
+        panelmedio.Visible = True
+       
     End Sub
 End Class

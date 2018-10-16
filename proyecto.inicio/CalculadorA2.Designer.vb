@@ -227,7 +227,7 @@ Partial Class CalculadorA2
         Me.Controls.Add(Me.btn0)
         Me.Controls.Add(Me.btncoma)
         Me.Controls.Add(Me.TxtCaja)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CalculadorA2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Calculadora"
