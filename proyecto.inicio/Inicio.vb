@@ -185,13 +185,6 @@ Public Class Inicio
     '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     Private Sub btnrealizarfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrealizarfact.Click
-        '    Dim llamar As New RealizarFactura
-        '  panelmedio.Controls.Clear()
-        '  llamar.TopLevel = False
-        ' llamar.Parent = panelmedio
-        '  llamar.Show()
-        '  llamar.Dock = DockStyle.Fill
-        '  panelmedio.Visible = True
         RealizarFactura.Show()
         Me.Hide()
 

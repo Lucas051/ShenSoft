@@ -31,11 +31,10 @@ Partial Class RealizarFactura
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod = New System.Windows.Forms.Label()
-        Me.txtcodigo = New System.Windows.Forms.TextBox()
         Me.txtcant = New System.Windows.Forms.TextBox()
         Me.txtdescuent = New System.Windows.Forms.TextBox()
         Me.txtprecioov = New System.Windows.Forms.TextBox()
-        Me.txtdesc = New System.Windows.Forms.TextBox()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -56,6 +55,7 @@ Partial Class RealizarFactura
         Me.btnrestaurar = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnRestaura = New System.Windows.Forms.PictureBox()
+        Me.lblCodigo = New System.Windows.Forms.Label()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratituloInicio.SuspendLayout()
@@ -117,13 +117,6 @@ Partial Class RealizarFactura
         Me.cod.TabIndex = 22
         Me.cod.Text = "Código"
         '
-        'txtcodigo
-        '
-        Me.txtcodigo.Location = New System.Drawing.Point(104, 72)
-        Me.txtcodigo.Name = "txtcodigo"
-        Me.txtcodigo.Size = New System.Drawing.Size(100, 20)
-        Me.txtcodigo.TabIndex = 27
-        '
         'txtcant
         '
         Me.txtcant.Location = New System.Drawing.Point(104, 135)
@@ -145,12 +138,12 @@ Partial Class RealizarFactura
         Me.txtprecioov.Size = New System.Drawing.Size(100, 20)
         Me.txtprecioov.TabIndex = 30
         '
-        'txtdesc
+        'txtdescripcion
         '
-        Me.txtdesc.Location = New System.Drawing.Point(104, 103)
-        Me.txtdesc.Name = "txtdesc"
-        Me.txtdesc.Size = New System.Drawing.Size(100, 20)
-        Me.txtdesc.TabIndex = 31
+        Me.txtdescripcion.Location = New System.Drawing.Point(104, 103)
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.Size = New System.Drawing.Size(100, 20)
+        Me.txtdescripcion.TabIndex = 31
         '
         'Label1
         '
@@ -301,7 +294,7 @@ Partial Class RealizarFactura
         '
         Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMinimizar.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnMinimizar.Location = New System.Drawing.Point(1069, 3)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1072, 7)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(25, 25)
         Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -385,7 +378,7 @@ Partial Class RealizarFactura
         '
         Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMaximizar.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnMaximizar.Location = New System.Drawing.Point(1100, 3)
+        Me.btnMaximizar.Location = New System.Drawing.Point(1110, 3)
         Me.btnMaximizar.Name = "btnMaximizar"
         Me.btnMaximizar.Size = New System.Drawing.Size(25, 25)
         Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -396,7 +389,7 @@ Partial Class RealizarFactura
         '
         Me.btnRestaura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRestaura.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnRestaura.Location = New System.Drawing.Point(1100, 3)
+        Me.btnRestaura.Location = New System.Drawing.Point(1110, 3)
         Me.btnRestaura.Name = "btnRestaura"
         Me.btnRestaura.Size = New System.Drawing.Size(25, 25)
         Me.btnRestaura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -404,12 +397,24 @@ Partial Class RealizarFactura
         Me.btnRestaura.TabStop = False
         Me.btnRestaura.Visible = False
         '
+        'lblCodigo
+        '
+        Me.lblCodigo.AutoSize = True
+        Me.lblCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lblCodigo.Location = New System.Drawing.Point(124, 71)
+        Me.lblCodigo.Name = "lblCodigo"
+        Me.lblCodigo.Size = New System.Drawing.Size(56, 18)
+        Me.lblCodigo.TabIndex = 51
+        Me.lblCodigo.Text = "Código"
+        '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(1147, 590)
+        Me.Controls.Add(Me.lblCodigo)
         Me.Controls.Add(Me.barratituloInicio)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
@@ -422,11 +427,10 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtdesc)
+        Me.Controls.Add(Me.txtdescripcion)
         Me.Controls.Add(Me.txtprecioov)
         Me.Controls.Add(Me.txtdescuent)
         Me.Controls.Add(Me.txtcant)
-        Me.Controls.Add(Me.txtcodigo)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.DataGridFacturas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -449,11 +453,10 @@ Partial Class RealizarFactura
     End Sub
     Friend WithEvents DataGridFacturas As System.Windows.Forms.DataGridView
     Friend WithEvents cod As System.Windows.Forms.Label
-    Public WithEvents txtcodigo As System.Windows.Forms.TextBox
     Public WithEvents txtcant As System.Windows.Forms.TextBox
     Public WithEvents txtdescuent As System.Windows.Forms.TextBox
     Public WithEvents txtprecioov As System.Windows.Forms.TextBox
-    Public WithEvents txtdesc As System.Windows.Forms.TextBox
+    Public WithEvents txtdescripcion As System.Windows.Forms.TextBox
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -480,4 +483,5 @@ Partial Class RealizarFactura
     Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
     Friend WithEvents btnMaximizar As System.Windows.Forms.PictureBox
     Friend WithEvents btnRestaura As System.Windows.Forms.PictureBox
+    Friend WithEvents lblCodigo As System.Windows.Forms.Label
 End Class

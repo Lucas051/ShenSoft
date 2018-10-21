@@ -33,8 +33,8 @@ Public Class SearchProducts
     Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarstock.CellClick
         Dim llamar As New RealizarFactura
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        RealizarFactura.txtcodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
-        RealizarFactura.txtdesc.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
+        RealizarFactura.lblCodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
+        RealizarFactura.txtdescripcion.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
         RealizarFactura.txtprecioov.Text = dgvbuscarstock.CurrentRow.Cells(4).Value.ToString
         'close para cerrar el form
         Close()

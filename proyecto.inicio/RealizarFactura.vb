@@ -4,6 +4,11 @@ Imports System.Windows.Forms
 Public Class RealizarFactura
     Dim cantidadp, valor, descuentop, valorTotal As Integer
 
+    'Variables para mover form en none
+    Private IsFormBeingDragged As Boolean = False
+    Private MouseDownX As Integer
+    Private MouseDownY As Integer
+
     Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarImprimir.Click
         Me.Hide()
         Cobrar.Show()
@@ -34,23 +39,31 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregar.Click
+        Try
 
-        cantidadp = txtcant.Text
-        valor = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
-        descuentop = Val(valor) * Val(txtdescuent.Text) / 100
-        valorTotal = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
+            If (txtdescripcion.Text <> "" And txtcant.Text <> "" And txtdescuent.Text <> "" And txtprecioov.Text <> "") Then
+                cantidadp = txtcant.Text
+                valor = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
+                descuentop = Val(valor) * Val(txtdescuent.Text) / 100
+                valorTotal = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
 
 
 
-        'Agrega valores de textbox a datagrid
-        DataGridFacturas.Rows.Add(txtcodigo.Text, txtdesc.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
+                'Agrega valores de textbox a datagrid
+                DataGridFacturas.Rows.Add(lblCodigo.Text, txtdescripcion.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
 
-        txtcodigo.Clear()
-        txtdesc.Clear()
-        txtcant.Clear()
-        txtdescuent.Clear()
-        txtprecioov.Clear()
+                txtdescripcion.Clear()
+                txtcant.Clear()
+                txtdescuent.Clear()
+                txtprecioov.Clear()
+            Else
+                MessageBox.Show("Se deben completar todos los campos!")
 
+            End If
+        Catch ex As Exception
+
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
@@ -73,4 +86,38 @@ Public Class RealizarFactura
         btnMaximizar.Visible = True
         btnRestaura.Visible = False
     End Sub
+
+    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    'MOVER FORM EN NONE
+    Private Sub barratitulo_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseDown
+        If e.Button = MouseButtons.Left Then
+
+            IsFormBeingDragged = True
+            MouseDownX = e.X
+            MouseDownY = e.Y
+
+        End If
+
+    End Sub
+
+
+    Private Sub barratituloInicio_MouseMove_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseMove
+        If IsFormBeingDragged Then
+            Dim temp As Point = New Point()
+            temp.X = Me.Location.X + (e.X - MouseDownX)
+            temp.Y = Me.Location.Y + (e.Y - MouseDownY)
+
+            Me.Location = temp
+
+            temp = Nothing
+
+        End If
+    End Sub
+
+    Private Sub barratituloInicio_MouseUp_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles barratituloInicio.MouseUp
+        If e.Button = MouseButtons.Left Then
+            IsFormBeingDragged = False
+        End If
+    End Sub
+    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 End Class
