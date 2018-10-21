@@ -54,4 +54,6 @@ Public Class Cobrar
     Private Sub btnmini_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmini.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+
+
 End Class

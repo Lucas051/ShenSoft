@@ -38,6 +38,7 @@ Partial Class Cobrar
         Me.btncobrar = New System.Windows.Forms.Button()
         Me.lblTotalPagar = New System.Windows.Forms.Label()
         Me.lblDevolver = New System.Windows.Forms.Label()
+        Me.lblVendedor = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,9 +47,9 @@ Partial Class Cobrar
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
-        Me.PictureBox1.Location = New System.Drawing.Point(58, -24)
+        Me.PictureBox1.Location = New System.Drawing.Point(15, -16)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(482, 294)
+        Me.PictureBox1.Size = New System.Drawing.Size(375, 238)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 34
         Me.PictureBox1.TabStop = False
@@ -60,14 +61,14 @@ Partial Class Cobrar
         Me.barratitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratitulo.Location = New System.Drawing.Point(0, 0)
         Me.barratitulo.Name = "barratitulo"
-        Me.barratitulo.Size = New System.Drawing.Size(628, 35)
+        Me.barratitulo.Size = New System.Drawing.Size(466, 35)
         Me.barratitulo.TabIndex = 36
         '
         'btnmini
         '
         Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(588, 5)
+        Me.btnmini.Location = New System.Drawing.Point(426, 5)
         Me.btnmini.Name = "btnmini"
         Me.btnmini.Size = New System.Drawing.Size(25, 25)
         Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -79,7 +80,7 @@ Partial Class Cobrar
         Me.cod.AutoSize = True
         Me.cod.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cod.ForeColor = System.Drawing.Color.White
-        Me.cod.Location = New System.Drawing.Point(77, 273)
+        Me.cod.Location = New System.Drawing.Point(59, 228)
         Me.cod.Name = "cod"
         Me.cod.Size = New System.Drawing.Size(70, 18)
         Me.cod.TabIndex = 37
@@ -87,7 +88,7 @@ Partial Class Cobrar
         '
         'txtclientes
         '
-        Me.txtclientes.Location = New System.Drawing.Point(150, 314)
+        Me.txtclientes.Location = New System.Drawing.Point(132, 288)
         Me.txtclientes.Multiline = True
         Me.txtclientes.Name = "txtclientes"
         Me.txtclientes.Size = New System.Drawing.Size(121, 26)
@@ -98,7 +99,7 @@ Partial Class Cobrar
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(93, 316)
+        Me.Label4.Location = New System.Drawing.Point(75, 290)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 18)
         Me.Label4.TabIndex = 39
@@ -109,7 +110,7 @@ Partial Class Cobrar
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(55, 360)
+        Me.Label5.Location = New System.Drawing.Point(36, 348)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(92, 18)
         Me.Label5.TabIndex = 41
@@ -120,7 +121,7 @@ Partial Class Cobrar
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(77, 409)
+        Me.Label6.Location = New System.Drawing.Point(59, 403)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 18)
         Me.Label6.TabIndex = 43
@@ -131,7 +132,7 @@ Partial Class Cobrar
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(77, 456)
+        Me.Label7.Location = New System.Drawing.Point(58, 466)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(68, 18)
         Me.Label7.TabIndex = 45
@@ -146,7 +147,7 @@ Partial Class Cobrar
         Me.buscarClientebtn.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buscarClientebtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.buscarClientebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buscarClientebtn.Location = New System.Drawing.Point(277, 314)
+        Me.buscarClientebtn.Location = New System.Drawing.Point(266, 288)
         Me.buscarClientebtn.Name = "buscarClientebtn"
         Me.buscarClientebtn.Size = New System.Drawing.Size(113, 26)
         Me.buscarClientebtn.TabIndex = 47
@@ -155,7 +156,7 @@ Partial Class Cobrar
         '
         'txtvendedor
         '
-        Me.txtvendedor.Location = New System.Drawing.Point(150, 273)
+        Me.txtvendedor.Location = New System.Drawing.Point(132, 228)
         Me.txtvendedor.Multiline = True
         Me.txtvendedor.Name = "txtvendedor"
         Me.txtvendedor.Size = New System.Drawing.Size(121, 26)
@@ -163,7 +164,7 @@ Partial Class Cobrar
         '
         'txtpagocon
         '
-        Me.txtpagocon.Location = New System.Drawing.Point(150, 409)
+        Me.txtpagocon.Location = New System.Drawing.Point(132, 403)
         Me.txtpagocon.Multiline = True
         Me.txtpagocon.Name = "txtpagocon"
         Me.txtpagocon.Size = New System.Drawing.Size(121, 26)
@@ -178,7 +179,7 @@ Partial Class Cobrar
         Me.atrasbtn.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.atrasbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.atrasbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.atrasbtn.Location = New System.Drawing.Point(492, 544)
+        Me.atrasbtn.Location = New System.Drawing.Point(371, 561)
         Me.atrasbtn.Name = "atrasbtn"
         Me.atrasbtn.Size = New System.Drawing.Size(80, 26)
         Me.atrasbtn.TabIndex = 52
@@ -194,7 +195,7 @@ Partial Class Cobrar
         Me.btncobrar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncobrar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btncobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncobrar.Location = New System.Drawing.Point(75, 502)
+        Me.btncobrar.Location = New System.Drawing.Point(68, 526)
         Me.btncobrar.Name = "btncobrar"
         Me.btncobrar.Size = New System.Drawing.Size(196, 26)
         Me.btncobrar.TabIndex = 53
@@ -205,7 +206,7 @@ Partial Class Cobrar
         '
         Me.lblTotalPagar.AutoSize = True
         Me.lblTotalPagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalPagar.Location = New System.Drawing.Point(157, 360)
+        Me.lblTotalPagar.Location = New System.Drawing.Point(138, 348)
         Me.lblTotalPagar.Name = "lblTotalPagar"
         Me.lblTotalPagar.Size = New System.Drawing.Size(96, 18)
         Me.lblTotalPagar.TabIndex = 54
@@ -215,18 +216,29 @@ Partial Class Cobrar
         '
         Me.lblDevolver.AutoSize = True
         Me.lblDevolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDevolver.Location = New System.Drawing.Point(157, 456)
+        Me.lblDevolver.Location = New System.Drawing.Point(138, 466)
         Me.lblDevolver.Name = "lblDevolver"
         Me.lblDevolver.Size = New System.Drawing.Size(126, 18)
         Me.lblDevolver.TabIndex = 55
         Me.lblDevolver.Text = "Dinero a Devolver"
+        '
+        'lblVendedor
+        '
+        Me.lblVendedor.AutoSize = True
+        Me.lblVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVendedor.Location = New System.Drawing.Point(263, 232)
+        Me.lblVendedor.Name = "lblVendedor"
+        Me.lblVendedor.Size = New System.Drawing.Size(71, 18)
+        Me.lblVendedor.TabIndex = 56
+        Me.lblVendedor.Text = "Vendedor"
         '
         'Cobrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(628, 582)
+        Me.ClientSize = New System.Drawing.Size(466, 599)
+        Me.Controls.Add(Me.lblVendedor)
         Me.Controls.Add(Me.lblDevolver)
         Me.Controls.Add(Me.lblTotalPagar)
         Me.Controls.Add(Me.btncobrar)
@@ -269,4 +281,5 @@ Partial Class Cobrar
     Friend WithEvents btncobrar As System.Windows.Forms.Button
     Friend WithEvents lblTotalPagar As System.Windows.Forms.Label
     Friend WithEvents lblDevolver As System.Windows.Forms.Label
+    Friend WithEvents lblVendedor As System.Windows.Forms.Label
 End Class
