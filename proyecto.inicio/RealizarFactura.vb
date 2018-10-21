@@ -10,6 +10,8 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
+        Me.Hide()
+        Inicio.Show()
         Dim llamarInicio As New PlantillaInicio
         Inicio.panelmedio.Controls.Clear()
         llamarInicio.TopLevel = False
@@ -51,4 +53,24 @@ Public Class RealizarFactura
 
     End Sub
 
+    Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnMaximizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMaximizar.Click
+        'maximiza ventana
+        Me.WindowState = FormWindowState.Maximized
+        'esconde boton, aparece restaurar
+        btnMaximizar.Visible = False
+        btnRestaura.Visible = True
+    End Sub
+
+
+    Private Sub btnRestaura_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestaura.Click
+        'Normaliza  ventana
+        Me.WindowState = FormWindowState.Normal
+        'esconde boton, aparece restaurar
+        btnMaximizar.Visible = True
+        btnRestaura.Visible = False
+    End Sub
 End Class

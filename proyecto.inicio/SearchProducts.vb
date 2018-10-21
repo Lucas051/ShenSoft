@@ -33,18 +33,11 @@ Public Class SearchProducts
     Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarstock.CellClick
         Dim llamar As New RealizarFactura
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        llamar.txtcodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
-        llamar.txtdesc.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
-        llamar.txtprecioov.Text = dgvbuscarstock.CurrentRow.Cells(4).Value.ToString
+        RealizarFactura.txtcodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
+        RealizarFactura.txtdesc.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
+        RealizarFactura.txtprecioov.Text = dgvbuscarstock.CurrentRow.Cells(4).Value.ToString
         'close para cerrar el form
         Close()
-
-
-        llamar.TopLevel = False
-        llamar.Parent = Inicio.panelmedio
-        llamar.Show()
-        llamar.Dock = DockStyle.Fill
-        Inicio.panelmedio.Visible = True
     End Sub
 
     Private Sub txtbuscarstock_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarstock.TextChanged

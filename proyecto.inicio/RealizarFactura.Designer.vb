@@ -22,6 +22,7 @@ Partial Class RealizarFactura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RealizarFactura))
         Me.DataGridFacturas = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,16 +47,33 @@ Partial Class RealizarFactura
         Me.btnbuscarproductos = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnMinimizar = New System.Windows.Forms.PictureBox()
+        Me.barratituloInicio = New System.Windows.Forms.Panel()
+        Me.LabelInicio = New System.Windows.Forms.Label()
+        Me.btnmini = New System.Windows.Forms.PictureBox()
+        Me.cerrarbtn = New System.Windows.Forms.PictureBox()
+        Me.btnmaxi = New System.Windows.Forms.PictureBox()
+        Me.btnrestaurar = New System.Windows.Forms.PictureBox()
+        Me.btnMaximizar = New System.Windows.Forms.PictureBox()
+        Me.btnRestaura = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.barratituloInicio.SuspendLayout()
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnRestaura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridFacturas
         '
         Me.DataGridFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridFacturas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
-        Me.DataGridFacturas.Location = New System.Drawing.Point(210, 72)
+        Me.DataGridFacturas.Location = New System.Drawing.Point(264, 84)
         Me.DataGridFacturas.Name = "DataGridFacturas"
-        Me.DataGridFacturas.Size = New System.Drawing.Size(644, 320)
+        Me.DataGridFacturas.Size = New System.Drawing.Size(849, 395)
         Me.DataGridFacturas.TabIndex = 0
         '
         'Column1
@@ -203,7 +221,7 @@ Partial Class RealizarFactura
         Me.btnguardarImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnguardarImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnguardarImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnguardarImprimir.Location = New System.Drawing.Point(210, 517)
+        Me.btnguardarImprimir.Location = New System.Drawing.Point(210, 552)
         Me.btnguardarImprimir.Name = "btnguardarImprimir"
         Me.btnguardarImprimir.Size = New System.Drawing.Size(145, 26)
         Me.btnguardarImprimir.TabIndex = 44
@@ -219,7 +237,7 @@ Partial Class RealizarFactura
         Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnborrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnborrar.Location = New System.Drawing.Point(210, 410)
+        Me.btnborrar.Location = New System.Drawing.Point(264, 485)
         Me.btnborrar.Name = "btnborrar"
         Me.btnborrar.Size = New System.Drawing.Size(114, 26)
         Me.btnborrar.TabIndex = 45
@@ -235,7 +253,7 @@ Partial Class RealizarFactura
         Me.btnatras.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnatras.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnatras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnatras.Location = New System.Drawing.Point(774, 517)
+        Me.btnatras.Location = New System.Drawing.Point(1055, 552)
         Me.btnatras.Name = "btnatras"
         Me.btnatras.Size = New System.Drawing.Size(80, 26)
         Me.btnatras.TabIndex = 46
@@ -251,7 +269,7 @@ Partial Class RealizarFactura
         Me.btnbuscarproductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnbuscarproductos.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnbuscarproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnbuscarproductos.Location = New System.Drawing.Point(775, 40)
+        Me.btnbuscarproductos.Location = New System.Drawing.Point(1034, 52)
         Me.btnbuscarproductos.Name = "btnbuscarproductos"
         Me.btnbuscarproductos.Size = New System.Drawing.Size(79, 26)
         Me.btnbuscarproductos.TabIndex = 47
@@ -263,7 +281,7 @@ Partial Class RealizarFactura
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(646, 44)
+        Me.Label5.Location = New System.Drawing.Point(905, 56)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(128, 18)
         Me.Label5.TabIndex = 48
@@ -273,18 +291,126 @@ Partial Class RealizarFactura
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(766, 410)
+        Me.Label4.Location = New System.Drawing.Point(945, 482)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(88, 18)
         Me.Label4.TabIndex = 49
         Me.Label4.Text = "Monto Total"
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
+        Me.btnMinimizar.Location = New System.Drawing.Point(1069, 3)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(25, 25)
+        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMinimizar.TabIndex = 16
+        Me.btnMinimizar.TabStop = False
+        '
+        'barratituloInicio
+        '
+        Me.barratituloInicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratituloInicio.Controls.Add(Me.LabelInicio)
+        Me.barratituloInicio.Controls.Add(Me.btnMinimizar)
+        Me.barratituloInicio.Controls.Add(Me.btnmini)
+        Me.barratituloInicio.Controls.Add(Me.cerrarbtn)
+        Me.barratituloInicio.Controls.Add(Me.btnmaxi)
+        Me.barratituloInicio.Controls.Add(Me.btnrestaurar)
+        Me.barratituloInicio.Controls.Add(Me.btnMaximizar)
+        Me.barratituloInicio.Controls.Add(Me.btnRestaura)
+        Me.barratituloInicio.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barratituloInicio.Location = New System.Drawing.Point(0, 0)
+        Me.barratituloInicio.Name = "barratituloInicio"
+        Me.barratituloInicio.Size = New System.Drawing.Size(1147, 35)
+        Me.barratituloInicio.TabIndex = 50
+        '
+        'LabelInicio
+        '
+        Me.LabelInicio.AutoSize = True
+        Me.LabelInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LabelInicio.Location = New System.Drawing.Point(12, 6)
+        Me.LabelInicio.Name = "LabelInicio"
+        Me.LabelInicio.Size = New System.Drawing.Size(60, 24)
+        Me.LabelInicio.TabIndex = 19
+        Me.LabelInicio.Text = "Inicio"
+        '
+        'btnmini
+        '
+        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmini.Image = CType(resources.GetObject("btnmini.Image"), System.Drawing.Image)
+        Me.btnmini.Location = New System.Drawing.Point(1197, 5)
+        Me.btnmini.Name = "btnmini"
+        Me.btnmini.Size = New System.Drawing.Size(25, 25)
+        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmini.TabIndex = 1
+        Me.btnmini.TabStop = False
+        '
+        'cerrarbtn
+        '
+        Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cerrarbtn.Image = CType(resources.GetObject("cerrarbtn.Image"), System.Drawing.Image)
+        Me.cerrarbtn.Location = New System.Drawing.Point(1259, 5)
+        Me.cerrarbtn.Name = "cerrarbtn"
+        Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
+        Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.cerrarbtn.TabIndex = 0
+        Me.cerrarbtn.TabStop = False
+        '
+        'btnmaxi
+        '
+        Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmaxi.Image = CType(resources.GetObject("btnmaxi.Image"), System.Drawing.Image)
+        Me.btnmaxi.Location = New System.Drawing.Point(1228, 5)
+        Me.btnmaxi.Name = "btnmaxi"
+        Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
+        Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmaxi.TabIndex = 2
+        Me.btnmaxi.TabStop = False
+        '
+        'btnrestaurar
+        '
+        Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnrestaurar.Image = CType(resources.GetObject("btnrestaurar.Image"), System.Drawing.Image)
+        Me.btnrestaurar.Location = New System.Drawing.Point(1228, 5)
+        Me.btnrestaurar.Name = "btnrestaurar"
+        Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
+        Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnrestaurar.TabIndex = 3
+        Me.btnrestaurar.TabStop = False
+        Me.btnrestaurar.Visible = False
+        '
+        'btnMaximizar
+        '
+        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximizar.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
+        Me.btnMaximizar.Location = New System.Drawing.Point(1100, 3)
+        Me.btnMaximizar.Name = "btnMaximizar"
+        Me.btnMaximizar.Size = New System.Drawing.Size(25, 25)
+        Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMaximizar.TabIndex = 18
+        Me.btnMaximizar.TabStop = False
+        '
+        'btnRestaura
+        '
+        Me.btnRestaura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestaura.Image = Global.proyecto.inicio.My.Resources.Resources.res
+        Me.btnRestaura.Location = New System.Drawing.Point(1100, 3)
+        Me.btnRestaura.Name = "btnRestaura"
+        Me.btnRestaura.Size = New System.Drawing.Size(25, 25)
+        Me.btnRestaura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnRestaura.TabIndex = 20
+        Me.btnRestaura.TabStop = False
+        Me.btnRestaura.Visible = False
         '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(895, 555)
+        Me.ClientSize = New System.Drawing.Size(1147, 590)
+        Me.Controls.Add(Me.barratituloInicio)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnbuscarproductos)
@@ -308,6 +434,15 @@ Partial Class RealizarFactura
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RealizarFactura"
         CType(Me.DataGridFacturas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.barratituloInicio.ResumeLayout(False)
+        Me.barratituloInicio.PerformLayout()
+        CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cerrarbtn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnmaxi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnRestaura, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -336,4 +471,13 @@ Partial Class RealizarFactura
     Friend WithEvents btnbuscarproductos As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents btnMinimizar As System.Windows.Forms.PictureBox
+    Friend WithEvents barratituloInicio As System.Windows.Forms.Panel
+    Friend WithEvents LabelInicio As System.Windows.Forms.Label
+    Friend WithEvents btnmini As System.Windows.Forms.PictureBox
+    Friend WithEvents cerrarbtn As System.Windows.Forms.PictureBox
+    Friend WithEvents btnmaxi As System.Windows.Forms.PictureBox
+    Friend WithEvents btnrestaurar As System.Windows.Forms.PictureBox
+    Friend WithEvents btnMaximizar As System.Windows.Forms.PictureBox
+    Friend WithEvents btnRestaura As System.Windows.Forms.PictureBox
 End Class
