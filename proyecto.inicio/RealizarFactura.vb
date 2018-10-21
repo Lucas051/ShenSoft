@@ -3,6 +3,7 @@ Imports System.Windows.Forms
 
 Public Class RealizarFactura
     Dim cantidadp, valor, descuentop, valorTotal As Integer
+    Dim montototal As Double = 0
 
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
@@ -39,6 +40,8 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregar.Click
+        Dim fila As DataGridViewRow = New DataGridViewRow()
+
         Try
 
             If (txtdescripcion.Text <> "" And txtcant.Text <> "" And txtdescuent.Text <> "" And txtprecioov.Text <> "") Then
@@ -50,7 +53,7 @@ Public Class RealizarFactura
 
 
                 'Agrega valores de textbox a datagrid
-                DataGridFacturas.Rows.Add(lblCodigo.Text, txtdescripcion.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
+                DGVFacturas.Rows.Add(lblCodigo.Text, txtdescripcion.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
 
                 txtdescripcion.Clear()
                 txtcant.Clear()
@@ -64,6 +67,15 @@ Public Class RealizarFactura
 
             MessageBox.Show(ex.ToString)
         End Try
+
+        For Each fila In DGVFacturas.Rows
+            montototal += Convert.ToDouble(fila.Cells("preciototal").Value)
+        Next
+
+        lblMontoTotal.Text = Convert.ToString(montototal)
+
+
+
     End Sub
 
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click

@@ -43,7 +43,7 @@ Public Class SearchProducts
     Private Sub txtbuscarstock_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarstock.TextChanged
         Try
             'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM stock WHERE cod_producto LIKE '%" & txtbuscarstock.Text & "%' and descripcion LIKE '%" & txtbuscarstock.Text & "%' and cantidad LIKE '%" & txtbuscarstock.Text & "%' and precio_costo LIKE '%" & txtbuscarstock.Text & "%' and precio_v_stock LIKE '%" & txtbuscarstock.Text & "%' and num_prov LIKE '%" & txtbuscarstock.Text & "%';"
+            conexioon.Consulta = "SELECT * FROM stock WHERE  descripcion LIKE '%" & txtbuscarstock.Text & "%';"
             consultar()
             dgvbuscarstock.DataSource = resultado
 
@@ -60,21 +60,21 @@ Public Class SearchProducts
         'maximiza ventana
         Me.WindowState = FormWindowState.Maximized
         'esconde boton, aparece restaurar
-        btnmaxi.Visible = False
-        btnrestaurar.Visible = True
+        btnMaximizar.Visible = False
+        btnRestaura.Visible = True
     End Sub
 
     Private Sub btnRestaura_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestaura.Click
         'maximiza ventana
         Me.WindowState = FormWindowState.Normal
         'esconde boton, aparece restaurar
-        btnmaxi.Visible = True
-        btnrestaurar.Visible = False
+        btnMaximizar.Visible = True
+        btnRestaura.Visible = False
     End Sub
 
     Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
         Me.Hide()
-        Inicio.Show()
+        RealizarFactura.Show()
 
     End Sub
 
