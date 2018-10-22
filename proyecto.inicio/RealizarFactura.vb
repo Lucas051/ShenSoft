@@ -4,6 +4,7 @@ Imports System.Windows.Forms
 Public Class RealizarFactura
     Dim cantidadp, valor, descuentop, valorTotal As Integer
     Dim montototal As Double = 0
+    Dim precioeliminado As Double
 
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
@@ -13,13 +14,23 @@ Public Class RealizarFactura
 
     Private Sub RealizarFactura_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         txtdescuent.Text = 0
-        txtcant.Text = 1
     End Sub
 
     Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarImprimir.Click
 
         ModuloVariables.MontoTotal = lblMontoTotal.Text
         Cobrar.Show()
+    End Sub
+
+    Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
+
+        DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
+
+        precioeliminado = DGVVentas.CurrentRow.Cells("preciototal").Value
+
+        montototal = montototal - precioeliminado
+        lblMontoTotal.Text = Convert.ToString(montototal)
+
     End Sub
 
     Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
@@ -41,6 +52,19 @@ Public Class RealizarFactura
 
     End Sub
 
+    Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
+        DGVVentas.Rows.Add(lblCodigo.Text, txtdescripcion.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
+        DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
+        If (DGVVentas.SelectedRows.Count > 0) Then
+            txtdescripcion.Text = DGVVentas.CurrentRow.Cells("descripcion").Value.ToString
+            txtcant.Text = DGVVentas.CurrentRow.Cells("cantidad").Value.ToString
+            txtdescuent.Text = DGVVentas.CurrentRow.Cells("descuento").Value.ToString
+            txtprecioov.Text = DGVVentas.CurrentRow.Cells("precioventa").Value.ToString
+        Else
+            MessageBox.Show("Seleccione una línea!")
+        End If
+    End Sub
+
     Private Sub buscarproductos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarproductos.Click
         SearchProducts.Show()
 
@@ -52,6 +76,7 @@ Public Class RealizarFactura
         Try
 
             If (txtdescripcion.Text <> "" And txtcant.Text <> "" And txtdescuent.Text <> "" And txtprecioov.Text <> "") Then
+                'calculo de valor total del producto agregado al DGV, en caso de realizar descuento también se realizará una operación
                 cantidadp = txtcant.Text
                 valor = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
                 descuentop = Val(valor) * Val(txtdescuent.Text) / 100
@@ -60,8 +85,9 @@ Public Class RealizarFactura
 
 
                 'Agrega valores de textbox a datagrid
-                DGVFacturas.Rows.Add(lblCodigo.Text, txtdescripcion.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
+                DGVVentas.Rows.Add(lblCodigo.Text, txtdescripcion.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
 
+                lblCodigo.ResetText()
                 txtdescripcion.Clear()
                 txtcant.Clear()
                 txtdescuent.Clear()
@@ -75,13 +101,12 @@ Public Class RealizarFactura
             MessageBox.Show(ex.ToString)
         End Try
 
-        For Each fila In DGVFacturas.Rows
+        For Each fila In DGVVentas.Rows
             montototal += Convert.ToDouble(fila.Cells("preciototal").Value)
         Next
 
+        txtdescuent.Text = 0
         lblMontoTotal.Text = Convert.ToString(montototal)
-
-
 
     End Sub
 
@@ -139,5 +164,6 @@ Public Class RealizarFactura
         End If
     End Sub
     '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 End Class

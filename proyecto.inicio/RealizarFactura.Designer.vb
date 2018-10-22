@@ -22,14 +22,11 @@ Partial Class RealizarFactura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RealizarFactura))
-        Me.DGVFacturas = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGVVentas = New System.Windows.Forms.DataGridView()
         Me.cod = New System.Windows.Forms.Label()
         Me.txtcant = New System.Windows.Forms.TextBox()
         Me.txtdescuent = New System.Windows.Forms.TextBox()
@@ -57,7 +54,15 @@ Partial Class RealizarFactura
         Me.btnRestaura = New System.Windows.Forms.PictureBox()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.lblMontoTotal = New System.Windows.Forms.Label()
-        CType(Me.DGVFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.DGVVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,127 +71,132 @@ Partial Class RealizarFactura
         CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnRestaura, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DGVFacturas
+        'DGVVentas
         '
-        Me.DGVFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVFacturas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.preciototal})
-        Me.DGVFacturas.Location = New System.Drawing.Point(264, 84)
-        Me.DGVFacturas.Name = "DGVFacturas"
-        Me.DGVFacturas.Size = New System.Drawing.Size(849, 369)
-        Me.DGVFacturas.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Código"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Descripción"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Descuento (%)"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Precio Unitario"
-        Me.Column5.Name = "Column5"
-        '
-        'preciototal
-        '
-        Me.preciototal.HeaderText = "Precio Total"
-        Me.preciototal.Name = "preciototal"
+        Me.DGVVentas.BackgroundColor = System.Drawing.Color.Silver
+        Me.DGVVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGVVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGVVentas.ColumnHeadersHeight = 42
+        Me.DGVVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descripcion, Me.cantidad, Me.descuento, Me.precioUnitario, Me.preciototal})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGVVentas.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGVVentas.EnableHeadersVisualStyles = False
+        Me.DGVVentas.GridColor = System.Drawing.Color.White
+        Me.DGVVentas.Location = New System.Drawing.Point(318, 84)
+        Me.DGVVentas.Name = "DGVVentas"
+        Me.DGVVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DGVVentas.RowHeadersWidth = 50
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.DGVVentas.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.DGVVentas.Size = New System.Drawing.Size(849, 369)
+        Me.DGVVentas.TabIndex = 0
         '
         'cod
         '
         Me.cod.AutoSize = True
-        Me.cod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cod.BackColor = System.Drawing.Color.Transparent
+        Me.cod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cod.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.cod.Location = New System.Drawing.Point(40, 71)
+        Me.cod.Location = New System.Drawing.Point(44, 67)
         Me.cod.Name = "cod"
-        Me.cod.Size = New System.Drawing.Size(56, 18)
+        Me.cod.Size = New System.Drawing.Size(59, 20)
         Me.cod.TabIndex = 22
         Me.cod.Text = "Código"
         '
         'txtcant
         '
-        Me.txtcant.Location = New System.Drawing.Point(104, 135)
+        Me.txtcant.Location = New System.Drawing.Point(109, 192)
         Me.txtcant.Name = "txtcant"
-        Me.txtcant.Size = New System.Drawing.Size(100, 20)
+        Me.txtcant.Size = New System.Drawing.Size(138, 20)
         Me.txtcant.TabIndex = 28
         '
         'txtdescuent
         '
-        Me.txtdescuent.Location = New System.Drawing.Point(104, 167)
+        Me.txtdescuent.Location = New System.Drawing.Point(109, 252)
         Me.txtdescuent.Name = "txtdescuent"
-        Me.txtdescuent.Size = New System.Drawing.Size(100, 20)
+        Me.txtdescuent.Size = New System.Drawing.Size(138, 20)
         Me.txtdescuent.TabIndex = 29
         '
         'txtprecioov
         '
-        Me.txtprecioov.Location = New System.Drawing.Point(104, 199)
+        Me.txtprecioov.Location = New System.Drawing.Point(109, 308)
         Me.txtprecioov.Name = "txtprecioov"
-        Me.txtprecioov.Size = New System.Drawing.Size(100, 20)
+        Me.txtprecioov.Size = New System.Drawing.Size(138, 20)
         Me.txtprecioov.TabIndex = 30
         '
         'txtdescripcion
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(104, 103)
+        Me.txtdescripcion.Location = New System.Drawing.Point(109, 129)
+        Me.txtdescripcion.Multiline = True
         Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(100, 20)
+        Me.txtdescripcion.Size = New System.Drawing.Size(138, 22)
         Me.txtdescripcion.TabIndex = 31
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(8, 102)
+        Me.Label1.Location = New System.Drawing.Point(11, 129)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 18)
+        Me.Label1.Size = New System.Drawing.Size(92, 20)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Descripción"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(27, 134)
+        Me.Label2.Location = New System.Drawing.Point(30, 192)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 18)
+        Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "Cantidad"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(16, 166)
+        Me.Label3.Location = New System.Drawing.Point(16, 252)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 18)
+        Me.Label3.Size = New System.Drawing.Size(87, 20)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Descuento"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(2, 198)
+        Me.Label6.Location = New System.Drawing.Point(3, 308)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(92, 18)
+        Me.Label6.Size = New System.Drawing.Size(100, 20)
         Me.Label6.TabIndex = 41
         Me.Label6.Text = "Precio Venta"
         '
@@ -199,9 +209,9 @@ Partial Class RealizarFactura
         Me.btnagregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnagregar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnagregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnagregar.Location = New System.Drawing.Point(30, 398)
+        Me.btnagregar.Location = New System.Drawing.Point(20, 361)
         Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(174, 26)
+        Me.btnagregar.Size = New System.Drawing.Size(227, 26)
         Me.btnagregar.TabIndex = 42
         Me.btnagregar.Text = "Agregar"
         Me.btnagregar.UseVisualStyleBackColor = False
@@ -215,7 +225,7 @@ Partial Class RealizarFactura
         Me.btnguardarImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnguardarImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnguardarImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnguardarImprimir.Location = New System.Drawing.Point(264, 552)
+        Me.btnguardarImprimir.Location = New System.Drawing.Point(318, 552)
         Me.btnguardarImprimir.Name = "btnguardarImprimir"
         Me.btnguardarImprimir.Size = New System.Drawing.Size(145, 26)
         Me.btnguardarImprimir.TabIndex = 44
@@ -231,7 +241,7 @@ Partial Class RealizarFactura
         Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnborrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnborrar.Location = New System.Drawing.Point(264, 471)
+        Me.btnborrar.Location = New System.Drawing.Point(318, 472)
         Me.btnborrar.Name = "btnborrar"
         Me.btnborrar.Size = New System.Drawing.Size(145, 26)
         Me.btnborrar.TabIndex = 45
@@ -247,7 +257,7 @@ Partial Class RealizarFactura
         Me.btnatras.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnatras.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnatras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnatras.Location = New System.Drawing.Point(1055, 552)
+        Me.btnatras.Location = New System.Drawing.Point(1088, 569)
         Me.btnatras.Name = "btnatras"
         Me.btnatras.Size = New System.Drawing.Size(80, 26)
         Me.btnatras.TabIndex = 46
@@ -263,7 +273,7 @@ Partial Class RealizarFactura
         Me.btnbuscarproductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnbuscarproductos.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnbuscarproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnbuscarproductos.Location = New System.Drawing.Point(1034, 52)
+        Me.btnbuscarproductos.Location = New System.Drawing.Point(1088, 52)
         Me.btnbuscarproductos.Name = "btnbuscarproductos"
         Me.btnbuscarproductos.Size = New System.Drawing.Size(79, 26)
         Me.btnbuscarproductos.TabIndex = 47
@@ -275,7 +285,7 @@ Partial Class RealizarFactura
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(905, 56)
+        Me.Label5.Location = New System.Drawing.Point(959, 56)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(128, 18)
         Me.Label5.TabIndex = 48
@@ -285,7 +295,7 @@ Partial Class RealizarFactura
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(908, 471)
+        Me.Label4.Location = New System.Drawing.Point(1032, 472)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(104, 18)
         Me.Label4.TabIndex = 49
@@ -295,7 +305,7 @@ Partial Class RealizarFactura
         '
         Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMinimizar.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnMinimizar.Location = New System.Drawing.Point(1072, 7)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1104, 7)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(25, 25)
         Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -316,25 +326,25 @@ Partial Class RealizarFactura
         Me.barratituloInicio.Dock = System.Windows.Forms.DockStyle.Top
         Me.barratituloInicio.Location = New System.Drawing.Point(0, 0)
         Me.barratituloInicio.Name = "barratituloInicio"
-        Me.barratituloInicio.Size = New System.Drawing.Size(1147, 35)
+        Me.barratituloInicio.Size = New System.Drawing.Size(1179, 35)
         Me.barratituloInicio.TabIndex = 50
         '
         'LabelInicio
         '
         Me.LabelInicio.AutoSize = True
-        Me.LabelInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LabelInicio.Location = New System.Drawing.Point(12, 6)
+        Me.LabelInicio.Location = New System.Drawing.Point(5, 9)
         Me.LabelInicio.Name = "LabelInicio"
-        Me.LabelInicio.Size = New System.Drawing.Size(60, 24)
+        Me.LabelInicio.Size = New System.Drawing.Size(104, 20)
         Me.LabelInicio.TabIndex = 19
-        Me.LabelInicio.Text = "Inicio"
+        Me.LabelInicio.Text = "Facturación"
         '
         'btnmini
         '
         Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmini.Image = CType(resources.GetObject("btnmini.Image"), System.Drawing.Image)
-        Me.btnmini.Location = New System.Drawing.Point(1197, 5)
+        Me.btnmini.Location = New System.Drawing.Point(1229, 5)
         Me.btnmini.Name = "btnmini"
         Me.btnmini.Size = New System.Drawing.Size(25, 25)
         Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -345,7 +355,7 @@ Partial Class RealizarFactura
         '
         Me.cerrarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cerrarbtn.Image = CType(resources.GetObject("cerrarbtn.Image"), System.Drawing.Image)
-        Me.cerrarbtn.Location = New System.Drawing.Point(1259, 5)
+        Me.cerrarbtn.Location = New System.Drawing.Point(1291, 5)
         Me.cerrarbtn.Name = "cerrarbtn"
         Me.cerrarbtn.Size = New System.Drawing.Size(25, 25)
         Me.cerrarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -356,7 +366,7 @@ Partial Class RealizarFactura
         '
         Me.btnmaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnmaxi.Image = CType(resources.GetObject("btnmaxi.Image"), System.Drawing.Image)
-        Me.btnmaxi.Location = New System.Drawing.Point(1228, 5)
+        Me.btnmaxi.Location = New System.Drawing.Point(1260, 5)
         Me.btnmaxi.Name = "btnmaxi"
         Me.btnmaxi.Size = New System.Drawing.Size(25, 25)
         Me.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -367,7 +377,7 @@ Partial Class RealizarFactura
         '
         Me.btnrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnrestaurar.Image = CType(resources.GetObject("btnrestaurar.Image"), System.Drawing.Image)
-        Me.btnrestaurar.Location = New System.Drawing.Point(1228, 5)
+        Me.btnrestaurar.Location = New System.Drawing.Point(1260, 5)
         Me.btnrestaurar.Name = "btnrestaurar"
         Me.btnrestaurar.Size = New System.Drawing.Size(25, 25)
         Me.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -379,7 +389,7 @@ Partial Class RealizarFactura
         '
         Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMaximizar.Image = Global.proyecto.inicio.My.Resources.Resources.maxi
-        Me.btnMaximizar.Location = New System.Drawing.Point(1110, 3)
+        Me.btnMaximizar.Location = New System.Drawing.Point(1142, 3)
         Me.btnMaximizar.Name = "btnMaximizar"
         Me.btnMaximizar.Size = New System.Drawing.Size(25, 25)
         Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -390,7 +400,7 @@ Partial Class RealizarFactura
         '
         Me.btnRestaura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRestaura.Image = Global.proyecto.inicio.My.Resources.Resources.res
-        Me.btnRestaura.Location = New System.Drawing.Point(1110, 3)
+        Me.btnRestaura.Location = New System.Drawing.Point(1142, 3)
         Me.btnRestaura.Name = "btnRestaura"
         Me.btnRestaura.Size = New System.Drawing.Size(25, 25)
         Me.btnRestaura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -401,11 +411,12 @@ Partial Class RealizarFactura
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigo.BackColor = System.Drawing.Color.Transparent
+        Me.lblCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.lblCodigo.Location = New System.Drawing.Point(124, 71)
+        Me.lblCodigo.Location = New System.Drawing.Point(124, 67)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(56, 18)
+        Me.lblCodigo.Size = New System.Drawing.Size(59, 20)
         Me.lblCodigo.TabIndex = 51
         Me.lblCodigo.Text = "Código"
         '
@@ -413,20 +424,85 @@ Partial Class RealizarFactura
         '
         Me.lblMontoTotal.AutoSize = True
         Me.lblMontoTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMontoTotal.Location = New System.Drawing.Point(1014, 470)
+        Me.lblMontoTotal.Location = New System.Drawing.Point(1138, 471)
         Me.lblMontoTotal.Name = "lblMontoTotal"
         Me.lblMontoTotal.Size = New System.Drawing.Size(19, 20)
         Me.lblMontoTotal.TabIndex = 52
         Me.lblMontoTotal.Text = "0"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel1.Controls.Add(Me.btnagregar)
+        Me.Panel1.Controls.Add(Me.lblCodigo)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.txtcant)
+        Me.Panel1.Controls.Add(Me.txtdescuent)
+        Me.Panel1.Controls.Add(Me.txtprecioov)
+        Me.Panel1.Controls.Add(Me.txtdescripcion)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.cod)
+        Me.Panel1.Location = New System.Drawing.Point(2, 35)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(287, 574)
+        Me.Panel1.TabIndex = 53
+        '
+        'btnEditar
+        '
+        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnEditar.FlatAppearance.BorderSize = 0
+        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.Location = New System.Drawing.Point(483, 472)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(145, 26)
+        Me.btnEditar.TabIndex = 54
+        Me.btnEditar.Text = "Editar Línea"
+        Me.btnEditar.UseVisualStyleBackColor = False
+        '
+        'codigo
+        '
+        Me.codigo.HeaderText = "Código"
+        Me.codigo.Name = "codigo"
+        '
+        'descripcion
+        '
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        '
+        'descuento
+        '
+        Me.descuento.HeaderText = "Descuento (%)"
+        Me.descuento.Name = "descuento"
+        '
+        'precioUnitario
+        '
+        Me.precioUnitario.HeaderText = "Precio Unitario"
+        Me.precioUnitario.Name = "precioUnitario"
+        '
+        'preciototal
+        '
+        Me.preciototal.HeaderText = "Precio Total"
+        Me.preciototal.Name = "preciototal"
         '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(1147, 590)
+        Me.ClientSize = New System.Drawing.Size(1179, 607)
+        Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.lblMontoTotal)
-        Me.Controls.Add(Me.lblCodigo)
         Me.Controls.Add(Me.barratituloInicio)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
@@ -434,22 +510,13 @@ Partial Class RealizarFactura
         Me.Controls.Add(Me.btnatras)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnguardarImprimir)
-        Me.Controls.Add(Me.btnagregar)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtdescripcion)
-        Me.Controls.Add(Me.txtprecioov)
-        Me.Controls.Add(Me.txtdescuent)
-        Me.Controls.Add(Me.txtcant)
-        Me.Controls.Add(Me.cod)
-        Me.Controls.Add(Me.DGVFacturas)
+        Me.Controls.Add(Me.DGVVentas)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "RealizarFactura"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RealizarFactura"
-        CType(Me.DGVFacturas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratituloInicio.ResumeLayout(False)
         Me.barratituloInicio.PerformLayout()
@@ -459,11 +526,13 @@ Partial Class RealizarFactura
         CType(Me.btnrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnRestaura, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DGVFacturas As System.Windows.Forms.DataGridView
+    Friend WithEvents DGVVentas As System.Windows.Forms.DataGridView
     Friend WithEvents cod As System.Windows.Forms.Label
     Public WithEvents txtcant As System.Windows.Forms.TextBox
     Public WithEvents txtdescuent As System.Windows.Forms.TextBox
@@ -491,10 +560,12 @@ Partial Class RealizarFactura
     Friend WithEvents btnRestaura As System.Windows.Forms.PictureBox
     Friend WithEvents lblCodigo As System.Windows.Forms.Label
     Friend WithEvents lblMontoTotal As System.Windows.Forms.Label
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precioUnitario As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents preciototal As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
