@@ -14,11 +14,6 @@ Public Class Cobrar
     End Sub
 
 
-    Private Sub txtpagocon_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtpagocon.TextChanged
-        devolver = Val(lblTotalPagar) - Val(txtpagocon.Text)
-        devolver = lblDevolver.Text
-
-    End Sub
 
     '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     'MOVER FORM EN NONE
@@ -70,4 +65,14 @@ Public Class Cobrar
 
 
 
+    Private Sub btncobrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncobrar.Click
+        Dim TotalPagar As Integer = Convert.ToInt32(lblTotalPagar.Text)
+        Dim PagoCon As Integer = Convert.ToInt32(txtpagocon.Text)
+        Dim devolver As Integer = 0
+
+        devolver = TotalPagar - PagoCon
+
+        devolver = lblDevolver.Text
+
+    End Sub
 End Class

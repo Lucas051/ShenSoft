@@ -24,6 +24,12 @@ Partial Class RealizarFactura
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RealizarFactura))
         Me.DGVFacturas = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod = New System.Windows.Forms.Label()
         Me.txtcant = New System.Windows.Forms.TextBox()
         Me.txtdescuent = New System.Windows.Forms.TextBox()
@@ -51,12 +57,6 @@ Partial Class RealizarFactura
         Me.btnRestaura = New System.Windows.Forms.PictureBox()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.lblMontoTotal = New System.Windows.Forms.Label()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DGVFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratituloInicio.SuspendLayout()
@@ -76,6 +76,36 @@ Partial Class RealizarFactura
         Me.DGVFacturas.Name = "DGVFacturas"
         Me.DGVFacturas.Size = New System.Drawing.Size(849, 369)
         Me.DGVFacturas.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Código"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Descripción"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Cantidad"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Descuento (%)"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Precio Unitario"
+        Me.Column5.Name = "Column5"
+        '
+        'preciototal
+        '
+        Me.preciototal.HeaderText = "Precio Total"
+        Me.preciototal.Name = "preciototal"
         '
         'cod
         '
@@ -388,36 +418,6 @@ Partial Class RealizarFactura
         Me.lblMontoTotal.Size = New System.Drawing.Size(19, 20)
         Me.lblMontoTotal.TabIndex = 52
         Me.lblMontoTotal.Text = "0"
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Código"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Descripción"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Descuento (%)"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Precio Unitario"
-        Me.Column5.Name = "Column5"
-        '
-        'preciototal
-        '
-        Me.preciototal.HeaderText = "Precio Total"
-        Me.preciototal.Name = "preciototal"
         '
         'RealizarFactura
         '

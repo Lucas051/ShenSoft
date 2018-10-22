@@ -10,6 +10,12 @@ Public Class RealizarFactura
     Private MouseDownX As Integer
     Private MouseDownY As Integer
 
+
+    Private Sub RealizarFactura_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        txtdescuent.Text = 0
+        txtcant.Text = 1
+    End Sub
+
     Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarImprimir.Click
 
         ModuloVariables.MontoTotal = lblMontoTotal.Text
@@ -133,4 +139,5 @@ Public Class RealizarFactura
         End If
     End Sub
     '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 End Class
