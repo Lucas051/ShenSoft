@@ -11,6 +11,8 @@ Public Class RealizarFactura
     Private MouseDownY As Integer
 
     Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarImprimir.Click
+
+        ModuloVariables.MontoTotal = lblMontoTotal.Text
         Cobrar.Show()
     End Sub
 

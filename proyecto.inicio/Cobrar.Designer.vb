@@ -206,6 +206,7 @@ Partial Class Cobrar
         '
         Me.lblTotalPagar.AutoSize = True
         Me.lblTotalPagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPagar.ForeColor = System.Drawing.Color.White
         Me.lblTotalPagar.Location = New System.Drawing.Point(138, 348)
         Me.lblTotalPagar.Name = "lblTotalPagar"
         Me.lblTotalPagar.Size = New System.Drawing.Size(96, 18)
@@ -215,22 +216,24 @@ Partial Class Cobrar
         'lblDevolver
         '
         Me.lblDevolver.AutoSize = True
-        Me.lblDevolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDevolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDevolver.ForeColor = System.Drawing.Color.White
         Me.lblDevolver.Location = New System.Drawing.Point(138, 466)
         Me.lblDevolver.Name = "lblDevolver"
-        Me.lblDevolver.Size = New System.Drawing.Size(126, 18)
+        Me.lblDevolver.Size = New System.Drawing.Size(17, 18)
         Me.lblDevolver.TabIndex = 55
-        Me.lblDevolver.Text = "Dinero a Devolver"
+        Me.lblDevolver.Text = "0"
         '
         'lblVendedor
         '
         Me.lblVendedor.AutoSize = True
         Me.lblVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVendedor.ForeColor = System.Drawing.Color.White
         Me.lblVendedor.Location = New System.Drawing.Point(263, 232)
         Me.lblVendedor.Name = "lblVendedor"
-        Me.lblVendedor.Size = New System.Drawing.Size(71, 18)
+        Me.lblVendedor.Size = New System.Drawing.Size(81, 18)
         Me.lblVendedor.TabIndex = 56
-        Me.lblVendedor.Text = "Vendedor"
+        Me.lblVendedor.Text = "(Vendedor)"
         '
         'Cobrar
         '
