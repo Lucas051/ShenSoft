@@ -34,8 +34,8 @@ Partial Class Gestionproveedores
         Me.btnañadir = New System.Windows.Forms.Button()
         Me.txtsaldo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnbuscarprov = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtbuscarprov = New System.Windows.Forms.TextBox()
         CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -161,29 +161,23 @@ Partial Class Gestionproveedores
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "Saldo"
         '
-        'btnbuscarprov
-        '
-        Me.btnbuscarprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnbuscarprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnbuscarprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnbuscarprov.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnbuscarprov.Location = New System.Drawing.Point(796, 40)
-        Me.btnbuscarprov.Name = "btnbuscarprov"
-        Me.btnbuscarprov.Size = New System.Drawing.Size(80, 28)
-        Me.btnbuscarprov.TabIndex = 31
-        Me.btnbuscarprov.Text = "Buscar"
-        Me.btnbuscarprov.UseVisualStyleBackColor = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(647, 44)
+        Me.Label5.Location = New System.Drawing.Point(626, 41)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(144, 18)
         Me.Label5.TabIndex = 32
         Me.Label5.Text = "Buscar Proveedores"
+        '
+        'txtbuscarprov
+        '
+        Me.txtbuscarprov.Location = New System.Drawing.Point(776, 42)
+        Me.txtbuscarprov.Name = "txtbuscarprov"
+        Me.txtbuscarprov.Size = New System.Drawing.Size(100, 20)
+        Me.txtbuscarprov.TabIndex = 33
         '
         'Gestionproveedores
         '
@@ -191,8 +185,8 @@ Partial Class Gestionproveedores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(896, 444)
+        Me.Controls.Add(Me.txtbuscarprov)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.btnbuscarprov)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtsaldo)
         Me.Controls.Add(Me.txtdireccion)
@@ -225,6 +219,6 @@ Partial Class Gestionproveedores
     Friend WithEvents btnañadir As System.Windows.Forms.Button
     Friend WithEvents txtsaldo As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents btnbuscarprov As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtbuscarprov As System.Windows.Forms.TextBox
 End Class

@@ -78,12 +78,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buscar proveedores.Designer.vb">
-      <DependentUpon>Buscar proveedores.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Buscar proveedores.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BuscarClientes.Designer.vb">
       <DependentUpon>BuscarClientes.vb</DependentUpon>
     </Compile>
@@ -193,9 +187,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Buscar proveedores.resx">
-      <DependentUpon>Buscar proveedores.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BuscarClientes.resx">
       <DependentUpon>BuscarClientes.vb</DependentUpon>
     </EmbeddedResource>
