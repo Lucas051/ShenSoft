@@ -198,7 +198,6 @@ Partial Class Gestionproveedores
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnlimpiar = New System.Windows.Forms.Button()
         Me.btnborrar = New System.Windows.Forms.Button()
         Me.btnañadir = New System.Windows.Forms.Button()
         Me.txtsaldo = New System.Windows.Forms.TextBox()
