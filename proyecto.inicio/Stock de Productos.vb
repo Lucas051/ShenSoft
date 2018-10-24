@@ -3,14 +3,28 @@
 Public Class Stock_de_Productos
 
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         Inicio.Show()
 
     End Sub
 
+    Private Sub Stock_de_Productos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
+        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
+        consultar()
+        DgvStock.DataSource = resultado
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
+        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+        DgvStock.Columns(0).HeaderText = "Código"
+        DgvStock.Columns(1).HeaderText = "Descripcion"
+        DgvStock.Columns(2).HeaderText = "Cantidad"
+        DgvStock.Columns(3).HeaderText = "Precio Costo"
+        DgvStock.Columns(4).HeaderText = "Precio Venta"
+        DgvStock.Columns(5).HeaderText = "Proveedor"
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
         Try
             Dim Codigo As String
             For Each row As DataGridViewRow In Me.DgvStock.Rows
@@ -64,42 +78,10 @@ Public Class Stock_de_Productos
 
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiar.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
 
-        txtdescripcion.Text = ""
-        txtprecio.Text = ""
-        txtcantidad.Text = ""
-        txtproveedor.Text = ""
-        txtpreciostock.Text = ""
-
-
-    End Sub
-
-    Private Sub Button5_Click(sender As System.Object, e As System.EventArgs)
         Me.Hide()
         SuspenderStock.Show()
 
     End Sub
-
-    Private Sub Stock_de_Productos_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'Codigo para insertar en un DataGridView creado datos de una tabla Mysql en este caso Stock
-        conexioon.Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
-        consultar()
-        DgvStock.DataSource = resultado
-
-        'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-        DgvStock.Columns(0).HeaderText = "Código"
-        DgvStock.Columns(1).HeaderText = "Descripcion"
-        DgvStock.Columns(2).HeaderText = "Cantidad"
-        DgvStock.Columns(3).HeaderText = "Precio Costo"
-        DgvStock.Columns(4).HeaderText = "Precio Venta"
-        DgvStock.Columns(5).HeaderText = "Proveedor"
-    End Sub
-
-
-
-    Private Sub txtdescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtdescripcion.TextChanged
-
-    End Sub
-
 End Class
