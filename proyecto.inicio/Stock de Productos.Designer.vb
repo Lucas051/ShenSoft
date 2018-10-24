@@ -22,10 +22,12 @@ Partial Class Stock_de_Productos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
         Me.txtprecio = New System.Windows.Forms.TextBox()
         Me.txtpreciostock = New System.Windows.Forms.TextBox()
-        Me.DgvStock = New System.Windows.Forms.DataGridView()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -36,49 +38,41 @@ Partial Class Stock_de_Productos
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btnvolver = New System.Windows.Forms.Button()
         Me.btningresar = New System.Windows.Forms.Button()
-        CType(Me.DgvStock, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvstock = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvstock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtdescripcion
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(191, 80)
+        Me.txtdescripcion.Location = New System.Drawing.Point(145, 58)
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.Size = New System.Drawing.Size(100, 20)
         Me.txtdescripcion.TabIndex = 6
         '
         'txtprecio
         '
-        Me.txtprecio.Location = New System.Drawing.Point(191, 117)
+        Me.txtprecio.Location = New System.Drawing.Point(145, 95)
         Me.txtprecio.Name = "txtprecio"
         Me.txtprecio.Size = New System.Drawing.Size(100, 20)
         Me.txtprecio.TabIndex = 7
         '
         'txtpreciostock
         '
-        Me.txtpreciostock.Location = New System.Drawing.Point(191, 158)
+        Me.txtpreciostock.Location = New System.Drawing.Point(145, 132)
         Me.txtpreciostock.Name = "txtpreciostock"
         Me.txtpreciostock.Size = New System.Drawing.Size(100, 20)
         Me.txtpreciostock.TabIndex = 8
         '
-        'DgvStock
-        '
-        Me.DgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvStock.Location = New System.Drawing.Point(367, 42)
-        Me.DgvStock.Name = "DgvStock"
-        Me.DgvStock.ReadOnly = True
-        Me.DgvStock.Size = New System.Drawing.Size(444, 352)
-        Me.DgvStock.TabIndex = 12
-        '
         'txtcantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(191, 201)
+        Me.txtcantidad.Location = New System.Drawing.Point(145, 172)
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
         Me.txtcantidad.TabIndex = 9
         '
         'txtproveedor
         '
-        Me.txtproveedor.Location = New System.Drawing.Point(191, 239)
+        Me.txtproveedor.Location = New System.Drawing.Point(145, 205)
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtproveedor.TabIndex = 10
@@ -88,7 +82,7 @@ Partial Class Stock_de_Productos
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label4.Location = New System.Drawing.Point(363, 9)
+        Me.Label4.Location = New System.Drawing.Point(87, 9)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(142, 24)
         Me.Label4.TabIndex = 17
@@ -99,7 +93,7 @@ Partial Class Stock_de_Productos
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(88, 241)
+        Me.Label7.Location = New System.Drawing.Point(42, 207)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(77, 18)
         Me.Label7.TabIndex = 21
@@ -110,7 +104,7 @@ Partial Class Stock_de_Productos
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(116, 119)
+        Me.Label8.Location = New System.Drawing.Point(70, 97)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(49, 18)
         Me.Label8.TabIndex = 22
@@ -121,7 +115,7 @@ Partial Class Stock_de_Productos
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(53, 160)
+        Me.Label9.Location = New System.Drawing.Point(7, 134)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(112, 18)
         Me.Label9.TabIndex = 23
@@ -132,7 +126,7 @@ Partial Class Stock_de_Productos
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(78, 82)
+        Me.Label10.Location = New System.Drawing.Point(32, 60)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(87, 18)
         Me.Label10.TabIndex = 24
@@ -143,7 +137,7 @@ Partial Class Stock_de_Productos
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(99, 203)
+        Me.Label11.Location = New System.Drawing.Point(53, 174)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(66, 18)
         Me.Label11.TabIndex = 25
@@ -155,7 +149,7 @@ Partial Class Stock_de_Productos
         Me.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnvolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnvolver.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnvolver.Location = New System.Drawing.Point(196, 357)
+        Me.btnvolver.Location = New System.Drawing.Point(279, 101)
         Me.btnvolver.Name = "btnvolver"
         Me.btnvolver.Size = New System.Drawing.Size(95, 37)
         Me.btnvolver.TabIndex = 27
@@ -168,12 +162,48 @@ Partial Class Stock_de_Productos
         Me.btningresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btningresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btningresar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btningresar.Location = New System.Drawing.Point(91, 357)
+        Me.btningresar.Location = New System.Drawing.Point(279, 58)
         Me.btningresar.Name = "btningresar"
         Me.btningresar.Size = New System.Drawing.Size(95, 37)
         Me.btningresar.TabIndex = 28
         Me.btningresar.Text = "Ingresar"
         Me.btningresar.UseVisualStyleBackColor = False
+        '
+        'dgvstock
+        '
+        Me.dgvstock.BackgroundColor = System.Drawing.Color.Silver
+        Me.dgvstock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvstock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvstock.ColumnHeadersHeight = 42
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvstock.DefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvstock.EnableHeadersVisualStyles = False
+        Me.dgvstock.GridColor = System.Drawing.Color.White
+        Me.dgvstock.Location = New System.Drawing.Point(45, 250)
+        Me.dgvstock.Name = "dgvstock"
+        Me.dgvstock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvstock.RowHeadersWidth = 50
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgvstock.RowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvstock.Size = New System.Drawing.Size(654, 304)
+        Me.dgvstock.TabIndex = 35
         '
         'Stock_de_Productos
         '
@@ -181,6 +211,7 @@ Partial Class Stock_de_Productos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(1062, 667)
+        Me.Controls.Add(Me.dgvstock)
         Me.Controls.Add(Me.btningresar)
         Me.Controls.Add(Me.btnvolver)
         Me.Controls.Add(Me.Label11)
@@ -191,14 +222,13 @@ Partial Class Stock_de_Productos
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtproveedor)
         Me.Controls.Add(Me.txtcantidad)
-        Me.Controls.Add(Me.DgvStock)
         Me.Controls.Add(Me.txtpreciostock)
         Me.Controls.Add(Me.txtprecio)
         Me.Controls.Add(Me.txtdescripcion)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Stock_de_Productos"
         Me.Text = "Stock de Productos"
-        CType(Me.DgvStock, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvstock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -206,7 +236,6 @@ Partial Class Stock_de_Productos
     Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
     Friend WithEvents txtprecio As System.Windows.Forms.TextBox
     Friend WithEvents txtpreciostock As System.Windows.Forms.TextBox
-    Friend WithEvents DgvStock As System.Windows.Forms.DataGridView
     Friend WithEvents txtcantidad As System.Windows.Forms.TextBox
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -217,4 +246,5 @@ Partial Class Stock_de_Productos
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents btnvolver As System.Windows.Forms.Button
     Friend WithEvents btningresar As System.Windows.Forms.Button
+    Friend WithEvents dgvstock As System.Windows.Forms.DataGridView
 End Class

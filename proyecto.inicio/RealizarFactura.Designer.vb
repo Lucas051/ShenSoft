@@ -27,6 +27,12 @@ Partial Class RealizarFactura
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RealizarFactura))
         Me.DGVVentas = New System.Windows.Forms.DataGridView()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod = New System.Windows.Forms.Label()
         Me.txtcant = New System.Windows.Forms.TextBox()
         Me.txtdescuent = New System.Windows.Forms.TextBox()
@@ -56,12 +62,6 @@ Partial Class RealizarFactura
         Me.lblMontoTotal = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DGVVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratituloInicio.SuspendLayout()
@@ -110,6 +110,36 @@ Partial Class RealizarFactura
         Me.DGVVentas.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DGVVentas.Size = New System.Drawing.Size(849, 369)
         Me.DGVVentas.TabIndex = 0
+        '
+        'codigo
+        '
+        Me.codigo.HeaderText = "Código"
+        Me.codigo.Name = "codigo"
+        '
+        'descripcion
+        '
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        '
+        'descuento
+        '
+        Me.descuento.HeaderText = "Descuento (%)"
+        Me.descuento.Name = "descuento"
+        '
+        'precioUnitario
+        '
+        Me.precioUnitario.HeaderText = "Precio Unitario"
+        Me.precioUnitario.Name = "precioUnitario"
+        '
+        'preciototal
+        '
+        Me.preciototal.HeaderText = "Precio Total"
+        Me.preciototal.Name = "preciototal"
         '
         'cod
         '
@@ -464,36 +494,6 @@ Partial Class RealizarFactura
         Me.btnEditar.TabIndex = 54
         Me.btnEditar.Text = "Editar Línea"
         Me.btnEditar.UseVisualStyleBackColor = False
-        '
-        'codigo
-        '
-        Me.codigo.HeaderText = "Código"
-        Me.codigo.Name = "codigo"
-        '
-        'descripcion
-        '
-        Me.descripcion.HeaderText = "Descripción"
-        Me.descripcion.Name = "descripcion"
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        '
-        'descuento
-        '
-        Me.descuento.HeaderText = "Descuento (%)"
-        Me.descuento.Name = "descuento"
-        '
-        'precioUnitario
-        '
-        Me.precioUnitario.HeaderText = "Precio Unitario"
-        Me.precioUnitario.Name = "precioUnitario"
-        '
-        'preciototal
-        '
-        Me.preciototal.HeaderText = "Precio Total"
-        Me.preciototal.Name = "preciototal"
         '
         'RealizarFactura
         '

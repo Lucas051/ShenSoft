@@ -22,10 +22,12 @@ Partial Class Gestionproveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txttelefono = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
-        Me.dgvproveedores = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -35,6 +37,7 @@ Partial Class Gestionproveedores
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtBuscarP = New System.Windows.Forms.TextBox()
+        Me.dgvproveedores = New System.Windows.Forms.DataGridView()
         CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,17 +61,6 @@ Partial Class Gestionproveedores
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtproveedor.TabIndex = 25
-        '
-        'dgvproveedores
-        '
-        Me.dgvproveedores.AllowUserToAddRows = False
-        Me.dgvproveedores.AllowUserToDeleteRows = False
-        Me.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvproveedores.Location = New System.Drawing.Point(310, 74)
-        Me.dgvproveedores.Name = "dgvproveedores"
-        Me.dgvproveedores.ReadOnly = True
-        Me.dgvproveedores.Size = New System.Drawing.Size(566, 320)
-        Me.dgvproveedores.TabIndex = 23
         '
         'Label4
         '
@@ -109,7 +101,7 @@ Partial Class Gestionproveedores
         Me.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnborrar.Location = New System.Drawing.Point(310, 404)
+        Me.btnborrar.Location = New System.Drawing.Point(289, 490)
         Me.btnborrar.Name = "btnborrar"
         Me.btnborrar.Size = New System.Drawing.Size(109, 28)
         Me.btnborrar.TabIndex = 16
@@ -122,7 +114,7 @@ Partial Class Gestionproveedores
         Me.btnañadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnañadir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnañadir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnañadir.Location = New System.Drawing.Point(97, 308)
+        Me.btnañadir.Location = New System.Drawing.Point(26, 268)
         Me.btnañadir.Name = "btnañadir"
         Me.btnañadir.Size = New System.Drawing.Size(80, 28)
         Me.btnañadir.TabIndex = 14
@@ -152,7 +144,7 @@ Partial Class Gestionproveedores
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(626, 41)
+        Me.Label5.Location = New System.Drawing.Point(614, 41)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(144, 18)
         Me.Label5.TabIndex = 32
@@ -160,18 +152,55 @@ Partial Class Gestionproveedores
         '
         'txtBuscarP
         '
-        Me.txtBuscarP.Location = New System.Drawing.Point(776, 42)
+        Me.txtBuscarP.Location = New System.Drawing.Point(764, 42)
         Me.txtBuscarP.Multiline = True
         Me.txtBuscarP.Name = "txtBuscarP"
         Me.txtBuscarP.Size = New System.Drawing.Size(100, 20)
         Me.txtBuscarP.TabIndex = 33
+        '
+        'dgvproveedores
+        '
+        Me.dgvproveedores.BackgroundColor = System.Drawing.Color.Silver
+        Me.dgvproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvproveedores.ColumnHeadersHeight = 42
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvproveedores.EnableHeadersVisualStyles = False
+        Me.dgvproveedores.GridColor = System.Drawing.Color.White
+        Me.dgvproveedores.Location = New System.Drawing.Point(289, 74)
+        Me.dgvproveedores.Name = "dgvproveedores"
+        Me.dgvproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvproveedores.RowHeadersWidth = 50
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvproveedores.Size = New System.Drawing.Size(575, 410)
+        Me.dgvproveedores.TabIndex = 34
         '
         'Gestionproveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(896, 444)
+        Me.ClientSize = New System.Drawing.Size(1062, 667)
+        Me.Controls.Add(Me.dgvproveedores)
         Me.Controls.Add(Me.txtBuscarP)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
@@ -179,7 +208,6 @@ Partial Class Gestionproveedores
         Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.txttelefono)
         Me.Controls.Add(Me.txtproveedor)
-        Me.Controls.Add(Me.dgvproveedores)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -196,7 +224,6 @@ Partial Class Gestionproveedores
     Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
     Friend WithEvents txttelefono As System.Windows.Forms.TextBox
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
-    Friend WithEvents dgvproveedores As System.Windows.Forms.DataGridView
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -206,6 +233,7 @@ Partial Class Gestionproveedores
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtBuscarP As System.Windows.Forms.TextBox
+    Friend WithEvents dgvproveedores As System.Windows.Forms.DataGridView
 
 
 
