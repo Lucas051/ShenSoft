@@ -22,7 +22,6 @@ C:\Users\Alumno-09\Desktop\ShenSoft-master\proyecto.inicio\obj\x86\Debug\proyect
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.exe
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.xml
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.pdb
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Buscar_proveedores.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarClientes.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarClientesCobrar.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Cobrar.resources

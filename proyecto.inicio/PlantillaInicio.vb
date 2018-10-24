@@ -12,6 +12,8 @@
         lblHora.Text = TimeOfDay.TimeOfDay.ToString
         TimerHora.Enabled = True
         '////////////////////////////////////////////
+        lblHora.Text = Format(DateAndTime.TimeOfDay, "hh") & ":"
+        lblMinuto.Text = Format(DateAndTime.TimeOfDay, "mm")
     End Sub
 
 End Class
