@@ -22,10 +22,12 @@ Partial Class Gestionproveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txttelefono = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
-        Me.dgvproveedores = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -34,7 +36,8 @@ Partial Class Gestionproveedores
         Me.txtsaldo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtBuscarProv = New System.Windows.Forms.TextBox()
+        Me.txtBuscarP = New System.Windows.Forms.TextBox()
+        Me.dgvproveedores = New System.Windows.Forms.DataGridView()
         CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,17 +61,6 @@ Partial Class Gestionproveedores
         Me.txtproveedor.Name = "txtproveedor"
         Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtproveedor.TabIndex = 25
-        '
-        'dgvproveedores
-        '
-        Me.dgvproveedores.AllowUserToAddRows = False
-        Me.dgvproveedores.AllowUserToDeleteRows = False
-        Me.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvproveedores.Location = New System.Drawing.Point(310, 74)
-        Me.dgvproveedores.Name = "dgvproveedores"
-        Me.dgvproveedores.ReadOnly = True
-        Me.dgvproveedores.Size = New System.Drawing.Size(566, 320)
-        Me.dgvproveedores.TabIndex = 23
         '
         'Label4
         '
@@ -109,11 +101,11 @@ Partial Class Gestionproveedores
         Me.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnborrar.Location = New System.Drawing.Point(142, 308)
+        Me.btnborrar.Location = New System.Drawing.Point(289, 490)
         Me.btnborrar.Name = "btnborrar"
-        Me.btnborrar.Size = New System.Drawing.Size(114, 28)
+        Me.btnborrar.Size = New System.Drawing.Size(109, 28)
         Me.btnborrar.TabIndex = 16
-        Me.btnborrar.Text = "Borrar"
+        Me.btnborrar.Text = "Borrar Linea"
         Me.btnborrar.UseVisualStyleBackColor = False
         '
         'btnañadir
@@ -122,9 +114,9 @@ Partial Class Gestionproveedores
         Me.btnañadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnañadir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnañadir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnañadir.Location = New System.Drawing.Point(12, 308)
+        Me.btnañadir.Location = New System.Drawing.Point(26, 268)
         Me.btnañadir.Name = "btnañadir"
-        Me.btnañadir.Size = New System.Drawing.Size(112, 28)
+        Me.btnañadir.Size = New System.Drawing.Size(80, 28)
         Me.btnañadir.TabIndex = 14
         Me.btnañadir.Text = "Añadir"
         Me.btnañadir.UseVisualStyleBackColor = False
@@ -152,219 +144,73 @@ Partial Class Gestionproveedores
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(588, 45)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(148, 18)
-        Me.Label5.TabIndex = 32
-        Me.Label5.Text = "Buscar Proveedores:"
-        '
-        'txtBuscarProv
-        '
-        Me.txtBuscarProv.Location = New System.Drawing.Point(742, 46)
-        Me.txtBuscarProv.Multiline = True
-        Me.txtBuscarProv.Name = "txtBuscarProv"
-        Me.txtBuscarProv.Size = New System.Drawing.Size(134, 20)
-        Me.txtBuscarProv.TabIndex = 33
-        '
-        'Gestionproveedores
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(896, 444)
-        Me.Controls.Add(Me.txtBuscarProv)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtsaldo)
-        Me.Controls.Add(Me.txtdireccion)
-        Me.Controls.Add(Me.txttelefono)
-        Me.Controls.Add(Me.txtproveedor)
-        Me.Controls.Add(Me.dgvproveedores)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnborrar)
-        Me.Controls.Add(Me.btnañadir)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Gestionproveedores"
-        Me.Text = "MODIFPROVEEDORES"
-        CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-        Me.txtdireccion = New System.Windows.Forms.TextBox()
-        Me.txttelefono = New System.Windows.Forms.TextBox()
-        Me.txtproveedor = New System.Windows.Forms.TextBox()
-        Me.dgvproveedores = New System.Windows.Forms.DataGridView()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnborrar = New System.Windows.Forms.Button()
-        Me.btnañadir = New System.Windows.Forms.Button()
-        Me.txtsaldo = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtbuscarprov = New System.Windows.Forms.TextBox()
-        CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'txtdireccion
-        '
-        Me.txtdireccion.Location = New System.Drawing.Point(97, 160)
-        Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(100, 20)
-        Me.txtdireccion.TabIndex = 27
-        '
-        'txttelefono
-        '
-        Me.txttelefono.Location = New System.Drawing.Point(97, 116)
-        Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(100, 20)
-        Me.txttelefono.TabIndex = 26
-        '
-        'txtproveedor
-        '
-        Me.txtproveedor.Location = New System.Drawing.Point(97, 74)
-        Me.txtproveedor.Name = "txtproveedor"
-        Me.txtproveedor.Size = New System.Drawing.Size(100, 20)
-        Me.txtproveedor.TabIndex = 25
-        '
-        'dgvproveedores
-        '
-        Me.dgvproveedores.AllowUserToAddRows = False
-        Me.dgvproveedores.AllowUserToDeleteRows = False
-        Me.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvproveedores.Location = New System.Drawing.Point(310, 74)
-        Me.dgvproveedores.Name = "dgvproveedores"
-        Me.dgvproveedores.ReadOnly = True
-        Me.dgvproveedores.Size = New System.Drawing.Size(566, 320)
-        Me.dgvproveedores.TabIndex = 23
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(23, 159)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 18)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Dirección"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(30, 115)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 18)
-        Me.Label3.TabIndex = 21
-        Me.Label3.Text = "Teléfono"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(16, 74)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 18)
-        Me.Label2.TabIndex = 20
-        Me.Label2.Text = "Proveedor"
-        '
-        'btnlimpiar
-        '
-        Me.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnlimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnlimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnlimpiar.Location = New System.Drawing.Point(11, 342)
-        Me.btnlimpiar.Name = "btnlimpiar"
-        Me.btnlimpiar.Size = New System.Drawing.Size(80, 28)
-        Me.btnlimpiar.TabIndex = 17
-        Me.btnlimpiar.Text = "Limpiar"
-        Me.btnlimpiar.UseVisualStyleBackColor = False
-        '
-        'btnborrar
-        '
-        Me.btnborrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnborrar.Location = New System.Drawing.Point(97, 342)
-        Me.btnborrar.Name = "btnborrar"
-        Me.btnborrar.Size = New System.Drawing.Size(80, 28)
-        Me.btnborrar.TabIndex = 16
-        Me.btnborrar.Text = "Borrar"
-        Me.btnborrar.UseVisualStyleBackColor = False
-        '
-        'btnañadir
-        '
-        Me.btnañadir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnañadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnañadir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnañadir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnañadir.Location = New System.Drawing.Point(12, 308)
-        Me.btnañadir.Name = "btnañadir"
-        Me.btnañadir.Size = New System.Drawing.Size(165, 28)
-        Me.btnañadir.TabIndex = 14
-        Me.btnañadir.Text = "Añadir"
-        Me.btnañadir.UseVisualStyleBackColor = False
-        '
-        'txtsaldo
-        '
-        Me.txtsaldo.Location = New System.Drawing.Point(97, 200)
-        Me.txtsaldo.Name = "txtsaldo"
-        Me.txtsaldo.Size = New System.Drawing.Size(100, 20)
-        Me.txtsaldo.TabIndex = 29
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(46, 199)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 18)
-        Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Saldo"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(626, 41)
+        Me.Label5.Location = New System.Drawing.Point(614, 41)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(144, 18)
         Me.Label5.TabIndex = 32
         Me.Label5.Text = "Buscar Proveedores"
         '
-        'txtbuscarprov
+        'txtBuscarP
         '
-        Me.txtbuscarprov.Location = New System.Drawing.Point(776, 42)
-        Me.txtbuscarprov.Name = "txtbuscarprov"
-        Me.txtbuscarprov.Size = New System.Drawing.Size(100, 20)
-        Me.txtbuscarprov.TabIndex = 33
+        Me.txtBuscarP.Location = New System.Drawing.Point(764, 42)
+        Me.txtBuscarP.Multiline = True
+        Me.txtBuscarP.Name = "txtBuscarP"
+        Me.txtBuscarP.Size = New System.Drawing.Size(100, 20)
+        Me.txtBuscarP.TabIndex = 33
+        '
+        'dgvproveedores
+        '
+        Me.dgvproveedores.BackgroundColor = System.Drawing.Color.Silver
+        Me.dgvproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvproveedores.ColumnHeadersHeight = 42
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvproveedores.EnableHeadersVisualStyles = False
+        Me.dgvproveedores.GridColor = System.Drawing.Color.White
+        Me.dgvproveedores.Location = New System.Drawing.Point(289, 74)
+        Me.dgvproveedores.Name = "dgvproveedores"
+        Me.dgvproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvproveedores.RowHeadersWidth = 50
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvproveedores.Size = New System.Drawing.Size(575, 410)
+        Me.dgvproveedores.TabIndex = 34
         '
         'Gestionproveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(896, 444)
-        Me.Controls.Add(Me.txtbuscarprov)
+        Me.ClientSize = New System.Drawing.Size(1062, 667)
+        Me.Controls.Add(Me.dgvproveedores)
+        Me.Controls.Add(Me.txtBuscarP)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtsaldo)
         Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.txttelefono)
         Me.Controls.Add(Me.txtproveedor)
-        Me.Controls.Add(Me.dgvproveedores)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnañadir)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -378,7 +224,6 @@ Partial Class Gestionproveedores
     Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
     Friend WithEvents txttelefono As System.Windows.Forms.TextBox
     Friend WithEvents txtproveedor As System.Windows.Forms.TextBox
-    Friend WithEvents dgvproveedores As System.Windows.Forms.DataGridView
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -387,8 +232,9 @@ Partial Class Gestionproveedores
     Friend WithEvents txtsaldo As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txtBuscarProv As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txtbuscarprov As System.Windows.Forms.TextBox
+    Friend WithEvents txtBuscarP As System.Windows.Forms.TextBox
+    Friend WithEvents dgvproveedores As System.Windows.Forms.DataGridView
+
+
 
 End Class
