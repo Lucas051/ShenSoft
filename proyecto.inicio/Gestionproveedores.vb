@@ -29,7 +29,7 @@ Public Class Gestionproveedores
 
     End Sub
 
-    Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpiar.Click
+    Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         txtproveedor.Text = ""
         txttelefono.Text = ""
         txtdireccion.Text = ""
@@ -55,13 +55,16 @@ Public Class Gestionproveedores
 
     End Sub
 
-    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarprov.Click
-        Dim llamar As New Buscar_proveedores
-        Inicio.panelmedio.Controls.Clear()
-        llamar.TopLevel = False
-        llamar.Parent = Inicio.panelmedio
-        llamar.Show()
-        llamar.Dock = DockStyle.Fill
-        Inicio.panelmedio.Visible = True
+
+    Private Sub txtBuscarProv_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarProv.TextChanged
+        Try
+            'BUSQUEDA DINAMICA EN DATAGRIDVIEW
+            conexioon.Consulta = "SELECT * FROM proveedores WHERE  nombre_prov LIKE '%" & txtBuscarProv.Text & "%';"
+            consultar()
+            dgvproveedores.DataSource = resultado
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

@@ -29,13 +29,12 @@ Partial Class Gestionproveedores
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnlimpiar = New System.Windows.Forms.Button()
         Me.btnborrar = New System.Windows.Forms.Button()
         Me.btnañadir = New System.Windows.Forms.Button()
         Me.txtsaldo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnbuscarprov = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtBuscarProv = New System.Windows.Forms.TextBox()
         CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -104,28 +103,15 @@ Partial Class Gestionproveedores
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Proveedor"
         '
-        'btnlimpiar
-        '
-        Me.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnlimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnlimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnlimpiar.Location = New System.Drawing.Point(11, 342)
-        Me.btnlimpiar.Name = "btnlimpiar"
-        Me.btnlimpiar.Size = New System.Drawing.Size(80, 28)
-        Me.btnlimpiar.TabIndex = 17
-        Me.btnlimpiar.Text = "Limpiar"
-        Me.btnlimpiar.UseVisualStyleBackColor = False
-        '
         'btnborrar
         '
         Me.btnborrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnborrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnborrar.Location = New System.Drawing.Point(97, 342)
+        Me.btnborrar.Location = New System.Drawing.Point(142, 308)
         Me.btnborrar.Name = "btnborrar"
-        Me.btnborrar.Size = New System.Drawing.Size(80, 28)
+        Me.btnborrar.Size = New System.Drawing.Size(114, 28)
         Me.btnborrar.TabIndex = 16
         Me.btnborrar.Text = "Borrar"
         Me.btnborrar.UseVisualStyleBackColor = False
@@ -138,7 +124,7 @@ Partial Class Gestionproveedores
         Me.btnañadir.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnañadir.Location = New System.Drawing.Point(12, 308)
         Me.btnañadir.Name = "btnañadir"
-        Me.btnañadir.Size = New System.Drawing.Size(165, 28)
+        Me.btnañadir.Size = New System.Drawing.Size(112, 28)
         Me.btnañadir.TabIndex = 14
         Me.btnañadir.Text = "Añadir"
         Me.btnañadir.UseVisualStyleBackColor = False
@@ -161,29 +147,24 @@ Partial Class Gestionproveedores
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "Saldo"
         '
-        'btnbuscarprov
-        '
-        Me.btnbuscarprov.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnbuscarprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnbuscarprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnbuscarprov.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnbuscarprov.Location = New System.Drawing.Point(796, 40)
-        Me.btnbuscarprov.Name = "btnbuscarprov"
-        Me.btnbuscarprov.Size = New System.Drawing.Size(80, 28)
-        Me.btnbuscarprov.TabIndex = 31
-        Me.btnbuscarprov.Text = "Buscar"
-        Me.btnbuscarprov.UseVisualStyleBackColor = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(647, 44)
+        Me.Label5.Location = New System.Drawing.Point(588, 45)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(144, 18)
+        Me.Label5.Size = New System.Drawing.Size(148, 18)
         Me.Label5.TabIndex = 32
-        Me.Label5.Text = "Buscar Proveedores"
+        Me.Label5.Text = "Buscar Proveedores:"
+        '
+        'txtBuscarProv
+        '
+        Me.txtBuscarProv.Location = New System.Drawing.Point(742, 46)
+        Me.txtBuscarProv.Multiline = True
+        Me.txtBuscarProv.Name = "txtBuscarProv"
+        Me.txtBuscarProv.Size = New System.Drawing.Size(134, 20)
+        Me.txtBuscarProv.TabIndex = 33
         '
         'Gestionproveedores
         '
@@ -191,8 +172,8 @@ Partial Class Gestionproveedores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(896, 444)
+        Me.Controls.Add(Me.txtBuscarProv)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.btnbuscarprov)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtsaldo)
         Me.Controls.Add(Me.txtdireccion)
@@ -202,7 +183,6 @@ Partial Class Gestionproveedores
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnlimpiar)
         Me.Controls.Add(Me.btnborrar)
         Me.Controls.Add(Me.btnañadir)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -220,11 +200,10 @@ Partial Class Gestionproveedores
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btnlimpiar As System.Windows.Forms.Button
     Friend WithEvents btnborrar As System.Windows.Forms.Button
     Friend WithEvents btnañadir As System.Windows.Forms.Button
     Friend WithEvents txtsaldo As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents btnbuscarprov As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtBuscarProv As System.Windows.Forms.TextBox
 End Class
