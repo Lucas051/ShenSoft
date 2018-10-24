@@ -14,6 +14,7 @@ Public Class RealizarFactura
 
     Private Sub RealizarFactura_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         txtdescuent.Text = 0
+        lblCodigo.ResetText()
     End Sub
 
     Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarImprimir.Click
@@ -101,12 +102,9 @@ Public Class RealizarFactura
             MessageBox.Show(ex.ToString)
         End Try
 
-        For Each fila In DGVVentas.Rows
-            montototal += Convert.ToDouble(fila.Cells("preciototal").Value)
-        Next
-
-        txtdescuent.Text = 0
-        lblMontoTotal.Text = Convert.ToString(montototal)
+        montototal += valorTotal
+        lblMontoTotal.Text = montototal
+        
 
     End Sub
 
