@@ -15,25 +15,36 @@ Public Class Gestionproveedores
                 consultar()
                 dgvproveedores.DataSource = resultado
 
+                dgvproveedores.Columns(0).HeaderText = "ID"
+                dgvproveedores.Columns(1).HeaderText = "Proveedor"
+                dgvproveedores.Columns(2).HeaderText = "Teléfono"
+                dgvproveedores.Columns(3).HeaderText = "Dirección"
+                dgvproveedores.Columns(4).HeaderText = "Saldo"
+
                 MessageBox.Show("Datos Guardados.")
 
             Else
                 MessageBox.Show("Se deben completar todos los campos.")
+
             End If
 
         Catch ex As Exception
 
             MessageBox.Show(ex.ToString)
-
         End Try
 
-    End Sub
+        txtproveedor.Clear()
+        txttelefono.Clear()
+        txtdireccion.Clear()
+        txtsaldo.Clear()
+
 
     Private Sub limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         txtproveedor.Text = ""
         txttelefono.Text = ""
         txtdireccion.Text = ""
         txtsaldo.Text = ""
+
     End Sub
 
     Private Sub volver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -55,11 +66,10 @@ Public Class Gestionproveedores
 
     End Sub
 
-
-    Private Sub txtBuscarProv_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarProv.TextChanged
+    Private Sub txtBuscarProv_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarprov.TextChanged
         Try
             'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM proveedores WHERE  nombre_prov LIKE '%" & txtBuscarProv.Text & "%';"
+            conexioon.Consulta = "SELECT * FROM proveedores WHERE  nombre_prov LIKE '%" & txtbuscarprov.Text & "%';"
             consultar()
             dgvproveedores.DataSource = resultado
 
@@ -67,4 +77,17 @@ Public Class Gestionproveedores
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub txtbuscarprov_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarprov.TextChanged
+        Try
+            'BUSQUEDA EN DATAGRIDVIEW
+            conexioon.Consulta = "SELECT * FROM proveedores WHERE nombre_prov LIKE '%" & txtbuscarprov.Text & "%';"
+            consultar()
+            dgvproveedores.DataSource = resultado
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
 End Class
