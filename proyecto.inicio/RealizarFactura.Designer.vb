@@ -27,12 +27,6 @@ Partial Class RealizarFactura
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RealizarFactura))
         Me.DGVVentas = New System.Windows.Forms.DataGridView()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod = New System.Windows.Forms.Label()
         Me.txtcant = New System.Windows.Forms.TextBox()
         Me.txtdescuent = New System.Windows.Forms.TextBox()
@@ -63,6 +57,12 @@ Partial Class RealizarFactura
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnlineaAgregada = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DGVVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratituloInicio.SuspendLayout()
@@ -111,36 +111,6 @@ Partial Class RealizarFactura
         Me.DGVVentas.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DGVVentas.Size = New System.Drawing.Size(849, 369)
         Me.DGVVentas.TabIndex = 0
-        '
-        'codigo
-        '
-        Me.codigo.HeaderText = "Código"
-        Me.codigo.Name = "codigo"
-        '
-        'descripcion
-        '
-        Me.descripcion.HeaderText = "Descripción"
-        Me.descripcion.Name = "descripcion"
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        '
-        'descuento
-        '
-        Me.descuento.HeaderText = "Descuento (%)"
-        Me.descuento.Name = "descuento"
-        '
-        'precioventa
-        '
-        Me.precioventa.HeaderText = "Precio Unitario"
-        Me.precioventa.Name = "precioventa"
-        '
-        'preciototal
-        '
-        Me.preciototal.HeaderText = "Precio Total"
-        Me.preciototal.Name = "preciototal"
         '
         'cod
         '
@@ -513,6 +483,40 @@ Partial Class RealizarFactura
         Me.btnEditar.Text = "Editar Línea"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
+        'codigo
+        '
+        Me.codigo.HeaderText = "Código"
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
+        Me.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'descripcion
+        '
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.descripcion.Width = 200
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        '
+        'descuento
+        '
+        Me.descuento.HeaderText = "Descuento (%)"
+        Me.descuento.Name = "descuento"
+        '
+        'precioventa
+        '
+        Me.precioventa.HeaderText = "Precio Unitario"
+        Me.precioventa.Name = "precioventa"
+        '
+        'preciototal
+        '
+        Me.preciototal.HeaderText = "Precio Total"
+        Me.preciototal.Name = "preciototal"
+        '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -580,11 +584,11 @@ Partial Class RealizarFactura
     Friend WithEvents lblMontoTotal As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents btnlineaAgregada As System.Windows.Forms.Button
     Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents precioventa As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents preciototal As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents btnlineaAgregada As System.Windows.Forms.Button
 End Class

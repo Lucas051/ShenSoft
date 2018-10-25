@@ -13,6 +13,7 @@ Public Class RealizarFactura
 
 
     Private Sub RealizarFactura_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        lblMontoTotal.Text = 0
         txtdescuent.Text = 0
         lblCodigo.ResetText()
     End Sub
@@ -25,21 +26,17 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
-        Try
-            For Each fila As DataGridViewRow In DGVVentas.Rows
-                DGVVentas.Rows.Remove(fila)
-                montototal -= Convert.ToDouble(fila.Cells("preciototal").Value)
-            Next
+
+        lblMontoTotal.Text = 0
+
+        DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
 
 
-            lblMontoTotal.Text = Convert.ToString(montototal)
+        For Each fila As DataGridViewRow In DGVVentas.SelectedRows
+            montototal += Convert.ToDouble(fila.Cells("preciototal").Value)
+        Next
+        lblMontoTotal.Text = Convert.ToString(montototal)
 
-
-        Catch ex As Exception
-            If lblMontoTotal.Text = String.Empty Then
-                MessageBox.Show("No hay fila para Remover")
-            End If
-        End Try
     End Sub
 
     Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
@@ -96,6 +93,17 @@ Public Class RealizarFactura
         row.Cells(2).Value = txtcant.Text
         row.Cells(3).Value = txtdescuent.Text
         row.Cells(4).Value = txtprecioov.Text
+
+
+        'calculo de valor total del producto agregado al DGV, en caso de realizar descuento también se realizará una operación
+        cantidadp = txtcant.Text
+        valor = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
+        descuentop = Val(valor) * Val(txtdescuent.Text) / 100
+        valorTotal = Val(cantidadp) * Val(txtprecioov.Text) - descuentop
+
+
+        row.Cells(5).Value = valorTotal
+
     End Sub
 
     Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregar.Click
@@ -135,6 +143,7 @@ Public Class RealizarFactura
 
     End Sub
 
+    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
