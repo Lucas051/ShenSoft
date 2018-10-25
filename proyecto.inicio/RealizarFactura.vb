@@ -4,7 +4,7 @@ Imports System.Windows.Forms
 Public Class RealizarFactura
     Dim cantidadp, valor, descuentop, valorTotal As Integer
     Dim montototal As Double = 0
-    Dim precioeliminado As Double
+
 
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
@@ -24,14 +24,21 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
+        Try
+            For Each fila As DataGridViewRow In DGVVentas.Rows
+                DGVVentas.Rows.Remove(fila)
+                montototal -= Convert.ToDouble(fila.Cells("preciototal").Value)
+            Next
 
-        DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
 
-        precioeliminado = DGVVentas.CurrentRow.Cells("preciototal").Value
+            lblMontoTotal.Text = Convert.ToString(montototal)
 
-        montototal = montototal - precioeliminado
-        lblMontoTotal.Text = Convert.ToString(montototal)
 
+        Catch ex As Exception
+            If lblMontoTotal.Text = String.Empty Then
+                MessageBox.Show("No hay fila para Remover")
+            End If
+        End Try
     End Sub
 
     Private Sub atras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
@@ -102,10 +109,10 @@ Public Class RealizarFactura
             MessageBox.Show(ex.ToString)
         End Try
 
+        txtdescuent.Text = 0
         montototal += valorTotal
         lblMontoTotal.Text = montototal
-        
-
+  
     End Sub
 
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click

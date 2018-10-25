@@ -129,9 +129,9 @@ Partial Class PlantillaInicio
         Me.lblTelefonos.ForeColor = System.Drawing.Color.White
         Me.lblTelefonos.Location = New System.Drawing.Point(201, 505)
         Me.lblTelefonos.Name = "lblTelefonos"
-        Me.lblTelefonos.Size = New System.Drawing.Size(362, 41)
+        Me.lblTelefonos.Size = New System.Drawing.Size(389, 41)
         Me.lblTelefonos.TabIndex = 23
-        Me.lblTelefonos.Text = "Tel.: 473 22722 Cel.: 092 165 355"
+        Me.lblTelefonos.Text = "Tel.: 473 22722  -  Cel.: 092 165 355"
         '
         'PlantillaInicio
         '

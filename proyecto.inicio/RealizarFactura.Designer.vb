@@ -324,10 +324,10 @@ Partial Class RealizarFactura
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(1032, 472)
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(969, 467)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 18)
+        Me.Label4.Size = New System.Drawing.Size(118, 24)
         Me.Label4.TabIndex = 49
         Me.Label4.Text = "Monto Total:"
         '
@@ -453,10 +453,10 @@ Partial Class RealizarFactura
         'lblMontoTotal
         '
         Me.lblMontoTotal.AutoSize = True
-        Me.lblMontoTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMontoTotal.Location = New System.Drawing.Point(1138, 471)
+        Me.lblMontoTotal.Font = New System.Drawing.Font("Bahnschrift", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMontoTotal.Location = New System.Drawing.Point(1093, 467)
         Me.lblMontoTotal.Name = "lblMontoTotal"
-        Me.lblMontoTotal.Size = New System.Drawing.Size(19, 20)
+        Me.lblMontoTotal.Size = New System.Drawing.Size(21, 24)
         Me.lblMontoTotal.TabIndex = 52
         Me.lblMontoTotal.Text = "0"
         '
