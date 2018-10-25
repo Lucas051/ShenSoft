@@ -31,7 +31,7 @@ Partial Class RealizarFactura
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioUnitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod = New System.Windows.Forms.Label()
         Me.txtcant = New System.Windows.Forms.TextBox()
@@ -61,6 +61,7 @@ Partial Class RealizarFactura
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.lblMontoTotal = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnlineaAgregada = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         CType(Me.DGVVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +88,7 @@ Partial Class RealizarFactura
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGVVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGVVentas.ColumnHeadersHeight = 42
-        Me.DGVVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descripcion, Me.cantidad, Me.descuento, Me.precioUnitario, Me.preciototal})
+        Me.DGVVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descripcion, Me.cantidad, Me.descuento, Me.precioventa, Me.preciototal})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ScrollBar
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -131,10 +132,10 @@ Partial Class RealizarFactura
         Me.descuento.HeaderText = "Descuento (%)"
         Me.descuento.Name = "descuento"
         '
-        'precioUnitario
+        'precioventa
         '
-        Me.precioUnitario.HeaderText = "Precio Unitario"
-        Me.precioUnitario.Name = "precioUnitario"
+        Me.precioventa.HeaderText = "Precio Unitario"
+        Me.precioventa.Name = "precioventa"
         '
         'preciototal
         '
@@ -463,6 +464,7 @@ Partial Class RealizarFactura
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel1.Controls.Add(Me.btnlineaAgregada)
         Me.Panel1.Controls.Add(Me.btnagregar)
         Me.Panel1.Controls.Add(Me.lblCodigo)
         Me.Panel1.Controls.Add(Me.Label6)
@@ -478,6 +480,22 @@ Partial Class RealizarFactura
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(287, 574)
         Me.Panel1.TabIndex = 53
+        '
+        'btnlineaAgregada
+        '
+        Me.btnlineaAgregada.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnlineaAgregada.FlatAppearance.BorderSize = 0
+        Me.btnlineaAgregada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnlineaAgregada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnlineaAgregada.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnlineaAgregada.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnlineaAgregada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnlineaAgregada.Location = New System.Drawing.Point(20, 402)
+        Me.btnlineaAgregada.Name = "btnlineaAgregada"
+        Me.btnlineaAgregada.Size = New System.Drawing.Size(227, 26)
+        Me.btnlineaAgregada.TabIndex = 56
+        Me.btnlineaAgregada.Text = "Agregar Línea Editada"
+        Me.btnlineaAgregada.UseVisualStyleBackColor = False
         '
         'btnEditar
         '
@@ -566,6 +584,7 @@ Partial Class RealizarFactura
     Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents precioUnitario As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precioventa As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents preciototal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnlineaAgregada As System.Windows.Forms.Button
 End Class

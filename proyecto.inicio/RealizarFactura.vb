@@ -17,6 +17,7 @@ Public Class RealizarFactura
         lblCodigo.ResetText()
     End Sub
 
+
     Private Sub guardarImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarImprimir.Click
 
         ModuloVariables.MontoTotal = lblMontoTotal.Text
@@ -61,8 +62,7 @@ Public Class RealizarFactura
     End Sub
 
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
-        DGVVentas.Rows.Add(lblCodigo.Text, txtdescripcion.Text, cantidadp, txtdescuent.Text, txtprecioov.Text, valorTotal)
-        DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
+
         If (DGVVentas.SelectedRows.Count > 0) Then
             txtdescripcion.Text = DGVVentas.CurrentRow.Cells("descripcion").Value.ToString
             txtcant.Text = DGVVentas.CurrentRow.Cells("cantidad").Value.ToString
@@ -71,11 +71,31 @@ Public Class RealizarFactura
         Else
             MessageBox.Show("Seleccione una línea!")
         End If
+
+    
+
     End Sub
+
 
     Private Sub buscarproductos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbuscarproductos.Click
         SearchProducts.Show()
 
+    End Sub
+
+    Private Sub btnlineaAgregada_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlineaAgregada.Click
+        ' Fila actualmente seleccionada en el control DataGridView
+        '
+        Dim row As DataGridViewRow = DGVVentas.CurrentRow
+
+        ' Si no hay ninguna fila seleccionada, abandonamos el procedimiento
+        '
+        If (row Is Nothing) Then Return
+
+        'mandamos los valores modificados de los txtbox hacia la currentRow
+        row.Cells(1).Value = txtdescripcion.Text
+        row.Cells(2).Value = txtcant.Text
+        row.Cells(3).Value = txtdescuent.Text
+        row.Cells(4).Value = txtprecioov.Text
     End Sub
 
     Private Sub agregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregar.Click
@@ -112,7 +132,7 @@ Public Class RealizarFactura
         txtdescuent.Text = 0
         montototal += valorTotal
         lblMontoTotal.Text = montototal
-  
+
     End Sub
 
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
@@ -169,4 +189,8 @@ Public Class RealizarFactura
         End If
     End Sub
     '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+  
 End Class
