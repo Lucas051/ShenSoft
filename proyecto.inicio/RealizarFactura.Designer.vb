@@ -109,7 +109,7 @@ Partial Class RealizarFactura
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.DGVVentas.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.DGVVentas.Size = New System.Drawing.Size(849, 369)
+        Me.DGVVentas.Size = New System.Drawing.Size(840, 369)
         Me.DGVVentas.TabIndex = 0
         '
         'cod
@@ -489,33 +489,46 @@ Partial Class RealizarFactura
         Me.codigo.Name = "codigo"
         Me.codigo.ReadOnly = True
         Me.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.codigo.Width = 120
         '
         'descripcion
         '
         Me.descripcion.HeaderText = "Descripción"
         Me.descripcion.Name = "descripcion"
-        Me.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.descripcion.Width = 200
         '
         'cantidad
         '
         Me.cantidad.HeaderText = "Cantidad"
         Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        Me.cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.cantidad.Width = 110
         '
         'descuento
         '
         Me.descuento.HeaderText = "Descuento (%)"
         Me.descuento.Name = "descuento"
+        Me.descuento.ReadOnly = True
+        Me.descuento.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.descuento.Width = 120
         '
         'precioventa
         '
         Me.precioventa.HeaderText = "Precio Unitario"
         Me.precioventa.Name = "precioventa"
+        Me.precioventa.ReadOnly = True
+        Me.precioventa.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.precioventa.Width = 120
         '
         'preciototal
         '
         Me.preciototal.HeaderText = "Precio Total"
         Me.preciototal.Name = "preciototal"
+        Me.preciototal.ReadOnly = True
+        Me.preciototal.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.preciototal.Width = 120
         '
         'RealizarFactura
         '
