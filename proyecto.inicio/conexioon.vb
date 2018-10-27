@@ -5,7 +5,7 @@ Imports System.Data.OleDb
 Imports System.Data
 Module conexioon
 
-    Dim ubicacion As String = "server=localhost ; user id=root ; password=;database =proyecto" ' "server=proyectoxd.ddns.net; user id=admin; password=admin; database=proyecto" 'cambiar esta linea por la otra para la BD remota
+    Dim ubicacion As String = "server=localhost ; user id=root ; password=;database =lapolleriabd" ' "server=proyectoxd.ddns.net; user id=admin; password=admin; database=proyecto" 'cambiar esta linea por la otra para la BD remota
 
     Public conexion As MySqlDataAdapter
     Public resultado As DataTable
