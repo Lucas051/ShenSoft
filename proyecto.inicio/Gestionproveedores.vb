@@ -13,17 +13,6 @@ Public Class Gestionproveedores
         End Try
     End Sub
 
-    Private Sub txtbuscarprov_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarP.TextChanged
-        Try
-            'BUSQUEDA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM proveedores WHERE nombre_prov LIKE '%" & txtBuscarP.Text & "%';"
-            consultar()
-            dgvproveedores.DataSource = resultado
-
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
 
@@ -34,9 +23,9 @@ Public Class Gestionproveedores
     Private Sub btnañadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnañadir.Click
         Try
 
-            If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "" And txtsaldo.Text <> "") Then
+            If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "") Then
 
-                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "','" + txtsaldo.Text + "' )"
+                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "' )"
                 consultar()
 
                 dgvproveedores.DataSource = resultado
@@ -65,7 +54,6 @@ Public Class Gestionproveedores
         txtproveedor.Clear()
         txttelefono.Clear()
         txtdireccion.Clear()
-        txtsaldo.Clear()
 
     End Sub
 
