@@ -10,12 +10,15 @@ Public Class SearchProducts
 
 
     Private Sub SearchProducts_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ' dgvbuscarstock.Columns(0).Width = 300
+
+
         Try
-   
+
             Consulta = "SELECT * FROM stock"
             consultar()
-            dgvbuscarStock.DataSource = resultado
-           
+            dgvbuscarstock.DataSource = resultado
+
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -28,9 +31,13 @@ Public Class SearchProducts
         dgvbuscarstock.Columns(3).HeaderText = "Precio Costo"
         dgvbuscarstock.Columns(4).HeaderText = "Precio Venta"
         dgvbuscarstock.Columns(5).HeaderText = "Proveedor"
+
+        'ancho de columnas dgv
+        dgvbuscarstock.Columns(0).Width = 90
+        dgvbuscarstock.Columns(1).Width = 200
     End Sub
 
-    Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarstock.CellClick
+    Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
         Dim llamar As New RealizarFactura
         'Mediante el evento indicamos hacia donde van los valores seleccionados
         RealizarFactura.lblCodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
@@ -43,7 +50,7 @@ Public Class SearchProducts
     Private Sub txtbuscarstock_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarstock.TextChanged
         Try
             'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM stock WHERE  descripcion LIKE '%" & txtbuscarstock.Text & "%';"
+            conexioon.Consulta = "SELECT S.*, FROM stock S WHERE  descripcion LIKE '%" & txtbuscarstock.Text & "%';"
             consultar()
             dgvbuscarstock.DataSource = resultado
 

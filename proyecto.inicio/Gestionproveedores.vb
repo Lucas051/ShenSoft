@@ -82,4 +82,6 @@ Public Class Gestionproveedores
         dgvproveedores.Columns(4).HeaderText = "Saldo"
 
     End Sub
+
+
 End Class

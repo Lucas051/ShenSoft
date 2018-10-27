@@ -84,4 +84,6 @@ Public Class Stock_de_Productos
         SuspenderStock.Show()
 
     End Sub
+
+
 End Class

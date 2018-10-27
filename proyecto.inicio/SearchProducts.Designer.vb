@@ -23,6 +23,9 @@ Partial Class SearchProducts
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchProducts))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.barratituloInicio = New System.Windows.Forms.Panel()
         Me.LabelInicio = New System.Windows.Forms.Label()
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
@@ -186,11 +189,39 @@ Partial Class SearchProducts
         '
         'dgvbuscarstock
         '
-        Me.dgvbuscarstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvbuscarstock.Location = New System.Drawing.Point(49, 94)
+        Me.dgvbuscarstock.BackgroundColor = System.Drawing.Color.Silver
+        Me.dgvbuscarstock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvbuscarstock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvbuscarstock.ColumnHeadersHeight = 42
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvbuscarstock.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvbuscarstock.EnableHeadersVisualStyles = False
+        Me.dgvbuscarstock.GridColor = System.Drawing.Color.White
+        Me.dgvbuscarstock.Location = New System.Drawing.Point(26, 84)
         Me.dgvbuscarstock.Name = "dgvbuscarstock"
-        Me.dgvbuscarstock.Size = New System.Drawing.Size(699, 258)
-        Me.dgvbuscarstock.TabIndex = 4
+        Me.dgvbuscarstock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvbuscarstock.RowHeadersWidth = 50
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgvbuscarstock.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvbuscarstock.Size = New System.Drawing.Size(734, 269)
+        Me.dgvbuscarstock.TabIndex = 35
         '
         'SearchProducts
         '
