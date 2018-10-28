@@ -22,9 +22,9 @@ Partial Class EditarProv
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvproveedores = New System.Windows.Forms.DataGridView()
         Me.txtBuscarP = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -34,10 +34,8 @@ Partial Class EditarProv
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnEditada = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnLineaEditada = New System.Windows.Forms.Button()
+        Me.btnEditarProv = New System.Windows.Forms.Button()
+        Me.btnSelecProv = New System.Windows.Forms.Button()
         CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,40 +43,41 @@ Partial Class EditarProv
         '
         Me.dgvproveedores.BackgroundColor = System.Drawing.Color.Silver
         Me.dgvproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dgvproveedores.ColumnHeadersHeight = 42
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ScrollBar
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle11
         Me.dgvproveedores.EnableHeadersVisualStyles = False
         Me.dgvproveedores.GridColor = System.Drawing.Color.White
         Me.dgvproveedores.Location = New System.Drawing.Point(279, 69)
         Me.dgvproveedores.Name = "dgvproveedores"
         Me.dgvproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvproveedores.RowHeadersWidth = 50
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvproveedores.Size = New System.Drawing.Size(575, 410)
         Me.dgvproveedores.TabIndex = 35
         '
         'txtBuscarP
         '
+        Me.txtBuscarP.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBuscarP.Location = New System.Drawing.Point(712, 28)
         Me.txtBuscarP.Multiline = True
         Me.txtBuscarP.Name = "txtBuscarP"
@@ -156,51 +155,37 @@ Partial Class EditarProv
         Me.Label2.TabIndex = 39
         Me.Label2.Text = "Nom. Proveedor"
         '
-        'btnEditada
+        'btnEditarProv
         '
-        Me.btnEditada.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnEditada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditada.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditada.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnEditada.Location = New System.Drawing.Point(41, 332)
-        Me.btnEditada.Name = "btnEditada"
-        Me.btnEditada.Size = New System.Drawing.Size(212, 28)
-        Me.btnEditada.TabIndex = 38
-        Me.btnEditada.Text = "Editar"
-        Me.btnEditada.UseVisualStyleBackColor = False
+        Me.btnEditarProv.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnEditarProv.FlatAppearance.BorderSize = 0
+        Me.btnEditarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnEditarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditarProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditarProv.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnEditarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditarProv.Location = New System.Drawing.Point(41, 293)
+        Me.btnEditarProv.Name = "btnEditarProv"
+        Me.btnEditarProv.Size = New System.Drawing.Size(212, 32)
+        Me.btnEditarProv.TabIndex = 48
+        Me.btnEditarProv.Text = "Editar"
+        Me.btnEditarProv.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'btnSelecProv
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(124, 266)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox1.TabIndex = 46
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(74, 270)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 19)
-        Me.Label1.TabIndex = 45
-        Me.Label1.Text = "Saldo"
-        '
-        'btnLineaEditada
-        '
-        Me.btnLineaEditada.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnLineaEditada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLineaEditada.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLineaEditada.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnLineaEditada.Location = New System.Drawing.Point(279, 496)
-        Me.btnLineaEditada.Name = "btnLineaEditada"
-        Me.btnLineaEditada.Size = New System.Drawing.Size(212, 28)
-        Me.btnLineaEditada.TabIndex = 47
-        Me.btnLineaEditada.Text = "Seleccionar Proveedor "
-        Me.btnLineaEditada.UseVisualStyleBackColor = False
+        Me.btnSelecProv.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnSelecProv.FlatAppearance.BorderSize = 0
+        Me.btnSelecProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnSelecProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSelecProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSelecProv.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnSelecProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSelecProv.Location = New System.Drawing.Point(279, 494)
+        Me.btnSelecProv.Name = "btnSelecProv"
+        Me.btnSelecProv.Size = New System.Drawing.Size(212, 32)
+        Me.btnSelecProv.TabIndex = 49
+        Me.btnSelecProv.Text = "Seleccionar Proveedor"
+        Me.btnSelecProv.UseVisualStyleBackColor = False
         '
         'EditarProv
         '
@@ -208,16 +193,14 @@ Partial Class EditarProv
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Beige
         Me.ClientSize = New System.Drawing.Size(891, 667)
-        Me.Controls.Add(Me.btnLineaEditada)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnSelecProv)
+        Me.Controls.Add(Me.btnEditarProv)
         Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.txttelefono)
         Me.Controls.Add(Me.txtproveedor)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnEditada)
         Me.Controls.Add(Me.txtBuscarP)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.dgvproveedores)
@@ -238,8 +221,6 @@ Partial Class EditarProv
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btnEditada As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents btnLineaEditada As System.Windows.Forms.Button
+    Friend WithEvents btnEditarProv As System.Windows.Forms.Button
+    Friend WithEvents btnSelecProv As System.Windows.Forms.Button
 End Class

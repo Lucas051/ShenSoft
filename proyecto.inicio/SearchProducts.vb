@@ -10,7 +10,6 @@ Public Class SearchProducts
 
 
     Private Sub SearchProducts_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ' dgvbuscarstock.Columns(0).Width = 300
 
 
         Try

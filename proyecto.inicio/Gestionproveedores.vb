@@ -15,7 +15,7 @@ Public Class Gestionproveedores
 
 
 
-    Private Sub btnañadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnañadir.Click
+    Private Sub btnagregarProv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregarProv.Click
         Try
 
             If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "") Then
@@ -35,7 +35,9 @@ Public Class Gestionproveedores
                 dgvproveedores.Columns(3).HeaderText = "Dirección"
                 dgvproveedores.Columns(4).HeaderText = "Saldo"
 
-                MessageBox.Show("Datos Guardados.")
+                'usamos los parametros para msgbox 
+                Dim opcion As DialogResult
+                opcion = MessageBox.Show("Datos Guardados Correctamente", "AÑADIDO CON EXITO")
 
             Else
                 MessageBox.Show("Se deben completar todos los campos.")
