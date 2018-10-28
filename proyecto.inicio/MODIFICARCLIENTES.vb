@@ -1,11 +1,5 @@
 ﻿Public Class MODIFICARCLIENTES
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Hide()
-        Inicio.Show()
-
-    End Sub
-
 
     Private Sub MODIFICARCLIENTES_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
