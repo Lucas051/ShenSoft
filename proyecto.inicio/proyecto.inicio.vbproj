@@ -109,6 +109,18 @@
     <Compile Include="ConsultaVentas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EditarProv.Designer.vb">
+      <DependentUpon>EditarProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditarProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarProv.Designer.vb">
+      <DependentUpon>EliminarProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Estadistica de Stock.Designer.vb">
       <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
     </Compile>
@@ -133,10 +145,10 @@
     <Compile Include="SearchProducts.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SuspenderSotck.Designer.vb">
-      <DependentUpon>SuspenderSotck.vb</DependentUpon>
+    <Compile Include="SuspenderStock.Designer.vb">
+      <DependentUpon>SuspenderStock.vb</DependentUpon>
     </Compile>
-    <Compile Include="SuspenderSotck.vb">
+    <Compile Include="SuspenderStock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio.Designer.vb">
@@ -202,6 +214,12 @@
     <EmbeddedResource Include="ConsultaVentas.resx">
       <DependentUpon>ConsultaVentas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarProv.resx">
+      <DependentUpon>EditarProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarProv.resx">
+      <DependentUpon>EliminarProv.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estadistica de Stock.resx">
       <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
     </EmbeddedResource>
@@ -214,8 +232,8 @@
     <EmbeddedResource Include="SearchProducts.resx">
       <DependentUpon>SearchProducts.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SuspenderSotck.resx">
-      <DependentUpon>SuspenderSotck.vb</DependentUpon>
+    <EmbeddedResource Include="SuspenderStock.resx">
+      <DependentUpon>SuspenderStock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>

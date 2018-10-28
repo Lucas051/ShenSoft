@@ -34,7 +34,6 @@ Partial Class Inicio
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnRestaura = New System.Windows.Forms.PictureBox()
         Me.Menuvertical = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panelclientes = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -42,6 +41,12 @@ Partial Class Inicio
         Me.btnconsultclient = New System.Windows.Forms.Button()
         Me.PictureBoxsalir = New System.Windows.Forms.PictureBox()
         Me.Panelproveedores = New System.Windows.Forms.Panel()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.btnEliminarProv = New System.Windows.Forms.Button()
+        Me.btnEditarProv = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btnmodprov = New System.Windows.Forms.Button()
@@ -63,6 +68,7 @@ Partial Class Inicio
         Me.btnCerrarSesion = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnSalir1 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblHora = New System.Windows.Forms.Label()
         Me.panelmedio = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -90,13 +96,13 @@ Partial Class Inicio
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnRestaura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Menuvertical.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panelclientes.SuspendLayout()
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panelproveedores.SuspendLayout()
         Me.PanelFact.SuspendLayout()
         Me.panelstock.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelmedio.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.panelOpciones.SuspendLayout()
@@ -229,7 +235,6 @@ Partial Class Inicio
         'Menuvertical
         '
         Me.Menuvertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Menuvertical.Controls.Add(Me.PictureBox2)
         Me.Menuvertical.Controls.Add(Me.Panelclientes)
         Me.Menuvertical.Controls.Add(Me.PictureBoxsalir)
         Me.Menuvertical.Controls.Add(Me.Panelproveedores)
@@ -243,21 +248,12 @@ Partial Class Inicio
         Me.Menuvertical.Controls.Add(Me.btnCerrarSesion)
         Me.Menuvertical.Controls.Add(Me.PictureBox1)
         Me.Menuvertical.Controls.Add(Me.btnSalir1)
+        Me.Menuvertical.Controls.Add(Me.PictureBox2)
         Me.Menuvertical.Dock = System.Windows.Forms.DockStyle.Left
         Me.Menuvertical.Location = New System.Drawing.Point(0, 35)
         Me.Menuvertical.Name = "Menuvertical"
         Me.Menuvertical.Size = New System.Drawing.Size(200, 555)
         Me.Menuvertical.TabIndex = 1
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.proyecto.inicio.My.Resources.Resources._1333_door_512
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 477)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(33, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 17
-        Me.PictureBox2.TabStop = False
         '
         'Panelclientes
         '
@@ -335,29 +331,101 @@ Partial Class Inicio
         'Panelproveedores
         '
         Me.Panelproveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panelproveedores.Controls.Add(Me.Panel15)
+        Me.Panelproveedores.Controls.Add(Me.Panel14)
+        Me.Panelproveedores.Controls.Add(Me.Panel13)
+        Me.Panelproveedores.Controls.Add(Me.Panel12)
+        Me.Panelproveedores.Controls.Add(Me.btnEliminarProv)
+        Me.Panelproveedores.Controls.Add(Me.btnEditarProv)
         Me.Panelproveedores.Controls.Add(Me.Panel3)
         Me.Panelproveedores.Controls.Add(Me.Panel7)
         Me.Panelproveedores.Controls.Add(Me.btnmodprov)
         Me.Panelproveedores.Location = New System.Drawing.Point(0, 405)
         Me.Panelproveedores.Name = "Panelproveedores"
-        Me.Panelproveedores.Size = New System.Drawing.Size(198, 35)
+        Me.Panelproveedores.Size = New System.Drawing.Size(198, 102)
         Me.Panelproveedores.TabIndex = 13
         Me.Panelproveedores.Visible = False
+        '
+        'Panel15
+        '
+        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel15.Location = New System.Drawing.Point(0, 73)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(5, 29)
+        Me.Panel15.TabIndex = 19
+        '
+        'Panel14
+        '
+        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel14.Location = New System.Drawing.Point(0, 39)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(5, 35)
+        Me.Panel14.TabIndex = 18
+        '
+        'Panel13
+        '
+        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel13.Location = New System.Drawing.Point(194, 66)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(5, 38)
+        Me.Panel13.TabIndex = 18
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel12.Location = New System.Drawing.Point(194, 39)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(5, 29)
+        Me.Panel12.TabIndex = 16
+        '
+        'btnEliminarProv
+        '
+        Me.btnEliminarProv.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnEliminarProv.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEliminarProv.FlatAppearance.BorderSize = 0
+        Me.btnEliminarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnEliminarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminarProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarProv.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnEliminarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminarProv.Location = New System.Drawing.Point(1, 72)
+        Me.btnEliminarProv.Name = "btnEliminarProv"
+        Me.btnEliminarProv.Size = New System.Drawing.Size(197, 29)
+        Me.btnEliminarProv.TabIndex = 15
+        Me.btnEliminarProv.Text = "Eliminar Prov."
+        Me.btnEliminarProv.UseVisualStyleBackColor = False
+        '
+        'btnEditarProv
+        '
+        Me.btnEditarProv.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnEditarProv.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEditarProv.FlatAppearance.BorderSize = 0
+        Me.btnEditarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnEditarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditarProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditarProv.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnEditarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditarProv.Location = New System.Drawing.Point(2, 39)
+        Me.btnEditarProv.Name = "btnEditarProv"
+        Me.btnEditarProv.Size = New System.Drawing.Size(197, 29)
+        Me.btnEditarProv.TabIndex = 14
+        Me.btnEditarProv.Text = "Editar Prov."
+        Me.btnEditarProv.UseVisualStyleBackColor = False
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(1, 4)
+        Me.Panel3.Location = New System.Drawing.Point(0, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(5, 29)
+        Me.Panel3.Size = New System.Drawing.Size(5, 38)
         Me.Panel3.TabIndex = 13
         '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(193, 4)
+        Me.Panel7.Location = New System.Drawing.Point(194, 4)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(5, 29)
+        Me.Panel7.Size = New System.Drawing.Size(5, 38)
         Me.Panel7.TabIndex = 12
         '
         'btnmodprov
@@ -374,7 +442,7 @@ Partial Class Inicio
         Me.btnmodprov.Name = "btnmodprov"
         Me.btnmodprov.Size = New System.Drawing.Size(197, 29)
         Me.btnmodprov.TabIndex = 8
-        Me.btnmodprov.Text = "Gestionar Prov."
+        Me.btnmodprov.Text = "Agregar Prov."
         Me.btnmodprov.UseVisualStyleBackColor = False
         '
         'PanelFact
@@ -626,6 +694,16 @@ Partial Class Inicio
         Me.btnSalir1.Text = "     Salir"
         Me.btnSalir1.UseVisualStyleBackColor = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.proyecto.inicio.My.Resources.Resources._1333_door_512
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 477)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(33, 30)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 17
+        Me.PictureBox2.TabStop = False
+        '
         'lblHora
         '
         Me.lblHora.AutoSize = True
@@ -862,13 +940,13 @@ Partial Class Inicio
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnRestaura, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Menuvertical.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panelclientes.ResumeLayout(False)
         CType(Me.PictureBoxsalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panelproveedores.ResumeLayout(False)
         Me.PanelFact.ResumeLayout(False)
         Me.panelstock.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelmedio.ResumeLayout(False)
         Me.panelmedio.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -939,4 +1017,10 @@ Partial Class Inicio
     Friend WithEvents PnlCalculadorA2 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents btnEliminarProv As System.Windows.Forms.Button
+    Friend WithEvents btnEditarProv As System.Windows.Forms.Button
+    Friend WithEvents Panel15 As System.Windows.Forms.Panel
+    Friend WithEvents Panel14 As System.Windows.Forms.Panel
+    Friend WithEvents Panel13 As System.Windows.Forms.Panel
+    Friend WithEvents Panel12 As System.Windows.Forms.Panel
 End Class

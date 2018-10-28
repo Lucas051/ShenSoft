@@ -252,6 +252,25 @@ Public Class Inicio
 
     End Sub
 
+    Private Sub btnEditarProv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditarProv.Click
+        Dim llamarEProv As New EditarProv
+        panelmedio.Controls.Clear()
+        llamarEProv.TopLevel = False
+        llamarEProv.Parent = panelmedio
+        llamarEProv.Show()
+        llamarEProv.Dock = DockStyle.Fill
+        panelmedio.Visible = True
+    End Sub
+
+    Private Sub btnEliminarProv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarProv.Click
+        Dim llamarEliminar As New EliminarProv
+        panelmedio.Controls.Clear()
+        llamarEliminar.TopLevel = False
+        llamarEliminar.Parent = panelmedio
+        llamarEliminar.Show()
+        llamarEliminar.Dock = DockStyle.Fill
+        panelmedio.Visible = True
+    End Sub
 
     Private Sub btnaddstock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnaddstock.Click
         Dim llamar4 As New Stock_de_Productos
@@ -422,7 +441,6 @@ Public Class Inicio
         Estadistica_de_Stock.Show()
 
     End Sub
-
 
 
 End Class

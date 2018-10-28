@@ -4,7 +4,7 @@ Public Class Gestionproveedores
     Private Sub txtBuscarP_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarP.TextChanged
         Try
             'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM proveedores WHERE  nombre_prov LIKE '%" & txtBuscarP.Text & "%';"
+            conexioon.Consulta = "SELECT * FROM proveedores WHERE nombre_prov LIKE '%" & txtBuscarP.Text & "%';"
             consultar()
             dgvproveedores.DataSource = resultado
 
@@ -14,11 +14,6 @@ Public Class Gestionproveedores
     End Sub
 
 
-    Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
-
-        dgvproveedores.Rows.Remove(dgvproveedores.CurrentRow)
-
-    End Sub
 
     Private Sub btnañadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnañadir.Click
         Try
@@ -29,6 +24,7 @@ Public Class Gestionproveedores
                 consultar()
 
                 dgvproveedores.DataSource = resultado
+
                 Consulta = "Select * from Proveedores"
                 consultar()
                 dgvproveedores.DataSource = resultado
@@ -58,28 +54,23 @@ Public Class Gestionproveedores
     End Sub
 
     Private Sub Gestionproveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Try
+            conexioon.Consulta = "SELECT * FROM proveedores;"
+            consultar()
+            dgvproveedores.DataSource = resultado
 
-        conexioon.Consulta = "SELECT * FROM proveedores;"
-        consultar()
-        dgvproveedores.DataSource = resultado
+            dgvproveedores.Columns(0).HeaderText = "ID"
+            dgvproveedores.Columns(1).HeaderText = "Proveedor"
+            dgvproveedores.Columns(2).HeaderText = "Teléfono"
+            dgvproveedores.Columns(3).HeaderText = "Dirección"
+            dgvproveedores.Columns(4).HeaderText = "Saldo"
+        Catch ex As Exception
 
-        dgvproveedores.Columns(0).HeaderText = "ID"
-        dgvproveedores.Columns(1).HeaderText = "Proveedor"
-        dgvproveedores.Columns(2).HeaderText = "Teléfono"
-        dgvproveedores.Columns(3).HeaderText = "Dirección"
-        dgvproveedores.Columns(4).HeaderText = "Saldo"
+            MessageBox.Show(ex.ToString)
+        End Try
 
     End Sub
 
 
-    Private Sub btneditarlinea_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btneditarlinea.Click
 
-        If (dgvproveedores.SelectedRows.Count > 0) Then
-            txtproveedor.Text = dgvproveedores.CurrentRow.Cells("Proveedor").Value.ToString
-            txttelefono.Text = dgvproveedores.CurrentRow.Cells("Teléfono").Value.ToString
-            txtdireccion.Text = dgvproveedores.CurrentRow.Cells("Saldo").Value.ToString
-        Else
-            MessageBox.Show("Seleccione una línea!")
-        End If
-    End Sub
 End Class
