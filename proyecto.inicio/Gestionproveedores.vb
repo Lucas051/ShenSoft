@@ -25,7 +25,7 @@ Public Class Gestionproveedores
 
             If (txtproveedor.Text <> "" And txttelefono.Text <> "" And txtdireccion.Text <> "") Then
 
-                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p,saldo_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "' )"
+                conexioon.Consulta = "INSERT INTO proveedores (nombre_prov,tel_p,direccion_p) VALUES ('" + txtproveedor.Text + "' , '" + txttelefono.Text + "','" + txtdireccion.Text + "' )"
                 consultar()
 
                 dgvproveedores.DataSource = resultado
@@ -72,4 +72,14 @@ Public Class Gestionproveedores
     End Sub
 
 
+    Private Sub btneditarlinea_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btneditarlinea.Click
+
+        If (dgvproveedores.SelectedRows.Count > 0) Then
+            txtproveedor.Text = dgvproveedores.CurrentRow.Cells("Proveedor").Value.ToString
+            txttelefono.Text = dgvproveedores.CurrentRow.Cells("Teléfono").Value.ToString
+            txtdireccion.Text = dgvproveedores.CurrentRow.Cells("Saldo").Value.ToString
+        Else
+            MessageBox.Show("Seleccione una línea!")
+        End If
+    End Sub
 End Class

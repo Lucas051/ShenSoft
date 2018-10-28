@@ -22,9 +22,9 @@ Partial Class Gestionproveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txttelefono = New System.Windows.Forms.TextBox()
         Me.txtproveedor = New System.Windows.Forms.TextBox()
@@ -43,6 +43,7 @@ Partial Class Gestionproveedores
         '
         'txtdireccion
         '
+        Me.txtdireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdireccion.Location = New System.Drawing.Point(136, 244)
         Me.txtdireccion.Multiline = True
         Me.txtdireccion.Name = "txtdireccion"
@@ -51,6 +52,7 @@ Partial Class Gestionproveedores
         '
         'txttelefono
         '
+        Me.txttelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttelefono.Location = New System.Drawing.Point(136, 184)
         Me.txttelefono.Multiline = True
         Me.txttelefono.Name = "txttelefono"
@@ -59,6 +61,7 @@ Partial Class Gestionproveedores
         '
         'txtproveedor
         '
+        Me.txtproveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtproveedor.Location = New System.Drawing.Point(136, 125)
         Me.txtproveedor.Multiline = True
         Me.txtproveedor.Name = "txtproveedor"
@@ -106,9 +109,9 @@ Partial Class Gestionproveedores
         Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnborrar.Location = New System.Drawing.Point(289, 490)
         Me.btnborrar.Name = "btnborrar"
-        Me.btnborrar.Size = New System.Drawing.Size(141, 28)
+        Me.btnborrar.Size = New System.Drawing.Size(154, 28)
         Me.btnborrar.TabIndex = 16
-        Me.btnborrar.Text = "Borrar Linea"
+        Me.btnborrar.Text = "Borrar Proveedor"
         Me.btnborrar.UseVisualStyleBackColor = False
         '
         'btnañadir
@@ -117,9 +120,9 @@ Partial Class Gestionproveedores
         Me.btnañadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnañadir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnañadir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnañadir.Location = New System.Drawing.Point(55, 319)
+        Me.btnañadir.Location = New System.Drawing.Point(53, 312)
         Me.btnañadir.Name = "btnañadir"
-        Me.btnañadir.Size = New System.Drawing.Size(185, 28)
+        Me.btnañadir.Size = New System.Drawing.Size(212, 28)
         Me.btnañadir.TabIndex = 14
         Me.btnañadir.Text = "Añadir"
         Me.btnañadir.UseVisualStyleBackColor = False
@@ -147,35 +150,35 @@ Partial Class Gestionproveedores
         '
         Me.dgvproveedores.BackgroundColor = System.Drawing.Color.Silver
         Me.dgvproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dgvproveedores.ColumnHeadersHeight = 42
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ScrollBar
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle11
         Me.dgvproveedores.EnableHeadersVisualStyles = False
         Me.dgvproveedores.GridColor = System.Drawing.Color.White
         Me.dgvproveedores.Location = New System.Drawing.Point(289, 74)
         Me.dgvproveedores.Name = "dgvproveedores"
         Me.dgvproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvproveedores.RowHeadersWidth = 50
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvproveedores.Size = New System.Drawing.Size(575, 410)
         Me.dgvproveedores.TabIndex = 34
         '
@@ -185,11 +188,11 @@ Partial Class Gestionproveedores
         Me.btnLineaEditada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLineaEditada.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLineaEditada.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnLineaEditada.Location = New System.Drawing.Point(55, 362)
+        Me.btnLineaEditada.Location = New System.Drawing.Point(53, 355)
         Me.btnLineaEditada.Name = "btnLineaEditada"
-        Me.btnLineaEditada.Size = New System.Drawing.Size(185, 28)
+        Me.btnLineaEditada.Size = New System.Drawing.Size(212, 30)
         Me.btnLineaEditada.TabIndex = 35
-        Me.btnLineaEditada.Text = "Añadir Línea Editada"
+        Me.btnLineaEditada.Text = "Añadir Proveedor Editado"
         Me.btnLineaEditada.UseVisualStyleBackColor = False
         '
         'btneditarlinea
@@ -198,11 +201,11 @@ Partial Class Gestionproveedores
         Me.btneditarlinea.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btneditarlinea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btneditarlinea.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btneditarlinea.Location = New System.Drawing.Point(449, 490)
+        Me.btneditarlinea.Location = New System.Drawing.Point(458, 490)
         Me.btneditarlinea.Name = "btneditarlinea"
-        Me.btneditarlinea.Size = New System.Drawing.Size(141, 28)
+        Me.btneditarlinea.Size = New System.Drawing.Size(158, 28)
         Me.btneditarlinea.TabIndex = 36
-        Me.btneditarlinea.Text = "Editar Linea"
+        Me.btneditarlinea.Text = "Editar Proveedor"
         Me.btneditarlinea.UseVisualStyleBackColor = False
         '
         'Gestionproveedores
