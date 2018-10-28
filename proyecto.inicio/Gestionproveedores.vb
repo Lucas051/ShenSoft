@@ -35,6 +35,11 @@ Public Class Gestionproveedores
                 dgvproveedores.Columns(3).HeaderText = "Dirección"
                 dgvproveedores.Columns(4).HeaderText = "Saldo"
 
+                'ancho de columnas dgv
+                dgvproveedores.Columns(0).Width = 60
+                dgvproveedores.Columns(1).Width = 200
+                dgvproveedores.Columns(4).Width = 65
+
                 'usamos los parametros para msgbox 
                 Dim opcion As DialogResult
                 opcion = MessageBox.Show("Datos Guardados Correctamente", "AÑADIDO CON EXITO")
@@ -66,6 +71,12 @@ Public Class Gestionproveedores
             dgvproveedores.Columns(2).HeaderText = "Teléfono"
             dgvproveedores.Columns(3).HeaderText = "Dirección"
             dgvproveedores.Columns(4).HeaderText = "Saldo"
+
+            'ancho de columnas dgv
+            dgvproveedores.Columns(0).Width = 60
+            dgvproveedores.Columns(1).Width = 200
+            dgvproveedores.Columns(4).Width = 65
+
         Catch ex As Exception
 
             MessageBox.Show(ex.ToString)
