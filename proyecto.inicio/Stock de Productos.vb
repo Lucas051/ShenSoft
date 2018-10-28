@@ -78,7 +78,7 @@ Public Class Stock_de_Productos
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnvolver.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Me.Hide()
         SuspenderStock.Show()

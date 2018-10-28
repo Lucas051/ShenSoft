@@ -660,7 +660,7 @@ Partial Class Inicio
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1062, 667)
+        Me.Panel4.Size = New System.Drawing.Size(891, 667)
         Me.Panel4.TabIndex = 18
         Me.Panel4.Visible = False
         '
