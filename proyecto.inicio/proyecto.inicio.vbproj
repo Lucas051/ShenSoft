@@ -78,10 +78,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuscarClientes.Designer.vb">
-      <DependentUpon>BuscarClientes.vb</DependentUpon>
+    <Compile Include="Deudores.Designer.vb">
+      <DependentUpon>Deudores.vb</DependentUpon>
     </Compile>
-    <Compile Include="BuscarClientes.vb">
+    <Compile Include="Deudores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BuscarClientesCobrar.Designer.vb">
@@ -199,8 +199,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BuscarClientes.resx">
-      <DependentUpon>BuscarClientes.vb</DependentUpon>
+    <EmbeddedResource Include="Deudores.resx">
+      <DependentUpon>Deudores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarClientesCobrar.resx">
       <DependentUpon>BuscarClientesCobrar.vb</DependentUpon>

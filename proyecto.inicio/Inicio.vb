@@ -230,7 +230,7 @@ Public Class Inicio
     End Sub
 
     Private Sub btndeudores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btndeudores.Click
-        Dim llamar6 As New BuscarClientes
+        Dim llamar6 As New Deudores
         panelmedio.Controls.Clear()
         llamar6.TopLevel = False
         llamar6.Parent = panelmedio

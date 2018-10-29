@@ -1,4 +1,4 @@
-﻿Public Class BuscarClientes
+﻿Public Class Deudores
 
 
     Private Sub BuscarClientesFact_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
