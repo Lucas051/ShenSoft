@@ -45,8 +45,9 @@ Public Class Gestionproveedores
                 opcion = MessageBox.Show("Datos Guardados Correctamente", "AÑADIDO CON EXITO")
 
             Else
-                MessageBox.Show("Se deben completar todos los campos.")
-
+                'usamos los parametros para msgbox 
+                Dim opcion As DialogResult
+                opcion = MessageBox.Show("Complete todos los campos!", "DATOS NO COMPLETADOS")
             End If
 
         Catch ex As Exception
@@ -75,7 +76,8 @@ Public Class Gestionproveedores
             'ancho de columnas dgv
             dgvproveedores.Columns(0).Width = 60
             dgvproveedores.Columns(1).Width = 200
-            dgvproveedores.Columns(4).Width = 65
+            dgvproveedores.Columns(3).Width = 150
+            dgvproveedores.Columns(4).Width = 70
 
         Catch ex As Exception
 

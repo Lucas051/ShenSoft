@@ -25,139 +25,61 @@ Partial Class MODIFICARCLIENTES
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.txttelefono = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
-        Me.txtsaldo = New System.Windows.Forms.TextBox()
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.txtcedula = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnañadir = New System.Windows.Forms.Button()
-        Me.btnborrar = New System.Windows.Forms.Button()
         Me.DgvClientes = New System.Windows.Forms.DataGridView()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnagregarC = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEliminarCliente = New System.Windows.Forms.Button()
+        Me.txtBuscarP = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCodigoCliente = New System.Windows.Forms.Label()
         CType(Me.DgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(324, 137)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 13)
-        Me.Label6.TabIndex = 31
-        Me.Label6.Text = "Teléfono:"
-        '
         'txttelefono
         '
-        Me.txttelefono.Location = New System.Drawing.Point(379, 134)
+        Me.txttelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txttelefono.Location = New System.Drawing.Point(440, 480)
+        Me.txttelefono.Multiline = True
         Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(100, 20)
-        Me.txttelefono.TabIndex = 29
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(321, 108)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 13)
-        Me.Label5.TabIndex = 30
-        Me.Label5.Text = "Dirección:"
+        Me.txttelefono.Size = New System.Drawing.Size(125, 22)
+        Me.txttelefono.TabIndex = 4
         '
         'txtdireccion
         '
-        Me.txtdireccion.Location = New System.Drawing.Point(379, 108)
+        Me.txtdireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtdireccion.Location = New System.Drawing.Point(440, 429)
+        Me.txtdireccion.Multiline = True
         Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(100, 20)
-        Me.txtdireccion.TabIndex = 28
-        '
-        'txtsaldo
-        '
-        Me.txtsaldo.Location = New System.Drawing.Point(379, 82)
-        Me.txtsaldo.Name = "txtsaldo"
-        Me.txtsaldo.Size = New System.Drawing.Size(100, 20)
-        Me.txtsaldo.TabIndex = 24
+        Me.txtdireccion.Size = New System.Drawing.Size(125, 22)
+        Me.txtdireccion.TabIndex = 3
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(379, 56)
+        Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtnombre.Location = New System.Drawing.Point(199, 477)
+        Me.txtnombre.Multiline = True
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtnombre.TabIndex = 23
+        Me.txtnombre.Size = New System.Drawing.Size(125, 22)
+        Me.txtnombre.TabIndex = 2
         '
         'txtcedula
         '
-        Me.txtcedula.Location = New System.Drawing.Point(379, 30)
+        Me.txtcedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtcedula.Location = New System.Drawing.Point(199, 432)
+        Me.txtcedula.Multiline = True
         Me.txtcedula.Name = "txtcedula"
-        Me.txtcedula.Size = New System.Drawing.Size(100, 20)
-        Me.txtcedula.TabIndex = 22
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(340, 85)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "Saldo:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(285, 59)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 13)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Nombre Completo:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(321, 37)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
-        Me.Label1.TabIndex = 18
-        Me.Label1.Text = "Cédula:"
-        '
-        'btnañadir
-        '
-        Me.btnañadir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnañadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnañadir.Font = New System.Drawing.Font("Bahnschrift Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnañadir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnañadir.Location = New System.Drawing.Point(758, 84)
-        Me.btnañadir.Name = "btnañadir"
-        Me.btnañadir.Size = New System.Drawing.Size(83, 34)
-        Me.btnañadir.TabIndex = 32
-        Me.btnañadir.Text = "Ingresar"
-        Me.btnañadir.UseVisualStyleBackColor = False
-        '
-        'btnborrar
-        '
-        Me.btnborrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnborrar.Font = New System.Drawing.Font("Bahnschrift Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnborrar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnborrar.Location = New System.Drawing.Point(758, 124)
-        Me.btnborrar.Name = "btnborrar"
-        Me.btnborrar.Size = New System.Drawing.Size(80, 35)
-        Me.btnborrar.TabIndex = 33
-        Me.btnborrar.Text = "Borrar"
-        Me.btnborrar.UseVisualStyleBackColor = False
+        Me.txtcedula.Size = New System.Drawing.Size(125, 22)
+        Me.txtcedula.TabIndex = 1
         '
         'DgvClientes
         '
@@ -172,7 +94,6 @@ Partial Class MODIFICARCLIENTES
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DgvClientes.ColumnHeadersHeight = 42
-        Me.DgvClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descripcion, Me.cantidad, Me.descuento, Me.precioventa, Me.preciototal})
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ScrollBar
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -183,7 +104,7 @@ Partial Class MODIFICARCLIENTES
         Me.DgvClientes.DefaultCellStyle = DataGridViewCellStyle8
         Me.DgvClientes.EnableHeadersVisualStyles = False
         Me.DgvClientes.GridColor = System.Drawing.Color.White
-        Me.DgvClientes.Location = New System.Drawing.Point(12, 193)
+        Me.DgvClientes.Location = New System.Drawing.Point(12, 44)
         Me.DgvClientes.Name = "DgvClientes"
         Me.DgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DgvClientes.RowHeadersWidth = 50
@@ -196,83 +117,180 @@ Partial Class MODIFICARCLIENTES
         Me.DgvClientes.Size = New System.Drawing.Size(867, 354)
         Me.DgvClientes.TabIndex = 34
         '
-        'codigo
-        '
-        Me.codigo.HeaderText = "Código"
-        Me.codigo.Name = "codigo"
-        Me.codigo.ReadOnly = True
-        Me.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.codigo.Width = 120
-        '
-        'descripcion
-        '
-        Me.descripcion.HeaderText = "Descripción"
-        Me.descripcion.Name = "descripcion"
-        Me.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.descripcion.Width = 200
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ReadOnly = True
-        Me.cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.cantidad.Width = 110
-        '
-        'descuento
-        '
-        Me.descuento.HeaderText = "Descuento (%)"
-        Me.descuento.Name = "descuento"
-        Me.descuento.ReadOnly = True
-        Me.descuento.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.descuento.Width = 120
-        '
-        'precioventa
-        '
-        Me.precioventa.HeaderText = "Precio Unitario"
-        Me.precioventa.Name = "precioventa"
-        Me.precioventa.ReadOnly = True
-        Me.precioventa.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.precioventa.Width = 120
-        '
-        'preciototal
-        '
-        Me.preciototal.HeaderText = "Precio Total"
-        Me.preciototal.Name = "preciototal"
-        Me.preciototal.ReadOnly = True
-        Me.preciototal.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.preciototal.Width = 120
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(392, 324)
+        Me.Label4.Location = New System.Drawing.Point(125, 430)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(52, 19)
         Me.Label4.TabIndex = 40
         Me.Label4.Text = "Cédula"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(58, 480)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(119, 19)
+        Me.Label7.TabIndex = 41
+        Me.Label7.Text = "Nombre Completo"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(366, 430)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(68, 19)
+        Me.Label9.TabIndex = 43
+        Me.Label9.Text = "Dirección"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(374, 480)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(60, 19)
+        Me.Label10.TabIndex = 44
+        Me.Label10.Text = "Teléfono"
+        '
+        'btnagregarC
+        '
+        Me.btnagregarC.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnagregarC.FlatAppearance.BorderSize = 0
+        Me.btnagregarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnagregarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnagregarC.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnagregarC.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnagregarC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnagregarC.Location = New System.Drawing.Point(587, 453)
+        Me.btnagregarC.Name = "btnagregarC"
+        Me.btnagregarC.Size = New System.Drawing.Size(125, 26)
+        Me.btnagregarC.TabIndex = 45
+        Me.btnagregarC.Text = "Ingresar"
+        Me.btnagregarC.UseVisualStyleBackColor = False
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.Location = New System.Drawing.Point(726, 429)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(125, 29)
+        Me.btnGuardar.TabIndex = 46
+        Me.btnGuardar.Text = "Guardar Edición"
+        Me.btnGuardar.UseVisualStyleBackColor = False
+        '
+        'btnEliminarCliente
+        '
+        Me.btnEliminarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnEliminarCliente.FlatAppearance.BorderSize = 0
+        Me.btnEliminarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnEliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnEliminarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminarCliente.Location = New System.Drawing.Point(726, 480)
+        Me.btnEliminarCliente.Name = "btnEliminarCliente"
+        Me.btnEliminarCliente.Size = New System.Drawing.Size(125, 29)
+        Me.btnEliminarCliente.TabIndex = 47
+        Me.btnEliminarCliente.Text = "Eliminar Cliente"
+        Me.btnEliminarCliente.UseVisualStyleBackColor = False
+        '
+        'txtBuscarP
+        '
+        Me.txtBuscarP.Font = New System.Drawing.Font("Bahnschrift", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscarP.Location = New System.Drawing.Point(740, 11)
+        Me.txtBuscarP.Multiline = True
+        Me.txtBuscarP.Name = "txtBuscarP"
+        Me.txtBuscarP.Size = New System.Drawing.Size(142, 25)
+        Me.txtBuscarP.TabIndex = 49
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(583, 12)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(154, 22)
+        Me.Label5.TabIndex = 48
+        Me.Label5.Text = "Buscar Proveedores:"
+        '
+        'btnEditar
+        '
+        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnEditar.FlatAppearance.BorderSize = 0
+        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.Location = New System.Drawing.Point(12, 8)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(158, 26)
+        Me.btnEditar.TabIndex = 55
+        Me.btnEditar.Text = "Seleccionar Cliente "
+        Me.btnEditar.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(176, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(139, 18)
+        Me.Label1.TabIndex = 56
+        Me.Label1.Text = "(Para Editar o Eliminar)"
+        '
+        'lblCodigoCliente
+        '
+        Me.lblCodigoCliente.AutoSize = True
+        Me.lblCodigoCliente.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigoCliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lblCodigoCliente.Location = New System.Drawing.Point(25, 432)
+        Me.lblCodigoCliente.Name = "lblCodigoCliente"
+        Me.lblCodigoCliente.Size = New System.Drawing.Size(15, 18)
+        Me.lblCodigoCliente.TabIndex = 57
+        Me.lblCodigoCliente.Text = "0"
+        Me.lblCodigoCliente.Visible = False
+        '
         'MODIFICARCLIENTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(891, 667)
+        Me.Controls.Add(Me.lblCodigoCliente)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.txtBuscarP)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.btnEliminarCliente)
+        Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.btnagregarC)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DgvClientes)
-        Me.Controls.Add(Me.btnborrar)
-        Me.Controls.Add(Me.btnañadir)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txttelefono)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtdireccion)
-        Me.Controls.Add(Me.txtsaldo)
         Me.Controls.Add(Me.txtnombre)
         Me.Controls.Add(Me.txtcedula)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MODIFICARCLIENTES"
         Me.Text = "MODIFICARCLIENTES"
@@ -281,24 +299,21 @@ Partial Class MODIFICARCLIENTES
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txttelefono As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
-    Friend WithEvents txtsaldo As System.Windows.Forms.TextBox
     Friend WithEvents txtnombre As System.Windows.Forms.TextBox
     Friend WithEvents txtcedula As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents btnañadir As System.Windows.Forms.Button
-    Friend WithEvents btnborrar As System.Windows.Forms.Button
     Friend WithEvents DgvClientes As System.Windows.Forms.DataGridView
-    Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents precioventa As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents preciototal As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents btnagregarC As System.Windows.Forms.Button
+    Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents btnEliminarCliente As System.Windows.Forms.Button
+    Friend WithEvents txtBuscarP As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblCodigoCliente As System.Windows.Forms.Label
 End Class

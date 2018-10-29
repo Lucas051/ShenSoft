@@ -96,4 +96,8 @@ Public Class EditarProv
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
+
+    End Sub
 End Class

@@ -315,7 +315,7 @@ Partial Class Inicio
         Me.btnconsultclient.Name = "btnconsultclient"
         Me.btnconsultclient.Size = New System.Drawing.Size(197, 30)
         Me.btnconsultclient.TabIndex = 7
-        Me.btnconsultclient.Text = "Agregar  Clientes"
+        Me.btnconsultclient.Text = "Gestión Clientes"
         Me.btnconsultclient.UseVisualStyleBackColor = False
         '
         'PictureBoxsalir
