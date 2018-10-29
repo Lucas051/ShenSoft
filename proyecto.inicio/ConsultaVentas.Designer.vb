@@ -22,78 +22,61 @@ Partial Class ConsultaVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblbuscar = New System.Windows.Forms.Label()
-        Me.txtbuscarfacturas = New System.Windows.Forms.TextBox()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvConsultaFacturas = New System.Windows.Forms.DataGridView()
-        Me.btnDetalle = New System.Windows.Forms.Button()
-        Me.btnAnularFactura = New System.Windows.Forms.Button()
         CType(Me.dgvConsultaFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblbuscar
-        '
-        Me.lblbuscar.AutoSize = True
-        Me.lblbuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblbuscar.Location = New System.Drawing.Point(13, 22)
-        Me.lblbuscar.Name = "lblbuscar"
-        Me.lblbuscar.Size = New System.Drawing.Size(56, 17)
-        Me.lblbuscar.TabIndex = 0
-        Me.lblbuscar.Text = "Buscar:"
-        '
-        'txtbuscarfacturas
-        '
-        Me.txtbuscarfacturas.Location = New System.Drawing.Point(75, 22)
-        Me.txtbuscarfacturas.Name = "txtbuscarfacturas"
-        Me.txtbuscarfacturas.Size = New System.Drawing.Size(100, 20)
-        Me.txtbuscarfacturas.TabIndex = 1
-        '
         'dgvConsultaFacturas
         '
-        Me.dgvConsultaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvConsultaFacturas.Location = New System.Drawing.Point(12, 60)
+        Me.dgvConsultaFacturas.BackgroundColor = System.Drawing.Color.Silver
+        Me.dgvConsultaFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvConsultaFacturas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvConsultaFacturas.ColumnHeadersHeight = 42
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvConsultaFacturas.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvConsultaFacturas.EnableHeadersVisualStyles = False
+        Me.dgvConsultaFacturas.GridColor = System.Drawing.Color.White
+        Me.dgvConsultaFacturas.Location = New System.Drawing.Point(63, 47)
         Me.dgvConsultaFacturas.Name = "dgvConsultaFacturas"
-        Me.dgvConsultaFacturas.Size = New System.Drawing.Size(581, 372)
-        Me.dgvConsultaFacturas.TabIndex = 2
+        Me.dgvConsultaFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvConsultaFacturas.RowHeadersWidth = 50
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgvConsultaFacturas.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvConsultaFacturas.Size = New System.Drawing.Size(723, 410)
+        Me.dgvConsultaFacturas.TabIndex = 36
         '
-        'btnDetalle
-        '
-        Me.btnDetalle.Location = New System.Drawing.Point(16, 457)
-        Me.btnDetalle.Name = "btnDetalle"
-        Me.btnDetalle.Size = New System.Drawing.Size(181, 29)
-        Me.btnDetalle.TabIndex = 3
-        Me.btnDetalle.Text = "Detalle de Factura"
-        Me.btnDetalle.UseVisualStyleBackColor = True
-        '
-        'btnAnularFactura
-        '
-        Me.btnAnularFactura.Location = New System.Drawing.Point(223, 457)
-        Me.btnAnularFactura.Name = "btnAnularFactura"
-        Me.btnAnularFactura.Size = New System.Drawing.Size(170, 29)
-        Me.btnAnularFactura.TabIndex = 4
-        Me.btnAnularFactura.Text = "Anular"
-        Me.btnAnularFactura.UseVisualStyleBackColor = True
-        '
-        'ConsultaFactura
+        'ConsultaVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(897, 564)
-        Me.Controls.Add(Me.btnAnularFactura)
-        Me.Controls.Add(Me.btnDetalle)
+        Me.ClientSize = New System.Drawing.Size(885, 469)
         Me.Controls.Add(Me.dgvConsultaFacturas)
-        Me.Controls.Add(Me.txtbuscarfacturas)
-        Me.Controls.Add(Me.lblbuscar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ConsultaFactura"
-        Me.Text = "ConsultaFactura"
+        Me.Name = "ConsultaVentas"
+        Me.Text = "ConsultaVentas"
         CType(Me.dgvConsultaFacturas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblbuscar As System.Windows.Forms.Label
-    Friend WithEvents txtbuscarfacturas As System.Windows.Forms.TextBox
     Friend WithEvents dgvConsultaFacturas As System.Windows.Forms.DataGridView
-    Friend WithEvents btnDetalle As System.Windows.Forms.Button
-    Friend WithEvents btnAnularFactura As System.Windows.Forms.Button
 End Class

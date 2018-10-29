@@ -22,7 +22,6 @@ C:\Users\Alumno-09\Desktop\ShenSoft-master\proyecto.inicio\obj\x86\Debug\proyect
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.exe
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.xml
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.pdb
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarClientes.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarClientesCobrar.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Cobrar.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.MODIFICARCLIENTES.resources
@@ -83,7 +82,6 @@ C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyect
 C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Estadistica_de_Stock.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.CalculadorA2.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Estadistica_de_Stock.resources
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.ConsultaVentas.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.PlantillaInicio.resources
 C:\Users\frear\Documents\GitHub\ShenSoftt\proyecto.inicio\obj\x86\Debug\proyecto.inicio.exe
 C:\Users\frear\Documents\GitHub\ShenSoftt\proyecto.inicio\obj\x86\Debug\proyecto.inicio.xml
@@ -110,3 +108,6 @@ C:\Users\frear\Documents\GitHub\ShenSoftt\proyecto.inicio\obj\x86\Debug\proyecto
 C:\Users\frear\Documents\GitHub\ShenSoftt\proyecto.inicio\obj\x86\Debug\proyecto.inicio.vbproj.GenerateResource.Cache
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EditarProv.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EliminarProv.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Deudores.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.GestionFacturacion.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.ConsultaVentas.resources

@@ -192,7 +192,7 @@ Public Class Inicio
     End Sub
 
     Private Sub btnconslfact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnconslfact.Click
-        Dim llamar1 As New ConsultaVentas
+        Dim llamar1 As New GestionFacturacion
         panelmedio.Controls.Clear()
         llamar1.TopLevel = False
         llamar1.Parent = panelmedio

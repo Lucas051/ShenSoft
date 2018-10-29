@@ -21,20 +21,34 @@ Public Class Stock_de_Productos
         DgvStock.Columns(2).HeaderText = "Cantidad"
         DgvStock.Columns(3).HeaderText = "Precio Costo"
         DgvStock.Columns(4).HeaderText = "Precio Venta"
-        DgvStock.Columns(5).HeaderText = "Proveedor"
+        dgvstock.Columns(5).HeaderText = "N° Factura"
+
+        'ancho de columnas dgv
+        dgvstock.Columns(0).Width = 60
+        dgvstock.Columns(1).Width = 200
+        dgvstock.Columns(2).Width = 100
+        dgvstock.Columns(3).Width = 150
+        dgvstock.Columns(4).Width = 150
+        dgvstock.Columns(5).Width = 158
+
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
+    Private Sub btnagregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregar.Click
         Try
             Dim Codigo As String
-            For Each row As DataGridViewRow In Me.DgvStock.Rows
+            For Each row As DataGridViewRow In Me.dgvstock.Rows
 
                 Codigo = row.Cells(1).Value
                 If txtdescripcion.Text = Codigo Then
-                    Consulta = "UPDATE stock set cantidad=cantidad +('" + txtcantidad.Text + "') WHERE descripcion = ('" + txtdescripcion.Text + "') "
+                    Consulta = "UPDATE stock set cantidad=cantidad +('" + txtcantidad.Text + "'), precio_costo= '" + txtpreciocosto.Text + "', precio_v_stock= '" + txtpreciostock.Text + "', n_factura_prov= '" + txtproveedor.Text + "' WHERE descripcion = ('" + txtdescripcion.Text + "') "
                 End If
 
             Next
+            txtdescripcion.Clear()
+            txtcantidad.Clear()
+            txtpreciocosto.Clear()
+            txtpreciostock.Clear()
+            txtproveedor.Clear()
 
 
 
@@ -43,31 +57,48 @@ Public Class Stock_de_Productos
         End Try
         Try
 
-            If (txtdescripcion.Text <> "" And txtprecio.Text <> "" And txtpreciostock.Text <> "") Then
-                'nacho puse nombre_prov en vez de num aca porque es mas facil reconocerlo por el nombre
-                'aca hay que hacer un join para conectar la foranea de nombre_prov de proveedores con stock en el mismo insert, hay sintaxis en internet
-                conexioon.Consulta = "INSERT INTO `stock` (`descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `num_prov`) VALUES ('" + txtdescripcion.Text + "','" + txtcantidad.Text + "','" + txtprecio.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "');"
+            If (txtdescripcion.Text <> "" And txtcantidad.Text <> "" And txtpreciocosto.Text <> "" And txtpreciostock.Text <> "" And txtproveedor.Text <> "") Then
+
+                conexioon.Consulta = "INSERT INTO `stock` (`descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `n_factura_prov`) VALUES ('" + txtdescripcion.Text + "','" + txtcantidad.Text + "','" + txtpreciocosto.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "');"
 
                 consultar()
-                DgvStock.DataSource = resultado
+                dgvstock.DataSource = resultado
 
                 Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
                 consultar()
-                DgvStock.DataSource = resultado
+                dgvstock.DataSource = resultado
 
                 'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-                DgvStock.Columns(0).HeaderText = "Código"
-                DgvStock.Columns(1).HeaderText = "Descripcion"
-                DgvStock.Columns(2).HeaderText = "Cantidad"
-                DgvStock.Columns(3).HeaderText = "Precio Costo"
-                DgvStock.Columns(4).HeaderText = "Precio Venta"
-                DgvStock.Columns(5).HeaderText = "Proveedor"
+                dgvstock.Columns(0).HeaderText = "Código"
+                dgvstock.Columns(1).HeaderText = "Descripcion"
+                dgvstock.Columns(2).HeaderText = "Cantidad"
+                dgvstock.Columns(3).HeaderText = "Precio Costo"
+                dgvstock.Columns(4).HeaderText = "Precio Venta"
+                dgvstock.Columns(5).HeaderText = "N° Factura"
 
-                MessageBox.Show("Datos Guardados Correctamente.")
+                'ancho de columnas dgv
+                dgvstock.Columns(0).Width = 60
+                dgvstock.Columns(1).Width = 200
+                dgvstock.Columns(2).Width = 100
+                dgvstock.Columns(3).Width = 150
+                dgvstock.Columns(4).Width = 150
+                dgvstock.Columns(5).Width = 158
+
+                'usamos los parametros para msgbox 
+                Dim opcion As DialogResult
+                opcion = MessageBox.Show("Datos ingresados con éxito!", "Registro Exitoso")
+
+                txtdescripcion.Clear()
+                txtcantidad.Clear()
+                txtpreciocosto.Clear()
+                txtpreciostock.Clear()
+                txtproveedor.Clear()
 
 
             Else
-                MessageBox.Show("Se deben rellenar todos los campos.")
+                'usamos los parametros para msgbox 
+                Dim opcion As DialogResult
+                opcion = MessageBox.Show("Complete todos los campos!", "DATOS NO COMPLETADOS")
             End If
 
         Catch ex As Exception
@@ -78,12 +109,6 @@ Public Class Stock_de_Productos
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-        Me.Hide()
-        SuspenderStock.Show()
-
-    End Sub
 
 
 End Class

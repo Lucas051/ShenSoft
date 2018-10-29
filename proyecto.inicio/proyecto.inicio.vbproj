@@ -78,6 +78,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaVentas.Designer.vb">
+      <DependentUpon>ConsultaVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Deudores.Designer.vb">
       <DependentUpon>Deudores.vb</DependentUpon>
     </Compile>
@@ -103,10 +109,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexioon.vb" />
-    <Compile Include="ConsultaVentas.Designer.vb">
-      <DependentUpon>ConsultaVentas.vb</DependentUpon>
+    <Compile Include="FacturasProveedores.Designer.vb">
+      <DependentUpon>FacturasProveedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="ConsultaVentas.vb">
+    <Compile Include="FacturasProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionFacturacion.Designer.vb">
+      <DependentUpon>GestionFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GestionFacturacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarProv.Designer.vb">
@@ -131,6 +143,18 @@
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </Compile>
     <Compile Include="MODIFICARCLIENTES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagosClientes.Designer.vb">
+      <DependentUpon>PagosClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PagosClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagosProv.Designer.vb">
+      <DependentUpon>PagosProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PagosProv.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PlantillaInicio.Designer.vb">
@@ -199,6 +223,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConsultaVentas.resx">
+      <DependentUpon>ConsultaVentas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Deudores.resx">
       <DependentUpon>Deudores.vb</DependentUpon>
     </EmbeddedResource>
@@ -211,8 +238,11 @@
     <EmbeddedResource Include="Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaVentas.resx">
-      <DependentUpon>ConsultaVentas.vb</DependentUpon>
+    <EmbeddedResource Include="FacturasProveedores.resx">
+      <DependentUpon>FacturasProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionFacturacion.resx">
+      <DependentUpon>GestionFacturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarProv.resx">
       <DependentUpon>EditarProv.vb</DependentUpon>
@@ -225,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagosClientes.resx">
+      <DependentUpon>PagosClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlantillaInicio.resx">
       <DependentUpon>PlantillaInicio.vb</DependentUpon>

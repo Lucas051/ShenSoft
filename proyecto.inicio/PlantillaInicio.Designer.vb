@@ -43,14 +43,14 @@ Partial Class PlantillaInicio
         Me.lblHora.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblHora.Font = New System.Drawing.Font("Bahnschrift Condensed", 55.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHora.ForeColor = System.Drawing.Color.White
-        Me.lblHora.Location = New System.Drawing.Point(265, 174)
+        Me.lblHora.Location = New System.Drawing.Point(299, 184)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(0, 89)
         Me.lblHora.TabIndex = 15
         '
         'DTPickerFecha
         '
-        Me.DTPickerFecha.Location = New System.Drawing.Point(683, 12)
+        Me.DTPickerFecha.Location = New System.Drawing.Point(731, 8)
         Me.DTPickerFecha.Name = "DTPickerFecha"
         Me.DTPickerFecha.Size = New System.Drawing.Size(200, 20)
         Me.DTPickerFecha.TabIndex = 16
@@ -66,7 +66,7 @@ Partial Class PlantillaInicio
         Me.lblMinuto.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblMinuto.Font = New System.Drawing.Font("Bahnschrift Condensed", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMinuto.ForeColor = System.Drawing.Color.White
-        Me.lblMinuto.Location = New System.Drawing.Point(357, 191)
+        Me.lblMinuto.Location = New System.Drawing.Point(391, 201)
         Me.lblMinuto.Name = "lblMinuto"
         Me.lblMinuto.Size = New System.Drawing.Size(0, 68)
         Me.lblMinuto.TabIndex = 18
@@ -77,7 +77,7 @@ Partial Class PlantillaInicio
         Me.lblAMPM.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblAMPM.Font = New System.Drawing.Font("Bahnschrift Condensed", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAMPM.ForeColor = System.Drawing.Color.White
-        Me.lblAMPM.Location = New System.Drawing.Point(430, 181)
+        Me.lblAMPM.Location = New System.Drawing.Point(464, 191)
         Me.lblAMPM.Name = "lblAMPM"
         Me.lblAMPM.Size = New System.Drawing.Size(0, 33)
         Me.lblAMPM.TabIndex = 19
@@ -88,7 +88,7 @@ Partial Class PlantillaInicio
         Me.lblSegundos.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblSegundos.Font = New System.Drawing.Font("Bahnschrift Condensed", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSegundos.ForeColor = System.Drawing.Color.White
-        Me.lblSegundos.Location = New System.Drawing.Point(429, 214)
+        Me.lblSegundos.Location = New System.Drawing.Point(463, 224)
         Me.lblSegundos.Name = "lblSegundos"
         Me.lblSegundos.Size = New System.Drawing.Size(0, 41)
         Me.lblSegundos.TabIndex = 20
@@ -107,7 +107,7 @@ Partial Class PlantillaInicio
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Bahnschrift Condensed", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha.ForeColor = System.Drawing.Color.White
-        Me.lblFecha.Location = New System.Drawing.Point(253, 263)
+        Me.lblFecha.Location = New System.Drawing.Point(287, 273)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(0, 27)
         Me.lblFecha.TabIndex = 21
@@ -115,7 +115,7 @@ Partial Class PlantillaInicio
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.relojazul
-        Me.PictureBox1.Location = New System.Drawing.Point(48, 60)
+        Me.PictureBox1.Location = New System.Drawing.Point(82, 70)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(659, 377)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -127,7 +127,7 @@ Partial Class PlantillaInicio
         Me.lblTelefonos.AutoSize = True
         Me.lblTelefonos.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTelefonos.ForeColor = System.Drawing.Color.White
-        Me.lblTelefonos.Location = New System.Drawing.Point(201, 505)
+        Me.lblTelefonos.Location = New System.Drawing.Point(222, 505)
         Me.lblTelefonos.Name = "lblTelefonos"
         Me.lblTelefonos.Size = New System.Drawing.Size(389, 41)
         Me.lblTelefonos.TabIndex = 23

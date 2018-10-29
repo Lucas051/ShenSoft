@@ -488,7 +488,7 @@ Partial Class Inicio
         Me.btnconslfact.Name = "btnconslfact"
         Me.btnconslfact.Size = New System.Drawing.Size(197, 29)
         Me.btnconslfact.TabIndex = 3
-        Me.btnconslfact.Text = "     Consulta de Fact."
+        Me.btnconslfact.Text = "     Gestión de Fact."
         Me.btnconslfact.UseVisualStyleBackColor = False
         '
         'btnrealizarfact
@@ -569,7 +569,7 @@ Partial Class Inicio
         Me.btnaddstock.Name = "btnaddstock"
         Me.btnaddstock.Size = New System.Drawing.Size(197, 30)
         Me.btnaddstock.TabIndex = 2
-        Me.btnaddstock.Text = "Agregar Stock"
+        Me.btnaddstock.Text = "Gestión Stock"
         Me.btnaddstock.UseVisualStyleBackColor = False
         '
         'btnmodistock
