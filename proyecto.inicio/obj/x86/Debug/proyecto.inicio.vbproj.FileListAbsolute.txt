@@ -111,3 +111,6 @@ C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Deudores.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.GestionFacturacion.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.ConsultaVentas.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.FacturasProveedores.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.PagosClientes.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarProv.resources

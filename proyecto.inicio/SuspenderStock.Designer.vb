@@ -81,7 +81,7 @@ Partial Class SuspenderStock
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(780, 352)
+        Me.ClientSize = New System.Drawing.Size(891, 667)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnmostrardatos)
         Me.Controls.Add(Me.txtcodigo)

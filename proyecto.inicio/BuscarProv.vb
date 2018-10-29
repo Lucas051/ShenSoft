@@ -1,62 +1,63 @@
-﻿Imports MySql.Data.MySqlClient
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
-Public Class SearchProducts
+Public Class BuscarProv
 
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
     Private MouseDownX As Integer
     Private MouseDownY As Integer
 
-
-    Private Sub SearchProducts_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
+    Private Sub BuscarProv_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
 
-            Consulta = "SELECT * FROM stock"
+            conexioon.Consulta = "SELECT * FROM proveedores;"
             consultar()
-            dgvbuscarstock.DataSource = resultado
+            dgvbuscarprov.DataSource = resultado
+
+            dgvbuscarprov.Columns(0).HeaderText = "ID"
+            dgvbuscarprov.Columns(1).HeaderText = "Proveedor"
+            dgvbuscarprov.Columns(2).HeaderText = "Teléfono"
+            dgvbuscarprov.Columns(3).HeaderText = "Dirección"
+            dgvbuscarprov.Columns(4).HeaderText = "Saldo"
+
+            'ancho de columnas dgv
+            dgvbuscarprov.Columns(0).Width = 100
+            dgvbuscarprov.Columns(1).Width = 200
+            dgvbuscarprov.Columns(2).Width = 200
+            dgvbuscarprov.Columns(3).Width = 200
+            dgvbuscarprov.Columns(4).Width = 100
 
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-        'Nombramos los encabezados del datagrid buscar
 
-        dgvbuscarstock.Columns(0).HeaderText = "Código"
-        dgvbuscarstock.Columns(1).HeaderText = "Descrip."
-        dgvbuscarstock.Columns(2).HeaderText = "Cantidad"
-        dgvbuscarstock.Columns(3).HeaderText = "Precio Costo"
-        dgvbuscarstock.Columns(4).HeaderText = "Precio Venta"
-        dgvbuscarstock.Columns(5).HeaderText = "Proveedor"
-
-        'ancho de columnas dgv
-        dgvbuscarstock.Columns(0).Width = 90
-        dgvbuscarstock.Columns(1).Width = 200
     End Sub
 
-    Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        Dim llamar As New RealizarFactura
-        'Mediante el evento indicamos hacia donde van los valores seleccionados
-        RealizarFactura.lblCodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
-        RealizarFactura.txtdescripcion.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
-        RealizarFactura.txtprecioov.Text = dgvbuscarstock.CurrentRow.Cells(4).Value.ToString
-        'close para cerrar el form
-        Close()
-    End Sub
-
-    Private Sub txtbuscarstock_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarstock.TextChanged
+    Private Sub txtbuscarstock_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarprov.TextChanged
         Try
             'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM stock WHERE  descripcion LIKE '%" & txtbuscarstock.Text & "%';"
+            conexioon.Consulta = "SELECT * FROM proveedores WHERE  nombre_prov LIKE '%" & txtbuscarprov.Text & "%';"
             consultar()
-            dgvbuscarstock.DataSource = resultado
+            dgvbuscarprov.DataSource = resultado
+
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub dgvbuscarprov_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarprov.CellClick
+        Dim llamarConsultaProv As New FacturasProveedores
+        'Mediante el evento indicamos hacia donde van los valores seleccionados
+        ModuloVariables.numeroprov = dgvbuscarprov.CurrentRow.Cells(0).Value.ToString
+        FacturasProveedores.txtproveedor.Text = ModuloVariables.numeroprov
+
+        'close para cerrar el form
+        Close()
+    End Sub
+
+
 
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
@@ -79,8 +80,7 @@ Public Class SearchProducts
     End Sub
 
     Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
-        Me.Hide()
-        RealizarFactura.Show()
+        Me.Close()
 
     End Sub
 
