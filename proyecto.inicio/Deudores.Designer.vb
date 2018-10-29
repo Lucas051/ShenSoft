@@ -33,9 +33,9 @@ Partial Class Deudores
         Me.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.lblCodigo.Location = New System.Drawing.Point(295, 151)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(147, 20)
+        Me.lblCodigo.Size = New System.Drawing.Size(162, 20)
         Me.lblCodigo.TabIndex = 52
-        Me.lblCodigo.Text = "Pagos de deudores"
+        Me.lblCodigo.Text = "Pagos de jajdeudores"
         '
         'Deudores
         '
