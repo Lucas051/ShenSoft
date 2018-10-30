@@ -23,6 +23,44 @@
             DgvClientes.Columns(3).Width = 100
             DgvClientes.Columns(4).Width = 200
             DgvClientes.Columns(5).Width = 125
+
+
+            If (user = "Gerentes" And pass = "963") Then
+                'oculta btn a los que el usuario no tiene permiso de ingresar
+                btnEliminarCliente.Enabled = False
+                btnEliminarCliente.Visible = False
+                Label1.Visible = False
+                btnEditar.Visible = False
+                btnEditar.Enabled = False
+                btnGuardar.Enabled = False
+                btnGuardar.Visible = False
+
+            ElseIf (user = "Empleado" And pass = "123") Then
+
+                'oculta btn a los que el usuario no tiene permiso de ingresar
+                btnEliminarCliente.Enabled = False
+                btnEliminarCliente.Visible = False
+                Label1.Visible = False
+                btnEditar.Visible = False
+                btnEditar.Enabled = False
+                btnGuardar.Enabled = False
+                btnGuardar.Visible = False
+                btnagregarC.Visible = False
+                btnagregarC.Enabled = False
+                txtnombre.Enabled = False
+                txtnombre.Visible = False
+                txtcedula.Enabled = False
+                txtcedula.Visible = False
+                txtdireccion.Enabled = False
+                txtdireccion.Visible = False
+                txttelefono.Enabled = False
+                txttelefono.Visible = False
+                Label4.Visible = False
+                Label7.Visible = False
+                Label9.Visible = False
+                Label10.Visible = False
+            End If
+
         Catch ex As Exception
 
             MessageBox.Show(ex.ToString)

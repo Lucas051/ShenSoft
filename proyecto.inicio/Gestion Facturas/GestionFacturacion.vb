@@ -40,6 +40,20 @@
         llamarPagosCli.Dock = DockStyle.Fill
         Inicio.panelmedio.Visible = True
     End Sub
+
+    Private Sub GestionFacturacion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If (user = "Gerentes" And pass = "963") Then
+            'oculta btn a los que el usuario no tiene permiso de ingresar
+            btnPagosProv.Enabled = False
+            btnFactProv.Enabled = False
+
+        ElseIf (user = "Empleado" And pass = "123") Then
+            'oculta btn a los que el usuario no tiene permiso de ingresar
+            btnPagosProv.Enabled = False
+            btnFactProv.Enabled = False
+
+        End If
+    End Sub
 End Class
 
 

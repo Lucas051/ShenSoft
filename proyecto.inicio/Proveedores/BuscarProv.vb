@@ -122,4 +122,8 @@ Public Class BuscarProv
         End If
     End Sub
     '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    Private Sub lblbuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblbuscar.Click
+
+    End Sub
 End Class

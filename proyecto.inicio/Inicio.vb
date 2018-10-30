@@ -31,6 +31,11 @@ Public Class Inicio
         Panelproveedores.Hide()
         panelOpciones.Width = 59
 
+        If (user = "Empleado" And pass = "123") Then
+            'oculta btn a los que el usuario no tiene permiso de ingresar
+            btnmodistock.Enabled = False
+        End If
+
     End Sub
 
     Private Sub cerrarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cerrarbtn.Click

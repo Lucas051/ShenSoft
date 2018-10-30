@@ -37,6 +37,8 @@ Partial Class Stock_de_Productos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnagregar = New System.Windows.Forms.Button()
+        Me.txtbuscarStock = New System.Windows.Forms.TextBox()
+        Me.lblbuscar = New System.Windows.Forms.Label()
         CType(Me.dgvstock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -193,12 +195,33 @@ Partial Class Stock_de_Productos
         Me.btnagregar.Text = "Ingresar"
         Me.btnagregar.UseVisualStyleBackColor = False
         '
+        'txtbuscarStock
+        '
+        Me.txtbuscarStock.Location = New System.Drawing.Point(710, 502)
+        Me.txtbuscarStock.Multiline = True
+        Me.txtbuscarStock.Name = "txtbuscarStock"
+        Me.txtbuscarStock.Size = New System.Drawing.Size(141, 25)
+        Me.txtbuscarStock.TabIndex = 45
+        '
+        'lblbuscar
+        '
+        Me.lblbuscar.AutoSize = True
+        Me.lblbuscar.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblbuscar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lblbuscar.Location = New System.Drawing.Point(631, 502)
+        Me.lblbuscar.Name = "lblbuscar"
+        Me.lblbuscar.Size = New System.Drawing.Size(61, 23)
+        Me.lblbuscar.TabIndex = 44
+        Me.lblbuscar.Text = "Buscar"
+        '
         'Stock_de_Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(891, 667)
+        Me.Controls.Add(Me.txtbuscarStock)
+        Me.Controls.Add(Me.lblbuscar)
         Me.Controls.Add(Me.btnagregar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
@@ -231,4 +254,6 @@ Partial Class Stock_de_Productos
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents btnagregar As System.Windows.Forms.Button
+    Friend WithEvents txtbuscarStock As System.Windows.Forms.TextBox
+    Friend WithEvents lblbuscar As System.Windows.Forms.Label
 End Class

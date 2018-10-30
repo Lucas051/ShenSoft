@@ -9,5 +9,8 @@ Module ModuloVariables
 
     Public numeroprov As Integer
 
-  
+    Public user As String
+
+    Public pass As String
+
 End Module

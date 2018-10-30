@@ -24,6 +24,7 @@ Public Class SuspenderStock
             dgvEliminar.Columns(4).Width = 150
             dgvEliminar.Columns(5).Width = 158
 
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
