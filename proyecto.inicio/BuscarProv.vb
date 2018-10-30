@@ -54,7 +54,11 @@ Public Class BuscarProv
         FacturasProveedores.txtproveedor.Text = ModuloVariables.numeroprov
 
         'close para cerrar el form
-        Close()
+        Dim llamarBuscarProv As New BuscarProv
+        llamarBuscarProv.TopLevel = False
+        llamarBuscarProv.Parent = Inicio.panelmedio
+        llamarBuscarProv.Show()
+        Inicio.panelmedio.Visible = True
     End Sub
 
 

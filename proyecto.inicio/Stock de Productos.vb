@@ -44,67 +44,64 @@ Public Class Stock_de_Productos
                 End If
 
             Next
-            txtdescripcion.Clear()
-            txtcantidad.Clear()
-            txtpreciocosto.Clear()
-            txtpreciostock.Clear()
-            txtproveedor.Clear()
+        
 
 
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
+
         Try
 
-            If (txtdescripcion.Text <> "" And txtcantidad.Text <> "" And txtpreciocosto.Text <> "" And txtpreciostock.Text <> "" And txtproveedor.Text <> "") Then
+            '  If (txtdescripcion.Text <> "" And txtcantidad.Text <> "" And txtpreciocosto.Text <> "" And txtpreciostock.Text <> "" And txtproveedor.Text <> "") Then
 
-                conexioon.Consulta = "INSERT INTO `stock` (`descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `n_factura_prov`) VALUES ('" + txtdescripcion.Text + "','" + txtcantidad.Text + "','" + txtpreciocosto.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "');"
+            conexioon.Consulta = "INSERT INTO `stock` (`descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `n_factura_prov`) VALUES ('" + txtdescripcion.Text + "','" + txtcantidad.Text + "','" + txtpreciocosto.Text + "','" + txtpreciostock.Text + "','" + txtproveedor.Text + "');"
 
-                consultar()
-                dgvstock.DataSource = resultado
+            consultar()
+            dgvstock.DataSource = resultado
 
-                Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
-                consultar()
-                dgvstock.DataSource = resultado
+            Consulta = "SELECT * FROM stock WHERE cantidad <> 0"
+            consultar()
+            dgvstock.DataSource = resultado
 
-                'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
-                dgvstock.Columns(0).HeaderText = "Código"
-                dgvstock.Columns(1).HeaderText = "Descripcion"
-                dgvstock.Columns(2).HeaderText = "Cantidad"
-                dgvstock.Columns(3).HeaderText = "Precio Costo"
-                dgvstock.Columns(4).HeaderText = "Precio Venta"
-                dgvstock.Columns(5).HeaderText = "N° Factura"
+            'Cambiar el nombre que tienen las columnas de Mysql esos "cod_producto" etc
+            dgvstock.Columns(0).HeaderText = "Código"
+            dgvstock.Columns(1).HeaderText = "Descripcion"
+            dgvstock.Columns(2).HeaderText = "Cantidad"
+            dgvstock.Columns(3).HeaderText = "Precio Costo"
+            dgvstock.Columns(4).HeaderText = "Precio Venta"
+            dgvstock.Columns(5).HeaderText = "N° Factura"
 
-                'ancho de columnas dgv
-                dgvstock.Columns(0).Width = 60
-                dgvstock.Columns(1).Width = 200
-                dgvstock.Columns(2).Width = 100
-                dgvstock.Columns(3).Width = 150
-                dgvstock.Columns(4).Width = 150
-                dgvstock.Columns(5).Width = 158
+            'ancho de columnas dgv
+            dgvstock.Columns(0).Width = 60
+            dgvstock.Columns(1).Width = 200
+            dgvstock.Columns(2).Width = 100
+            dgvstock.Columns(3).Width = 150
+            dgvstock.Columns(4).Width = 150
+            dgvstock.Columns(5).Width = 158
 
-                'usamos los parametros para msgbox 
-                Dim opcion As DialogResult
-                opcion = MessageBox.Show("Datos ingresados con éxito!", "Registro Exitoso")
-
-                txtdescripcion.Clear()
-                txtcantidad.Clear()
-                txtpreciocosto.Clear()
-                txtpreciostock.Clear()
-                txtproveedor.Clear()
+            'usamos los parametros para msgbox 
+            Dim opcion As DialogResult
+            opcion = MessageBox.Show("Datos ingresados con éxito!", "Registro Exitoso")
 
 
-            Else
-                'usamos los parametros para msgbox 
-                Dim opcion As DialogResult
-                opcion = MessageBox.Show("Complete todos los campos!", "DATOS NO COMPLETADOS")
-            End If
+
+            '  Else
+            '   'usamos los parametros para msgbox 
+            '   Dim opcion As DialogResult
+            '   opcion = MessageBox.Show("Complete todos los campos!", "DATOS NO COMPLETADOS")
+            ' End If
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
 
+        txtdescripcion.Clear()
+        txtcantidad.Clear()
+        txtpreciocosto.Clear()
+        txtpreciostock.Clear()
+        txtproveedor.Clear()
 
 
     End Sub
