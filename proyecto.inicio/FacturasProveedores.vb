@@ -228,4 +228,14 @@
             opcion = MessageBox.Show("Seleccione una linea!", "DATOS NO SELECCIONADOS")
         End If
     End Sub
+
+    Private Sub btnatras_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnatras.Click
+        Dim llamar1 As New GestionFacturacion
+        Inicio.panelmedio.Controls.Clear()
+        llamar1.TopLevel = False
+        llamar1.Parent = Inicio.panelmedio
+        llamar1.Show()
+        llamar1.Dock = DockStyle.Fill
+        Inicio.panelmedio.Visible = True
+    End Sub
 End Class
