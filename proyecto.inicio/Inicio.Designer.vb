@@ -24,6 +24,7 @@ Partial Class Inicio
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.barratituloInicio = New System.Windows.Forms.Panel()
+        Me.lblUsuario = New System.Windows.Forms.Label()
         Me.LabelInicio = New System.Windows.Forms.Label()
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnmini = New System.Windows.Forms.PictureBox()
@@ -86,7 +87,17 @@ Partial Class Inicio
         Me.btncalculadora = New System.Windows.Forms.Button()
         Me.btncharts = New System.Windows.Forms.Button()
         Me.btncalendario = New System.Windows.Forms.Button()
-        Me.lblUsuario = New System.Windows.Forms.Label()
+        Me.panelEstadisticas = New System.Windows.Forms.Panel()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.Panel22 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,6 +123,7 @@ Partial Class Inicio
         CType(Me.PTBcharts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PTBabrir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PTBocultar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelEstadisticas.SuspendLayout()
         Me.SuspendLayout()
         '
         'barratituloInicio
@@ -132,6 +144,16 @@ Partial Class Inicio
         Me.barratituloInicio.Name = "barratituloInicio"
         Me.barratituloInicio.Size = New System.Drawing.Size(1147, 35)
         Me.barratituloInicio.TabIndex = 0
+        '
+        'lblUsuario
+        '
+        Me.lblUsuario.AutoSize = True
+        Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblUsuario.Location = New System.Drawing.Point(939, 5)
+        Me.lblUsuario.Name = "lblUsuario"
+        Me.lblUsuario.Size = New System.Drawing.Size(0, 24)
+        Me.lblUsuario.TabIndex = 21
         '
         'LabelInicio
         '
@@ -783,6 +805,7 @@ Partial Class Inicio
         Me.panelOpciones.AllowDrop = True
         Me.panelOpciones.BackColor = System.Drawing.Color.LightSteelBlue
         Me.panelOpciones.CausesValidation = False
+        Me.panelOpciones.Controls.Add(Me.panelEstadisticas)
         Me.panelOpciones.Controls.Add(Me.PTBcalendario)
         Me.panelOpciones.Controls.Add(Me.PTBcalculadora)
         Me.panelOpciones.Controls.Add(Me.PTBcharts)
@@ -794,9 +817,9 @@ Partial Class Inicio
         Me.panelOpciones.Controls.Add(Me.btncalendario)
         Me.panelOpciones.Cursor = System.Windows.Forms.Cursors.Default
         Me.panelOpciones.Dock = System.Windows.Forms.DockStyle.Right
-        Me.panelOpciones.Location = New System.Drawing.Point(1088, 35)
+        Me.panelOpciones.Location = New System.Drawing.Point(979, 35)
         Me.panelOpciones.Name = "panelOpciones"
-        Me.panelOpciones.Size = New System.Drawing.Size(59, 555)
+        Me.panelOpciones.Size = New System.Drawing.Size(168, 555)
         Me.panelOpciones.TabIndex = 15
         '
         'PTBcalendario
@@ -918,15 +941,140 @@ Partial Class Inicio
         Me.btncalendario.Text = "Calendario"
         Me.btncalendario.UseVisualStyleBackColor = False
         '
-        'lblUsuario
+        'panelEstadisticas
         '
-        Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblUsuario.Location = New System.Drawing.Point(939, 5)
-        Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(0, 24)
-        Me.lblUsuario.TabIndex = 21
+        Me.panelEstadisticas.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.panelEstadisticas.Controls.Add(Me.Panel17)
+        Me.panelEstadisticas.Controls.Add(Me.Panel18)
+        Me.panelEstadisticas.Controls.Add(Me.Panel19)
+        Me.panelEstadisticas.Controls.Add(Me.Panel20)
+        Me.panelEstadisticas.Controls.Add(Me.Button1)
+        Me.panelEstadisticas.Controls.Add(Me.Button2)
+        Me.panelEstadisticas.Controls.Add(Me.Panel21)
+        Me.panelEstadisticas.Controls.Add(Me.Panel22)
+        Me.panelEstadisticas.Controls.Add(Me.Button3)
+        Me.panelEstadisticas.Controls.Add(Me.Button4)
+        Me.panelEstadisticas.Location = New System.Drawing.Point(0, 360)
+        Me.panelEstadisticas.Name = "panelEstadisticas"
+        Me.panelEstadisticas.Size = New System.Drawing.Size(168, 142)
+        Me.panelEstadisticas.TabIndex = 18
+        Me.panelEstadisticas.Visible = False
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel17.Location = New System.Drawing.Point(0, 74)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(5, 62)
+        Me.Panel17.TabIndex = 19
+        '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel18.Location = New System.Drawing.Point(0, 39)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(5, 35)
+        Me.Panel18.TabIndex = 18
+        '
+        'Panel19
+        '
+        Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel19.Location = New System.Drawing.Point(194, 66)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(5, 38)
+        Me.Panel19.TabIndex = 18
+        '
+        'Panel20
+        '
+        Me.Panel20.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel20.Location = New System.Drawing.Point(194, 39)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(5, 29)
+        Me.Panel20.TabIndex = 16
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Blue
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(1, 72)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(167, 29)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "Stock"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.Blue
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(2, 39)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(166, 29)
+        Me.Button2.TabIndex = 14
+        Me.Button2.Text = "Clientes"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Panel21
+        '
+        Me.Panel21.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel21.Location = New System.Drawing.Point(0, 4)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(5, 38)
+        Me.Panel21.TabIndex = 13
+        '
+        'Panel22
+        '
+        Me.Panel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel22.Location = New System.Drawing.Point(194, 4)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(5, 38)
+        Me.Panel22.TabIndex = 12
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.Blue
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(3, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(165, 29)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = "Ventas"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.Blue
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(0, 106)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(169, 33)
+        Me.Button4.TabIndex = 23
+        Me.Button4.Text = "Proveedores"
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Inicio
         '
@@ -968,6 +1116,7 @@ Partial Class Inicio
         CType(Me.PTBcharts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PTBabrir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PTBocultar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelEstadisticas.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1036,4 +1185,15 @@ Partial Class Inicio
     Friend WithEvents Panel13 As System.Windows.Forms.Panel
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
     Friend WithEvents lblUsuario As System.Windows.Forms.Label
+    Friend WithEvents panelEstadisticas As System.Windows.Forms.Panel
+    Friend WithEvents Panel17 As System.Windows.Forms.Panel
+    Friend WithEvents Panel18 As System.Windows.Forms.Panel
+    Friend WithEvents Panel19 As System.Windows.Forms.Panel
+    Friend WithEvents Panel20 As System.Windows.Forms.Panel
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Panel21 As System.Windows.Forms.Panel
+    Friend WithEvents Panel22 As System.Windows.Forms.Panel
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

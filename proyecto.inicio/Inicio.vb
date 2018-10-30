@@ -31,6 +31,7 @@ Public Class Inicio
         Panelproveedores.Hide()
         panelOpciones.Width = 59
 
+
         If (user = "Empleado" And pass = "123") Then
             'oculta btn a los que el usuario no tiene permiso de ingresar
             btnmodistock.Enabled = False
@@ -377,6 +378,7 @@ Public Class Inicio
             panelOpciones.Width = panelOpciones.Width + 1
         End While
         PTBocultar.Show()
+        panelEstadisticas.Visible = True
     End Sub
 
     Private Sub PTBocultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PTBocultar.Click
@@ -385,6 +387,7 @@ Public Class Inicio
             panelOpciones.Width -= 1
         End While
         PTBabrir.Show()
+        panelEstadisticas.Visible = False
     End Sub
 
 
@@ -446,4 +449,43 @@ Public Class Inicio
 
 
 
+    Private Sub PTBcharts_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Dim llamarVentas As New EstadisticaVentas
+        panelmedio.Controls.Clear()
+        llamarVentas.TopLevel = False
+        llamarVentas.Parent = panelmedio
+        llamarVentas.Show()
+        llamarVentas.Dock = DockStyle.Fill
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim llamarClientes As New EstadiscticaCliente
+        panelmedio.Controls.Clear()
+        llamarClientes.TopLevel = False
+        llamarClientes.Parent = panelmedio
+        llamarClientes.Show()
+        llamarClientes.Dock = DockStyle.Fill
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim llamarStock As New EstadisticaStock
+        panelmedio.Controls.Clear()
+        llamarStock.TopLevel = False
+        llamarStock.Parent = panelmedio
+        llamarStock.Show()
+        llamarStock.Dock = DockStyle.Fill
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Dim llamarProv As New EstadisticasProv
+        panelmedio.Controls.Clear()
+        llamarProv.TopLevel = False
+        llamarProv.Parent = panelmedio
+        llamarProv.Show()
+        llamarProv.Dock = DockStyle.Fill
+    End Sub
 End Class
