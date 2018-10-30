@@ -45,4 +45,10 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+ 
+    Private Sub btnBuscarProv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarProv.Click
+        BuscarProv.Show()
+
+    End Sub
 End Class
