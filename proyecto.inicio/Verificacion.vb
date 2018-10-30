@@ -80,28 +80,38 @@ Public Class Verificacion
 
             MessageBox.Show("Ingreso exitoso!", "Datos Verificados")
 
-            NivelAcceso = txtuser.Text
 
-            If NivelAcceso = "Dueños" Then
+            If txtuser.Text = "Dueños" Then
                 Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=Dueños;password=456;database=lapolleriabd")
-                ' .TabUsuarios.Enabled = False
-                'Resto de acciones permitidas
+                'todas las acciones permitidas
 
+            ElseIf txtuser.Text = "Gerentes" Then
 
-
-
-            ElseIf NivelAcceso = "Gerentes" Then
                 Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=Gerentes;password=963;database=lapolleriabd")
-                ' .TabUsuarios.Enabled = False
-                'Resto de acciones permitidas
+                'puede visualizar todo
+
+                'inserta datos en stock
+                'facturas y genera
+                'clientes
+
+                MODIFICARCLIENTES.btnEliminarCliente.Enabled = False
+                MODIFICARCLIENTES.btnGuardar.Enabled = False
+                MODIFICARCLIENTES.btnEditar.Enabled = False
+                MODIFICARCLIENTES.Label1.Enabled = False
+
+                MODIFICARCLIENTES.btnEliminarCliente.Visible = False
+                MODIFICARCLIENTES.btnGuardar.Visible = False
+                MODIFICARCLIENTES.btnEditar.Visible = False
+                MODIFICARCLIENTES.Label1.Visible = False
 
 
-
-            ElseIf NivelAcceso = "Empleado" Then
+            ElseIf txtuser.Text = "Empleado" Then
                 Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=Empleado;password=123;database=lapolleriabd")
                 ' .TabUsuarios.Enabled = False
                 'Resto de acciones permitidas
             End If
+
+
             Me.Hide()
             Inicio.Show()
             txtuser.Clear()

@@ -78,28 +78,28 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuscarProv.Designer.vb">
+    <Compile Include="Proveedores\BuscarProv.Designer.vb">
       <DependentUpon>BuscarProv.vb</DependentUpon>
     </Compile>
-    <Compile Include="BuscarProv.vb">
+    <Compile Include="Proveedores\BuscarProv.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultaVentas.Designer.vb">
+    <Compile Include="Gestion Facturas\ConsultaVentas.Designer.vb">
       <DependentUpon>ConsultaVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="ConsultaVentas.vb">
+    <Compile Include="Gestion Facturas\ConsultaVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Deudores.Designer.vb">
+    <Compile Include="Clientes\Deudores.Designer.vb">
       <DependentUpon>Deudores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Deudores.vb">
+    <Compile Include="Clientes\Deudores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscarClientesCobrar.Designer.vb">
+    <Compile Include="Facturacion\BuscarClientesCobrar.Designer.vb">
       <DependentUpon>BuscarClientesCobrar.vb</DependentUpon>
     </Compile>
-    <Compile Include="BuscarClientesCobrar.vb">
+    <Compile Include="Facturacion\BuscarClientesCobrar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CalculadorA2.Designer.vb">
@@ -108,35 +108,35 @@
     <Compile Include="CalculadorA2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cobrar.Designer.vb">
+    <Compile Include="Facturacion\Cobrar.Designer.vb">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Cobrar.vb">
+    <Compile Include="Facturacion\Cobrar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="conexioon.vb" />
-    <Compile Include="FacturasProveedores.Designer.vb">
+    <Compile Include="Modulos\conexioon.vb" />
+    <Compile Include="Gestion Facturas\FacturasProveedores.Designer.vb">
       <DependentUpon>FacturasProveedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="FacturasProveedores.vb">
+    <Compile Include="Gestion Facturas\FacturasProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionFacturacion.Designer.vb">
+    <Compile Include="Gestion Facturas\GestionFacturacion.Designer.vb">
       <DependentUpon>GestionFacturacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="GestionFacturacion.vb">
+    <Compile Include="Gestion Facturas\GestionFacturacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarProv.Designer.vb">
+    <Compile Include="Proveedores\EditarProv.Designer.vb">
       <DependentUpon>EditarProv.vb</DependentUpon>
     </Compile>
-    <Compile Include="EditarProv.vb">
+    <Compile Include="Proveedores\EditarProv.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarProv.Designer.vb">
+    <Compile Include="Proveedores\EliminarProv.Designer.vb">
       <DependentUpon>EliminarProv.vb</DependentUpon>
     </Compile>
-    <Compile Include="EliminarProv.vb">
+    <Compile Include="Proveedores\EliminarProv.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estadistica de Stock.Designer.vb">
@@ -145,22 +145,22 @@
     <Compile Include="Estadistica de Ventas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MODIFICARCLIENTES.Designer.vb">
+    <Compile Include="Clientes\MODIFICARCLIENTES.Designer.vb">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </Compile>
-    <Compile Include="MODIFICARCLIENTES.vb">
+    <Compile Include="Clientes\MODIFICARCLIENTES.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagosClientes.Designer.vb">
+    <Compile Include="Gestion Facturas\PagosClientes.Designer.vb">
       <DependentUpon>PagosClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="PagosClientes.vb">
+    <Compile Include="Gestion Facturas\PagosClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagosProv.Designer.vb">
+    <Compile Include="Gestion Facturas\PagosProv.Designer.vb">
       <DependentUpon>PagosProv.vb</DependentUpon>
     </Compile>
-    <Compile Include="PagosProv.vb">
+    <Compile Include="Gestion Facturas\PagosProv.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PlantillaInicio.Designer.vb">
@@ -169,16 +169,16 @@
     <Compile Include="PlantillaInicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchProducts.Designer.vb">
+    <Compile Include="Facturacion\SearchProducts.Designer.vb">
       <DependentUpon>SearchProducts.vb</DependentUpon>
     </Compile>
-    <Compile Include="SearchProducts.vb">
+    <Compile Include="Facturacion\SearchProducts.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SuspenderStock.Designer.vb">
+    <Compile Include="Stock\SuspenderStock.Designer.vb">
       <DependentUpon>SuspenderStock.vb</DependentUpon>
     </Compile>
-    <Compile Include="SuspenderStock.vb">
+    <Compile Include="Stock\SuspenderStock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio.Designer.vb">
@@ -187,10 +187,10 @@
     <Compile Include="Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestionproveedores.Designer.vb">
+    <Compile Include="Proveedores\Gestionproveedores.Designer.vb">
       <DependentUpon>Gestionproveedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Gestionproveedores.vb">
+    <Compile Include="Proveedores\Gestionproveedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -208,23 +208,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="RealizarFactura.Designer.vb">
+    <Compile Include="Facturacion\RealizarFactura.Designer.vb">
       <DependentUpon>RealizarFactura.vb</DependentUpon>
     </Compile>
-    <Compile Include="RealizarFactura.vb">
+    <Compile Include="Facturacion\RealizarFactura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock de Productos.Designer.vb">
+    <Compile Include="Stock\Stock de Productos.Designer.vb">
       <DependentUpon>Stock de Productos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Stock de Productos.vb">
+    <Compile Include="Stock\Stock de Productos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuloVariables.vb" />
-    <Compile Include="Vendedores.Designer.vb">
+    <Compile Include="Modulos\ModuloVariables.vb" />
+    <Compile Include="Facturacion\Vendedores.Designer.vb">
       <DependentUpon>Vendedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Vendedores.vb">
+    <Compile Include="Facturacion\Vendedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Verificacion.Designer.vb">
@@ -235,61 +235,61 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BuscarProv.resx">
+    <EmbeddedResource Include="Proveedores\BuscarProv.resx">
       <DependentUpon>BuscarProv.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaVentas.resx">
+    <EmbeddedResource Include="Gestion Facturas\ConsultaVentas.resx">
       <DependentUpon>ConsultaVentas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Deudores.resx">
+    <EmbeddedResource Include="Clientes\Deudores.resx">
       <DependentUpon>Deudores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscarClientesCobrar.resx">
+    <EmbeddedResource Include="Facturacion\BuscarClientesCobrar.resx">
       <DependentUpon>BuscarClientesCobrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadorA2.resx">
       <DependentUpon>CalculadorA2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cobrar.resx">
+    <EmbeddedResource Include="Facturacion\Cobrar.resx">
       <DependentUpon>Cobrar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacturasProveedores.resx">
+    <EmbeddedResource Include="Gestion Facturas\FacturasProveedores.resx">
       <DependentUpon>FacturasProveedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionFacturacion.resx">
+    <EmbeddedResource Include="Gestion Facturas\GestionFacturacion.resx">
       <DependentUpon>GestionFacturacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarProv.resx">
+    <EmbeddedResource Include="Proveedores\EditarProv.resx">
       <DependentUpon>EditarProv.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarProv.resx">
+    <EmbeddedResource Include="Proveedores\EliminarProv.resx">
       <DependentUpon>EliminarProv.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadistica de Stock.resx">
       <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MODIFICARCLIENTES.resx">
+    <EmbeddedResource Include="Clientes\MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PagosClientes.resx">
+    <EmbeddedResource Include="Gestion Facturas\PagosClientes.resx">
       <DependentUpon>PagosClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PagosProv.resx">
+    <EmbeddedResource Include="Gestion Facturas\PagosProv.resx">
       <DependentUpon>PagosProv.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlantillaInicio.resx">
       <DependentUpon>PlantillaInicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchProducts.resx">
+    <EmbeddedResource Include="Facturacion\SearchProducts.resx">
       <DependentUpon>SearchProducts.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SuspenderStock.resx">
+    <EmbeddedResource Include="Stock\SuspenderStock.resx">
       <DependentUpon>SuspenderStock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestionproveedores.resx">
+    <EmbeddedResource Include="Proveedores\Gestionproveedores.resx">
       <DependentUpon>Gestionproveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -298,13 +298,13 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="RealizarFactura.resx">
+    <EmbeddedResource Include="Facturacion\RealizarFactura.resx">
       <DependentUpon>RealizarFactura.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock de Productos.resx">
+    <EmbeddedResource Include="Stock\Stock de Productos.resx">
       <DependentUpon>Stock de Productos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vendedores.resx">
+    <EmbeddedResource Include="Facturacion\Vendedores.resx">
       <DependentUpon>Vendedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Verificacion.resx">
@@ -415,9 +415,7 @@
   <ItemGroup>
     <None Include="Resources\relojazul.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Gestion Facturas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

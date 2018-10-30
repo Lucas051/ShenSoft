@@ -86,6 +86,7 @@ Partial Class Inicio
         Me.btncalculadora = New System.Windows.Forms.Button()
         Me.btncharts = New System.Windows.Forms.Button()
         Me.btncalendario = New System.Windows.Forms.Button()
+        Me.lblUsuario = New System.Windows.Forms.Label()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,6 +117,7 @@ Partial Class Inicio
         'barratituloInicio
         '
         Me.barratituloInicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.barratituloInicio.Controls.Add(Me.lblUsuario)
         Me.barratituloInicio.Controls.Add(Me.LabelInicio)
         Me.barratituloInicio.Controls.Add(Me.btnMinimizar)
         Me.barratituloInicio.Controls.Add(Me.btnmini)
@@ -916,6 +918,16 @@ Partial Class Inicio
         Me.btncalendario.Text = "Calendario"
         Me.btncalendario.UseVisualStyleBackColor = False
         '
+        'lblUsuario
+        '
+        Me.lblUsuario.AutoSize = True
+        Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblUsuario.Location = New System.Drawing.Point(939, 5)
+        Me.lblUsuario.Name = "lblUsuario"
+        Me.lblUsuario.Size = New System.Drawing.Size(0, 24)
+        Me.lblUsuario.TabIndex = 21
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1023,4 +1035,5 @@ Partial Class Inicio
     Friend WithEvents Panel14 As System.Windows.Forms.Panel
     Friend WithEvents Panel13 As System.Windows.Forms.Panel
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
+    Friend WithEvents lblUsuario As System.Windows.Forms.Label
 End Class
