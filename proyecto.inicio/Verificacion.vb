@@ -1,6 +1,12 @@
 ﻿Imports System.Runtime.InteropServices
-
+Imports MySql.Data
+Imports MySql.Data.Types
+Imports MySql.Data.MySqlClient
+Imports System.Data.OleDb
+Imports System.Data
 Public Class Verificacion
+
+    Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=lapolleriabd")
 
     Private Sub txtuser_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtuser.Enter
         'Desaparece nombre de textbox
@@ -49,20 +55,38 @@ Public Class Verificacion
     End Sub
 
     Private Sub Verificacion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'agregar para que se pueda mover la ventana
+
+        Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=lapolleriabd")
+
     End Sub
 
     Private Sub btningresar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
-        Dim lista As Byte
 
-        If (txtuser.Text <> "" And txtpass.Text <> "") Then
-            conexioon.Consulta = "SELECT * FROM "
-            consultar()
+
+        Dim command As New MySqlCommand("SELECT `user`, `pass` FROM `usuarios` WHERE `user` = @username AND `pass` = @password", connection)
+
+        command.Parameters.Add("@username", MySqlDbType.VarChar).Value = txtuser.Text
+        command.Parameters.Add("@password", MySqlDbType.VarChar).Value = txtpass.Text
+
+        Dim adapter As New MySqlDataAdapter(command)
+        Dim table As New DataTable()
+
+        adapter.Fill(table)
+
+        If table.Rows.Count = 0 Then
+
+            MessageBox.Show("Contraseña o Usuario Incorrecto", "Error al Ingresar")
+
+        Else
+
+            MessageBox.Show("Ingreso exitoso!", "Datos Verificados")
+
+            Inicio.Show()
+            Me.Hide()
+            txtuser.Clear()
+            txtpass.Clear()
+
         End If
-
-        'Me.Hide()
-        'Inicio.Show()
-        'por el momento dejamos la seguridad como segundo plano, para poder seguir con otras funciones mas importantes del programa
     End Sub
 
 

@@ -103,14 +103,14 @@ Public Class Cobrar
 
             For Each row As DataGridViewRow In RealizarFactura.DGVVentas.Rows
 
-                cmd.Parameters.Clear()
+                '  cmd.Parameters.Clear()
 
-                cmd.Parameters.AddWithValue("@precio_v", CStr(row.Cells("precioventa").Value))
-                cmd.Parameters.AddWithValue("@cantidad", CInt(row.Cells("cantidad").Value))
-                cmd.Parameters.AddWithValue("@descripcion", CStr(row.Cells("descripcion").Value))
-                cmd.Parameters.AddWithValue("@cod_producto", CStr(row.Cells("codigo").Value))
+                '    cmd.Parameters.AddWithValue("@precio_v", CStr(row.Cells("precioventa").Value))
+                '   cmd.Parameters.AddWithValue("@cantidad", CInt(row.Cells("cantidad").Value))
+                '   cmd.Parameters.AddWithValue("@descripcion", CStr(row.Cells("descripcion").Value))
+                '   cmd.Parameters.AddWithValue("@cod_producto", CStr(row.Cells("codigo").Value))
 
-                cmd.ExecuteNonQuery()
+                '  cmd.ExecuteNonQuery()
             Next
 
         Catch ex As Exception
