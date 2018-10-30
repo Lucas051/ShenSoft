@@ -99,7 +99,7 @@ Public Class Cobrar
         Try
             conexioon.Consulta = "INSERT INTO genera (n_factura, precio_v, cantidad, descripcion, cod_producto) VALUES (@n_factura, @precio_v, @cantidad,  @descripcion,  @cod_producto)"
             consultar()
-            Dim cmd As New SqlCommand(Consulta, ubicacion)
+            ' Dim cmd As New SqlCommand(Consulta, ubicacion)
 
             For Each row As DataGridViewRow In RealizarFactura.DGVVentas.Rows
 
