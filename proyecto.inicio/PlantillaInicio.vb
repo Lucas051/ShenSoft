@@ -28,7 +28,5 @@
         lblFecha.Text = fecha
     End Sub
 
-    Private Sub lblTelefonos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblTelefonos.Click
 
-    End Sub
 End Class

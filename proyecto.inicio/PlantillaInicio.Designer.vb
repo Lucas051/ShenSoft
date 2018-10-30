@@ -66,7 +66,7 @@ Partial Class PlantillaInicio
         Me.lblMinuto.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblMinuto.Font = New System.Drawing.Font("Bahnschrift Condensed", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMinuto.ForeColor = System.Drawing.Color.White
-        Me.lblMinuto.Location = New System.Drawing.Point(391, 201)
+        Me.lblMinuto.Location = New System.Drawing.Point(387, 201)
         Me.lblMinuto.Name = "lblMinuto"
         Me.lblMinuto.Size = New System.Drawing.Size(0, 68)
         Me.lblMinuto.TabIndex = 18
@@ -115,7 +115,7 @@ Partial Class PlantillaInicio
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.relojazul
-        Me.PictureBox1.Location = New System.Drawing.Point(82, 70)
+        Me.PictureBox1.Location = New System.Drawing.Point(78, 70)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(659, 377)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
