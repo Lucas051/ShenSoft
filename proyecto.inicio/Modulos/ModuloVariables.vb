@@ -13,4 +13,6 @@ Module ModuloVariables
 
     Public pass As String
 
+    Public num_factura As Integer
+
 End Module

@@ -1,12 +1,17 @@
 ﻿Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
-Imports System.Data.SqlClient
+Imports MySql.Data
+Imports MySql.Data.Types
+Imports MySql.Data.MySqlClient
+Imports System.Data.OleDb
 
 Public Class Cobrar
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
     Private MouseDownX As Integer
     Private MouseDownY As Integer
+
+    Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=lapolleriabd")
 
     Dim devolver As Integer
 
@@ -83,34 +88,53 @@ Public Class Cobrar
         If (opcion = DialogResult.Yes) Then
             Try
 
-                conexioon.Consulta = "INSERT INTO facturas (monto, forma_de_pago, num_cliente, id_vendedor) VALUES('" + lblTotalPagar.Text + "','" + CBformadepago.Text + "','" + txtclientes.Text + "','" + txtvendedor.Text + ");"
-                consultar()
+                Dim command As New MySqlCommand("INSERT INTO facturas (monto, forma_de_pago, num_cliente, id_vendedor) VALUES((@monto, @forma_de_pago, @num_cliente,  @id_vendedor)", connection)
+                '  command = New MySqlCommand(Query, MysqlConn)
 
+                command.Parameters.Add("@monto", MySqlDbType.VarChar).Value = lblTotalPagar.Text
+                command.Parameters.Add("@forma_de_pago", MySqlDbType.VarChar).Value = CBformadepago.Text
+                command.Parameters.Add("@num_cliente", MySqlDbType.VarChar).Value = txtclientes.Text
+                command.Parameters.Add("@id_vendedor", MySqlDbType.VarChar).Value = txtvendedor.Text.ToString
+
+
+                Dim adapter As New MySqlDataAdapter(command)
+                Dim table As New DataTable()
+
+                adapter.Fill(table)
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
 
         End If
+        'guardo valor de la row 0 del insert factura en variable global
 
+        ' despues la inserto en genera
 
         If RealizarFactura.DGVVentas.Rows.Count = 0 Then
             Return
         End If
+
         Try
-            conexioon.Consulta = "INSERT INTO genera (n_factura, precio_v, cantidad, descripcion, cod_producto) VALUES (@n_factura, @precio_v, @cantidad,  @descripcion,  @cod_producto)"
-            consultar()
-            ' Dim cmd As New SqlCommand(Consulta, ubicacion)
 
             For Each row As DataGridViewRow In RealizarFactura.DGVVentas.Rows
 
-                '  cmd.Parameters.Clear()
+                Dim command As New MySqlCommand("INSERT INTO genera (n_factura, precio_v, cantidad, descripcion, cod_producto) VALUES (@n_factura, @precio_v, @cantidad,  @descripcion,  @cod_producto)", connection)
 
-                '    cmd.Parameters.AddWithValue("@precio_v", CStr(row.Cells("precioventa").Value))
-                '   cmd.Parameters.AddWithValue("@cantidad", CInt(row.Cells("cantidad").Value))
-                '   cmd.Parameters.AddWithValue("@descripcion", CStr(row.Cells("descripcion").Value))
-                '   cmd.Parameters.AddWithValue("@cod_producto", CStr(row.Cells("codigo").Value))
+                command.Parameters.Clear()
 
-                '  cmd.ExecuteNonQuery()
+                command.Parameters.Add("@n_factura", MySqlDbType.VarChar).Value = 3
+                command.Parameters.AddWithValue("@precio_v", CStr(row.Cells("precioventa").Value))
+                command.Parameters.AddWithValue("@cantidad", CInt(row.Cells("cantidad").Value))
+                command.Parameters.AddWithValue("@descripcion", CStr(row.Cells("descripcion").Value))
+                command.Parameters.AddWithValue("@cod_producto", CStr(row.Cells("codigo").Value))
+
+                command.ExecuteNonQuery()
+
+                Dim adapter As New MySqlDataAdapter(command)
+                Dim table As New DataTable()
+
+                adapter.Fill(table)
+
             Next
 
         Catch ex As Exception
