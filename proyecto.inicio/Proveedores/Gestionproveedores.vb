@@ -79,6 +79,25 @@ Public Class Gestionproveedores
             dgvproveedores.Columns(3).Width = 150
             dgvproveedores.Columns(4).Width = 70
 
+            If (user = "Empleado" And pass = "123") Then
+                'oculta btn a los que el usuario no tiene permiso de ingresar
+                Label2.Visible = False
+                Label3.Visible = False
+                Label4.Visible = False
+
+                txtproveedor.Visible = False
+                txtproveedor.Enabled = False
+                txttelefono.Visible = False
+                txttelefono.Enabled = False
+                txtdireccion.Visible = False
+                txtdireccion.Enabled = False
+
+                btnagregarProv.Enabled = False
+                btnagregarProv.Visible = False
+
+
+            End If
+
         Catch ex As Exception
 
             MessageBox.Show(ex.ToString)

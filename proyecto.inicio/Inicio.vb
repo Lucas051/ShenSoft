@@ -34,6 +34,8 @@ Public Class Inicio
         If (user = "Empleado" And pass = "123") Then
             'oculta btn a los que el usuario no tiene permiso de ingresar
             btnmodistock.Enabled = False
+            btnEditarProv.Enabled = False
+            btnEliminarProv.Enabled = False
         End If
 
     End Sub
