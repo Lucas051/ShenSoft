@@ -586,7 +586,7 @@ Partial Class Inicio
         Me.btnmodistock.Name = "btnmodistock"
         Me.btnmodistock.Size = New System.Drawing.Size(197, 31)
         Me.btnmodistock.TabIndex = 3
-        Me.btnmodistock.Text = "Modificar Stock"
+        Me.btnmodistock.Text = "Suspender Stock"
         Me.btnmodistock.UseVisualStyleBackColor = False
         '
         'Panel9
