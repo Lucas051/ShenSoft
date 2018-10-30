@@ -78,6 +78,30 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estadisticas\EstadisticasProv.Designer.vb">
+      <DependentUpon>EstadisticasProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticasProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadiscticaCliente.Designer.vb">
+      <DependentUpon>EstadiscticaCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadiscticaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaStock.Designer.vb">
+      <DependentUpon>EstadisticaStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaVentas.Designer.vb">
+      <DependentUpon>EstadisticaVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Proveedores\BuscarProv.Designer.vb">
       <DependentUpon>BuscarProv.vb</DependentUpon>
     </Compile>
@@ -137,12 +161,6 @@
       <DependentUpon>EliminarProv.vb</DependentUpon>
     </Compile>
     <Compile Include="Proveedores\EliminarProv.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadistica de Stock.Designer.vb">
-      <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Estadistica de Ventas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Clientes\MODIFICARCLIENTES.Designer.vb">
@@ -235,6 +253,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Estadisticas\EstadisticasProv.resx">
+      <DependentUpon>EstadisticasProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\EstadisticaVentas.resx">
+      <DependentUpon>EstadisticaVentas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\BuscarProv.resx">
       <DependentUpon>BuscarProv.vb</DependentUpon>
     </EmbeddedResource>
@@ -264,9 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\EliminarProv.resx">
       <DependentUpon>EliminarProv.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadistica de Stock.resx">
-      <DependentUpon>Estadistica de Ventas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\MODIFICARCLIENTES.resx">
       <DependentUpon>MODIFICARCLIENTES.vb</DependentUpon>

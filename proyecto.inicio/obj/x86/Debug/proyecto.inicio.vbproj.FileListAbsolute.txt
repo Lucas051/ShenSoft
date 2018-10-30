@@ -81,7 +81,6 @@ C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyect
 C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.CalculadorA2.resources
 C:\Users\usuario\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Estadistica_de_Stock.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.CalculadorA2.resources
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Estadistica_de_Stock.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.PlantillaInicio.resources
 C:\Users\frear\Documents\GitHub\ShenSoftt\proyecto.inicio\obj\x86\Debug\proyecto.inicio.exe
 C:\Users\frear\Documents\GitHub\ShenSoftt\proyecto.inicio\obj\x86\Debug\proyecto.inicio.xml
@@ -116,3 +115,5 @@ C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarProv.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.PagosProv.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Vendedores.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadisticasProv.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadisticaVentas.resources
