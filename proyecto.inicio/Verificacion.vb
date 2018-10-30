@@ -53,8 +53,15 @@ Public Class Verificacion
     End Sub
 
     Private Sub btningresar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
-        Me.Hide()
-        Inicio.Show()
+        Dim lista As Byte
+
+        If (txtuser.Text <> "" And txtpass.Text <> "") Then
+            conexioon.Consulta = "SELECT * FROM "
+            consultar()
+        End If
+
+        'Me.Hide()
+        'Inicio.Show()
         'por el momento dejamos la seguridad como segundo plano, para poder seguir con otras funciones mas importantes del programa
     End Sub
 

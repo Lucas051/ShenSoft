@@ -23,6 +23,7 @@ Partial Class Cobrar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.barratitulo = New System.Windows.Forms.Panel()
+        Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,7 +38,6 @@ Partial Class Cobrar
         Me.txtvendedor = New System.Windows.Forms.TextBox()
         Me.txtclientes = New System.Windows.Forms.TextBox()
         Me.txtpagocon = New System.Windows.Forms.TextBox()
-        Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CBformadepago = New System.Windows.Forms.ComboBox()
         Me.barratitulo.SuspendLayout()
@@ -54,6 +54,17 @@ Partial Class Cobrar
         Me.barratitulo.Name = "barratitulo"
         Me.barratitulo.Size = New System.Drawing.Size(466, 35)
         Me.barratitulo.TabIndex = 36
+        '
+        'btnmini
+        '
+        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
+        Me.btnmini.Location = New System.Drawing.Point(426, 5)
+        Me.btnmini.Name = "btnmini"
+        Me.btnmini.Size = New System.Drawing.Size(25, 25)
+        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmini.TabIndex = 1
+        Me.btnmini.TabStop = False
         '
         'cod
         '
@@ -222,17 +233,6 @@ Partial Class Cobrar
         Me.txtpagocon.Name = "txtpagocon"
         Me.txtpagocon.Size = New System.Drawing.Size(129, 23)
         Me.txtpagocon.TabIndex = 60
-        '
-        'btnmini
-        '
-        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(426, 5)
-        Me.btnmini.Name = "btnmini"
-        Me.btnmini.Size = New System.Drawing.Size(25, 25)
-        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmini.TabIndex = 1
-        Me.btnmini.TabStop = False
         '
         'PictureBox1
         '

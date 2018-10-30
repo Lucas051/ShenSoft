@@ -10,13 +10,17 @@
 
     Public Sub Validaciones()
         Select Case NivelAcceso
-            Case 1
-                'Reglas para el Administrador
+            Case "Dueños"
+                If NivelAcceso = "Dueños" Then
+                    ' .TabUsuarios.Enabled = False
+                    'Resto de acciones permitidas
+                End If
 
-            Case 2
+
+            Case "Gerentes"
                 'Reglas para el Miembro
 
-            Case 3
+            Case "Empleado"
                 'Reglas para el Invitado
         End Select
     End Sub
