@@ -33,7 +33,6 @@
             Try
                 conexioon.Consulta = "UPDATE proveedores SET saldo_p = saldo_p + " + txtmonto.Text + " WHERE num_prov=" + txtproveedor.Text + ";"
                 consultar()
-                dgvFacturasProv.DataSource = resultado
             Catch ex As Exception
                 MessageBox.Show(ex.ToString)
             End Try

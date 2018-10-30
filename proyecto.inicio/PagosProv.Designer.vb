@@ -29,12 +29,12 @@ Partial Class PagosProv
         Me.btnatras = New System.Windows.Forms.Button()
         Me.txtBuscarP = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnPagar = New System.Windows.Forms.Button()
+        Me.TXTnrecibofisico = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtImporte = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtProveedor = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnBuscarProv = New System.Windows.Forms.Button()
         CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +63,7 @@ Partial Class PagosProv
         Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvproveedores.EnableHeadersVisualStyles = False
         Me.dgvproveedores.GridColor = System.Drawing.Color.White
-        Me.dgvproveedores.Location = New System.Drawing.Point(339, 59)
+        Me.dgvproveedores.Location = New System.Drawing.Point(283, 59)
         Me.dgvproveedores.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.dgvproveedores.Name = "dgvproveedores"
         Me.dgvproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -74,7 +74,7 @@ Partial Class PagosProv
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvproveedores.Size = New System.Drawing.Size(540, 410)
+        Me.dgvproveedores.Size = New System.Drawing.Size(596, 410)
         Me.dgvproveedores.TabIndex = 57
         '
         'btnatras
@@ -113,77 +113,77 @@ Partial Class PagosProv
         Me.Label5.TabIndex = 59
         Me.Label5.Text = "Buscar Proveedores:"
         '
-        'Button1
+        'btnPagar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(18, 352)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(269, 32)
-        Me.Button1.TabIndex = 61
-        Me.Button1.Text = "Pagar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnPagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnPagar.FlatAppearance.BorderSize = 0
+        Me.btnPagar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPagar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPagar.Location = New System.Drawing.Point(37, 353)
+        Me.btnPagar.Name = "btnPagar"
+        Me.btnPagar.Size = New System.Drawing.Size(241, 32)
+        Me.btnPagar.TabIndex = 61
+        Me.btnPagar.Text = "Agregar Pago"
+        Me.btnPagar.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'TXTnrecibofisico
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(145, 126)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(142, 25)
-        Me.TextBox1.TabIndex = 63
+        Me.TXTnrecibofisico.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTnrecibofisico.Location = New System.Drawing.Point(136, 126)
+        Me.TXTnrecibofisico.Multiline = True
+        Me.TXTnrecibofisico.Name = "TXTnrecibofisico"
+        Me.TXTnrecibofisico.Size = New System.Drawing.Size(142, 25)
+        Me.TXTnrecibofisico.TabIndex = 63
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(39, 127)
+        Me.Label1.Location = New System.Drawing.Point(30, 127)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 22)
         Me.Label1.TabIndex = 62
         Me.Label1.Text = "N° Recibo"
         '
-        'TextBox2
+        'txtImporte
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(145, 188)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(142, 25)
-        Me.TextBox2.TabIndex = 65
+        Me.txtImporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtImporte.Location = New System.Drawing.Point(136, 188)
+        Me.txtImporte.Multiline = True
+        Me.txtImporte.Name = "txtImporte"
+        Me.txtImporte.Size = New System.Drawing.Size(142, 25)
+        Me.txtImporte.TabIndex = 65
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(51, 191)
+        Me.Label2.Location = New System.Drawing.Point(42, 191)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 22)
         Me.Label2.TabIndex = 64
         Me.Label2.Text = "Importe"
         '
-        'TextBox3
+        'txtProveedor
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(145, 248)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(142, 25)
-        Me.TextBox3.TabIndex = 67
+        Me.txtProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProveedor.Location = New System.Drawing.Point(136, 248)
+        Me.txtProveedor.Multiline = True
+        Me.txtProveedor.Name = "txtProveedor"
+        Me.txtProveedor.Size = New System.Drawing.Size(142, 25)
+        Me.txtProveedor.TabIndex = 67
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(14, 249)
+        Me.Label3.Location = New System.Drawing.Point(5, 249)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 22)
         Me.Label3.TabIndex = 66
@@ -198,7 +198,7 @@ Partial Class PagosProv
         Me.btnBuscarProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarProv.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnBuscarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarProv.Location = New System.Drawing.Point(145, 281)
+        Me.btnBuscarProv.Location = New System.Drawing.Point(136, 281)
         Me.btnBuscarProv.Name = "btnBuscarProv"
         Me.btnBuscarProv.Size = New System.Drawing.Size(142, 29)
         Me.btnBuscarProv.TabIndex = 68
@@ -212,13 +212,13 @@ Partial Class PagosProv
         Me.BackColor = System.Drawing.Color.Beige
         Me.ClientSize = New System.Drawing.Size(891, 566)
         Me.Controls.Add(Me.btnBuscarProv)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtProveedor)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtImporte)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TXTnrecibofisico)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnPagar)
         Me.Controls.Add(Me.txtBuscarP)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnatras)
@@ -235,12 +235,12 @@ Partial Class PagosProv
     Friend WithEvents btnatras As System.Windows.Forms.Button
     Friend WithEvents txtBuscarP As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents btnPagar As System.Windows.Forms.Button
+    Friend WithEvents TXTnrecibofisico As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtImporte As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtProveedor As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnBuscarProv As System.Windows.Forms.Button
 End Class
