@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
-Public Class SearchProducts
+Public Class Vendedores
 
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
@@ -9,12 +9,10 @@ Public Class SearchProducts
     Private MouseDownY As Integer
 
 
-    Private Sub SearchProducts_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
+    Private Sub Vendedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
 
-            Consulta = "SELECT * FROM stock"
+            Consulta = "SELECT * FROM vendedores"
             consultar()
             dgvbuscarstock.DataSource = resultado
 
@@ -25,40 +23,32 @@ Public Class SearchProducts
         'Nombramos los encabezados del datagrid buscar
 
         dgvbuscarstock.Columns(0).HeaderText = "Código"
-        dgvbuscarstock.Columns(1).HeaderText = "Descrip."
-        dgvbuscarstock.Columns(2).HeaderText = "Cantidad"
-        dgvbuscarstock.Columns(3).HeaderText = "Precio Costo"
-        dgvbuscarstock.Columns(4).HeaderText = "Precio Venta"
-        dgvbuscarstock.Columns(5).HeaderText = "Proveedor"
+        dgvbuscarstock.Columns(1).HeaderText = "Nombre"
+
+
 
         'ancho de columnas dgv
-        dgvbuscarstock.Columns(0).Width = 90
-        dgvbuscarstock.Columns(1).Width = 200
+        dgvbuscarstock.Columns(0).Width = 215
+        dgvbuscarstock.Columns(1).Width = 215
     End Sub
-
-    Private Sub dgvbuscarstock_CellClick_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarstock.CellClick
-        Dim llamar As New RealizarFactura
+    Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarstock.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
-        RealizarFactura.lblCodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
-        RealizarFactura.txtdescripcion.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
-        RealizarFactura.txtprecioov.Text = dgvbuscarstock.CurrentRow.Cells(4).Value.ToString
+        Cobrar.txtvendedor.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
+
         'close para cerrar el form
         Close()
     End Sub
 
+    Private Sub dgvbuscarstock_CellClick_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
+        Dim llamar As New RealizarFactura
+        'Mediante el evento indicamos hacia donde van los valores seleccionados
+        RealizarFactura.lblCodigo.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
+        RealizarFactura.txtdescripcion.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
 
-
-    Private Sub txtbuscarstock_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtbuscarstock.TextChanged
-        Try
-            'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM stock WHERE  descripcion LIKE '%" & txtbuscarstock.Text & "%';"
-            consultar()
-            dgvbuscarstock.DataSource = resultado
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        'close para cerrar el form
+        Close()
     End Sub
+
 
     Private Sub btnMinimizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
@@ -82,7 +72,6 @@ Public Class SearchProducts
 
     Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
         Me.Hide()
-        RealizarFactura.Show()
 
     End Sub
 

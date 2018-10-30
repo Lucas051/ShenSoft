@@ -221,6 +221,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuloVariables.vb" />
+    <Compile Include="Vendedores.Designer.vb">
+      <DependentUpon>Vendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Verificacion.Designer.vb">
       <DependentUpon>Verificacion.vb</DependentUpon>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stock de Productos.resx">
       <DependentUpon>Stock de Productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedores.resx">
+      <DependentUpon>Vendedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Verificacion.resx">
       <DependentUpon>Verificacion.vb</DependentUpon>

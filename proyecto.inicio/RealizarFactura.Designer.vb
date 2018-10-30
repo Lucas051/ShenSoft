@@ -27,6 +27,12 @@ Partial Class RealizarFactura
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RealizarFactura))
         Me.DGVVentas = New System.Windows.Forms.DataGridView()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cod = New System.Windows.Forms.Label()
         Me.txtcant = New System.Windows.Forms.TextBox()
         Me.txtdescuent = New System.Windows.Forms.TextBox()
@@ -57,12 +63,6 @@ Partial Class RealizarFactura
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnlineaAgregada = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioventa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DGVVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratituloInicio.SuspendLayout()
@@ -101,7 +101,7 @@ Partial Class RealizarFactura
         Me.DGVVentas.GridColor = System.Drawing.Color.White
         Me.DGVVentas.Location = New System.Drawing.Point(318, 84)
         Me.DGVVentas.Name = "DGVVentas"
-        Me.DGVVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DGVVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DGVVentas.RowHeadersWidth = 50
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -111,6 +111,53 @@ Partial Class RealizarFactura
         Me.DGVVentas.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DGVVentas.Size = New System.Drawing.Size(840, 369)
         Me.DGVVentas.TabIndex = 0
+        '
+        'codigo
+        '
+        Me.codigo.HeaderText = "Código"
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
+        Me.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.codigo.Width = 120
+        '
+        'descripcion
+        '
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.descripcion.Width = 200
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        Me.cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.cantidad.Width = 110
+        '
+        'descuento
+        '
+        Me.descuento.HeaderText = "Descuento (%)"
+        Me.descuento.Name = "descuento"
+        Me.descuento.ReadOnly = True
+        Me.descuento.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.descuento.Width = 120
+        '
+        'precioventa
+        '
+        Me.precioventa.HeaderText = "Precio Unitario"
+        Me.precioventa.Name = "precioventa"
+        Me.precioventa.ReadOnly = True
+        Me.precioventa.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.precioventa.Width = 120
+        '
+        'preciototal
+        '
+        Me.preciototal.HeaderText = "Precio Total"
+        Me.preciototal.Name = "preciototal"
+        Me.preciototal.ReadOnly = True
+        Me.preciototal.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.preciototal.Width = 120
         '
         'cod
         '
@@ -274,7 +321,7 @@ Partial Class RealizarFactura
         Me.btnbuscarproductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnbuscarproductos.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnbuscarproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnbuscarproductos.Location = New System.Drawing.Point(1088, 52)
+        Me.btnbuscarproductos.Location = New System.Drawing.Point(1079, 52)
         Me.btnbuscarproductos.Name = "btnbuscarproductos"
         Me.btnbuscarproductos.Size = New System.Drawing.Size(79, 26)
         Me.btnbuscarproductos.TabIndex = 47
@@ -286,7 +333,7 @@ Partial Class RealizarFactura
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(959, 56)
+        Me.Label5.Location = New System.Drawing.Point(950, 56)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(128, 18)
         Me.Label5.TabIndex = 48
@@ -482,53 +529,6 @@ Partial Class RealizarFactura
         Me.btnEditar.TabIndex = 54
         Me.btnEditar.Text = "Editar Línea"
         Me.btnEditar.UseVisualStyleBackColor = False
-        '
-        'codigo
-        '
-        Me.codigo.HeaderText = "Código"
-        Me.codigo.Name = "codigo"
-        Me.codigo.ReadOnly = True
-        Me.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.codigo.Width = 120
-        '
-        'descripcion
-        '
-        Me.descripcion.HeaderText = "Descripción"
-        Me.descripcion.Name = "descripcion"
-        Me.descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.descripcion.Width = 200
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ReadOnly = True
-        Me.cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.cantidad.Width = 110
-        '
-        'descuento
-        '
-        Me.descuento.HeaderText = "Descuento (%)"
-        Me.descuento.Name = "descuento"
-        Me.descuento.ReadOnly = True
-        Me.descuento.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.descuento.Width = 120
-        '
-        'precioventa
-        '
-        Me.precioventa.HeaderText = "Precio Unitario"
-        Me.precioventa.Name = "precioventa"
-        Me.precioventa.ReadOnly = True
-        Me.precioventa.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.precioventa.Width = 120
-        '
-        'preciototal
-        '
-        Me.preciototal.HeaderText = "Precio Total"
-        Me.preciototal.Name = "preciototal"
-        Me.preciototal.ReadOnly = True
-        Me.preciototal.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.preciototal.Width = 120
         '
         'RealizarFactura
         '

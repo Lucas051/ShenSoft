@@ -22,37 +22,28 @@ Partial Class Cobrar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.barratitulo = New System.Windows.Forms.Panel()
-        Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
-        Me.txtclientes = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.buscarClientebtn = New System.Windows.Forms.Button()
-        Me.txtvendedor = New System.Windows.Forms.TextBox()
-        Me.txtpagocon = New System.Windows.Forms.TextBox()
         Me.atrasbtn = New System.Windows.Forms.Button()
         Me.btncobrar = New System.Windows.Forms.Button()
         Me.lblTotalPagar = New System.Windows.Forms.Label()
         Me.lblDevolver = New System.Windows.Forms.Label()
-        Me.lblVendedor = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtvendedor = New System.Windows.Forms.TextBox()
+        Me.txtclientes = New System.Windows.Forms.TextBox()
+        Me.txtpagocon = New System.Windows.Forms.TextBox()
+        Me.btnmini = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CBformadepago = New System.Windows.Forms.ComboBox()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
-        Me.PictureBox1.Location = New System.Drawing.Point(15, -16)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(375, 238)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 34
-        Me.PictureBox1.TabStop = False
         '
         'barratitulo
         '
@@ -64,17 +55,6 @@ Partial Class Cobrar
         Me.barratitulo.Size = New System.Drawing.Size(466, 35)
         Me.barratitulo.TabIndex = 36
         '
-        'btnmini
-        '
-        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
-        Me.btnmini.Location = New System.Drawing.Point(426, 5)
-        Me.btnmini.Name = "btnmini"
-        Me.btnmini.Size = New System.Drawing.Size(25, 25)
-        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnmini.TabIndex = 1
-        Me.btnmini.TabStop = False
-        '
         'cod
         '
         Me.cod.AutoSize = True
@@ -85,14 +65,6 @@ Partial Class Cobrar
         Me.cod.Size = New System.Drawing.Size(70, 18)
         Me.cod.TabIndex = 37
         Me.cod.Text = "Vendedor"
-        '
-        'txtclientes
-        '
-        Me.txtclientes.Location = New System.Drawing.Point(132, 288)
-        Me.txtclientes.Multiline = True
-        Me.txtclientes.Name = "txtclientes"
-        Me.txtclientes.Size = New System.Drawing.Size(121, 26)
-        Me.txtclientes.TabIndex = 40
         '
         'Label4
         '
@@ -149,26 +121,10 @@ Partial Class Cobrar
         Me.buscarClientebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buscarClientebtn.Location = New System.Drawing.Point(266, 288)
         Me.buscarClientebtn.Name = "buscarClientebtn"
-        Me.buscarClientebtn.Size = New System.Drawing.Size(113, 26)
+        Me.buscarClientebtn.Size = New System.Drawing.Size(133, 26)
         Me.buscarClientebtn.TabIndex = 47
         Me.buscarClientebtn.Text = "Buscar Cliente"
         Me.buscarClientebtn.UseVisualStyleBackColor = False
-        '
-        'txtvendedor
-        '
-        Me.txtvendedor.Location = New System.Drawing.Point(132, 228)
-        Me.txtvendedor.Multiline = True
-        Me.txtvendedor.Name = "txtvendedor"
-        Me.txtvendedor.Size = New System.Drawing.Size(121, 26)
-        Me.txtvendedor.TabIndex = 48
-        '
-        'txtpagocon
-        '
-        Me.txtpagocon.Location = New System.Drawing.Point(132, 403)
-        Me.txtpagocon.Multiline = True
-        Me.txtpagocon.Name = "txtpagocon"
-        Me.txtpagocon.Size = New System.Drawing.Size(121, 26)
-        Me.txtpagocon.TabIndex = 50
         '
         'atrasbtn
         '
@@ -224,16 +180,77 @@ Partial Class Cobrar
         Me.lblDevolver.TabIndex = 55
         Me.lblDevolver.Text = "0"
         '
-        'lblVendedor
+        'Button1
         '
-        Me.lblVendedor.AutoSize = True
-        Me.lblVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVendedor.ForeColor = System.Drawing.Color.White
-        Me.lblVendedor.Location = New System.Drawing.Point(263, 232)
-        Me.lblVendedor.Name = "lblVendedor"
-        Me.lblVendedor.Size = New System.Drawing.Size(81, 18)
-        Me.lblVendedor.TabIndex = 56
-        Me.lblVendedor.Text = "(Vendedor)"
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(266, 228)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(133, 26)
+        Me.Button1.TabIndex = 57
+        Me.Button1.Text = "Buscar Vendedor"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'txtvendedor
+        '
+        Me.txtvendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtvendedor.Location = New System.Drawing.Point(131, 227)
+        Me.txtvendedor.Multiline = True
+        Me.txtvendedor.Name = "txtvendedor"
+        Me.txtvendedor.Size = New System.Drawing.Size(129, 23)
+        Me.txtvendedor.TabIndex = 58
+        '
+        'txtclientes
+        '
+        Me.txtclientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtclientes.Location = New System.Drawing.Point(131, 288)
+        Me.txtclientes.Multiline = True
+        Me.txtclientes.Name = "txtclientes"
+        Me.txtclientes.Size = New System.Drawing.Size(129, 23)
+        Me.txtclientes.TabIndex = 59
+        '
+        'txtpagocon
+        '
+        Me.txtpagocon.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpagocon.Location = New System.Drawing.Point(131, 402)
+        Me.txtpagocon.Multiline = True
+        Me.txtpagocon.Name = "txtpagocon"
+        Me.txtpagocon.Size = New System.Drawing.Size(129, 23)
+        Me.txtpagocon.TabIndex = 60
+        '
+        'btnmini
+        '
+        Me.btnmini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmini.Image = Global.proyecto.inicio.My.Resources.Resources.minimazar
+        Me.btnmini.Location = New System.Drawing.Point(426, 5)
+        Me.btnmini.Name = "btnmini"
+        Me.btnmini.Size = New System.Drawing.Size(25, 25)
+        Me.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnmini.TabIndex = 1
+        Me.btnmini.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.proyecto.inicio.My.Resources.Resources.logoencamino1
+        Me.PictureBox1.Location = New System.Drawing.Point(15, -16)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(375, 238)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 34
+        Me.PictureBox1.TabStop = False
+        '
+        'CBformadepago
+        '
+        Me.CBformadepago.FormattingEnabled = True
+        Me.CBformadepago.Location = New System.Drawing.Point(276, 403)
+        Me.CBformadepago.Name = "CBformadepago"
+        Me.CBformadepago.Size = New System.Drawing.Size(148, 21)
+        Me.CBformadepago.TabIndex = 61
         '
         'Cobrar
         '
@@ -241,18 +258,19 @@ Partial Class Cobrar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(466, 599)
-        Me.Controls.Add(Me.lblVendedor)
+        Me.Controls.Add(Me.CBformadepago)
+        Me.Controls.Add(Me.txtpagocon)
+        Me.Controls.Add(Me.txtclientes)
+        Me.Controls.Add(Me.txtvendedor)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblDevolver)
         Me.Controls.Add(Me.lblTotalPagar)
         Me.Controls.Add(Me.btncobrar)
         Me.Controls.Add(Me.atrasbtn)
-        Me.Controls.Add(Me.txtpagocon)
-        Me.Controls.Add(Me.txtvendedor)
         Me.Controls.Add(Me.buscarClientebtn)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtclientes)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.barratitulo)
@@ -261,9 +279,9 @@ Partial Class Cobrar
         Me.Name = "Cobrar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cobrar"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.barratitulo.ResumeLayout(False)
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -272,17 +290,18 @@ Partial Class Cobrar
     Friend WithEvents barratitulo As System.Windows.Forms.Panel
     Friend WithEvents btnmini As System.Windows.Forms.PictureBox
     Friend WithEvents cod As System.Windows.Forms.Label
-    Public WithEvents txtclientes As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents buscarClientebtn As System.Windows.Forms.Button
-    Public WithEvents txtvendedor As System.Windows.Forms.TextBox
-    Public WithEvents txtpagocon As System.Windows.Forms.TextBox
     Friend WithEvents atrasbtn As System.Windows.Forms.Button
     Friend WithEvents btncobrar As System.Windows.Forms.Button
     Friend WithEvents lblTotalPagar As System.Windows.Forms.Label
     Friend WithEvents lblDevolver As System.Windows.Forms.Label
-    Friend WithEvents lblVendedor As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents txtvendedor As System.Windows.Forms.TextBox
+    Friend WithEvents txtclientes As System.Windows.Forms.TextBox
+    Friend WithEvents txtpagocon As System.Windows.Forms.TextBox
+    Friend WithEvents CBformadepago As System.Windows.Forms.ComboBox
 End Class
