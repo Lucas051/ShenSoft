@@ -81,6 +81,7 @@ Public Class Cobrar
         ' devolver = TotalPagar - PagoCon
 
         ' devolver = lblDevolver.Text
+
         'usamos los parametros para msgbox y confirmar si quiere eliminar
         Dim opcion As DialogResult
         opcion = MessageBox.Show("La venta se concretará, realmente desea continuar?", "Cobrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -88,8 +89,7 @@ Public Class Cobrar
         If (opcion = DialogResult.Yes) Then
             Try
 
-                Dim command As New MySqlCommand("INSERT INTO facturas (monto, forma_de_pago, num_cliente, id_vendedor) VALUES((@monto, @forma_de_pago, @num_cliente,  @id_vendedor)", connection)
-                '  command = New MySqlCommand(Query, MysqlConn)
+                Dim command As New MySqlCommand("INSERT INTO facturas (monto, forma_de_pago, num_cliente, id_vendedor) VALUES(@monto, @forma_de_pago, @num_cliente,  @id_vendedor)", connection)
 
                 command.Parameters.Add("@monto", MySqlDbType.VarChar).Value = lblTotalPagar.Text
                 command.Parameters.Add("@forma_de_pago", MySqlDbType.VarChar).Value = CBformadepago.Text
