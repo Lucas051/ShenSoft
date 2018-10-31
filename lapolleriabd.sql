@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-10-2018 a las 00:08:39
+-- Tiempo de generación: 31-10-2018 a las 21:26:13
 -- Versión del servidor: 5.7.21
 -- Versión de PHP: 5.6.35
 
@@ -37,7 +37,15 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `tel_c` varchar(50) DEFAULT NULL,
   `saldo_c` int(11) DEFAULT '0',
   PRIMARY KEY (`num_cliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`num_cliente`, `CI`, `nombre_cliente`, `direccion_c`, `tel_c`, `saldo_c`) VALUES
+(2, 45874599, 'Guillermo Lopez', 'Lacalle 145', '47354879', 0),
+(3, 50558745, 'Juan Carlos', 'Artigas 123', '47345654', 0);
 
 -- --------------------------------------------------------
 
@@ -52,9 +60,18 @@ CREATE TABLE IF NOT EXISTS `facturas` (
   `monto` int(11) NOT NULL,
   `forma_de_pago` varchar(30) DEFAULT NULL,
   `num_cliente` int(11) NOT NULL,
+  `id_vendedor` int(11) NOT NULL,
   PRIMARY KEY (`n_factura`),
-  KEY `num_cliente` (`num_cliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `num_cliente` (`num_cliente`),
+  KEY `id_vendedor` (`id_vendedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `facturas`
+--
+
+INSERT INTO `facturas` (`n_factura`, `fecha`, `monto`, `forma_de_pago`, `num_cliente`, `id_vendedor`) VALUES
+(2, '2018-10-30 15:20:35', 1000, 'Contado', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -67,9 +84,26 @@ CREATE TABLE IF NOT EXISTS `factura_prov` (
   `n_factura_prov` int(11) NOT NULL AUTO_INCREMENT,
   `fecha_p` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `num_prov` int(11) NOT NULL,
+  `monto` int(11) NOT NULL,
+  `forma_de_pago` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`n_factura_prov`),
   KEY `num_prov` (`num_prov`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `factura_prov`
+--
+
+INSERT INTO `factura_prov` (`n_factura_prov`, `fecha_p`, `num_prov`, `monto`, `forma_de_pago`) VALUES
+(2, '2018-10-29 23:47:17', 6, 0, 'Contado'),
+(3, '2018-10-29 23:56:38', 5, 0, 'Contado'),
+(4, '2018-10-30 00:07:54', 6, 0, 'Contado'),
+(5, '2018-10-30 00:08:00', 6, 0, 'Contado'),
+(6, '2018-10-30 00:08:04', 5, 0, 'Contado'),
+(7, '2018-10-30 00:08:15', 5, 1200, 'Crédito'),
+(8, '2018-10-30 00:08:33', 5, 1000, 'Contado'),
+(9, '2018-10-30 00:08:44', 5, 800, 'Crédito'),
+(10, '2018-10-30 00:10:55', 5, 200, 'Crédito');
 
 -- --------------------------------------------------------
 
@@ -87,6 +121,13 @@ CREATE TABLE IF NOT EXISTS `genera` (
   KEY `n_factura` (`n_factura`),
   KEY `cod_producto` (`cod_producto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `genera`
+--
+
+INSERT INTO `genera` (`n_factura`, `precio_v`, `cantidad`, `descripcion`, `cod_producto`) VALUES
+(2, 100, 10, 'Alitas', 1);
 
 -- --------------------------------------------------------
 
@@ -118,7 +159,14 @@ CREATE TABLE IF NOT EXISTS `pagos_clientes` (
   `importe` int(11) NOT NULL,
   PRIMARY KEY (`num_recibo_c`),
   KEY `num_cliente` (`num_cliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pagos_clientes`
+--
+
+INSERT INTO `pagos_clientes` (`num_recibo_c`, `fecha`, `num_cliente`, `importe`) VALUES
+(2, '2018-10-30 01:36:46', 2, 800);
 
 -- --------------------------------------------------------
 
@@ -132,9 +180,19 @@ CREATE TABLE IF NOT EXISTS `pagos_prov` (
   `fecha` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `importe` int(11) NOT NULL,
   `num_prov` int(11) NOT NULL,
+  `numero_recibo_fisico_p` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`num_recibo_p`),
   KEY `num_prov` (`num_prov`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pagos_prov`
+--
+
+INSERT INTO `pagos_prov` (`num_recibo_p`, `fecha`, `importe`, `num_prov`, `numero_recibo_fisico_p`) VALUES
+(1, '2018-10-30 00:58:58', 1000, 5, 'A23412'),
+(2, '2018-10-30 00:59:27', 500, 5, 'A45532'),
+(3, '2018-10-30 01:48:14', 500, 5, 'B34231');
 
 -- --------------------------------------------------------
 
@@ -150,7 +208,17 @@ CREATE TABLE IF NOT EXISTS `proveedores` (
   `direccion_p` varchar(50) DEFAULT NULL,
   `saldo_p` int(11) DEFAULT '0',
   PRIMARY KEY (`num_prov`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `proveedores`
+--
+
+INSERT INTO `proveedores` (`num_prov`, `nombre_prov`, `tel_p`, `direccion_p`, `saldo_p`) VALUES
+(5, 'PollosDeft', '47354689', 'Ruta 3 km. 8', 0),
+(6, 'MeatCon', '098115216 - 47518421', 'Saravia 56 (Artigas)', 0),
+(7, 'Frigorifico La Caballada', '47324587', 'Ruta 31 km. 20', 0),
+(8, 'Frigorifico Las Piedras', '47354689', 'Ruta 4 km. 20', 0);
 
 -- --------------------------------------------------------
 
@@ -168,7 +236,62 @@ CREATE TABLE IF NOT EXISTS `stock` (
   `n_factura_prov` int(11) NOT NULL,
   PRIMARY KEY (`cod_producto`),
   KEY `n_factura_prov` (`n_factura_prov`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `stock`
+--
+
+INSERT INTO `stock` (`cod_producto`, `descripcion`, `cantidad`, `precio_costo`, `precio_v_stock`, `n_factura_prov`) VALUES
+(1, 'Alitas', 1, 120, 250, 7),
+(2, 'Milanesas de Carne', 10, 200, 300, 7),
+(3, 'Milanesas de Pollo', 5, 200, 220, 8),
+(4, 'Milanesas de Jamon y Queso', 10, 150, 180, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `user` varchar(50) NOT NULL,
+  `pass` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`user`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`user`, `pass`) VALUES
+('Administrador', '1e7f0832d6a3c62d1cddc1d271553e567a99506803feec02c2c28e379fcd272f'),
+('Dueños', 'b3a8e0e1f9ab1bfe3a36f231f676f78bb30a519d2b21e6c530c0eee8ebb4a5d0'),
+('Gerentes', 'b22eb34537f6f6753da6e0dc05713be0ccc35ef12dae0f6bf19b5206d373af33'),
+('Empleado', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `vendedores`
+--
+
+DROP TABLE IF EXISTS `vendedores`;
+CREATE TABLE IF NOT EXISTS `vendedores` (
+  `id_vendedor` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_vendedor` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id_vendedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `vendedores`
+--
+
+INSERT INTO `vendedores` (`id_vendedor`, `nombre_vendedor`) VALUES
+(1, 'Lucas'),
+(2, 'Pio'),
+(3, 'Coco');
 
 --
 -- Restricciones para tablas volcadas
@@ -178,7 +301,8 @@ CREATE TABLE IF NOT EXISTS `stock` (
 -- Filtros para la tabla `facturas`
 --
 ALTER TABLE `facturas`
-  ADD CONSTRAINT `facturas_ibfk_1` FOREIGN KEY (`num_cliente`) REFERENCES `clientes` (`num_cliente`);
+  ADD CONSTRAINT `facturas_ibfk_1` FOREIGN KEY (`num_cliente`) REFERENCES `clientes` (`num_cliente`),
+  ADD CONSTRAINT `facturas_ibfk_2` FOREIGN KEY (`id_vendedor`) REFERENCES `vendedores` (`id_vendedor`);
 
 --
 -- Filtros para la tabla `factura_prov`
