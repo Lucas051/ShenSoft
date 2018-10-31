@@ -62,7 +62,8 @@ Public Class Verificacion
     Private Sub btningresar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btningresar.Click
 
 
-        Dim command As New MySqlCommand("SELECT `user`, `pass` FROM `usuarios` WHERE `user` = @username AND `pass` = @password", connection)
+        Dim command As New MySqlCommand("SELECT `user`, `pass` FROM `usuarios` WHERE `user` = @username AND `pass` = sha2(@password, 256)", connection)
+
 
         command.Parameters.Add("@username", MySqlDbType.VarChar).Value = txtuser.Text
         command.Parameters.Add("@password", MySqlDbType.VarChar).Value = txtpass.Text
