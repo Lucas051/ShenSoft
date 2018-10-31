@@ -253,8 +253,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Estadisticas\EstadiscticaCliente.resx">
+      <DependentUpon>EstadiscticaCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas\EstadisticasProv.resx">
       <DependentUpon>EstadisticasProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\EstadisticaStock.resx">
+      <DependentUpon>EstadisticaStock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas\EstadisticaVentas.resx">
       <DependentUpon>EstadisticaVentas.vb</DependentUpon>

@@ -4,7 +4,7 @@
     Private Sub MODIFICARCLIENTES_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         Try
-            conexioon.Consulta = "SELECT * FROM clientes"
+            conexioon.Consulta = "SELECT * FROM clientes WHERE saldo_c=0"
             consultar()
             DgvClientes.DataSource = resultado
 
@@ -120,7 +120,7 @@
     Private Sub txtBuscarP_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarP.TextChanged
         Try
             'BUSQUEDA DINAMICA EN DATAGRIDVIEW
-            conexioon.Consulta = "SELECT * FROM clientes WHERE nombre_cliente LIKE '%" & txtBuscarP.Text & "%';"
+            conexioon.Consulta = "SELECT * FROM clientes WHERE saldo_c=0 and nombre_cliente LIKE '%" & txtBuscarP.Text & "%';"
             consultar()
             DgvClientes.DataSource = resultado
 
@@ -181,7 +181,7 @@
         End Try
 
         Try
-            conexioon.Consulta = "SELECT * FROM clientes"
+            conexioon.Consulta = "SELECT * FROM clientes WHERE saldo_c=0"
             consultar()
             DgvClientes.DataSource = resultado
 
@@ -233,7 +233,7 @@
             txttelefono.Clear()
 
             Try
-                conexioon.Consulta = "SELECT * FROM clientes"
+                conexioon.Consulta = "SELECT * FROM clientes WHERE saldo_c=0"
                 consultar()
                 DgvClientes.DataSource = resultado
 
