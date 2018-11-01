@@ -22,6 +22,7 @@ Partial Class Cobrar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cobrar))
         Me.barratitulo = New System.Windows.Forms.Panel()
         Me.btnmini = New System.Windows.Forms.PictureBox()
         Me.cod = New System.Windows.Forms.Label()
@@ -42,6 +43,9 @@ Partial Class Cobrar
         Me.CBformadepago = New System.Windows.Forms.ComboBox()
         Me.lblnumCliente = New System.Windows.Forms.Label()
         Me.lblNumVendedor = New System.Windows.Forms.Label()
+        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.prdDocumento = New System.Drawing.Printing.PrintDocument()
+        Me.ppdvistaprevia = New System.Windows.Forms.PrintPreviewDialog()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,11 +168,11 @@ Partial Class Cobrar
         Me.btncobrar.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncobrar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btncobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncobrar.Location = New System.Drawing.Point(68, 526)
+        Me.btncobrar.Location = New System.Drawing.Point(29, 526)
         Me.btncobrar.Name = "btncobrar"
-        Me.btncobrar.Size = New System.Drawing.Size(196, 26)
+        Me.btncobrar.Size = New System.Drawing.Size(152, 26)
         Me.btncobrar.TabIndex = 53
-        Me.btncobrar.Text = "Cobrar Monto e Imprimir"
+        Me.btncobrar.Text = "Cobrar Monto"
         Me.btncobrar.UseVisualStyleBackColor = False
         '
         'lblTotalPagar
@@ -278,12 +282,42 @@ Partial Class Cobrar
         Me.lblNumVendedor.Text = "0"
         Me.lblNumVendedor.Visible = False
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnImprimir.FlatAppearance.BorderSize = 0
+        Me.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Bahnschrift Light", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImprimir.Location = New System.Drawing.Point(203, 526)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(167, 26)
+        Me.btnImprimir.TabIndex = 64
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = False
+        '
+        'prdDocumento
+        '
+        '
+        'ppdvistaprevia
+        '
+        Me.ppdvistaprevia.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.ppdvistaprevia.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.ppdvistaprevia.ClientSize = New System.Drawing.Size(400, 300)
+        Me.ppdvistaprevia.Enabled = True
+        Me.ppdvistaprevia.Icon = CType(resources.GetObject("ppdvistaprevia.Icon"), System.Drawing.Icon)
+        Me.ppdvistaprevia.Name = "ppdvistaprevia"
+        Me.ppdvistaprevia.Visible = False
+        '
         'Cobrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(466, 599)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.lblNumVendedor)
         Me.Controls.Add(Me.lblnumCliente)
         Me.Controls.Add(Me.CBformadepago)
@@ -334,4 +368,7 @@ Partial Class Cobrar
     Friend WithEvents CBformadepago As System.Windows.Forms.ComboBox
     Friend WithEvents lblnumCliente As System.Windows.Forms.Label
     Friend WithEvents lblNumVendedor As System.Windows.Forms.Label
+    Friend WithEvents btnImprimir As System.Windows.Forms.Button
+    Friend WithEvents prdDocumento As System.Drawing.Printing.PrintDocument
+    Friend WithEvents ppdvistaprevia As System.Windows.Forms.PrintPreviewDialog
 End Class

@@ -25,6 +25,7 @@ Partial Class PagosProv
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PagosProv))
         Me.dgvproveedores = New System.Windows.Forms.DataGridView()
         Me.btnatras = New System.Windows.Forms.Button()
         Me.btnPagar = New System.Windows.Forms.Button()
@@ -36,6 +37,9 @@ Partial Class PagosProv
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnBuscarProv = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.ppdvistaprevia = New System.Windows.Forms.PrintPreviewDialog()
+        Me.prdDocumento = New System.Drawing.Printing.PrintDocument()
         CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -195,12 +199,39 @@ Partial Class PagosProv
         Me.Label4.TabIndex = 69
         Me.Label4.Text = "Pagos a Proveedores"
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnImprimir.FlatAppearance.BorderSize = 0
+        Me.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImprimir.Location = New System.Drawing.Point(37, 391)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(241, 34)
+        Me.btnImprimir.TabIndex = 82
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = False
+        '
+        'ppdvistaprevia
+        '
+        Me.ppdvistaprevia.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.ppdvistaprevia.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.ppdvistaprevia.ClientSize = New System.Drawing.Size(400, 300)
+        Me.ppdvistaprevia.Enabled = True
+        Me.ppdvistaprevia.Icon = CType(resources.GetObject("ppdvistaprevia.Icon"), System.Drawing.Icon)
+        Me.ppdvistaprevia.Name = "ppdvistaprevia"
+        Me.ppdvistaprevia.Visible = False
+        '
         'PagosProv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Beige
         Me.ClientSize = New System.Drawing.Size(891, 566)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnBuscarProv)
         Me.Controls.Add(Me.txtProveedor)
@@ -231,4 +262,7 @@ Partial Class PagosProv
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnBuscarProv As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents btnImprimir As System.Windows.Forms.Button
+    Friend WithEvents ppdvistaprevia As System.Windows.Forms.PrintPreviewDialog
+    Friend WithEvents prdDocumento As System.Drawing.Printing.PrintDocument
 End Class

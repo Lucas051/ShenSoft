@@ -25,6 +25,7 @@ Partial Class PagosClientes
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PagosClientes))
         Me.btnBuscarProv = New System.Windows.Forms.Button()
         Me.txtcliente = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,8 +33,11 @@ Partial Class PagosClientes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnPagar = New System.Windows.Forms.Button()
         Me.btnatras = New System.Windows.Forms.Button()
-        Me.dgvproveedores = New System.Windows.Forms.DataGridView()
-        CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvclientes = New System.Windows.Forms.DataGridView()
+        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.prdDocumento = New System.Drawing.Printing.PrintDocument()
+        Me.ppdvistaprevia = New System.Windows.Forms.PrintPreviewDialog()
+        CType(Me.dgvclientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnBuscarProv
@@ -124,10 +128,10 @@ Partial Class PagosClientes
         Me.btnatras.Text = "Atrás"
         Me.btnatras.UseVisualStyleBackColor = False
         '
-        'dgvproveedores
+        'dgvclientes
         '
-        Me.dgvproveedores.BackgroundColor = System.Drawing.Color.Silver
-        Me.dgvproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvclientes.BackgroundColor = System.Drawing.Color.Silver
+        Me.dgvclientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -135,8 +139,8 @@ Partial Class PagosClientes
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvproveedores.ColumnHeadersHeight = 42
+        Me.dgvclientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvclientes.ColumnHeadersHeight = 42
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ScrollBar
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -144,22 +148,51 @@ Partial Class PagosClientes
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvproveedores.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvproveedores.EnableHeadersVisualStyles = False
-        Me.dgvproveedores.GridColor = System.Drawing.Color.White
-        Me.dgvproveedores.Location = New System.Drawing.Point(25, 134)
-        Me.dgvproveedores.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.dgvproveedores.Name = "dgvproveedores"
-        Me.dgvproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvproveedores.RowHeadersWidth = 50
+        Me.dgvclientes.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvclientes.EnableHeadersVisualStyles = False
+        Me.dgvclientes.GridColor = System.Drawing.Color.White
+        Me.dgvclientes.Location = New System.Drawing.Point(25, 134)
+        Me.dgvclientes.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dgvclientes.Name = "dgvclientes"
+        Me.dgvclientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvclientes.RowHeadersWidth = 50
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Bahnschrift", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.dgvproveedores.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvproveedores.Size = New System.Drawing.Size(783, 348)
-        Me.dgvproveedores.TabIndex = 69
+        Me.dgvclientes.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvclientes.Size = New System.Drawing.Size(783, 348)
+        Me.dgvclientes.TabIndex = 69
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnImprimir.FlatAppearance.BorderSize = 0
+        Me.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.Font = New System.Drawing.Font("Bahnschrift Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImprimir.Location = New System.Drawing.Point(239, 81)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(144, 34)
+        Me.btnImprimir.TabIndex = 81
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = False
+        '
+        'prdDocumento
+        '
+        '
+        'ppdvistaprevia
+        '
+        Me.ppdvistaprevia.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.ppdvistaprevia.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.ppdvistaprevia.ClientSize = New System.Drawing.Size(400, 300)
+        Me.ppdvistaprevia.Enabled = True
+        Me.ppdvistaprevia.Icon = CType(resources.GetObject("ppdvistaprevia.Icon"), System.Drawing.Icon)
+        Me.ppdvistaprevia.Name = "ppdvistaprevia"
+        Me.ppdvistaprevia.Visible = False
         '
         'PagosClientes
         '
@@ -167,6 +200,7 @@ Partial Class PagosClientes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(891, 582)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnBuscarProv)
         Me.Controls.Add(Me.txtcliente)
         Me.Controls.Add(Me.Label3)
@@ -174,11 +208,11 @@ Partial Class PagosClientes
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnPagar)
         Me.Controls.Add(Me.btnatras)
-        Me.Controls.Add(Me.dgvproveedores)
+        Me.Controls.Add(Me.dgvclientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PagosClientes"
         Me.Text = "PagosClientes"
-        CType(Me.dgvproveedores, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvclientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -190,5 +224,8 @@ Partial Class PagosClientes
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnPagar As System.Windows.Forms.Button
     Friend WithEvents btnatras As System.Windows.Forms.Button
-    Friend WithEvents dgvproveedores As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvclientes As System.Windows.Forms.DataGridView
+    Friend WithEvents btnImprimir As System.Windows.Forms.Button
+    Friend WithEvents prdDocumento As System.Drawing.Printing.PrintDocument
+    Friend WithEvents ppdvistaprevia As System.Windows.Forms.PrintPreviewDialog
 End Class
