@@ -401,19 +401,19 @@ Public Class Inicio
 
     End Sub
 
-    Private Sub btncalculadora_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncalculadora.MouseLeave
+    Private Sub btncalculadora_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         btnOcultar.ForeColor = Color.Blue
     End Sub
 
-    Private Sub btncalculadora_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncalculadora.MouseMove
+    Private Sub btncalculadora_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         btnOcultar.ForeColor = Color.LightGray
     End Sub
 
-    Private Sub btncalendario_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncalendario.MouseLeave
+    Private Sub btncalendario_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         btnOcultar.ForeColor = Color.Blue
     End Sub
 
-    Private Sub btncalendario_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncalendario.MouseMove
+    Private Sub btncalendario_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         btnOcultar.ForeColor = Color.LightGray
     End Sub
 
@@ -424,7 +424,7 @@ Public Class Inicio
     Private Sub btncharts_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btncharts.MouseMove
         btnOcultar.ForeColor = Color.LightGray
     End Sub
-    Private Sub PTBcalendario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PTBcalendario.Click
+    Private Sub PTBcalendario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If MonthCalendar1.Visible = False Then
             MonthCalendar1.Visible = True
         Else
@@ -433,7 +433,7 @@ Public Class Inicio
     End Sub
 
 
-    Private Sub PTBcalculadora_Click(sender As System.Object, e As System.EventArgs) Handles PTBcalculadora.Click
+    Private Sub PTBcalculadora_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim llamar As New CalculadorA2
         PnlCalculadorA2.Controls.Clear()
         llamar.TopLevel = False

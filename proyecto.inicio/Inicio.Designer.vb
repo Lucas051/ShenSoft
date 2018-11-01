@@ -78,15 +78,6 @@ Partial Class Inicio
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.panelOpciones = New System.Windows.Forms.Panel()
-        Me.PTBcalendario = New System.Windows.Forms.PictureBox()
-        Me.PTBcalculadora = New System.Windows.Forms.PictureBox()
-        Me.PTBcharts = New System.Windows.Forms.PictureBox()
-        Me.PTBabrir = New System.Windows.Forms.PictureBox()
-        Me.PTBocultar = New System.Windows.Forms.PictureBox()
-        Me.btnOcultar = New System.Windows.Forms.Button()
-        Me.btncalculadora = New System.Windows.Forms.Button()
-        Me.btncharts = New System.Windows.Forms.Button()
-        Me.btncalendario = New System.Windows.Forms.Button()
         Me.panelEstadisticas = New System.Windows.Forms.Panel()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.Panel18 = New System.Windows.Forms.Panel()
@@ -98,6 +89,11 @@ Partial Class Inicio
         Me.Panel22 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.PTBcharts = New System.Windows.Forms.PictureBox()
+        Me.PTBabrir = New System.Windows.Forms.PictureBox()
+        Me.PTBocultar = New System.Windows.Forms.PictureBox()
+        Me.btnOcultar = New System.Windows.Forms.Button()
+        Me.btncharts = New System.Windows.Forms.Button()
         Me.barratituloInicio.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,12 +114,10 @@ Partial Class Inicio
         Me.panelmedio.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.panelOpciones.SuspendLayout()
-        CType(Me.PTBcalendario, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PTBcalculadora, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelEstadisticas.SuspendLayout()
         CType(Me.PTBcharts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PTBabrir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PTBocultar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelEstadisticas.SuspendLayout()
         Me.SuspendLayout()
         '
         'barratituloInicio
@@ -806,140 +800,17 @@ Partial Class Inicio
         Me.panelOpciones.BackColor = System.Drawing.Color.LightSteelBlue
         Me.panelOpciones.CausesValidation = False
         Me.panelOpciones.Controls.Add(Me.panelEstadisticas)
-        Me.panelOpciones.Controls.Add(Me.PTBcalendario)
-        Me.panelOpciones.Controls.Add(Me.PTBcalculadora)
         Me.panelOpciones.Controls.Add(Me.PTBcharts)
         Me.panelOpciones.Controls.Add(Me.PTBabrir)
         Me.panelOpciones.Controls.Add(Me.PTBocultar)
         Me.panelOpciones.Controls.Add(Me.btnOcultar)
-        Me.panelOpciones.Controls.Add(Me.btncalculadora)
         Me.panelOpciones.Controls.Add(Me.btncharts)
-        Me.panelOpciones.Controls.Add(Me.btncalendario)
         Me.panelOpciones.Cursor = System.Windows.Forms.Cursors.Default
         Me.panelOpciones.Dock = System.Windows.Forms.DockStyle.Right
         Me.panelOpciones.Location = New System.Drawing.Point(979, 35)
         Me.panelOpciones.Name = "panelOpciones"
         Me.panelOpciones.Size = New System.Drawing.Size(168, 555)
         Me.panelOpciones.TabIndex = 15
-        '
-        'PTBcalendario
-        '
-        Me.PTBcalendario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PTBcalendario.Image = Global.proyecto.inicio.My.Resources.Resources.calendario1
-        Me.PTBcalendario.Location = New System.Drawing.Point(6, 222)
-        Me.PTBcalendario.Name = "PTBcalendario"
-        Me.PTBcalendario.Size = New System.Drawing.Size(49, 46)
-        Me.PTBcalendario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PTBcalendario.TabIndex = 19
-        Me.PTBcalendario.TabStop = False
-        '
-        'PTBcalculadora
-        '
-        Me.PTBcalculadora.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PTBcalculadora.Image = Global.proyecto.inicio.My.Resources.Resources.Calculator_512
-        Me.PTBcalculadora.Location = New System.Drawing.Point(6, 131)
-        Me.PTBcalculadora.Name = "PTBcalculadora"
-        Me.PTBcalculadora.Size = New System.Drawing.Size(49, 46)
-        Me.PTBcalculadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PTBcalculadora.TabIndex = 18
-        Me.PTBcalculadora.TabStop = False
-        '
-        'PTBcharts
-        '
-        Me.PTBcharts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PTBcharts.Image = Global.proyecto.inicio.My.Resources.Resources.charts
-        Me.PTBcharts.Location = New System.Drawing.Point(6, 312)
-        Me.PTBcharts.Name = "PTBcharts"
-        Me.PTBcharts.Size = New System.Drawing.Size(49, 46)
-        Me.PTBcharts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PTBcharts.TabIndex = 17
-        Me.PTBcharts.TabStop = False
-        '
-        'PTBabrir
-        '
-        Me.PTBabrir.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PTBabrir.Image = Global.proyecto.inicio.My.Resources.Resources.arrowleft
-        Me.PTBabrir.Location = New System.Drawing.Point(9, 26)
-        Me.PTBabrir.Name = "PTBabrir"
-        Me.PTBabrir.Size = New System.Drawing.Size(40, 39)
-        Me.PTBabrir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PTBabrir.TabIndex = 16
-        Me.PTBabrir.TabStop = False
-        '
-        'PTBocultar
-        '
-        Me.PTBocultar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PTBocultar.Image = Global.proyecto.inicio.My.Resources.Resources.arrowRight
-        Me.PTBocultar.Location = New System.Drawing.Point(9, 26)
-        Me.PTBocultar.Name = "PTBocultar"
-        Me.PTBocultar.Size = New System.Drawing.Size(40, 39)
-        Me.PTBocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PTBocultar.TabIndex = 17
-        Me.PTBocultar.TabStop = False
-        '
-        'btnOcultar
-        '
-        Me.btnOcultar.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.btnOcultar.FlatAppearance.BorderSize = 0
-        Me.btnOcultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOcultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOcultar.ForeColor = System.Drawing.Color.Blue
-        Me.btnOcultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOcultar.Location = New System.Drawing.Point(52, 26)
-        Me.btnOcultar.Name = "btnOcultar"
-        Me.btnOcultar.Size = New System.Drawing.Size(104, 46)
-        Me.btnOcultar.TabIndex = 16
-        Me.btnOcultar.Text = "Ocultar"
-        Me.btnOcultar.UseVisualStyleBackColor = False
-        '
-        'btncalculadora
-        '
-        Me.btncalculadora.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.btncalculadora.FlatAppearance.BorderSize = 0
-        Me.btncalculadora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btncalculadora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncalculadora.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncalculadora.ForeColor = System.Drawing.Color.Blue
-        Me.btncalculadora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncalculadora.Location = New System.Drawing.Point(52, 131)
-        Me.btncalculadora.Name = "btncalculadora"
-        Me.btncalculadora.Size = New System.Drawing.Size(122, 46)
-        Me.btncalculadora.TabIndex = 20
-        Me.btncalculadora.Text = "Calculadora"
-        Me.btncalculadora.UseVisualStyleBackColor = False
-        '
-        'btncharts
-        '
-        Me.btncharts.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.btncharts.FlatAppearance.BorderSize = 0
-        Me.btncharts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btncharts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncharts.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncharts.ForeColor = System.Drawing.Color.Blue
-        Me.btncharts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncharts.Location = New System.Drawing.Point(52, 312)
-        Me.btncharts.Name = "btncharts"
-        Me.btncharts.Size = New System.Drawing.Size(122, 46)
-        Me.btncharts.TabIndex = 22
-        Me.btncharts.Text = "Estadísticas"
-        Me.btncharts.UseVisualStyleBackColor = False
-        '
-        'btncalendario
-        '
-        Me.btncalendario.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.btncalendario.FlatAppearance.BorderSize = 0
-        Me.btncalendario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btncalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncalendario.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncalendario.ForeColor = System.Drawing.Color.Blue
-        Me.btncalendario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncalendario.Location = New System.Drawing.Point(52, 222)
-        Me.btncalendario.Name = "btncalendario"
-        Me.btncalendario.Size = New System.Drawing.Size(122, 46)
-        Me.btncalendario.TabIndex = 21
-        Me.btncalendario.Text = "Calendario"
-        Me.btncalendario.UseVisualStyleBackColor = False
         '
         'panelEstadisticas
         '
@@ -954,7 +825,7 @@ Partial Class Inicio
         Me.panelEstadisticas.Controls.Add(Me.Panel22)
         Me.panelEstadisticas.Controls.Add(Me.Button3)
         Me.panelEstadisticas.Controls.Add(Me.Button4)
-        Me.panelEstadisticas.Location = New System.Drawing.Point(0, 360)
+        Me.panelEstadisticas.Location = New System.Drawing.Point(1, 158)
         Me.panelEstadisticas.Name = "panelEstadisticas"
         Me.panelEstadisticas.Size = New System.Drawing.Size(168, 142)
         Me.panelEstadisticas.TabIndex = 18
@@ -1076,6 +947,71 @@ Partial Class Inicio
         Me.Button4.Text = "Proveedores"
         Me.Button4.UseVisualStyleBackColor = False
         '
+        'PTBcharts
+        '
+        Me.PTBcharts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PTBcharts.Image = Global.proyecto.inicio.My.Resources.Resources.charts
+        Me.PTBcharts.Location = New System.Drawing.Point(7, 110)
+        Me.PTBcharts.Name = "PTBcharts"
+        Me.PTBcharts.Size = New System.Drawing.Size(49, 46)
+        Me.PTBcharts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PTBcharts.TabIndex = 17
+        Me.PTBcharts.TabStop = False
+        '
+        'PTBabrir
+        '
+        Me.PTBabrir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PTBabrir.Image = Global.proyecto.inicio.My.Resources.Resources.arrowleft
+        Me.PTBabrir.Location = New System.Drawing.Point(9, 26)
+        Me.PTBabrir.Name = "PTBabrir"
+        Me.PTBabrir.Size = New System.Drawing.Size(40, 39)
+        Me.PTBabrir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PTBabrir.TabIndex = 16
+        Me.PTBabrir.TabStop = False
+        '
+        'PTBocultar
+        '
+        Me.PTBocultar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PTBocultar.Image = Global.proyecto.inicio.My.Resources.Resources.arrowRight
+        Me.PTBocultar.Location = New System.Drawing.Point(9, 26)
+        Me.PTBocultar.Name = "PTBocultar"
+        Me.PTBocultar.Size = New System.Drawing.Size(40, 39)
+        Me.PTBocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PTBocultar.TabIndex = 17
+        Me.PTBocultar.TabStop = False
+        '
+        'btnOcultar
+        '
+        Me.btnOcultar.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnOcultar.FlatAppearance.BorderSize = 0
+        Me.btnOcultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOcultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOcultar.ForeColor = System.Drawing.Color.Blue
+        Me.btnOcultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnOcultar.Location = New System.Drawing.Point(52, 26)
+        Me.btnOcultar.Name = "btnOcultar"
+        Me.btnOcultar.Size = New System.Drawing.Size(104, 46)
+        Me.btnOcultar.TabIndex = 16
+        Me.btnOcultar.Text = "Ocultar"
+        Me.btnOcultar.UseVisualStyleBackColor = False
+        '
+        'btncharts
+        '
+        Me.btncharts.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btncharts.FlatAppearance.BorderSize = 0
+        Me.btncharts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btncharts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncharts.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncharts.ForeColor = System.Drawing.Color.Blue
+        Me.btncharts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btncharts.Location = New System.Drawing.Point(53, 110)
+        Me.btncharts.Name = "btncharts"
+        Me.btncharts.Size = New System.Drawing.Size(122, 46)
+        Me.btncharts.TabIndex = 22
+        Me.btncharts.Text = "Estadísticas"
+        Me.btncharts.UseVisualStyleBackColor = False
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1111,12 +1047,10 @@ Partial Class Inicio
         Me.panelmedio.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.panelOpciones.ResumeLayout(False)
-        CType(Me.PTBcalendario, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PTBcalculadora, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelEstadisticas.ResumeLayout(False)
         CType(Me.PTBcharts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PTBabrir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PTBocultar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelEstadisticas.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1163,14 +1097,10 @@ Partial Class Inicio
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btnSalir1 As System.Windows.Forms.Button
     Friend WithEvents panelOpciones As System.Windows.Forms.Panel
-    Friend WithEvents PTBcalendario As System.Windows.Forms.PictureBox
-    Friend WithEvents PTBcalculadora As System.Windows.Forms.PictureBox
     Friend WithEvents PTBcharts As System.Windows.Forms.PictureBox
     Friend WithEvents PTBabrir As System.Windows.Forms.PictureBox
     Friend WithEvents btnOcultar As System.Windows.Forms.Button
     Friend WithEvents btncharts As System.Windows.Forms.Button
-    Friend WithEvents btncalendario As System.Windows.Forms.Button
-    Friend WithEvents btncalculadora As System.Windows.Forms.Button
     Friend WithEvents PTBocultar As System.Windows.Forms.PictureBox
     Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
