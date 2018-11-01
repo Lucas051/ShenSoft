@@ -93,8 +93,8 @@ Public Class Cobrar
 
                 command.Parameters.Add("@monto", MySqlDbType.VarChar).Value = lblTotalPagar.Text
                 command.Parameters.Add("@forma_de_pago", MySqlDbType.VarChar).Value = CBformadepago.Text
-                command.Parameters.Add("@num_cliente", MySqlDbType.VarChar).Value = txtclientes.Text
-                command.Parameters.Add("@id_vendedor", MySqlDbType.VarChar).Value = txtvendedor.Text.ToString
+                command.Parameters.Add("@num_cliente", MySqlDbType.VarChar).Value = lblnumCliente.Text
+                command.Parameters.Add("@id_vendedor", MySqlDbType.VarChar).Value = lblNumVendedor.Text.ToString
 
 
                 Dim adapter As New MySqlDataAdapter(command)
@@ -106,9 +106,7 @@ Public Class Cobrar
             End Try
 
         End If
-        'guardo valor de la row 0 del insert factura en variable global
 
-        ' despues la inserto en genera
 
         If RealizarFactura.DGVVentas.Rows.Count = 0 Then
             Return
@@ -118,19 +116,18 @@ Public Class Cobrar
 
             For Each row As DataGridViewRow In RealizarFactura.DGVVentas.Rows
 
-                Dim command As New MySqlCommand("INSERT INTO genera (n_factura, precio_v, cantidad, descripcion, cod_producto) VALUES (@n_factura, @precio_v, @cantidad,  @descripcion,  @cod_producto)", connection)
+                Dim command1 As New MySqlCommand("INSERT INTO genera (n_factura, precio_v, cantidad, descripcion, cod_producto) VALUES (last_insert_id(), @precio_v, @cantidad,  @descripcion,  @cod_producto)", connection)
 
-                command.Parameters.Clear()
+                command1.Parameters.Clear()
 
-                command.Parameters.Add("@n_factura", MySqlDbType.VarChar).Value = 3
-                command.Parameters.AddWithValue("@precio_v", CStr(row.Cells("precioventa").Value))
-                command.Parameters.AddWithValue("@cantidad", CInt(row.Cells("cantidad").Value))
-                command.Parameters.AddWithValue("@descripcion", CStr(row.Cells("descripcion").Value))
-                command.Parameters.AddWithValue("@cod_producto", CStr(row.Cells("codigo").Value))
+                command1.Parameters.AddWithValue("@precio_v", CStr(row.Cells("precioventa").Value))
+                command1.Parameters.AddWithValue("@cantidad", CInt(row.Cells("cantidad").Value))
+                command1.Parameters.AddWithValue("@descripcion", CStr(row.Cells("descripcion").Value))
+                command1.Parameters.AddWithValue("@cod_producto", CStr(row.Cells("codigo").Value))
 
-                command.ExecuteNonQuery()
+                command1.ExecuteNonQuery()
 
-                Dim adapter As New MySqlDataAdapter(command)
+                Dim adapter As New MySqlDataAdapter(command1)
                 Dim table As New DataTable()
 
                 adapter.Fill(table)

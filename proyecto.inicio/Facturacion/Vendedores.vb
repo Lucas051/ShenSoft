@@ -33,6 +33,7 @@ Public Class Vendedores
     End Sub
     Private Sub dgvbuscarstock_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvbuscarstock.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
+        Cobrar.lblNumVendedor.Text = dgvbuscarstock.CurrentRow.Cells(0).Value.ToString
         Cobrar.txtvendedor.Text = dgvbuscarstock.CurrentRow.Cells(1).Value.ToString
 
         'close para cerrar el form

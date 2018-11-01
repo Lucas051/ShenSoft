@@ -117,3 +117,5 @@ C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Vendedores.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadisticasProv.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadisticaVentas.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadiscticaCliente.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadisticaStock.resources

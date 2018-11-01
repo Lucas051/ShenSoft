@@ -40,6 +40,8 @@ Partial Class Cobrar
         Me.txtpagocon = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CBformadepago = New System.Windows.Forms.ComboBox()
+        Me.lblnumCliente = New System.Windows.Forms.Label()
+        Me.lblNumVendedor = New System.Windows.Forms.Label()
         Me.barratitulo.SuspendLayout()
         CType(Me.btnmini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -252,12 +254,38 @@ Partial Class Cobrar
         Me.CBformadepago.Size = New System.Drawing.Size(148, 21)
         Me.CBformadepago.TabIndex = 61
         '
+        'lblnumCliente
+        '
+        Me.lblnumCliente.AutoSize = True
+        Me.lblnumCliente.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnumCliente.ForeColor = System.Drawing.Color.White
+        Me.lblnumCliente.Location = New System.Drawing.Point(94, 308)
+        Me.lblnumCliente.Name = "lblnumCliente"
+        Me.lblnumCliente.Size = New System.Drawing.Size(16, 18)
+        Me.lblnumCliente.TabIndex = 62
+        Me.lblnumCliente.Text = "0"
+        Me.lblnumCliente.Visible = False
+        '
+        'lblNumVendedor
+        '
+        Me.lblNumVendedor.AutoSize = True
+        Me.lblNumVendedor.Font = New System.Drawing.Font("Bahnschrift", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNumVendedor.ForeColor = System.Drawing.Color.White
+        Me.lblNumVendedor.Location = New System.Drawing.Point(94, 256)
+        Me.lblNumVendedor.Name = "lblNumVendedor"
+        Me.lblNumVendedor.Size = New System.Drawing.Size(16, 18)
+        Me.lblNumVendedor.TabIndex = 63
+        Me.lblNumVendedor.Text = "0"
+        Me.lblNumVendedor.Visible = False
+        '
         'Cobrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(466, 599)
+        Me.Controls.Add(Me.lblNumVendedor)
+        Me.Controls.Add(Me.lblnumCliente)
         Me.Controls.Add(Me.CBformadepago)
         Me.Controls.Add(Me.txtpagocon)
         Me.Controls.Add(Me.txtclientes)
@@ -304,4 +332,6 @@ Partial Class Cobrar
     Friend WithEvents txtclientes As System.Windows.Forms.TextBox
     Friend WithEvents txtpagocon As System.Windows.Forms.TextBox
     Friend WithEvents CBformadepago As System.Windows.Forms.ComboBox
+    Friend WithEvents lblnumCliente As System.Windows.Forms.Label
+    Friend WithEvents lblNumVendedor As System.Windows.Forms.Label
 End Class

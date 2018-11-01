@@ -29,6 +29,7 @@ Public Class BuscarClientesCobrar
     End Sub
     Private Sub DGVbuscarclientes_CellClick_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVbuscarclientes.CellClick
         'Mediante el evento indicamos hacia donde van los valores seleccionados
+        Cobrar.lblnumCliente.Text = DGVbuscarclientes.CurrentRow.Cells(0).Value.ToString
         Cobrar.txtclientes.Text = DGVbuscarclientes.CurrentRow.Cells(2).Value.ToString
 
         'close para cerrar el form
