@@ -178,7 +178,6 @@ Public Class Cobrar
 
                 cmd.ExecuteNonQuery()
                 cmd.Connection.Close()
-                MsgBox(i)
 
             Next
            
@@ -190,6 +189,27 @@ Public Class Cobrar
         End Try
 
         MessageBox.Show("Venta Guardada con éxito", "Venta Concretada")
+
+        Dim i1 As Integer = 0
+        RealizarFactura.lblMontoTotal.Text = 0
+        For i1 = 0 To RealizarFactura.DGVVentas.Rows.Count - 1
+
+            RealizarFactura.DGVVentas.Rows.Remove(RealizarFactura.DGVVentas.CurrentRow)
+        Next
+
+        Me.Hide()
+        Inicio.Show()
+
+        Dim llamarInicio As New PlantillaInicio
+        Inicio.panelmedio.Controls.Clear()
+        llamarInicio.TopLevel = False
+        llamarInicio.Parent = Inicio.panelmedio
+        llamarInicio.Show()
+        llamarInicio.Dock = DockStyle.Fill
+
+
+        Inicio.panelmedio.Visible = True
+
 
 
     End Sub
@@ -204,7 +224,7 @@ Public Class Cobrar
         'Me.prdDocumento.Print()
 
         'Usar tamaño y posición específica
-        'ppdVistaPrevia.SetBounds(0, 0, 1920, 1080)
+        ppdvistaprevia.SetBounds(0, 0, 1920, 1080)
 
         'Maximizar formulario de vista previa
         DirectCast(ppdVistaPrevia, Form).WindowState = FormWindowState.Maximized

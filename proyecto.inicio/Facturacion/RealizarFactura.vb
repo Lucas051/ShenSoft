@@ -30,11 +30,13 @@ Public Class RealizarFactura
         lblMontoTotal.Text = 0
 
         DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
+        Dim i2 As Integer = 0
 
+        For i2 = 0 To DGVVentas.Rows.Count - 1
 
-        For Each fila As DataGridViewRow In DGVVentas.SelectedRows
-            montototal += Convert.ToDouble(fila.Cells("preciototal").Value)
+            montototal -= Convert.ToDouble(DGVVentas.Rows.Item(i2).Cells(5).Value)
         Next
+
         lblMontoTotal.Text = Convert.ToString(montototal)
 
     End Sub
