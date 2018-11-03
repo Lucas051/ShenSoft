@@ -16,11 +16,21 @@ Public Class Cobrar
 
     Dim devolver As Integer
 
+    Private ultimoid As Integer
+
+    Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=lapolleriabd")
+
+    Private cadenaConexion As String = ("datasource=localhost;port=3306;username=root;password=;database=lapolleriabd")
+
+
     Private Sub Cobrar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         lblTotalPagar.Text = ModuloVariables.MontoTotal
 
         CBformadepago.Items.Add("Contado")
         CBformadepago.Items.Add("Cuenta")
+
+
+
     End Sub
 
 
@@ -75,69 +85,112 @@ Public Class Cobrar
 
 
     Private Sub btncobrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncobrar.Click
-        'Dim TotalPagar As Integer = Convert.ToInt32(lblTotalPagar.Text)
-        '  Dim PagoCon As Integer = Convert.ToInt32(txtpagocon.Text)
-        ' Dim devolver As Integer = 0
-
-        ' devolver = TotalPagar - PagoCon
-
-        ' devolver = lblDevolver.Text
-
-        'usamos los parametros para msgbox y confirmar si quiere eliminar
+       
         Dim opcion As DialogResult
         opcion = MessageBox.Show("La venta se concretará, realmente desea continuar?", "Cobrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If (opcion = DialogResult.Yes) Then
             Try
 
-                Dim command As New MySqlCommand("INSERT INTO facturas (monto, forma_de_pago, num_cliente, id_vendedor) VALUES(@monto, @forma_de_pago, @num_cliente,  @id_vendedor)")
+                conexioon.Consulta = "INSERT INTO facturas (monto, forma_de_pago, num_cliente, id_vendedor) VALUES('" + lblTotalPagar.Text + "','" + CBformadepago.Text + "','" + lblnumCliente.Text + "','" + lblNumVendedor.Text + "');"
+                consultar()
 
-                command.Parameters.Add("@monto", MySqlDbType.VarChar).Value = lblTotalPagar.Text
-                command.Parameters.Add("@forma_de_pago", MySqlDbType.VarChar).Value = CBformadepago.Text
-                command.Parameters.Add("@num_cliente", MySqlDbType.VarChar).Value = lblnumCliente.Text
-                command.Parameters.Add("@id_vendedor", MySqlDbType.VarChar).Value = lblNumVendedor.Text.ToString
+                Try
 
+                    ' Creamos el comando
+                    Dim cmd As MySqlCommand = connection.CreateCommand()
 
-                Dim adapter As New MySqlDataAdapter(command)
-                Dim table As New DataTable()
+                    ' Construimos la consulta T-SQL que deseamos ejecutar
+                    '
+                    cmd.CommandText = "SELECT max(n_factura) from facturas;"
 
-                adapter.Fill(table)
+                    ' Abrimos la conexión
+                    connection.Open()
+
+                    ' Ejecutamos la consulta
+                    Dim value As Object = cmd.ExecuteScalar()
+
+                    ' Pasamos el valor a la variable
+                    ultimoid = Convert.ToString(value)
+
+                    connection.Close()
+                Catch ex As Exception
+                    ' Se ha producido un error.
+                    MessageBox.Show(ex.Message)
+
+                End Try
+
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
 
         End If
 
+        
 
         If RealizarFactura.DGVVentas.Rows.Count = 0 Then
             Return
         End If
 
+        If (CBformadepago.Text = "Cuenta") Then
+            Try
+                conexioon.Consulta = "UPDATE clientes SET saldo_c = saldo_c + " + lblTotalPagar.Text + " WHERE num_cliente=" + lblnumCliente.Text + ";"
+                consultar()
+
+                'usamos los parametros para msgbox 
+
+                MessageBox.Show("Saldo agregado a cuenta del cliente!", "INGRESO COMPLETADO")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+        
+
         Try
+            ' connection.Open()
 
-            For Each row As DataGridViewRow In RealizarFactura.DGVVentas.Rows
 
-                Dim command1 As New MySqlCommand("INSERT INTO genera (n_factura, precio_v, cantidad, descripcion, cod_producto) VALUES (last_insert_id(), @precio_v, @cantidad,  @descripcion,  @cod_producto)")
 
-                command1.Parameters.Clear()
 
-                command1.Parameters.AddWithValue("@precio_v", CStr(row.Cells("precioventa").Value))
-                command1.Parameters.AddWithValue("@cantidad", CInt(row.Cells("cantidad").Value))
-                command1.Parameters.AddWithValue("@descripcion", CStr(row.Cells("descripcion").Value))
-                command1.Parameters.AddWithValue("@cod_producto", CStr(row.Cells("codigo").Value))
 
-                command1.ExecuteNonQuery()
+            Dim query As String
 
-                Dim adapter As New MySqlDataAdapter(command1)
-                Dim table As New DataTable()
+            query = "INSERT INTO genera (n_factura, precio_v, cantidad, descripcion, cod_producto) VALUES (?n_factura, ?precio_v, ?cantidad, ?descripcion, ?cod_producto)"
 
-                adapter.Fill(table)
+            Dim cmd As New MySqlCommand(query, connection)
+
+            cmd.Connection = connection
+
+            Dim i As Integer = 0
+
+            For i = 0 To RealizarFactura.DGVVentas.Rows.Count - 1
+
+                cmd.Parameters.Clear()
+
+                cmd.Connection.Open()
+
+                cmd.Parameters.AddWithValue("?n_factura", MySqlDbType.Int32).Value = ultimoid
+                cmd.Parameters.AddWithValue("?precio_v", RealizarFactura.DGVVentas.Rows.Item(i).Cells(5).Value)
+                cmd.Parameters.AddWithValue("?cantidad", RealizarFactura.DGVVentas.Rows.Item(i).Cells(2).Value)
+                cmd.Parameters.AddWithValue("?descripcion", RealizarFactura.DGVVentas.Rows.Item(i).Cells(1).Value)
+                cmd.Parameters.AddWithValue("?cod_producto", RealizarFactura.DGVVentas.Rows.Item(i).Cells(0).Value)
+
+                cmd.ExecuteNonQuery()
+                cmd.Connection.Close()
+                MsgBox(i)
 
             Next
+           
+
 
         Catch ex As Exception
             MsgBox(ex.Message)
+
         End Try
+
+        MessageBox.Show("Venta Guardada con éxito", "Venta Concretada")
+
 
     End Sub
 
@@ -215,5 +268,31 @@ Public Class Cobrar
             'disparar este evento como si fuese la primera vez, y si i está con el valor de la última fila del grid no se imprime nada.
             i = 0
         End If
+    End Sub
+
+    Private Sub CBformadepago_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBformadepago.SelectedIndexChanged
+        Try
+            If (txtpagocon.Text = "") Then
+                MsgBox("Ingrese monto con el cual el cliente ha pagado", "NO SE HA RECIBIDO EL PAGO")
+            Else
+                If (CBformadepago.Text = "Contado") Then
+
+                    Dim TotalPagar As Integer = Convert.ToInt32(lblTotalPagar.Text)
+                    Dim PagoCon As Integer = Convert.ToInt32(txtpagocon.Text)
+                    Dim devolver As Integer = 0
+
+                    devolver = PagoCon - TotalPagar
+
+                    lblDevolver.Text = devolver
+                ElseIf (CBformadepago.Text = "Cuenta") Then
+                    lblDevolver.Text = 0
+
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
     End Sub
 End Class

@@ -807,9 +807,9 @@ Partial Class Inicio
         Me.panelOpciones.Controls.Add(Me.btncharts)
         Me.panelOpciones.Cursor = System.Windows.Forms.Cursors.Default
         Me.panelOpciones.Dock = System.Windows.Forms.DockStyle.Right
-        Me.panelOpciones.Location = New System.Drawing.Point(979, 35)
+        Me.panelOpciones.Location = New System.Drawing.Point(1088, 35)
         Me.panelOpciones.Name = "panelOpciones"
-        Me.panelOpciones.Size = New System.Drawing.Size(168, 555)
+        Me.panelOpciones.Size = New System.Drawing.Size(59, 555)
         Me.panelOpciones.TabIndex = 15
         '
         'panelEstadisticas

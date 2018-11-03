@@ -237,4 +237,11 @@
         llamar1.Dock = DockStyle.Fill
         Inicio.panelmedio.Visible = True
     End Sub
+
+    Private Sub CBformadepago_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBformadepago.SelectedIndexChanged
+        If (CBformadepago.Text = "Crédito") Then
+            conexioon.Consulta = "UPDATE proveedores SET saldo_p = saldo_p + " + txtmonto.Text + " WHERE num_prov=" + txtproveedor.Text + ";"
+            consultar()
+        End If
+    End Sub
 End Class

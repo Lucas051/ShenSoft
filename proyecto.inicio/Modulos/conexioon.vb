@@ -2,7 +2,6 @@
 Imports MySql.Data.Types
 Imports MySql.Data.MySqlClient
 Imports System.Data.OleDb
-Imports System.Data
 Module conexioon
 
     Dim ubicacion As String = "server=localhost ; user id=root ; password=;database =lapolleriabd" ' "server=proyectoxd.ddns.net; user id=admin; password=admin; database=proyecto" 'cambiar esta linea por la otra para la BD remota
@@ -12,16 +11,15 @@ Module conexioon
     Public Consulta As String
     Public mysqlconexion As MySqlConnection = New MySqlConnection(ubicacion)
 
+
     Public Sub consultar()
         conexion = New MySqlDataAdapter(consulta, ubicacion)
         resultado = New DataTable
 
         conexion.Fill(resultado)
 
-
-
-
-
     End Sub
+
+    
 
 End Module

@@ -433,25 +433,10 @@ Public Class Inicio
     End Sub
 
 
-    Private Sub PTBcalculadora_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim llamar As New CalculadorA2
-        PnlCalculadorA2.Controls.Clear()
-        llamar.TopLevel = False
-        llamar.Parent = PnlCalculadorA2
-        llamar.Show()
-        llamar.Dock = DockStyle.Fill
-        PnlCalculadorA2.Visible = True And PnlCalculadorA2.Visible = False
-
-
-    End Sub
 
 
 
 
-
-    Private Sub PTBcharts_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Dim llamarVentas As New EstadisticaVentas
