@@ -3,8 +3,7 @@
     Private Sub EstadisticaVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
        
 
-        CBConsultas.Items.Add("Productos más vendido")
-        CBConsultas.Items.Add("Productos menos vendido")
+        CBConsultas.Items.Add("Productos más vendidos")
         CBConsultas.Items.Add("Productos que aún no se han vendido")
     End Sub
 
@@ -20,7 +19,7 @@
                 MessageBox.Show(ex.ToString)
             End Try
 
-        ElseIf (CBConsultas.Text = "Productos más vendido") Then
+        ElseIf (CBConsultas.Text = "Productos más vendidos") Then
             Try
                 Consulta = "select *, sum(cantidad) as 'Cantidad Total' from genera group by cod_producto;"
                 consultar()

@@ -220,16 +220,14 @@ Public Class Cobrar
     End Sub
 
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
-        'Imprimir directamente sin vista previa
-        'Me.prdDocumento.Print()
+      
 
-        'Usar tamaño y posición específica
-        ppdvistaprevia.SetBounds(0, 0, 1920, 1080)
-
-        'Maximizar formulario de vista previa
         DirectCast(ppdVistaPrevia, Form).WindowState = FormWindowState.Maximized
 
-        ppdVistaPrevia.Show()
+        ppdvistaprevia.Show()
+
+        'Imprimir directamente sin vista previa
+        Me.prdDocumento.Print()
     End Sub
 
     Private Sub prdDocumento_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles prdDocumento.PrintPage
@@ -253,7 +251,7 @@ Public Class Cobrar
         Next
 
         posicionY = margenSuperior + (contador * fuenteImpresion.GetHeight(e.Graphics))
-        e.Graphics.DrawString(texto, fuenteImpresion, System.Drawing.Brushes.Black, 10, posicionY)
+        e.Graphics.DrawString(texto, fuenteImpresion, System.Drawing.Brushes.Black, -50, posicionY)
         'Se deja una línea de separación.
         contador += 2
 
@@ -272,7 +270,7 @@ Public Class Cobrar
             posicionY = margenSuperior + (contador * fuenteImpresion.GetHeight(e.Graphics))
 
             'Se escribe la línea con el objeto Graphics.
-            e.Graphics.DrawString(texto, fuenteImpresion, System.Drawing.Brushes.Black, 10, posicionY)
+            e.Graphics.DrawString(texto, fuenteImpresion, System.Drawing.Brushes.Black, 20, posicionY)
             'Se incrementan los contadores.
             contador += 1
             i += 1
@@ -290,29 +288,4 @@ Public Class Cobrar
         End If
     End Sub
 
-    Private Sub CBformadepago_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBformadepago.SelectedIndexChanged
-        Try
-            If (txtpagocon.Text = "") Then
-                MsgBox("Ingrese monto con el cual el cliente ha pagado", "NO SE HA RECIBIDO EL PAGO")
-            Else
-                If (CBformadepago.Text = "Contado") Then
-
-                    Dim TotalPagar As Integer = Convert.ToInt32(lblTotalPagar.Text)
-                    Dim PagoCon As Integer = Convert.ToInt32(txtpagocon.Text)
-                    Dim devolver As Integer = 0
-
-                    devolver = PagoCon - TotalPagar
-
-                    lblDevolver.Text = devolver
-                ElseIf (CBformadepago.Text = "Cuenta") Then
-                    lblDevolver.Text = 0
-
-                End If
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-
-    End Sub
 End Class

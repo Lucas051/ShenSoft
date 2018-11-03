@@ -97,16 +97,13 @@
 
 
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
-        'Imprimir directamente sin vista previa
-        'Me.prdDocumento.Print()
-
-        'Usar tamaño y posición específica
-        'ppdVistaPrevia.SetBounds(0, 0, 1920, 1080)
-
-        'Maximizar formulario de vista previa
+      
         DirectCast(ppdvistaprevia, Form).WindowState = FormWindowState.Maximized
 
         ppdvistaprevia.Show()
+
+        'Imprimir directamente sin vista previa
+        Me.prdDocumento.Print()
     End Sub
 
     Private Sub prdDocumento_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles prdDocumento.PrintPage

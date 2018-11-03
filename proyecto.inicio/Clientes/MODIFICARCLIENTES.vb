@@ -2,7 +2,7 @@
 
 
     Private Sub MODIFICARCLIENTES_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
+    
         Try
             conexioon.Consulta = "SELECT * FROM clientes WHERE saldo_c=0"
             consultar()
