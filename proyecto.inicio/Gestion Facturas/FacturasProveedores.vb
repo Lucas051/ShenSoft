@@ -86,11 +86,7 @@
     End Sub
 
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-        Dim llamarBuscarProv As New BuscarProv
-        llamarBuscarProv.TopLevel = False
-        llamarBuscarProv.Parent = Inicio.panelmedio
-        llamarBuscarProv.Show()
-        Inicio.panelmedio.Visible = True
+        BuscarProv.Show()
 
     End Sub
 

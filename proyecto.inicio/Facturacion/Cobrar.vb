@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
+Imports System.Drawing.Printing
 Imports MySql.Data
 Imports MySql.Data.Types
 Imports MySql.Data.MySqlClient
@@ -82,7 +83,13 @@ Public Class Cobrar
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-
+    Private Sub CBformadepago_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBformadepago.SelectedIndexChanged
+        If CBformadepago.Text = "Contado" Then
+            lblDevolver.Text = Val(txtpagocon.Text) - Val(lblTotalPagar.Text)
+        ElseIf CBformadepago.Text = "Cuenta" Then
+            lblDevolver.Text = 0
+        End If
+    End Sub
 
     Private Sub btncobrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncobrar.Click
        
@@ -222,23 +229,27 @@ Public Class Cobrar
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
       
 
-        DirectCast(ppdVistaPrevia, Form).WindowState = FormWindowState.Maximized
+        DirectCast(ppdvistaprevia, Form).WindowState = FormWindowState.Maximized
 
-        ppdvistaprevia.Show()
+
+        ppdvistaprevia.Document = prdDocumento
+        ppdvistaprevia.ShowDialog()
 
         'Imprimir directamente sin vista previa
-        Me.prdDocumento.Print()
+        ' Me.prdDocumento.Print()
     End Sub
 
     Private Sub prdDocumento_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles prdDocumento.PrintPage
         'Se define la fuente que vamos a usar para imprimir. En este caso Arial de 10.
         Dim fuenteImpresion As System.Drawing.Font = New Font("Arial", 10)
+        Dim fuentetitulos As System.Drawing.Font = New Font("Arial Black", 10)
         Dim margenSuperior As Double = e.MarginBounds.Top
         Dim posicionY As Double = 0
         Dim lineasPorPagina As Double = 0
         Dim contador As Integer = 0
         Dim texto As String = ""
         Dim fila As System.Windows.Forms.DataGridViewRow
+
 
         'Se calcula el número de líneas que caben en cada página.
         lineasPorPagina = e.MarginBounds.Height / fuenteImpresion.GetHeight(e.Graphics)
@@ -247,11 +258,11 @@ Public Class Cobrar
         Dim encabezado As DataGridViewHeaderCell
         For Each column As DataGridViewColumn In RealizarFactura.DGVVentas.Columns
             encabezado = column.HeaderCell
-            texto += vbTab + vbTab + encabezado.FormattedValue.ToString()
+            texto += vbTab + " || " + encabezado.FormattedValue.ToString() + " || "
         Next
 
         posicionY = margenSuperior + (contador * fuenteImpresion.GetHeight(e.Graphics))
-        e.Graphics.DrawString(texto, fuenteImpresion, System.Drawing.Brushes.Black, -50, posicionY)
+        e.Graphics.DrawString(texto, fuenteImpresion, System.Drawing.Brushes.Black, -10, posicionY)
         'Se deja una línea de separación.
         contador += 2
 
@@ -262,7 +273,7 @@ Public Class Cobrar
             For Each celda As System.Windows.Forms.DataGridViewCell In fila.Cells
                 'Se comprueba que la celda tenga algún valor, en caso de permitir añadir filas esto es necesario.
                 If celda.Value IsNot Nothing Then
-                    texto += vbTab + vbTab + celda.Value.ToString()
+                    texto += vbTab + " ||     " + celda.Value.ToString() + " ||     "
                 End If
             Next
 
@@ -286,6 +297,57 @@ Public Class Cobrar
             'disparar este evento como si fuese la primera vez, y si i está con el valor de la última fila del grid no se imprime nada.
             i = 0
         End If
+
+        Dim fecha As String
+        Dim iva As Integer
+        Dim subtotal As Integer
+
+        iva = (Val(lblTotalPagar.Text) * 22) / 100
+
+        subtotal = Val(lblTotalPagar.Text) - iva
+
+        fecha = DateTime.Now.ToString("dd/MM/yyyy")
+
+        e.Graphics.DrawString("E-Ticket Contado", lblTotalPagar.Font, Brushes.Black, 10, 10)
+
+        e.Graphics.DrawString("EMITE: ", fuentetitulos, Brushes.Black, 200, 10)
+        e.Graphics.DrawString("La Pollería", lblTotalPagar.Font, Brushes.Black, 265, 10)
+
+        e.Graphics.DrawString("PARA: ", fuentetitulos, Brushes.Black, 400, 10)
+        e.Graphics.DrawString(txtclientes.Text, lblTotalPagar.Font, Brushes.Black, 465, 10)
+
+        e.Graphics.DrawString("VENDEDOR: ", fuentetitulos, Brushes.Black, 360, 30)
+        e.Graphics.DrawString(txtvendedor.Text, lblTotalPagar.Font, Brushes.Black, 470, 30)
+
+        e.Graphics.DrawString(fecha, lblTotalPagar.Font, Brushes.Black, 665, 10)
+
+        e.Graphics.DrawString("SUBTOTAL:", fuentetitulos, Brushes.Black, 650, 400)
+        e.Graphics.DrawString(subtotal, lblTotalPagar.Font, Brushes.Black, 800, 400)
+
+        e.Graphics.DrawString("IVA(22%):", fuentetitulos, Brushes.Black, 650, 450)
+        e.Graphics.DrawString(iva, lblTotalPagar.Font, Brushes.Black, 800, 450)
+
+        e.Graphics.DrawString("TOTAL PAGADO:", fuentetitulos, Brushes.Black, 650, 500)
+        e.Graphics.DrawString(lblTotalPagar.Text, lblTotalPagar.Font, Brushes.Black, 800, 500)
     End Sub
 
+  
+    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs)
+        'Se define la fuente que vamos a usar para imprimir. En este caso Arial de 10.
+        Dim fuenteImpresion As System.Drawing.Font = New Font("Arial", 10)
+        Dim margenSuperior As Double = e.MarginBounds.Top
+        Dim posicionY As Double = 0
+        Dim lineasPorPagina As Double = 0
+        Dim contador As Integer = 0
+        Dim texto As String = ""
+        prdDocumento.DefaultPageSettings.Landscape = True
+
+        Dim bm As New Bitmap(RealizarFactura.DGVVentas.Width, RealizarFactura.DGVVentas.Height)
+        RealizarFactura.DGVVentas.DrawToBitmap(bm, New Rectangle(0, 0, RealizarFactura.DGVVentas.Width, RealizarFactura.DGVVentas.Height))
+        e.Graphics.DrawImage(bm, 0, 0)
+
+        e.Graphics.DrawString(lblTotalPagar.Text, fuenteImpresion, System.Drawing.Brushes.Black, -50, posicionY)
+
+
+    End Sub
 End Class

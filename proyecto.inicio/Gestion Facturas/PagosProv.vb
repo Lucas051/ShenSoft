@@ -95,8 +95,8 @@
         End Try
     End Sub
 
-    Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
-      
+    Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
         DirectCast(ppdvistaprevia, Form).WindowState = FormWindowState.Maximized
 
         ppdvistaprevia.Show()

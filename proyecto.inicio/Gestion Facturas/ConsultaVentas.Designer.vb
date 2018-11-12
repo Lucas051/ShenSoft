@@ -29,6 +29,8 @@ Partial Class ConsultaVentas
         Me.btnatras = New System.Windows.Forms.Button()
         Me.btnAnular = New System.Windows.Forms.Button()
         Me.btnDetalle = New System.Windows.Forms.Button()
+        Me.cod = New System.Windows.Forms.Label()
+        Me.txtposicion = New System.Windows.Forms.TextBox()
         CType(Me.dgvConsultaFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,7 +95,7 @@ Partial Class ConsultaVentas
         Me.btnAnular.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAnular.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnAnular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAnular.Location = New System.Drawing.Point(63, 478)
+        Me.btnAnular.Location = New System.Drawing.Point(337, 523)
         Me.btnAnular.Name = "btnAnular"
         Me.btnAnular.Size = New System.Drawing.Size(169, 32)
         Me.btnAnular.TabIndex = 50
@@ -109,18 +111,40 @@ Partial Class ConsultaVentas
         Me.btnDetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDetalle.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnDetalle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDetalle.Location = New System.Drawing.Point(258, 478)
+        Me.btnDetalle.Location = New System.Drawing.Point(337, 477)
         Me.btnDetalle.Name = "btnDetalle"
         Me.btnDetalle.Size = New System.Drawing.Size(169, 32)
         Me.btnDetalle.TabIndex = 51
         Me.btnDetalle.Text = "Ver Detalle"
         Me.btnDetalle.UseVisualStyleBackColor = False
         '
+        'cod
+        '
+        Me.cod.AutoSize = True
+        Me.cod.BackColor = System.Drawing.Color.Transparent
+        Me.cod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cod.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.cod.Location = New System.Drawing.Point(1, 477)
+        Me.cod.Name = "cod"
+        Me.cod.Size = New System.Drawing.Size(164, 20)
+        Me.cod.TabIndex = 52
+        Me.cod.Text = "Ingrese N° de Factura"
+        '
+        'txtposicion
+        '
+        Me.txtposicion.Location = New System.Drawing.Point(171, 477)
+        Me.txtposicion.Multiline = True
+        Me.txtposicion.Name = "txtposicion"
+        Me.txtposicion.Size = New System.Drawing.Size(138, 22)
+        Me.txtposicion.TabIndex = 53
+        '
         'ConsultaVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(891, 561)
+        Me.Controls.Add(Me.txtposicion)
+        Me.Controls.Add(Me.cod)
         Me.Controls.Add(Me.btnDetalle)
         Me.Controls.Add(Me.btnAnular)
         Me.Controls.Add(Me.btnatras)
@@ -130,10 +154,13 @@ Partial Class ConsultaVentas
         Me.Text = "ConsultaVentas"
         CType(Me.dgvConsultaFacturas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgvConsultaFacturas As System.Windows.Forms.DataGridView
     Friend WithEvents btnatras As System.Windows.Forms.Button
     Friend WithEvents btnAnular As System.Windows.Forms.Button
     Friend WithEvents btnDetalle As System.Windows.Forms.Button
+    Friend WithEvents cod As System.Windows.Forms.Label
+    Public WithEvents txtposicion As System.Windows.Forms.TextBox
 End Class

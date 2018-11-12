@@ -4,7 +4,7 @@ Imports System.Windows.Forms
 Public Class RealizarFactura
     Dim cantidadp, valor, descuentop, valorTotal As Integer
     Dim montototal As Double = 0
-
+    Dim cuenta As Integer
 
     'Variables para mover form en none
     Private IsFormBeingDragged As Boolean = False
@@ -16,6 +16,7 @@ Public Class RealizarFactura
         lblMontoTotal.Text = 0
         txtdescuent.Text = 0
         lblCodigo.ResetText()
+        lblescondido.Visible = False
     End Sub
 
 
@@ -27,17 +28,29 @@ Public Class RealizarFactura
 
     Private Sub btnborrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnborrar.Click
 
-        lblMontoTotal.Text = 0
 
-        DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
-        Dim i2 As Integer = 0
+        Try
+            DGVVentas.Rows.Remove(DGVVentas.CurrentRow)
 
-        For i2 = 0 To DGVVentas.Rows.Count - 1
+            
 
-            montototal -= Convert.ToDouble(DGVVentas.Rows.Item(i2).Cells(5).Value)
-        Next
+            For Each Fila In DGVVentas.Rows.Cast(Of DataGridViewRow)()
+                montototal = Fila.Cells("preciototal").Value.ToString()
+            Next
+            lblMontoTotal.Text = montototal
 
-        lblMontoTotal.Text = Convert.ToString(montototal)
+            If DGVVentas.RowCount = 0 Then
+
+                MessageBox.Show("Grilla Vacia!", "Datos Totalmente Borrados")
+                lblMontoTotal.Text = 0
+                montototal = Nothing
+            End If
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.ToString)
+        End Try
+
 
     End Sub
 
@@ -71,7 +84,6 @@ Public Class RealizarFactura
             MessageBox.Show("Seleccione una línea!")
         End If
 
-    
 
     End Sub
 
@@ -142,6 +154,8 @@ Public Class RealizarFactura
         txtdescuent.Text = 0
         montototal += valorTotal
         lblMontoTotal.Text = montototal
+
+       
 
     End Sub
 

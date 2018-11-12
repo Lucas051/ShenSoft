@@ -63,6 +63,7 @@ Partial Class RealizarFactura
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnlineaAgregada = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.lblescondido = New System.Windows.Forms.Label()
         CType(Me.DGVVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.barratituloInicio.SuspendLayout()
@@ -531,12 +532,23 @@ Partial Class RealizarFactura
         Me.btnEditar.Text = "Editar Línea"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
+        'lblescondido
+        '
+        Me.lblescondido.AutoSize = True
+        Me.lblescondido.Font = New System.Drawing.Font("Bahnschrift", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblescondido.Location = New System.Drawing.Point(1093, 467)
+        Me.lblescondido.Name = "lblescondido"
+        Me.lblescondido.Size = New System.Drawing.Size(21, 24)
+        Me.lblescondido.TabIndex = 55
+        Me.lblescondido.Text = "0"
+        '
         'RealizarFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(1179, 607)
+        Me.Controls.Add(Me.lblescondido)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.lblMontoTotal)
         Me.Controls.Add(Me.barratituloInicio)
@@ -605,4 +617,5 @@ Partial Class RealizarFactura
     Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents precioventa As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents preciototal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lblescondido As System.Windows.Forms.Label
 End Class

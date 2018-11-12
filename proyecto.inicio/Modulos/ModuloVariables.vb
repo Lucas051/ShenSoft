@@ -15,4 +15,6 @@ Module ModuloVariables
 
     Public num_factura As Integer
 
+    Public posicion As Integer
+
 End Module

@@ -19,9 +19,6 @@ C:\Users\Alumno-09\Desktop\ShenSoft-master\proyecto.inicio\obj\x86\Debug\proyect
 C:\Users\Alumno-09\Desktop\ShenSoft-master\proyecto.inicio\obj\x86\Debug\proyecto.inicio.xml
 C:\Users\Alumno-09\Desktop\ShenSoft-master\proyecto.inicio\obj\x86\Debug\proyecto.inicio.pdb
 C:\Users\Alumno-09\Desktop\ShenSoft-master\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Gestionproveedores.resources
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.exe
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.xml
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.pdb
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.BuscarClientesCobrar.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Cobrar.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.MODIFICARCLIENTES.resources
@@ -33,9 +30,6 @@ C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Stock_de_Productos.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Verificacion.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.vbproj.GenerateResource.Cache
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\proyecto.inicio.exe
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\proyecto.inicio.pdb
-C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\proyecto.inicio.xml
 C:\Users\frear\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.exe
 C:\Users\frear\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.xml
 C:\Users\frear\Documents\GitHub\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.pdb
@@ -118,3 +112,15 @@ C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadisticaVentas.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadiscticaCliente.resources
 C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.EstadisticaStock.resources
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\LaPolleria.exe.manifest
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\LaPolleria.application
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\LaPolleria.exe
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\LaPolleria.pdb
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\bin\Debug\LaPolleria.xml
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\LaPolleria.TrustInfo.xml
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\LaPolleria.exe.manifest
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\LaPolleria.application
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\LaPolleria.exe
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\LaPolleria.xml
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\LaPolleria.pdb
+C:\Users\Lucas\Documents\GitHub\ShenSoft\ShenSoft\proyecto.inicio\obj\x86\Debug\proyecto.inicio.Detalle.resources

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="LaPolleria.exe" version="1.0.0.0" publicKeyToken="0d04bdd3816177aa" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="Icono.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="LaPolleria" version="1.0.0.0" publicKeyToken="0D04BDD3816177AA" language="neutral" processorArchitecture="x86" />
+    <commandLine file="LaPolleria.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Opciones del manifiesto de Control de cuentas de usuario
+             Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+             nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            La especificación del nodo requestedExecutionLevel deshabilitará la virtualización de archivos y del Registro.
+            Si desea usar la virtualización de archivos y del Registro para la compatibilidad 
+            con versiones anteriores, elimine el nodo requestedExecutionLevel.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LaPolleria.exe" size="2340864">
+      <assemblyIdentity name="LaPolleria" version="1.0.0.0" publicKeyToken="0D04BDD3816177AA" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xqovg5f9a3PGjoGFHO/QLeGZeSU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualBasic.PowerPacks.Vs.dll" size="259464">
+      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks.Vs" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ht9gayw7qviBWoZTNeGrJx3jUcI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll" size="47000">
+      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks.Vs.resources" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>osRl87r0GjAesSqUvkQNQIS8bk8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="423936">
+      <assemblyIdentity name="MySql.Data" version="6.8.8.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>9cU3suQjeCohdL3QDWY9yqJkguw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Icono.ico" size="56946">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/14RWYExb6aaD1GRAev+X93AOic=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Lista de todas las versiones de Windows con las que esta aplicación está diseñada para funcionar. Windows seleccionará automáticamente el entorno de mayor compatibilidad.-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows 7, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN={6DBF1606-EB6F-4BD4-A462-CC72EFCB7FA2}" issuerKeyHash="71f489df30976ef6ae4754bcc8a13de9b72865eb" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>CmYcjG3/qUu29VmDnAjbFS32DW4=</DigestValue></Reference></SignedInfo><SignatureValue>CGh6WVVPtf/2CDZEybSu3H53OF4wkbqwFxqoCfCO+iOueLJ1bkMsiMRQrG9vZ9ClX748W+y59FBq9RguFSMdCdhtT9td28FipjVVJouDxWIaqpXQ0Pt26YQwxjIcaVrzwB6x6s8wWwq7F+14ADAF7QURQoRyaLUblbFwRq21rbs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>toDPYUWTyV2kV7ja6q6IuAoL8bdtlYcMYI073+gLhoxCcnIDyZ85Y8xo4PBWKzWa5vb4NS5Q4FL6WKUv5huMClnzCzSAyWV5A2wD8osrtqmIDcNxEVS3esyGyaplj9kXnINjJDiRc+QmeqjKSU6tfccUn4PHX3QbZFSwSibU7k0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6e0df62d15db089c8359f5b64ba9ff6d8c1c660a" Description="" Url=""><as:assemblyIdentity name="LaPolleria.exe" version="1.0.0.0" publicKeyToken="0d04bdd3816177aa" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN={6DBF1606-EB6F-4BD4-A462-CC72EFCB7FA2}</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>h1fATm1UD8XmnXzkXnrsqaI6KNo=</DigestValue></Reference></SignedInfo><SignatureValue>XjZJTwNo/jqFPfcX2OU+rTEEEm/4Elal8hNztKWleV+5iPGvOGi0R8B3c5C+zeM5FbhaUy9OXCMVVLC4gcV7SN/gcTlxe/p8yLmaDv0XlVkxBq5XIPfKeW3ZSqfgcN55VBLmsocXT6aPw9f5JD6G0Mxbu5n2IqmZsJW/Vj4O9VQ=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>toDPYUWTyV2kV7ja6q6IuAoL8bdtlYcMYI073+gLhoxCcnIDyZ85Y8xo4PBWKzWa5vb4NS5Q4FL6WKUv5huMClnzCzSAyWV5A2wD8osrtqmIDcNxEVS3esyGyaplj9kXnINjJDiRc+QmeqjKSU6tfccUn4PHX3QbZFSwSibU7k0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICMTCCAZqgAwIBAgIQYbG6D+k+po9GhpuBNVoXTDANBgkqhkiG9w0BAQUFADBXMVUwUwYDVQQDHkwAewA2AEQAQgBGADEANgAwADYALQBFAEIANgBGAC0ANABCAEQANAAtAEEANAA2ADIALQBDAEMANwAyAEUARgBDAEIANwBGAEEAMgB9MB4XDTE4MTEwMzA0MzU1N1oXDTE5MTEwMzEwMzU1N1owVzFVMFMGA1UEAx5MAHsANgBEAEIARgAxADYAMAA2AC0ARQBCADYARgAtADQAQgBEADQALQBBADQANgAyAC0AQwBDADcAMgBFAEYAQwBCADcARgBBADIAfTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtoDPYUWTyV2kV7ja6q6IuAoL8bdtlYcMYI073+gLhoxCcnIDyZ85Y8xo4PBWKzWa5vb4NS5Q4FL6WKUv5huMClnzCzSAyWV5A2wD8osrtqmIDcNxEVS3esyGyaplj9kXnINjJDiRc+QmeqjKSU6tfccUn4PHX3QbZFSwSibU7k0CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCuCwwxjJ4vU7mux5seSKyGo7jSQtQIQumeWQ9obP5MlDRw0P1IFS0pJDaZj9bWriIIZhPf1KT/sSEcdCz7Xd/KxIfYhQJCGijBFpp+bRxoVHnLfRzbWqYtNGQzaZvCRIQCqBC1vL1sYznvm7UtX7zCGxGrqeSgSFT8/Eo0KFSbVw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
