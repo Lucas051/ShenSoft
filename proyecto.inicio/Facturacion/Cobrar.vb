@@ -195,6 +195,41 @@ Public Class Cobrar
 
         End Try
 
+        Try
+            ' connection.Open()
+
+
+
+
+
+            Dim query1 As String
+
+            query1 = "UPDATE stock SET cantidad= cantidad - ?cantidad"
+
+            Dim cmd As New MySqlCommand(query1, connection)
+
+            cmd.Connection = connection
+
+            Dim i As Integer = 0
+
+            For i = 0 To RealizarFactura.DGVVentas.Rows.Count - 1
+
+                cmd.Parameters.Clear()
+
+                cmd.Connection.Open()
+
+                cmd.Parameters.AddWithValue("?cantidad", RealizarFactura.DGVVentas.Rows.Item(i).Cells(2).Value)
+
+                cmd.ExecuteNonQuery()
+                cmd.Connection.Close()
+
+            Next
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+
         MessageBox.Show("Venta Guardada con éxito", "Venta Concretada")
 
         Dim i1 As Integer = 0
@@ -217,7 +252,7 @@ Public Class Cobrar
 
         Inicio.panelmedio.Visible = True
 
-
+        RealizarFactura.Hide()
 
     End Sub
 

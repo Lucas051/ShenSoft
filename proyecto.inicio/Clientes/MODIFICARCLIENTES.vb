@@ -68,6 +68,36 @@
     End Sub
 
     Private Sub btnagregarC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregarC.Click
+        If IsNumeric(txtcedula.Text) Then
+            Dim cedula As String
+            Dim num(7) As Char
+            Dim suma As Integer
+            Dim suma1 As Integer
+            Dim calculo() As Integer = {2, 9, 8, 7, 6, 3, 4}
+
+            cedula = txtcedula.Text
+            num = txtcedula.Text.ToCharArray()
+
+            For i = 0 To 6
+                Dim num1 As Integer = Val(num(i))
+                suma = (num1 * calculo(i)) + suma
+            Next
+
+            num = suma.ToString.ToCharArray
+
+            ReDim Preserve num(1)
+            suma1 = Convert.ToInt32(num) + 1
+            num = suma1.ToString.ToCharArray
+            ReDim Preserve num(2)
+            num(2) = "0"
+
+            suma1 = Convert.ToInt32(num)
+            suma = suma1 - suma
+            num = cedula.ToCharArray()
+
+            If Str(suma) = Val(num(7)) Then
+                MessageBox.Show("Cédula Válida", "Datos Incorrectos")
+           
 
         Try
 
@@ -114,6 +144,12 @@
 
         End Try
 
+            Else
+                MessageBox.Show("Cédula Inválida", "Datos Incorrectos")
+            End If
+        Else
+            MessageBox.Show("Ingrese sólo números", "Datos Incorrectos")
+        End If
     End Sub
 
 
@@ -206,7 +242,7 @@
         End Try
     End Sub
 
-   
+
     Private Sub btnEliminarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarCliente.Click
         Dim row As DataGridViewRow = DgvClientes.CurrentRow
 
@@ -256,6 +292,14 @@
 
                 MessageBox.Show(ex.ToString)
             End Try
+        End If
+    End Sub
+
+    Private Sub txtcedula_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtcedula.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+        KeyAscii = CShort(SoloNumeros(KeyAscii))
+        If KeyAscii = 0 Then
+            e.Handled = True
         End If
     End Sub
 End Class

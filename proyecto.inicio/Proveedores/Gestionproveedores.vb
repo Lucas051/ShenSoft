@@ -38,7 +38,8 @@ Public Class Gestionproveedores
                 'ancho de columnas dgv
                 dgvproveedores.Columns(0).Width = 60
                 dgvproveedores.Columns(1).Width = 200
-                dgvproveedores.Columns(4).Width = 65
+                dgvproveedores.Columns(3).Width = 150
+                dgvproveedores.Columns(4).Width = 70
 
                 'usamos los parametros para msgbox 
                 Dim opcion As DialogResult
